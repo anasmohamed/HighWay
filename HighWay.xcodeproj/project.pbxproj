@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,24 @@
 		322D9B172614B46600C6F823 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D9B162614B46600C6F823 /* LoginViewController.swift */; };
 		322D9B1C2614B49900C6F823 /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322D9B1B2614B49900C6F823 /* LoginView.storyboard */; };
 		3263077D2614D15A00D72306 /* cairo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3263077C2614D15A00D72306 /* cairo.ttf */; };
+		32F1E6022615358000C12C84 /* Cairo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32F1E5FC2615357F00C12C84 /* Cairo-Light.ttf */; };
+		32F1E6032615358000C12C84 /* Cairo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32F1E5FD2615358000C12C84 /* Cairo-Bold.ttf */; };
+		32F1E6042615358000C12C84 /* Cairo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32F1E5FE2615358000C12C84 /* Cairo-Regular.ttf */; };
+		32F1E6052615358000C12C84 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32F1E5FF2615358000C12C84 /* Cairo-SemiBold.ttf */; };
+		32F1E6062615358000C12C84 /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32F1E6002615358000C12C84 /* Cairo-Black.ttf */; };
+		32F1E6072615358000C12C84 /* Cairo-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32F1E6012615358000C12C84 /* Cairo-ExtraLight.ttf */; };
+		32F1E610261537ED00C12C84 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32F1E60F261537ED00C12C84 /* Signup.storyboard */; };
+		32F1E6152615380700C12C84 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F1E6142615380700C12C84 /* SignupViewController.swift */; };
+		32F1E61A26153F0F00C12C84 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F1E61926153F0F00C12C84 /* Checkbox.swift */; };
+		32FA06C7261504C100912153 /* PlaceholderCenterText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA06C6261504C100912153 /* PlaceholderCenterText.swift */; };
+		32FA06CF2615065F00912153 /* ShadowForUIVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA06CE2615065F00912153 /* ShadowForUIVIew.swift */; };
+		32FA06DC26150A0F00912153 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA06DB26150A0F00912153 /* LoginViewModel.swift */; };
+		32FA06E426150B5000912153 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA06E326150B5000912153 /* Observable.swift */; };
+		32FA06EA2615158600912153 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA06E92615158600912153 /* LoginManager.swift */; };
+		32FA06F32615176E00912153 /* LoginVIewController + TextFiledDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA06F22615176E00912153 /* LoginVIewController + TextFiledDelegate.swift */; };
+		38382F5D52B3ADCAD82A579D /* Pods_HighWayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE51935E4D6CBC9F78BB580B /* Pods_HighWayTests.framework */; };
+		4E46F8C3EF175696A88AAC00 /* Pods_HighWay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3614DA640F371E5ED27AF9BB /* Pods_HighWay.framework */; };
+		D19923E55440F36AABF4C576 /* Pods_HighWay_HighWayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8095E87ADB9F1E7F022F7F /* Pods_HighWay_HighWayUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A963A342FEA0BB22094DC6D /* Pods-HighWay-HighWayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighWay-HighWayUITests.release.xcconfig"; path = "Target Support Files/Pods-HighWay-HighWayUITests/Pods-HighWay-HighWayUITests.release.xcconfig"; sourceTree = "<group>"; };
 		322D9AD02614B14000C6F823 /* HighWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HighWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		322D9AD32614B14000C6F823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		322D9AD52614B14000C6F823 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +76,29 @@
 		322D9B162614B46600C6F823 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		322D9B1B2614B49900C6F823 /* LoginView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginView.storyboard; sourceTree = "<group>"; };
 		3263077C2614D15A00D72306 /* cairo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = cairo.ttf; sourceTree = "<group>"; };
+		32F1E5FC2615357F00C12C84 /* Cairo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Light.ttf"; sourceTree = "<group>"; };
+		32F1E5FD2615358000C12C84 /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
+		32F1E5FE2615358000C12C84 /* Cairo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Regular.ttf"; sourceTree = "<group>"; };
+		32F1E5FF2615358000C12C84 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
+		32F1E6002615358000C12C84 /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
+		32F1E6012615358000C12C84 /* Cairo-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-ExtraLight.ttf"; sourceTree = "<group>"; };
+		32F1E60F261537ED00C12C84 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
+		32F1E6142615380700C12C84 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		32F1E61926153F0F00C12C84 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		32FA06C6261504C100912153 /* PlaceholderCenterText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderCenterText.swift; sourceTree = "<group>"; };
+		32FA06CE2615065F00912153 /* ShadowForUIVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowForUIVIew.swift; sourceTree = "<group>"; };
+		32FA06DB26150A0F00912153 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		32FA06E326150B5000912153 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		32FA06E92615158600912153 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		32FA06F22615176E00912153 /* LoginVIewController + TextFiledDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVIewController + TextFiledDelegate.swift"; sourceTree = "<group>"; };
+		3614DA640F371E5ED27AF9BB /* Pods_HighWay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HighWay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E8095E87ADB9F1E7F022F7F /* Pods_HighWay_HighWayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HighWay_HighWayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B12F5321069AFFBFD64F970 /* Pods-HighWay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighWay.release.xcconfig"; path = "Target Support Files/Pods-HighWay/Pods-HighWay.release.xcconfig"; sourceTree = "<group>"; };
+		6C278BC3FD1B6F08D8A21379 /* Pods-HighWayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighWayTests.debug.xcconfig"; path = "Target Support Files/Pods-HighWayTests/Pods-HighWayTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E0502792DF124317079689FA /* Pods-HighWayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighWayTests.release.xcconfig"; path = "Target Support Files/Pods-HighWayTests/Pods-HighWayTests.release.xcconfig"; sourceTree = "<group>"; };
+		E0AC2BEAA2DFD66C7314D5A1 /* Pods-HighWay-HighWayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighWay-HighWayUITests.debug.xcconfig"; path = "Target Support Files/Pods-HighWay-HighWayUITests/Pods-HighWay-HighWayUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE51935E4D6CBC9F78BB580B /* Pods_HighWayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HighWayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAFE1E45D54388E1D2A94C07 /* Pods-HighWay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighWay.debug.xcconfig"; path = "Target Support Files/Pods-HighWay/Pods-HighWay.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E46F8C3EF175696A88AAC00 /* Pods_HighWay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38382F5D52B3ADCAD82A579D /* Pods_HighWayTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D19923E55440F36AABF4C576 /* Pods_HighWay_HighWayUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +136,8 @@
 				322D9AE92614B14100C6F823 /* HighWayTests */,
 				322D9AF42614B14100C6F823 /* HighWayUITests */,
 				322D9AD12614B14000C6F823 /* Products */,
+				70D44D291663FA89CFEA1DC1 /* Pods */,
+				FC1C438D812CB6E45FF3BD1C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +154,8 @@
 		322D9AD22614B14000C6F823 /* HighWay */ = {
 			isa = PBXGroup;
 			children = (
+				322D9B0F2614B2FB00C6F823 /* Model */,
+				32FA06C52615049500912153 /* Common */,
 				3263077B2614D06B00D72306 /* Fonts */,
 				322D9B0C2614B1CF00C6F823 /* Presentation */,
 				322D9AD32614B14000C6F823 /* AppDelegate.swift */,
@@ -149,7 +198,7 @@
 		322D9B0D2614B2AF00C6F823 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				322D9B0F2614B2FB00C6F823 /* Model */,
+				32F1E60B2615379000C12C84 /* Signup */,
 				322D9B0E2614B2BC00C6F823 /* Login */,
 			);
 			path = Auth;
@@ -158,6 +207,8 @@
 		322D9B0E2614B2BC00C6F823 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				32FA06E82615156700912153 /* LoginManager */,
+				32FA06D9261509D500912153 /* ViewModel */,
 				322D9B152614B3DC00C6F823 /* View */,
 			);
 			path = Login;
@@ -174,6 +225,7 @@
 		322D9B152614B3DC00C6F823 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				32FA06F12615171100912153 /* Extensions */,
 				322D9B162614B46600C6F823 /* LoginViewController.swift */,
 				322D9B1B2614B49900C6F823 /* LoginView.storyboard */,
 			);
@@ -183,9 +235,106 @@
 		3263077B2614D06B00D72306 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				32F1E6002615358000C12C84 /* Cairo-Black.ttf */,
+				32F1E5FD2615358000C12C84 /* Cairo-Bold.ttf */,
+				32F1E6012615358000C12C84 /* Cairo-ExtraLight.ttf */,
+				32F1E5FC2615357F00C12C84 /* Cairo-Light.ttf */,
+				32F1E5FE2615358000C12C84 /* Cairo-Regular.ttf */,
+				32F1E5FF2615358000C12C84 /* Cairo-SemiBold.ttf */,
 				3263077C2614D15A00D72306 /* cairo.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		32F1E60B2615379000C12C84 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				32F1E60E261537CB00C12C84 /* SignupManager */,
+				32F1E60D261537BA00C12C84 /* ViewModel */,
+				32F1E60C261537B100C12C84 /* View */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		32F1E60C261537B100C12C84 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				32F1E60F261537ED00C12C84 /* Signup.storyboard */,
+				32F1E6142615380700C12C84 /* SignupViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		32F1E60D261537BA00C12C84 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		32F1E60E261537CB00C12C84 /* SignupManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignupManager;
+			sourceTree = "<group>";
+		};
+		32FA06C52615049500912153 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				32FA06C6261504C100912153 /* PlaceholderCenterText.swift */,
+				32FA06CE2615065F00912153 /* ShadowForUIVIew.swift */,
+				32FA06E326150B5000912153 /* Observable.swift */,
+				32F1E61926153F0F00C12C84 /* Checkbox.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		32FA06D9261509D500912153 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				32FA06DB26150A0F00912153 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		32FA06E82615156700912153 /* LoginManager */ = {
+			isa = PBXGroup;
+			children = (
+				32FA06E92615158600912153 /* LoginManager.swift */,
+			);
+			path = LoginManager;
+			sourceTree = "<group>";
+		};
+		32FA06F12615171100912153 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				32FA06F22615176E00912153 /* LoginVIewController + TextFiledDelegate.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		70D44D291663FA89CFEA1DC1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FAFE1E45D54388E1D2A94C07 /* Pods-HighWay.debug.xcconfig */,
+				6B12F5321069AFFBFD64F970 /* Pods-HighWay.release.xcconfig */,
+				E0AC2BEAA2DFD66C7314D5A1 /* Pods-HighWay-HighWayUITests.debug.xcconfig */,
+				2A963A342FEA0BB22094DC6D /* Pods-HighWay-HighWayUITests.release.xcconfig */,
+				6C278BC3FD1B6F08D8A21379 /* Pods-HighWayTests.debug.xcconfig */,
+				E0502792DF124317079689FA /* Pods-HighWayTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FC1C438D812CB6E45FF3BD1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3614DA640F371E5ED27AF9BB /* Pods_HighWay.framework */,
+				5E8095E87ADB9F1E7F022F7F /* Pods_HighWay_HighWayUITests.framework */,
+				EE51935E4D6CBC9F78BB580B /* Pods_HighWayTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,9 +344,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 322D9AFA2614B14100C6F823 /* Build configuration list for PBXNativeTarget "HighWay" */;
 			buildPhases = (
+				C086A8F4932C482405DE057C /* [CP] Check Pods Manifest.lock */,
 				322D9ACC2614B14000C6F823 /* Sources */,
 				322D9ACD2614B14000C6F823 /* Frameworks */,
 				322D9ACE2614B14000C6F823 /* Resources */,
+				65E567F6F09F18947E8BBF83 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -212,6 +363,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 322D9AFD2614B14100C6F823 /* Build configuration list for PBXNativeTarget "HighWayTests" */;
 			buildPhases = (
+				94E63E0BE31CABD00AFEBCD1 /* [CP] Check Pods Manifest.lock */,
 				322D9AE22614B14100C6F823 /* Sources */,
 				322D9AE32614B14100C6F823 /* Frameworks */,
 				322D9AE42614B14100C6F823 /* Resources */,
@@ -230,9 +382,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 322D9B002614B14100C6F823 /* Build configuration list for PBXNativeTarget "HighWayUITests" */;
 			buildPhases = (
+				B98564C3D86E807E7A6F3AFA /* [CP] Check Pods Manifest.lock */,
 				322D9AED2614B14100C6F823 /* Sources */,
 				322D9AEE2614B14100C6F823 /* Frameworks */,
 				322D9AEF2614B14100C6F823 /* Resources */,
+				55A1BF0940F2877ED5E8A93D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -292,10 +446,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3263077D2614D15A00D72306 /* cairo.ttf in Resources */,
+				32F1E6072615358000C12C84 /* Cairo-ExtraLight.ttf in Resources */,
 				322D9AE02614B14100C6F823 /* LaunchScreen.storyboard in Resources */,
+				32F1E6052615358000C12C84 /* Cairo-SemiBold.ttf in Resources */,
+				32F1E6042615358000C12C84 /* Cairo-Regular.ttf in Resources */,
 				322D9ADD2614B14100C6F823 /* Assets.xcassets in Resources */,
 				322D9ADB2614B14100C6F823 /* Main.storyboard in Resources */,
+				32F1E6022615358000C12C84 /* Cairo-Light.ttf in Resources */,
+				32F1E6062615358000C12C84 /* Cairo-Black.ttf in Resources */,
 				322D9B1C2614B49900C6F823 /* LoginView.storyboard in Resources */,
+				32F1E610261537ED00C12C84 /* Signup.storyboard in Resources */,
+				32F1E6032615358000C12C84 /* Cairo-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,15 +476,126 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		55A1BF0940F2877ED5E8A93D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HighWay-HighWayUITests/Pods-HighWay-HighWayUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HighWay-HighWayUITests/Pods-HighWay-HighWayUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HighWay-HighWayUITests/Pods-HighWay-HighWayUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65E567F6F09F18947E8BBF83 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HighWay/Pods-HighWay-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HighWay/Pods-HighWay-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HighWay/Pods-HighWay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94E63E0BE31CABD00AFEBCD1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HighWayTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B98564C3D86E807E7A6F3AFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HighWay-HighWayUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C086A8F4932C482405DE057C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HighWay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		322D9ACC2614B14000C6F823 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				322D9B112614B31C00C6F823 /* User.swift in Sources */,
+				32FA06C7261504C100912153 /* PlaceholderCenterText.swift in Sources */,
 				322D9AD82614B14000C6F823 /* ViewController.swift in Sources */,
 				322D9AD42614B14000C6F823 /* AppDelegate.swift in Sources */,
+				32FA06E426150B5000912153 /* Observable.swift in Sources */,
+				32FA06EA2615158600912153 /* LoginManager.swift in Sources */,
+				32F1E6152615380700C12C84 /* SignupViewController.swift in Sources */,
+				32FA06DC26150A0F00912153 /* LoginViewModel.swift in Sources */,
+				32FA06F32615176E00912153 /* LoginVIewController + TextFiledDelegate.swift in Sources */,
 				322D9B172614B46600C6F823 /* LoginViewController.swift in Sources */,
+				32F1E61A26153F0F00C12C84 /* Checkbox.swift in Sources */,
+				32FA06CF2615065F00912153 /* ShadowForUIVIew.swift in Sources */,
 				322D9AD62614B14000C6F823 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +769,7 @@
 		};
 		322D9AFB2614B14100C6F823 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAFE1E45D54388E1D2A94C07 /* Pods-HighWay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -515,6 +788,7 @@
 		};
 		322D9AFC2614B14100C6F823 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B12F5321069AFFBFD64F970 /* Pods-HighWay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -533,6 +807,7 @@
 		};
 		322D9AFE2614B14100C6F823 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C278BC3FD1B6F08D8A21379 /* Pods-HighWayTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -554,6 +829,7 @@
 		};
 		322D9AFF2614B14100C6F823 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0502792DF124317079689FA /* Pods-HighWayTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -575,6 +851,7 @@
 		};
 		322D9B012614B14100C6F823 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0AC2BEAA2DFD66C7314D5A1 /* Pods-HighWay-HighWayUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -594,6 +871,7 @@
 		};
 		322D9B022614B14100C6F823 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A963A342FEA0BB22094DC6D /* Pods-HighWay-HighWayUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
