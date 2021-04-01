@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pEL-bi-6Yu">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K8G-70-njt">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -12,36 +12,36 @@
         <array key="Cairo-Bold.ttf">
             <string>Cairo-Bold</string>
         </array>
-        <array key="Cairo-Regular.ttf">
-            <string>Cairo-Regular</string>
-        </array>
         <array key="Cairo-SemiBold.ttf">
             <string>Cairo-SemiBold</string>
         </array>
+        <array key="cairo.ttf">
+            <string>Cairo-Regular</string>
+        </array>
     </customFonts>
     <scenes>
-        <!--Signup View Controller-->
+        <!--Sign up-->
         <scene sceneID="uN2-zc-KW4">
             <objects>
-                <viewController id="pEL-bi-6Yu" customClass="SignupViewController" customModule="HighWay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignupViewController" id="pEL-bi-6Yu" customClass="SignupViewController" customModule="HighWay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IWf-1S-Lba">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIGHWAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svV-K7-euP">
-                                <rect key="frame" x="166.33333333333334" y="52" width="81.333333333333343" height="36"/>
-                                <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="19"/>
+                                <rect key="frame" x="164" y="108" width="86" height="37.5"/>
+                                <fontDescription key="fontDescription" name="Cairo-Bold" family="Cairo" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We are happy to help you , anytime, anywhere" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJW-Qa-ccD">
-                                <rect key="frame" x="10" y="96" width="394" height="32"/>
+                                <rect key="frame" x="10" y="153.5" width="394" height="32"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ZA-CJ-mYG">
-                                <rect key="frame" x="20" y="150" width="374" height="360"/>
+                                <rect key="frame" x="20" y="207.5" width="374" height="360"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ruw-qP-JRk">
                                         <rect key="frame" x="10" y="10" width="354" height="50"/>
@@ -126,9 +126,9 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wrv-1S-mua">
-                                        <rect key="frame" x="38" y="258" width="314" height="20"/>
+                                        <rect key="frame" x="38" y="258" width="239" height="20"/>
                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="15"/>
-                                        <state key="normal" title="I agree to the terms and privacy and privacy policy">
+                                        <state key="normal" title="I agree to the terms and privacy policy">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                         <connections>
@@ -163,10 +163,10 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EIA-Qq-YTH"/>
-                        <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.96071070430000005" green="0.96082574129999998" blue="0.96067160370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="EIA-Qq-YTH" firstAttribute="trailing" secondItem="3ZA-CJ-mYG" secondAttribute="trailing" constant="20" id="1TQ-LQ-ViN"/>
-                            <constraint firstItem="svV-K7-euP" firstAttribute="top" secondItem="EIA-Qq-YTH" secondAttribute="top" constant="52" id="21J-m0-wCm"/>
+                            <constraint firstItem="svV-K7-euP" firstAttribute="top" secondItem="EIA-Qq-YTH" secondAttribute="top" constant="20" id="21J-m0-wCm"/>
                             <constraint firstItem="3ZA-CJ-mYG" firstAttribute="top" secondItem="BJW-Qa-ccD" secondAttribute="bottom" constant="22" id="9WV-M2-q53"/>
                             <constraint firstItem="BJW-Qa-ccD" firstAttribute="leading" secondItem="EIA-Qq-YTH" secondAttribute="leading" constant="10" id="9ig-gR-avK"/>
                             <constraint firstItem="BJW-Qa-ccD" firstAttribute="centerX" secondItem="EIA-Qq-YTH" secondAttribute="centerX" id="Ncs-iF-rWD"/>
@@ -176,6 +176,7 @@
                             <constraint firstItem="3ZA-CJ-mYG" firstAttribute="leading" secondItem="EIA-Qq-YTH" secondAttribute="leading" constant="20" id="vCK-I3-lbe"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Sign up" id="htf-1g-9fa"/>
                     <connections>
                         <outlet property="createAccountBtn" destination="tSL-0q-aOf" id="jfz-10-3QX"/>
                         <outlet property="emailTextField" destination="vLw-WX-VbA" id="Wmf-iz-Ycs"/>
@@ -188,7 +189,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qny-tK-35d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-365.625" y="53.75"/>
+            <point key="canvasLocation" x="540.57971014492762" y="52.989130434782609"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BWk-An-hVh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K8G-70-njt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xlj-We-hw3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pEL-bi-6Yu" kind="relationship" relationship="rootViewController" id="Gqz-NQ-07n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ho8-cK-gVW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-366.66666666666669" y="52.989130434782609"/>
         </scene>
     </scenes>
     <resources>

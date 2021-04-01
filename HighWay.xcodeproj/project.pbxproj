@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3224404B2616285E008A876B /* SignupViewController + TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3224404A2616285E008A876B /* SignupViewController + TextFieldDelegate.swift */; };
+		3224405326164A52008A876B /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3224405226164A52008A876B /* EmailValidation.swift */; };
 		322D9AD42614B14000C6F823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D9AD32614B14000C6F823 /* AppDelegate.swift */; };
 		322D9AD62614B14000C6F823 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D9AD52614B14000C6F823 /* SceneDelegate.swift */; };
 		322D9AD82614B14000C6F823 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D9AD72614B14000C6F823 /* ViewController.swift */; };
@@ -66,6 +67,7 @@
 /* Begin PBXFileReference section */
 		2A963A342FEA0BB22094DC6D /* Pods-HighWay-HighWayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighWay-HighWayUITests.release.xcconfig"; path = "Target Support Files/Pods-HighWay-HighWayUITests/Pods-HighWay-HighWayUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3224404A2616285E008A876B /* SignupViewController + TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignupViewController + TextFieldDelegate.swift"; sourceTree = "<group>"; };
+		3224405226164A52008A876B /* EmailValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidation.swift; sourceTree = "<group>"; };
 		322D9AD02614B14000C6F823 /* HighWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HighWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		322D9AD32614B14000C6F823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		322D9AD52614B14000C6F823 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				32E7127C261602CD00FF0F8F /* HandleKeboardShowExtenstion.swift */,
 				32E712812616032200FF0F8F /* UIResponder + KeyboardExtension.swift */,
 				32E712872616068A00FF0F8F /* UITextField + DoneBtnExtension.swift */,
+				3224405226164A52008A876B /* EmailValidation.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -629,6 +632,7 @@
 				32FA06F32615176E00912153 /* LoginVIewController + TextFiledDelegate.swift in Sources */,
 				322D9B172614B46600C6F823 /* LoginViewController.swift in Sources */,
 				32E712152615E35600FF0F8F /* SignupViewModel.swift in Sources */,
+				3224405326164A52008A876B /* EmailValidation.swift in Sources */,
 				32F1E61A26153F0F00C12C84 /* Checkbox.swift in Sources */,
 				32FA06CF2615065F00912153 /* ShadowForUIVIew.swift in Sources */,
 				32E712882616068A00FF0F8F /* UITextField + DoneBtnExtension.swift in Sources */,

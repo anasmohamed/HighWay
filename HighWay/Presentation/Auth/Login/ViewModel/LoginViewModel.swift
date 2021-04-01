@@ -7,7 +7,7 @@
 
 import Foundation
 class LoginViewModel {
-    private let loginManager :LoginManager
+    private let loginManager  = LoginManager()
     private var user = User(){
         didSet{
             email = user.email
@@ -19,18 +19,18 @@ class LoginViewModel {
     
     
     var credentialsInputErrorMessage: Observable<String> = Observable("")
-    var isUsernameTextFieldHighLighted: Observable<Bool> = Observable(false)
+    var isEmailTextFieldHighLighted: Observable<Bool> = Observable(false)
     var isPasswordTextFieldHighLighted: Observable<Bool> = Observable(false)
     var errorMessage: Observable<String?> = Observable(nil)
     
-    
-    init(loginManager: LoginManager) {
-        self.loginManager = loginManager
-    }
+//
+//    init(loginManager: LoginManager) {
+//        self.loginManager = loginManager
+//    }
     
     //Here we update our model
-    func updateCredentials(username: String, password: String, otp: String? = nil) {
-        user.userName = username
+    func updateCredentials(email: String, password: String, otp: String? = nil) {
+        user.email = email
         user.password = password
     }
     
@@ -47,20 +47,27 @@ class LoginViewModel {
     
     
     func credentialsInput() -> CredentialsInputStatus {
-        if email.isEmpty && password.isEmpty {
-            credentialsInputErrorMessage.value = "Please provide username and password."
-            return .Incorrect
-        }
-        if email.isEmpty {
-            credentialsInputErrorMessage.value = "Username field is empty."
-            isUsernameTextFieldHighLighted.value = true
-            return .Incorrect
-        }
+//        if email.isEmpty && password.isEmpty {
+//            credentialsInputErrorMessage.value = "Please provide username and password."
+//            return .Incorrect
+//        }
         if password.isEmpty {
-            credentialsInputErrorMessage.value = "Password field is empty."
+            errorMessage.value = "Password shoulb be 6 digits or more"
             isPasswordTextFieldHighLighted.value = true
             return .Incorrect
         }
+        if email.isEmpty {
+            errorMessage.value = "email field is empty."
+            isEmailTextFieldHighLighted.value = true
+            return .Incorrect
+        }
+        if !EmailValidation.isValidEmail(email)
+        {
+            errorMessage.value = "Enter Valid Email."
+            isEmailTextFieldHighLighted.value = true
+            return .Incorrect
+        }
+      
         return .Correct
     }
     

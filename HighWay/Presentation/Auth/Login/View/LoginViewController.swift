@@ -15,18 +15,34 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var createAccountStackView: UIStackView!
     @IBOutlet weak var containerView: UIView!
     
-    var loginViewModel: LoginViewModel!
+    var loginViewModel = LoginViewModel()
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupButton()
+        bindData()
+        setDelegates()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        createAccountStackView.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.viewWillAppear(animated)
+        super.viewWillAppear(animated)
+        containerView.cornerRadiusAndShodow()
+        self.addKeyboardObserver()
+
         
+    }
+    @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
+        let signupStoryboard = UIStoryboard.init(name: "Signup", bundle: nil)
+        let signupViewController = signupStoryboard.instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
+        self.navigationController?.pushViewController(signupViewController, animated: true)
+        
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.removeKeyboardObserver()
     }
     func setupButton()  {
         signInBtn.layer.cornerRadius = 5
@@ -34,7 +50,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func signInBtnDidTapped(_ sender: Any) {
         //Here we ask viewModel to update model with existing credentials from text fields
-        loginViewModel.updateCredentials(username: emailTextField.text!, password: passwordTextField.text!)
+        loginViewModel.updateCredentials(email: emailTextField.text!, password: passwordTextField.text!)
         
         //Here we check user's credentials input - if it's correct we call login()
         switch loginViewModel.credentialsInput() {
@@ -52,11 +68,9 @@ class LoginViewController: UIViewController {
     }
     
     func bindData() {
-//        loginViewModel.credentialsInputErrorMessage.bind { [weak self] in
-//
-//        }
+
         
-        loginViewModel.isUsernameTextFieldHighLighted.bind { [weak self] in
+        loginViewModel.isEmailTextFieldHighLighted.bind { [weak self] in
             if $0 { self?.highlightTextField((self?.emailTextField)!)}
         }
         

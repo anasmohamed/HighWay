@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cey-p4-R7w">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -12,15 +12,15 @@
         <array key="Cairo-Bold.ttf">
             <string>Cairo-Bold</string>
         </array>
-        <array key="Cairo-Regular.ttf">
-            <string>Cairo-Regular</string>
-        </array>
         <array key="Cairo-SemiBold.ttf">
             <string>Cairo-SemiBold</string>
         </array>
+        <array key="cairo.ttf">
+            <string>Cairo-Regular</string>
+        </array>
     </customFonts>
     <scenes>
-        <!--Login View Controller-->
+        <!--Login-->
         <scene sceneID="y19-ls-9BI">
             <objects>
                 <viewController id="9xM-wK-FWh" customClass="LoginViewController" customModule="HighWay" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,23 +40,31 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHT-8U-yqv">
-                                <rect key="frame" x="30" y="257.5" width="354" height="300"/>
+                                <rect key="frame" x="30" y="227.5" width="354" height="300"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3qb-YB-E4K">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3qb-YB-E4K">
                                         <rect key="frame" x="20" y="20" width="314" height="50"/>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.96082574129999998" blue="0.96067160370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Gci-Pw-q5X"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Fv-r4-rap">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Fv-r4-rap">
                                         <rect key="frame" x="20" y="78" width="314" height="50"/>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.96082574129999998" blue="0.96067160370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="bLN-5S-HpU"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6M-9o-2ha">
                                         <rect key="frame" x="20" y="136" width="0.0" height="28"/>
@@ -65,9 +73,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vh-U5-VdH">
-                                        <rect key="frame" x="20" y="138" width="122" height="41"/>
+                                        <rect key="frame" x="20" y="138" width="125" height="41"/>
                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="15"/>
-                                        <state key="normal" title="Foreget Password?">
+                                        <state key="normal" title="Foreget Password ?">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                         <connections>
@@ -81,7 +89,7 @@
                                             <constraint firstAttribute="height" constant="50" id="tQS-nY-tL8"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="17"/>
-                                        <state key="normal" title="Sign in">
+                                        <state key="normal" title="SIGN IN">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -89,22 +97,25 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="vxg-6e-dCP">
-                                        <rect key="frame" x="101.5" y="247.5" width="151" height="32"/>
+                                        <rect key="frame" x="109.5" y="247.5" width="135" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WoU-dz-gmK">
-                                                <rect key="frame" x="0.0" y="0.0" width="108" height="32"/>
-                                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="102" height="20"/>
+                                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="ycl-ql-eOt">
-                                                <rect key="frame" x="121" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="115" y="0.0" width="20" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="T4j-DO-3oy"/>
-                                                    <constraint firstAttribute="width" constant="30" id="YmX-qs-OhX"/>
+                                                    <constraint firstAttribute="height" constant="20" id="T4j-DO-3oy"/>
+                                                    <constraint firstAttribute="width" constant="20" id="YmX-qs-OhX"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ycl-ql-eOt" firstAttribute="centerY" secondItem="WoU-dz-gmK" secondAttribute="centerY" id="3k0-xY-pru"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -130,18 +141,18 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hxE-MR-NYx"/>
-                        <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fKU-Df-aAZ" firstAttribute="centerX" secondItem="hxE-MR-NYx" secondAttribute="centerX" id="0Wz-fx-hN5"/>
                             <constraint firstItem="kHT-8U-yqv" firstAttribute="leading" secondItem="hxE-MR-NYx" secondAttribute="leading" constant="30" id="Meo-lQ-Pe4"/>
                             <constraint firstItem="hxE-MR-NYx" firstAttribute="trailing" secondItem="kHT-8U-yqv" secondAttribute="trailing" constant="30" id="UPV-JD-iSp"/>
-                            <constraint firstItem="kHT-8U-yqv" firstAttribute="top" secondItem="fKU-Df-aAZ" secondAttribute="bottom" constant="50" id="UlB-5y-wlV"/>
+                            <constraint firstItem="kHT-8U-yqv" firstAttribute="top" secondItem="fKU-Df-aAZ" secondAttribute="bottom" constant="20" id="UlB-5y-wlV"/>
                             <constraint firstItem="ykq-2X-TCR" firstAttribute="top" secondItem="hxE-MR-NYx" secondAttribute="top" constant="30" id="erK-DM-63k"/>
                             <constraint firstItem="fKU-Df-aAZ" firstAttribute="top" secondItem="ykq-2X-TCR" secondAttribute="bottom" constant="16" id="sOE-9K-fES"/>
                             <constraint firstItem="ykq-2X-TCR" firstAttribute="centerX" secondItem="hxE-MR-NYx" secondAttribute="centerX" id="xnA-7y-4dd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="UHT-u0-XUR"/>
+                    <navigationItem key="navigationItem" title="Login" id="UHT-u0-XUR"/>
                     <connections>
                         <outlet property="containerView" destination="kHT-8U-yqv" id="UcJ-zD-ZlT"/>
                         <outlet property="createAccountStackView" destination="vxg-6e-dCP" id="ULr-8K-2PP"/>
