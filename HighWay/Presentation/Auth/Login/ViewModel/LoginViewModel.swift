@@ -10,11 +10,11 @@ class LoginViewModel {
     private let loginManager :LoginManager
     private var user = User(){
         didSet{
-            userName = user.userName
+            email = user.email
             password = user.password
         }
     }
-    private var userName = ""
+    private var email = ""
     private var password = ""
     
     
@@ -36,7 +36,7 @@ class LoginViewModel {
     
     
     func login() {
-        loginManager.loginWithCredentials(username: userName, password: password) { [weak self] (error) in
+        loginManager.loginWithCredentials(email: email, password: password) { [weak self] (user,error) in
             guard let error = error else {
                 return
             }
@@ -47,11 +47,11 @@ class LoginViewModel {
     
     
     func credentialsInput() -> CredentialsInputStatus {
-        if userName.isEmpty && password.isEmpty {
+        if email.isEmpty && password.isEmpty {
             credentialsInputErrorMessage.value = "Please provide username and password."
             return .Incorrect
         }
-        if userName.isEmpty {
+        if email.isEmpty {
             credentialsInputErrorMessage.value = "Username field is empty."
             isUsernameTextFieldHighLighted.value = true
             return .Incorrect

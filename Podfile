@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+ platform :ios, '10.0'
 
 target 'HighWay' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -7,6 +7,9 @@ target 'HighWay' do
 
   # Pods for HighWay
 pod 'Toast-Swift', '~> 5.0.1'
+pod 'Firebase/Analytics'
+pod 'Firebase/Auth'
+
 
   target 'HighWayTests' do
     inherit! :search_paths

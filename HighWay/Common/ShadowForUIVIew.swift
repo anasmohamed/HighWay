@@ -8,12 +8,12 @@
 import Foundation
 import UIKit
 extension UIView{
-    func cornerRadiusAndShodow(view:UIView)  {
-           view.layer.shadowColor = UIColor.gray.cgColor
-           view.layer.shadowOpacity = 1
-           view.layer.shadowOffset = .zero
-           view.layer.shadowRadius = 3
-           view.layer.rasterizationScale = UIScreen.main.scale
-           view.layer.cornerRadius = 5
+    func cornerRadiusAndShodow()  {
+        self.layer.shadowColor = UIColor.lightGray.cgColor
+        self.layer.shadowOpacity = 1
+        self.layer.shadowOffset = .zero
+        self.layer.shadowRadius = 3
+        self.layer.rasterizationScale = UIScreen.main.scale
+        self.layer.cornerRadius = 5
        }
 }

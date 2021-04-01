@@ -19,6 +19,12 @@
 		322D9B172614B46600C6F823 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D9B162614B46600C6F823 /* LoginViewController.swift */; };
 		322D9B1C2614B49900C6F823 /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322D9B1B2614B49900C6F823 /* LoginView.storyboard */; };
 		3263077D2614D15A00D72306 /* cairo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3263077C2614D15A00D72306 /* cairo.ttf */; };
+		32E712152615E35600FF0F8F /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E712142615E35600FF0F8F /* SignupViewModel.swift */; };
+		32E7121A2615E42E00FF0F8F /* SignupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E712192615E42E00FF0F8F /* SignupManager.swift */; };
+		32E7121F2615E66B00FF0F8F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32E7121E2615E66B00FF0F8F /* GoogleService-Info.plist */; };
+		32E7127D261602CD00FF0F8F /* HandleKeboardShowExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E7127C261602CD00FF0F8F /* HandleKeboardShowExtenstion.swift */; };
+		32E712822616032200FF0F8F /* UIResponder + KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E712812616032200FF0F8F /* UIResponder + KeyboardExtension.swift */; };
+		32E712882616068A00FF0F8F /* UITextField + DoneBtnExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E712872616068A00FF0F8F /* UITextField + DoneBtnExtension.swift */; };
 		32F1E6022615358000C12C84 /* Cairo-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32F1E5FC2615357F00C12C84 /* Cairo-Light.ttf */; };
 		32F1E6032615358000C12C84 /* Cairo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32F1E5FD2615358000C12C84 /* Cairo-Bold.ttf */; };
 		32F1E6042615358000C12C84 /* Cairo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32F1E5FE2615358000C12C84 /* Cairo-Regular.ttf */; };
@@ -76,6 +82,12 @@
 		322D9B162614B46600C6F823 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		322D9B1B2614B49900C6F823 /* LoginView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginView.storyboard; sourceTree = "<group>"; };
 		3263077C2614D15A00D72306 /* cairo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = cairo.ttf; sourceTree = "<group>"; };
+		32E712142615E35600FF0F8F /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		32E712192615E42E00FF0F8F /* SignupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupManager.swift; sourceTree = "<group>"; };
+		32E7121E2615E66B00FF0F8F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		32E7127C261602CD00FF0F8F /* HandleKeboardShowExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleKeboardShowExtenstion.swift; sourceTree = "<group>"; };
+		32E712812616032200FF0F8F /* UIResponder + KeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder + KeyboardExtension.swift"; sourceTree = "<group>"; };
+		32E712872616068A00FF0F8F /* UITextField + DoneBtnExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + DoneBtnExtension.swift"; sourceTree = "<group>"; };
 		32F1E5FC2615357F00C12C84 /* Cairo-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Light.ttf"; sourceTree = "<group>"; };
 		32F1E5FD2615358000C12C84 /* Cairo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Bold.ttf"; sourceTree = "<group>"; };
 		32F1E5FE2615358000C12C84 /* Cairo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Regular.ttf"; sourceTree = "<group>"; };
@@ -164,6 +176,7 @@
 				322D9AD92614B14100C6F823 /* Main.storyboard */,
 				322D9ADC2614B14100C6F823 /* Assets.xcassets */,
 				322D9ADE2614B14100C6F823 /* LaunchScreen.storyboard */,
+				32E7121E2615E66B00FF0F8F /* GoogleService-Info.plist */,
 				322D9AE12614B14100C6F823 /* Info.plist */,
 			);
 			path = HighWay;
@@ -198,8 +211,8 @@
 		322D9B0D2614B2AF00C6F823 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				32F1E60B2615379000C12C84 /* Signup */,
 				322D9B0E2614B2BC00C6F823 /* Login */,
+				32F1E60B2615379000C12C84 /* Signup */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -268,6 +281,7 @@
 		32F1E60D261537BA00C12C84 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				32E712142615E35600FF0F8F /* SignupViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -275,6 +289,7 @@
 		32F1E60E261537CB00C12C84 /* SignupManager */ = {
 			isa = PBXGroup;
 			children = (
+				32E712192615E42E00FF0F8F /* SignupManager.swift */,
 			);
 			path = SignupManager;
 			sourceTree = "<group>";
@@ -286,6 +301,9 @@
 				32FA06CE2615065F00912153 /* ShadowForUIVIew.swift */,
 				32FA06E326150B5000912153 /* Observable.swift */,
 				32F1E61926153F0F00C12C84 /* Checkbox.swift */,
+				32E7127C261602CD00FF0F8F /* HandleKeboardShowExtenstion.swift */,
+				32E712812616032200FF0F8F /* UIResponder + KeyboardExtension.swift */,
+				32E712872616068A00FF0F8F /* UITextField + DoneBtnExtension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -445,6 +463,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32E7121F2615E66B00FF0F8F /* GoogleService-Info.plist in Resources */,
 				3263077D2614D15A00D72306 /* cairo.ttf in Resources */,
 				32F1E6072615358000C12C84 /* Cairo-ExtraLight.ttf in Resources */,
 				322D9AE02614B14100C6F823 /* LaunchScreen.storyboard in Resources */,
@@ -586,16 +605,21 @@
 			files = (
 				322D9B112614B31C00C6F823 /* User.swift in Sources */,
 				32FA06C7261504C100912153 /* PlaceholderCenterText.swift in Sources */,
+				32E7121A2615E42E00FF0F8F /* SignupManager.swift in Sources */,
 				322D9AD82614B14000C6F823 /* ViewController.swift in Sources */,
 				322D9AD42614B14000C6F823 /* AppDelegate.swift in Sources */,
 				32FA06E426150B5000912153 /* Observable.swift in Sources */,
+				32E7127D261602CD00FF0F8F /* HandleKeboardShowExtenstion.swift in Sources */,
 				32FA06EA2615158600912153 /* LoginManager.swift in Sources */,
 				32F1E6152615380700C12C84 /* SignupViewController.swift in Sources */,
+				32E712822616032200FF0F8F /* UIResponder + KeyboardExtension.swift in Sources */,
 				32FA06DC26150A0F00912153 /* LoginViewModel.swift in Sources */,
 				32FA06F32615176E00912153 /* LoginVIewController + TextFiledDelegate.swift in Sources */,
 				322D9B172614B46600C6F823 /* LoginViewController.swift in Sources */,
+				32E712152615E35600FF0F8F /* SignupViewModel.swift in Sources */,
 				32F1E61A26153F0F00C12C84 /* Checkbox.swift in Sources */,
 				32FA06CF2615065F00912153 /* ShadowForUIVIew.swift in Sources */,
+				32E712882616068A00FF0F8F /* UITextField + DoneBtnExtension.swift in Sources */,
 				322D9AD62614B14000C6F823 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
