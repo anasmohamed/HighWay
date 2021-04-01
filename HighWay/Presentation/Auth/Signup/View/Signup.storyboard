@@ -108,6 +108,9 @@
                                             <userDefinedRuntimeAttribute type="color" keyPath="uncheckedBorderColor">
                                                 <color key="value" systemColor="labelColor"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="checkmarkStyleIB">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mzy-84-bsG">

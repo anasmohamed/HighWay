@@ -22,6 +22,8 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupButton()
+        bindData()
+        setDelegates()
         // Do any additional setup after loading the view.
     }
    
@@ -46,7 +48,8 @@ class SignupViewController: UIViewController {
     
     @IBAction func createAccountBtnDidTapped(_ sender: Any) {
         //Here we ask viewModel to update model with existing credentials from text fields
-        signupViewModel.updateCredentials(username: emailTextField.text!, password: passwordTextField.text!,phoneNumber: phoneNumberTextField.text!,email: emailTextField.text!)
+        print(privacypolicyCheckBox.isChecked)
+        signupViewModel.updateCredentials(username: userNameTextField.text!, password: passwordTextField.text!,phoneNumber: phoneNumberTextField.text!,email: emailTextField.text!,isPrivacyPolicyChecked: privacypolicyCheckBox.isChecked)
         
         //Here we check user's credentials input - if it's correct we call login()
         switch signupViewModel.credentialsInput() {
@@ -59,13 +62,48 @@ class SignupViewController: UIViewController {
         
         
     }
-    
+    func bindData() {
+//        loginViewModel.credentialsInputErrorMessage.bind { [weak self] in
+//
+//        }
+        
+        signupViewModel.isEmailTextFieldHighLighted.bind { [weak self] in
+            if $0 { self?.highlightTextField((self?.emailTextField)!)}
+        }
+        
+        signupViewModel.isPasswordTextFieldHighLighted.bind { [weak self] in
+            if $0 { self?.highlightTextField((self?.passwordTextField)!)}
+        }
+        signupViewModel.isUsernameTextFieldHighLighted.bind { [weak self] in
+            if $0 { self?.highlightTextField((self?.userNameTextField)!)}
+        }
+        signupViewModel.isPhoneNumberTextFieldHighLighted.bind { [weak self] in
+            if $0 { self?.highlightTextField((self?.phoneNumberTextField)!)}
+        }
+        signupViewModel.errorMessage.bind {
+            guard let errorMessage = $0 else { return }
+            self.view.makeToast(errorMessage, duration: 3.0, position: .bottom)
+
+        }
+    }
+    func highlightTextField(_ textField: UITextField) {
+        textField.resignFirstResponder()
+        textField.layer.borderWidth = 1.0
+        textField.layer.borderColor = UIColor.red.cgColor
+        textField.layer.cornerRadius = 3
+    }
     func setupButton()  {
         createAccountBtn.layer.cornerRadius = 8
     }
     
     func signup() {
         signupViewModel.signup()
+    }
+    func setDelegates() {
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        userNameTextField.delegate = self
+        phoneNumberTextField.delegate = self
     }
     
 }

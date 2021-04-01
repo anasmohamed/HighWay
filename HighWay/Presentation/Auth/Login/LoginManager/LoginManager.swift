@@ -9,9 +9,8 @@ import Foundation
 import FirebaseAuth
 class LoginManager {
     func loginWithCredentials(email:String,password:String, completionHandler: @escaping (User,Error?) -> Void) {
-        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-            
-            
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+          guard let strongSelf = self else { return }
         }
 
     }

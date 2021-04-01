@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3224404B2616285E008A876B /* SignupViewController + TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3224404A2616285E008A876B /* SignupViewController + TextFieldDelegate.swift */; };
 		322D9AD42614B14000C6F823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D9AD32614B14000C6F823 /* AppDelegate.swift */; };
 		322D9AD62614B14000C6F823 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D9AD52614B14000C6F823 /* SceneDelegate.swift */; };
 		322D9AD82614B14000C6F823 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D9AD72614B14000C6F823 /* ViewController.swift */; };
@@ -64,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		2A963A342FEA0BB22094DC6D /* Pods-HighWay-HighWayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighWay-HighWayUITests.release.xcconfig"; path = "Target Support Files/Pods-HighWay-HighWayUITests/Pods-HighWay-HighWayUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3224404A2616285E008A876B /* SignupViewController + TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignupViewController + TextFieldDelegate.swift"; sourceTree = "<group>"; };
 		322D9AD02614B14000C6F823 /* HighWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HighWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		322D9AD32614B14000C6F823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		322D9AD52614B14000C6F823 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		322440492616281B008A876B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3224404A2616285E008A876B /* SignupViewController + TextFieldDelegate.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		322D9AC72614B14000C6F823 = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +282,7 @@
 		32F1E60C261537B100C12C84 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				322440492616281B008A876B /* Extensions */,
 				32F1E60F261537ED00C12C84 /* Signup.storyboard */,
 				32F1E6142615380700C12C84 /* SignupViewController.swift */,
 			);
@@ -611,6 +622,7 @@
 				32FA06E426150B5000912153 /* Observable.swift in Sources */,
 				32E7127D261602CD00FF0F8F /* HandleKeboardShowExtenstion.swift in Sources */,
 				32FA06EA2615158600912153 /* LoginManager.swift in Sources */,
+				3224404B2616285E008A876B /* SignupViewController + TextFieldDelegate.swift in Sources */,
 				32F1E6152615380700C12C84 /* SignupViewController.swift in Sources */,
 				32E712822616032200FF0F8F /* UIResponder + KeyboardExtension.swift in Sources */,
 				32FA06DC26150A0F00912153 /* LoginViewModel.swift in Sources */,
