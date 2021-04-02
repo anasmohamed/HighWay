@@ -9,6 +9,7 @@ target 'HighWay' do
 pod 'Toast-Swift', '~> 5.0.1'
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
+pod "SwiftToast"
 
 
   target 'HighWayTests' do

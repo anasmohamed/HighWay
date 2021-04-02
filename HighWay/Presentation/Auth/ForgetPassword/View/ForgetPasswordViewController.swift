@@ -6,21 +6,24 @@
 //
 
 import UIKit
-
+import Toast_Swift
 class ForgetPasswordViewController: UIViewController {
+ 
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var resetPasswordView: UIView!
     @IBOutlet weak var sendEmailBtn: UIButton!
     
     var forgetPasswordViewModel = ForgetPasswordViewModel()
-    
-    
+   
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupButton()  
+      
+        setupButton()
         setDelegates() 
         bindData()
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,6 +44,8 @@ class ForgetPasswordViewController: UIViewController {
         switch forgetPasswordViewModel.credentialsInput() {
         
         case .Correct:
+            LoadingIndicatorView.show(self.view, loadingText: "Loading")
+
             sendEmailToResetPassword()
         case .Incorrect:
             return
@@ -50,7 +55,20 @@ class ForgetPasswordViewController: UIViewController {
         sendEmailBtn.layer.cornerRadius = 7
     }
     func bindData() {
+        forgetPasswordViewModel.successMessage.bind {
+            guard let successMessage = $0 else { return }
+            LoadingIndicatorView.hide()
         
+            var style = ToastStyle()
+
+            // this is just one of many style options
+            style.messageColor = .white
+            style.backgroundColor = .green
+            style.messageFont = UIFont(name:"" , size:20.0)!
+            self.view.makeToast(successMessage, duration: 3.0, position: .bottom,style:style)
+
+
+        }
         
         forgetPasswordViewModel.isEmailTextFieldHighLighted.bind { [weak self] in
             if $0 { self?.highlightTextField((self?.emailTextField)!)}
@@ -59,8 +77,17 @@ class ForgetPasswordViewController: UIViewController {
         
         
         forgetPasswordViewModel.errorMessage.bind {
+            LoadingIndicatorView.hide()
+
             guard let errorMessage = $0 else { return }
-            self.view.makeToast(errorMessage, duration: 3.0, position: .bottom)
+            
+                var style = ToastStyle()
+
+                // this is just one of many style options
+                style.messageColor = .white
+                style.backgroundColor = .red
+                style.messageFont = UIFont(name:"Cairo-Regular" , size:20.0)!
+                self.view.makeToast(errorMessage, duration: 3.0, position: .bottom,style:style)
             
         }
     }
@@ -78,6 +105,8 @@ class ForgetPasswordViewController: UIViewController {
         textField.layer.borderColor = UIColor.red.cgColor
         textField.layer.cornerRadius = 3
     }
+    
+  
     
 }
 extension ForgetPasswordViewController: UITextFieldDelegate {

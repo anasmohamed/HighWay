@@ -88,7 +88,7 @@ class LoginViewController: UIViewController {
         
         loginViewModel.errorMessage.bind {
             guard let errorMessage = $0 else { return }
-            self.view.makeToast(errorMessage, duration: 3.0, position: .bottom)
+//            AlertController.showAllert(title: "Error", message: errorMessage, allertType: .error)
 
         }
     }

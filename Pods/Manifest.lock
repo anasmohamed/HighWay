@@ -73,11 +73,13 @@ PODS:
   - nanopb/decode (2.30907.0)
   - nanopb/encode (2.30907.0)
   - PromisesObjC (1.2.12)
+  - SwiftToast (1.1.3)
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
+  - SwiftToast
   - Toast-Swift (~> 5.0.1)
 
 SPEC REPOS:
@@ -94,6 +96,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - nanopb
     - PromisesObjC
+    - SwiftToast
     - Toast-Swift
 
 SPEC CHECKSUMS:
@@ -109,8 +112,9 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  SwiftToast: 029cbeda85c04fb3fa5df774ba461b19971bc6c5
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: e97dd2bbcdf203ff97461f9eae41f96085a5888e
+PODFILE CHECKSUM: 6733d797e1e70ff9b58819e89ed0c4ce1256137b
 
 COCOAPODS: 1.10.1

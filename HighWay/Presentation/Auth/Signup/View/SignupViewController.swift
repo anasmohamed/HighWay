@@ -24,10 +24,11 @@ class SignupViewController: UIViewController {
         setupButton()
         bindData()
         setDelegates()
+        setupBackButton()
         // Do any additional setup after loading the view.
     }
    
-
+   
       
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -40,6 +41,7 @@ class SignupViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         self.removeKeyboardObserver()
     }
+    
     @IBAction func privacyPolicyBtnDidTapped(_ sender: Any) {
         
         
@@ -82,8 +84,7 @@ class SignupViewController: UIViewController {
         }
         signupViewModel.errorMessage.bind {
             guard let errorMessage = $0 else { return }
-            self.view.makeToast(errorMessage, duration: 3.0, position: .bottom)
-
+//            AlertController.showAllert(title: "Error", message: errorMessage, allertType: .error)
         }
     }
     func highlightTextField(_ textField: UITextField) {
@@ -95,7 +96,14 @@ class SignupViewController: UIViewController {
     func setupButton()  {
         createAccountBtn.layer.cornerRadius = 8
     }
-    
+    func setupBackButton() {
+        let leftBackBtn = UIButton(type: .system)
+        leftBackBtn.setImage(UIImage(named: "left-arrow"), for: .normal)
+        leftBackBtn.sizeToFit()
+        leftBackBtn.addTarget(self, action: #selector(self.navigateToMainViewController), for: .touchUpInside)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBackBtn);
+        navigationController?.navigationBar.tintColor = UIColor.init(red: 68/255, green: 68/255, blue: 68/255, alpha: 1.0)
+    }
     func signup() {
         signupViewModel.signup()
     }
@@ -105,5 +113,7 @@ class SignupViewController: UIViewController {
         userNameTextField.delegate = self
         phoneNumberTextField.delegate = self
     }
-    
+    @objc func navigateToMainViewController()  {
+        self.navigationController?.popViewController(animated: true)
+    }
 }

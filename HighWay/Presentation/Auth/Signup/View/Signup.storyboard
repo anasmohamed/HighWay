@@ -12,11 +12,11 @@
         <array key="Cairo-Bold.ttf">
             <string>Cairo-Bold</string>
         </array>
+        <array key="Cairo-Regular.ttf">
+            <string>Cairo-Regular</string>
+        </array>
         <array key="Cairo-SemiBold.ttf">
             <string>Cairo-SemiBold</string>
-        </array>
-        <array key="cairo.ttf">
-            <string>Cairo-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -81,7 +81,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSL-0q-aOf">
                                         <rect key="frame" x="10" y="298" width="354" height="50"/>
-                                        <color key="backgroundColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.26664334540000001" green="0.26667976380000002" blue="0.2666309476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="MCu-ZD-gMC"/>
                                         </constraints>
@@ -210,6 +210,7 @@
             <point key="canvasLocation" x="-366.66666666666669" y="52.989130434782609"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
