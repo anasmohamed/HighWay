@@ -8,11 +8,18 @@
 import Foundation
 import FirebaseAuth
 class LoginManager {
-    func loginWithCredentials(email:String,password:String, completionHandler: @escaping (User,Error?) -> Void) {
+    func loginWithCredentials(email:String,password:String, completionHandler: @escaping (String?,Error?) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-          guard let strongSelf = self else { return }
-            print(error)
-            print(authResult?.user.email)
+            if let error = error as? NSError {
+                completionHandler(nil,error)
+
+            } else {
+              print("User signs up successfully")
+                let newUserInfo = authResult?.user
+              let email = newUserInfo?.email
+                completionHandler(email,nil)
+
+            }
         }
 
     }

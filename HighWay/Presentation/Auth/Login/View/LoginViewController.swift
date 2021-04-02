@@ -65,6 +65,14 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func forgetPasswordBtnDidTapped(_ sender: Any) {
+      
+        let forgetPasswordStoryboard = UIStoryboard.init(name: "ForgetPassword",bundle: nil)
+        let forgetPasswordViewController = forgetPasswordStoryboard.instantiateViewController(withIdentifier: "ForgetPasswordViewController") as! ForgetPasswordViewController
+        forgetPasswordViewController.modalTransitionStyle = .crossDissolve
+        forgetPasswordViewController.modalPresentationStyle = .overCurrentContext
+        self.present(forgetPasswordViewController,animated:true,completion:nil)
+        
+        
     }
     
     func bindData() {
