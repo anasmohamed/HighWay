@@ -22,11 +22,12 @@ class LoginViewModel {
     var isEmailTextFieldHighLighted: Observable<Bool> = Observable(false)
     var isPasswordTextFieldHighLighted: Observable<Bool> = Observable(false)
     var errorMessage: Observable<String?> = Observable(nil)
-    
-//
-//    init(loginManager: LoginManager) {
-//        self.loginManager = loginManager
-//    }
+    var loginSuccess: Observable<String?> = Observable(nil)
+
+    //
+    //    init(loginManager: LoginManager) {
+    //        self.loginManager = loginManager
+    //    }
     
     //Here we update our model
     func updateCredentials(email: String, password: String, otp: String? = nil) {
@@ -37,6 +38,10 @@ class LoginViewModel {
     
     func login() {
         loginManager.loginWithCredentials(email: email, password: password) { [weak self] (user,error) in
+            guard let user = user else {
+                return
+            }
+            self?.loginSuccess.value = user
             guard let error = error else {
                 return
             }
@@ -47,14 +52,15 @@ class LoginViewModel {
     
     
     func credentialsInput() -> CredentialsInputStatus {
-//        if email.isEmpty && password.isEmpty {
-//            credentialsInputErrorMessage.value = "Please provide username and password."
-//            return .Incorrect
-//        }
+        //        if email.isEmpty && password.isEmpty {
+        //            credentialsInputErrorMessage.value = "Please provide username and password."
+        //            return .Incorrect
+        //        }
         if password.isEmpty {
             errorMessage.value = "Password shoulb be 6 digits or more"
             isPasswordTextFieldHighLighted.value = true
             return .Incorrect
+            
         }
         if email.isEmpty {
             errorMessage.value = "email field is empty."
@@ -67,7 +73,7 @@ class LoginViewModel {
             isEmailTextFieldHighLighted.value = true
             return .Incorrect
         }
-      
+        
         return .Correct
     }
     

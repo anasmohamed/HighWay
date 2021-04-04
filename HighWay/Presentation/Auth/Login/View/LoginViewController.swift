@@ -76,7 +76,11 @@ class LoginViewController: UIViewController {
     }
     
     func bindData() {
+        loginViewModel.loginSuccess.bind {
+            guard let email = $0 else { return }
+            let homeViewStoryboard = UIStoryboard.init(name: "", bundle: nil)
 
+        }
         
         loginViewModel.isEmailTextFieldHighLighted.bind { [weak self] in
             if $0 { self?.highlightTextField((self?.emailTextField)!)}
@@ -88,8 +92,13 @@ class LoginViewController: UIViewController {
         
         loginViewModel.errorMessage.bind {
             guard let errorMessage = $0 else { return }
-//            AlertController.showAllert(title: "Error", message: errorMessage, allertType: .error)
+            var style = ToastStyle()
 
+            // this is just one of many style options
+            style.messageColor = .white
+            style.backgroundColor = .red
+            style.messageFont = UIFont(name:"Cairo-Regular" , size:20.0)!
+            self.view.makeToast(errorMessage, duration: 3.0, position: .bottom,style:style)
         }
     }
     
