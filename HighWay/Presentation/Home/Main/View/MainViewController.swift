@@ -8,7 +8,8 @@
 import UIKit
 
 class MainViewController: UIViewController {
-   
+    
+    @IBOutlet weak var chatImage: UIImageView!
     @IBOutlet weak var serviceCollectionView: UICollectionView!
     var mainViewModel : MainViewModel!
     override func viewDidLoad() {
@@ -18,18 +19,14 @@ class MainViewController: UIViewController {
         serviceCollectionView.dataSource = self
         setupCollectionView()
         serviceCollectionView.reloadData()
+        setupChatImage()
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    private func setupChatImage()
+    {
+        chatImage.layer.cornerRadius = 5
     }
-    */
-
+    
 }

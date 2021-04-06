@@ -10,6 +10,8 @@ pod 'Toast-Swift', '~> 5.0.1'
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
 pod "SwiftToast"
+pod 'Cosmos', '~> 23.0'
+pod 'Firebase/Firestore'
 
 
   target 'HighWayTests' do

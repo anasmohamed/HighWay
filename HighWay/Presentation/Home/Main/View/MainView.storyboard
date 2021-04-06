@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Cairo-Regular.ttf">
+            <string>Cairo-Regular</string>
+        </array>
         <array key="Cairo-SemiBold.ttf">
             <string>Cairo-SemiBold</string>
-        </array>
-        <array key="cairo.ttf">
-            <string>Cairo-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -51,25 +51,25 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start a quick chat" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DPK-Yg-hbm">
-                                        <rect key="frame" x="8" y="44" width="268" height="34"/>
+                                        <rect key="frame" x="8" y="44" width="261" height="40"/>
                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v44-R3-tR3">
-                                        <rect key="frame" x="277" y="44" width="38" height="34"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat" translatesAutoresizingMaskIntoConstraints="NO" id="v44-R3-tR3">
+                                        <rect key="frame" x="270" y="44" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="h4C-6m-UBd"/>
-                                            <constraint firstAttribute="width" constant="38" id="haG-z3-Mir"/>
+                                            <constraint firstAttribute="height" constant="40" id="h4C-6m-UBd"/>
+                                            <constraint firstAttribute="width" constant="40" id="haG-z3-Mir"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="it can be useful.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Hl-gR-bV2">
-                                        <rect key="frame" x="8" y="86" width="101.5" height="28.5"/>
+                                        <rect key="frame" x="8" y="92" width="101.5" height="28.5"/>
                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jcn-47-04d">
-                                        <rect key="frame" x="0.0" y="124.5" width="320" height="54.5"/>
+                                        <rect key="frame" x="0.0" y="130.5" width="320" height="48.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="chi-Vh-Vhq">
                                             <size key="itemSize" width="120" height="52"/>
@@ -79,7 +79,7 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DDe-rS-HKb">
-                                                <rect key="frame" x="0.0" y="1.5" width="120" height="52"/>
+                                                <rect key="frame" x="0.0" y="-2" width="120" height="52"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7uG-ZT-dg4">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="52"/>
@@ -100,7 +100,7 @@
                                     <constraint firstItem="DPK-Yg-hbm" firstAttribute="top" secondItem="5Ei-Vu-Wjw" secondAttribute="bottom" constant="7.5" id="U0f-K9-OZh"/>
                                     <constraint firstItem="5Ei-Vu-Wjw" firstAttribute="leading" secondItem="6xF-xm-SZU" secondAttribute="leading" constant="8" id="Wsw-bZ-9tQ"/>
                                     <constraint firstItem="v44-R3-tR3" firstAttribute="centerY" secondItem="DPK-Yg-hbm" secondAttribute="centerY" id="aX9-Uj-nyB"/>
-                                    <constraint firstAttribute="trailing" secondItem="v44-R3-tR3" secondAttribute="trailing" constant="5" id="fzm-OS-RRc"/>
+                                    <constraint firstAttribute="trailing" secondItem="v44-R3-tR3" secondAttribute="trailing" constant="10" id="fzm-OS-RRc"/>
                                     <constraint firstItem="v44-R3-tR3" firstAttribute="top" secondItem="DPK-Yg-hbm" secondAttribute="top" id="gLN-3M-ti1"/>
                                     <constraint firstAttribute="bottom" secondItem="jcn-47-04d" secondAttribute="bottom" id="hNK-Tr-dBH"/>
                                     <constraint firstItem="jcn-47-04d" firstAttribute="leading" secondItem="6xF-xm-SZU" secondAttribute="leading" id="lHf-pe-tMH"/>
@@ -129,12 +129,23 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="6Nc-6z-Adw"/>
                     <connections>
+                        <outlet property="chatImage" destination="v44-R3-tR3" id="ieq-P8-Jc3"/>
                         <outlet property="serviceCollectionView" destination="jcn-47-04d" id="stI-tB-efn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmf-HH-M6h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1246.875" y="-28.52112676056338"/>
+        </scene>
+        <!--ProfileView-->
+        <scene sceneID="hfU-BS-YUb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProfileView" id="7jy-0B-tAb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Cgj-JJ-HTV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TIg-a1-1hv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1295" y="487"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hVr-ZQ-8B3">
@@ -148,6 +159,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="dwZ-rG-zV5" kind="relationship" relationship="viewControllers" id="xRz-PV-5tm"/>
+                        <segue destination="7jy-0B-tAb" kind="relationship" relationship="viewControllers" id="g2P-C8-T8e"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RFc-nb-N3C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -157,6 +169,7 @@
     </scenes>
     <resources>
         <image name="City driver-pana" width="2000" height="2000"/>
+        <image name="chat" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
