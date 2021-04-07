@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cMc-m2-xoN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Orders Histroy View Controller-->
+        <scene sceneID="Os5-2B-ejY">
+            <objects>
+                <viewController id="ycg-U3-bgS" customClass="OrdersHistroyViewController" customModule="HighWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vmK-m2-dBY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Eh2-1h-F07">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="53B-j5-2qS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Eh2-1h-F07" firstAttribute="leading" secondItem="53B-j5-2qS" secondAttribute="leading" id="J0j-aS-Zjc"/>
+                            <constraint firstItem="53B-j5-2qS" firstAttribute="trailing" secondItem="Eh2-1h-F07" secondAttribute="trailing" id="P1T-El-owV"/>
+                            <constraint firstItem="Eh2-1h-F07" firstAttribute="top" secondItem="53B-j5-2qS" secondAttribute="top" id="dYQ-6s-7U3"/>
+                            <constraint firstItem="53B-j5-2qS" firstAttribute="bottom" secondItem="Eh2-1h-F07" secondAttribute="bottom" id="mdJ-eC-ILF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jlL-m7-WHL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FPm-uJ-e1w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1376.8115942028987" y="39.508928571428569"/>
+        </scene>
+        <!--Orders-->
+        <scene sceneID="lo6-cl-PE5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cMc-m2-xoN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Orders" image="google-docs" id="knE-ll-Y5l"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l3v-AU-Acz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ycg-U3-bgS" kind="relationship" relationship="rootViewController" id="Egu-49-FRI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vhs-zT-Dcv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="466.66666666666669" y="39.508928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="google-docs" width="16" height="16"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
