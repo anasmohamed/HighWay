@@ -22,6 +22,7 @@ class ProfileViewController: UIViewController {
         profileManuTableView.delegate = self
         profileManuTableView.dataSource = self
         setupTableView()
+        setupEmailLbl()
         profileImageAndEmailView.layer.cornerRadius = 6
         profileManuTableView.layer.cornerRadius = 6
         // Do any additional setup after loading the view.
@@ -30,7 +31,13 @@ class ProfileViewController: UIViewController {
     func setupTableView()  {
         profileManuTableView.register(UINib(nibName: "ProfileMenuTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileMenuTableViewCell")
     }
-    
+    func setupEmailLbl()
+    {
+        let email = UserDefaults.standard.string(forKey:"email")
+        
+        emailLbl.text = email
+        
+    }
     
     
 }
@@ -43,7 +50,7 @@ extension ProfileViewController :UITableViewDelegate,UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileMenuTableViewCell", for: indexPath)
             as! ProfileMenuTableViewCell
         if indexPath.row != 6{
-        cell.accessoryType = .disclosureIndicator
+            cell.accessoryType = .disclosureIndicator
         }
         cell.item = profileViewModel.profileManuListViewModel.profileManuViewModels[indexPath.row]
         return cell
@@ -63,7 +70,7 @@ extension ProfileViewController :UITableViewDelegate,UITableViewDataSource{
         case 1:
             let ratingsStoryboard = UIStoryboard.init(name: "Ratings", bundle: nil)
             let ratingsViewController = ratingsStoryboard.instantiateViewController(withIdentifier: "RatingsViewController") as! RatingsViewController
-           
+            
             self.navigationController?.pushViewController(ratingsViewController, animated: true)
         case 2:
             let resetPasswordStoryboard = UIStoryboard.init(name: "ResetPassword", bundle: nil)
@@ -72,7 +79,7 @@ extension ProfileViewController :UITableViewDelegate,UITableViewDataSource{
             resetPasswordViewController.modalPresentationStyle = .overCurrentContext
             self.present(resetPasswordViewController, animated: true, completion: nil)
         default:
-        break
+            break
         }
     }
 }

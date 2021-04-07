@@ -78,7 +78,12 @@ class LoginViewController: UIViewController {
     func bindData() {
         loginViewModel.loginSuccess.bind {
             guard let email = $0 else { return }
-            let homeViewStoryboard = UIStoryboard.init(name: "", bundle: nil)
+            let homeViewStoryboard = UIStoryboard.init(name: "MainView", bundle: nil)
+            let homeViewController = homeViewStoryboard.instantiateViewController(withIdentifier: "HomeTabBar")
+            
+            self.present(homeViewController, animated: true, completion: nil)
+            UserDefaults.standard.set(email, forKey: "email")
+
 
         }
         

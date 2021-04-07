@@ -16,7 +16,7 @@ class LoginManager {
             } else {
               print("User signs up successfully")
                 let newUserInfo = authResult?.user
-              let email = newUserInfo?.email
+                let email = newUserInfo?.email
                 completionHandler(email,nil)
 
             }
