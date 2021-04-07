@@ -137,6 +137,16 @@
             </objects>
             <point key="canvasLocation" x="1246.875" y="-28.52112676056338"/>
         </scene>
+        <!--OrdersHistory-->
+        <scene sceneID="YfR-6m-mgw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="OrdersHistory" id="GcS-z2-aXz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Orders" image="google-docs" id="ynz-2I-1SW"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Myr-C3-LuX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-983" y="448"/>
+        </scene>
         <!--ProfileNavigationControlller-->
         <scene sceneID="hfU-BS-YUb">
             <objects>
@@ -159,6 +169,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="dwZ-rG-zV5" kind="relationship" relationship="viewControllers" id="xRz-PV-5tm"/>
+                        <segue destination="GcS-z2-aXz" kind="relationship" relationship="viewControllers" id="ZjB-w8-RGV"/>
                         <segue destination="7jy-0B-tAb" kind="relationship" relationship="viewControllers" id="g2P-C8-T8e"/>
                     </connections>
                 </tabBarController>
@@ -170,6 +181,7 @@
     <resources>
         <image name="City driver-pana" width="2000" height="2000"/>
         <image name="chat" width="128" height="128"/>
+        <image name="google-docs" width="16" height="16"/>
         <image name="home" width="16" height="16"/>
         <image name="man" width="16" height="16"/>
         <systemColor name="systemBackgroundColor">

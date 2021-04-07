@@ -8,7 +8,7 @@
 import Foundation
 struct Order {
     var orderType = ""
-    var orderDataTime = ""
+    var orderDataTime : Date!
     var orderId = ""
     var orderStatus = ""
 }
