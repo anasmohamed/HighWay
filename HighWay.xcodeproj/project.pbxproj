@@ -35,6 +35,11 @@
 		327D062C261BDA7F00A74D9A /* RatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D062B261BDA7F00A74D9A /* RatingViewModel.swift */; };
 		327D0634261BDA9D00A74D9A /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D0633261BDA9D00A74D9A /* Rating.swift */; };
 		327D063A261BE47C00A74D9A /* RatingFirbaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D0639261BE47C00A74D9A /* RatingFirbaseManager.swift */; };
+		3287B5CC261D2B06004E6971 /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3287B5CB261D2B06004E6971 /* ResetPassword.storyboard */; };
+		3287B5D1261D2F06004E6971 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3287B5D0261D2F06004E6971 /* ResetPasswordViewController.swift */; };
+		3287B5D6261D30C3004E6971 /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3287B5D5261D30C3004E6971 /* ResetPasswordViewModel.swift */; };
+		3287B5DB261D30FF004E6971 /* ResetPasswordFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3287B5DA261D30FF004E6971 /* ResetPasswordFirebaseManager.swift */; };
+		3287B5ED261D3690004E6971 /* ResetPassword + TextFieldDelegetes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3287B5EC261D3690004E6971 /* ResetPassword + TextFieldDelegetes.swift */; };
 		32D6A8C526174D7600661F6E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D9B162614B46600C6F823 /* LoginViewController.swift */; };
 		32D6A8EA2617629D00661F6E /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D6A8E92617629D00661F6E /* AlertController.swift */; };
 		32D6A9042617651300661F6E /* ForgetPassowordProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D6A9032617651300661F6E /* ForgetPassowordProtocol.swift */; };
@@ -130,6 +135,11 @@
 		327D062B261BDA7F00A74D9A /* RatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewModel.swift; sourceTree = "<group>"; };
 		327D0633261BDA9D00A74D9A /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		327D0639261BE47C00A74D9A /* RatingFirbaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingFirbaseManager.swift; sourceTree = "<group>"; };
+		3287B5CB261D2B06004E6971 /* ResetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
+		3287B5D0261D2F06004E6971 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		3287B5D5261D30C3004E6971 /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
+		3287B5DA261D30FF004E6971 /* ResetPasswordFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordFirebaseManager.swift; sourceTree = "<group>"; };
+		3287B5EC261D3690004E6971 /* ResetPassword + TextFieldDelegetes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResetPassword + TextFieldDelegetes.swift"; sourceTree = "<group>"; };
 		32D6A8E92617629D00661F6E /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		32D6A9032617651300661F6E /* ForgetPassowordProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassowordProtocol.swift; sourceTree = "<group>"; };
 		32D6A9E42617789700661F6E /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
@@ -376,6 +386,8 @@
 		3265514926188A0100A88C38 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3287B5F4261D402F004E6971 /* OrderHistory */,
+				3287B5C7261D29AC004E6971 /* ResetPassword */,
 				32EC9F2A261B604A0071C625 /* Ratings */,
 				32EC9F20261B5DB30071C625 /* Language */,
 				3272707526194C9E00E947B2 /* Profile */,
@@ -453,6 +465,81 @@
 				327D0639261BE47C00A74D9A /* RatingFirbaseManager.swift */,
 			);
 			path = RatingFirebaseManager;
+			sourceTree = "<group>";
+		};
+		3287B5C7261D29AC004E6971 /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				3287B5CA261D29D5004E6971 /* ResetPassowrdFirebaseManager */,
+				3287B5C9261D29C5004E6971 /* ViewModel */,
+				3287B5C8261D29BB004E6971 /* View */,
+			);
+			path = ResetPassword;
+			sourceTree = "<group>";
+		};
+		3287B5C8261D29BB004E6971 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3287B5EB261D3655004E6971 /* Extension */,
+				3287B5CB261D2B06004E6971 /* ResetPassword.storyboard */,
+				3287B5D0261D2F06004E6971 /* ResetPasswordViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3287B5C9261D29C5004E6971 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3287B5D5261D30C3004E6971 /* ResetPasswordViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3287B5CA261D29D5004E6971 /* ResetPassowrdFirebaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				3287B5DA261D30FF004E6971 /* ResetPasswordFirebaseManager.swift */,
+			);
+			path = ResetPassowrdFirebaseManager;
+			sourceTree = "<group>";
+		};
+		3287B5EB261D3655004E6971 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3287B5EC261D3690004E6971 /* ResetPassword + TextFieldDelegetes.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		3287B5F4261D402F004E6971 /* OrderHistory */ = {
+			isa = PBXGroup;
+			children = (
+				3287B5F7261D4054004E6971 /* FirebaseManager */,
+				3287B5F6261D4044004E6971 /* ViewModel */,
+				3287B5F5261D403D004E6971 /* View */,
+			);
+			path = OrderHistory;
+			sourceTree = "<group>";
+		};
+		3287B5F5261D403D004E6971 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3287B5F6261D4044004E6971 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3287B5F7261D4054004E6971 /* FirebaseManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FirebaseManager;
 			sourceTree = "<group>";
 		};
 		32EC9F20261B5DB30071C625 /* Language */ = {
@@ -745,6 +832,7 @@
 				323DBFFA26169882006E3380 /* ForgetPassword.storyboard in Resources */,
 				32F1E6072615358000C12C84 /* Cairo-ExtraLight.ttf in Resources */,
 				32F4B658261A84DE00D7D7E7 /* ProfileMenuTableViewCell.xib in Resources */,
+				3287B5CC261D2B06004E6971 /* ResetPassword.storyboard in Resources */,
 				322D9AE02614B14100C6F823 /* LaunchScreen.storyboard in Resources */,
 				32F1E6052615358000C12C84 /* Cairo-SemiBold.ttf in Resources */,
 				3265515D26189D9500A88C38 /* ServiceCollectionViewCell.xib in Resources */,
@@ -899,6 +987,8 @@
 				32D6A8EA2617629D00661F6E /* AlertController.swift in Sources */,
 				32EC9F32261B62270071C625 /* RatingsViewController.swift in Sources */,
 				32F4B647261A7E2C00D7D7E7 /* ProfileViewController.swift in Sources */,
+				3287B5DB261D30FF004E6971 /* ResetPasswordFirebaseManager.swift in Sources */,
+				3287B5ED261D3690004E6971 /* ResetPassword + TextFieldDelegetes.swift in Sources */,
 				322D9AD82614B14000C6F823 /* ViewController.swift in Sources */,
 				327D0634261BDA9D00A74D9A /* Rating.swift in Sources */,
 				322D9AD42614B14000C6F823 /* AppDelegate.swift in Sources */,
@@ -915,11 +1005,13 @@
 				32E712822616032200FF0F8F /* UIResponder + KeyboardExtension.swift in Sources */,
 				32FA06DC26150A0F00912153 /* LoginViewModel.swift in Sources */,
 				32FA06F32615176E00912153 /* LoginVIewController + TextFiledDelegate.swift in Sources */,
+				3287B5D1261D2F06004E6971 /* ResetPasswordViewController.swift in Sources */,
 				32E712152615E35600FF0F8F /* SignupViewModel.swift in Sources */,
 				32D6AA642617866600661F6E /* LoadingIndicatorView.swift in Sources */,
 				323DC0042616992D006E3380 /* ForgetPasswordViewModel.swift in Sources */,
 				3224405326164A52008A876B /* EmailValidation.swift in Sources */,
 				32F1E61A26153F0F00C12C84 /* Checkbox.swift in Sources */,
+				3287B5D6261D30C3004E6971 /* ResetPasswordViewModel.swift in Sources */,
 				32FA06CF2615065F00912153 /* ShadowForUIVIew.swift in Sources */,
 				323DC00A26169A72006E3380 /* ForgetPasswordFirebaseManager.swift in Sources */,
 				3265515226188D2C00A88C38 /* MainViewController.swift in Sources */,

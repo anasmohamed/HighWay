@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="cairo.ttf">
+        <array key="Cairo-Regular.ttf">
             <string>Cairo-Regular</string>
         </array>
     </customFonts>
@@ -17,7 +17,7 @@
         <!--Profile View Controller-->
         <scene sceneID="p7f-2N-Gwb">
             <objects>
-                <viewController id="Wer-NU-gKS" customClass="ProfileViewController" customModule="HighWay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="Wer-NU-gKS" customClass="ProfileViewController" customModule="HighWay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S1r-0F-7T3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,7 +75,9 @@
                             <constraint firstItem="aLm-FU-Ryd" firstAttribute="leading" secondItem="raB-od-khL" secondAttribute="leading" constant="20" id="zmW-Ph-lnx"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="JiF-o0-ACi"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="emailLbl" destination="mse-gE-3zY" id="tl7-4W-hqT"/>
                         <outlet property="profileImageAndEmailView" destination="aLm-FU-Ryd" id="uHw-gC-uXs"/>
@@ -87,11 +89,13 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="49.553571428571423"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Profile-->
         <scene sceneID="bjz-bT-wHM">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7H0-mg-Bp0" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ProfileNavigationControlller" automaticallyAdjustsScrollViewInsets="NO" id="7H0-mg-Bp0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="man" id="sIC-70-80Y"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NQ7-IH-RRP">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -107,6 +111,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="man" width="16" height="16"/>
         <image name="user" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

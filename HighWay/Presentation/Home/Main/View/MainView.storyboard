@@ -18,7 +18,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="UmG-GL-acn">
             <objects>
                 <viewController storyboardIdentifier="MainViewController" id="dwZ-rG-zV5" customClass="MainViewController" customModule="HighWay" customModuleProvider="target" sceneMemberID="viewController">
@@ -127,7 +127,7 @@
                             <constraint firstItem="VvN-aP-UzA" firstAttribute="leading" secondItem="0hb-V4-vaT" secondAttribute="leading" id="uu8-ym-CdB"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="6Nc-6z-Adw"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="6Nc-6z-Adw"/>
                     <connections>
                         <outlet property="chatImage" destination="v44-R3-tR3" id="ieq-P8-Jc3"/>
                         <outlet property="serviceCollectionView" destination="jcn-47-04d" id="stI-tB-efn"/>
@@ -137,11 +137,11 @@
             </objects>
             <point key="canvasLocation" x="1246.875" y="-28.52112676056338"/>
         </scene>
-        <!--ProfileView-->
+        <!--ProfileNavigationControlller-->
         <scene sceneID="hfU-BS-YUb">
             <objects>
-                <viewControllerPlaceholder storyboardName="ProfileView" id="7jy-0B-tAb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Cgj-JJ-HTV"/>
+                <viewControllerPlaceholder storyboardName="ProfileView" referencedIdentifier="ProfileNavigationControlller" id="7jy-0B-tAb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profle" image="man" id="Cgj-JJ-HTV"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TIg-a1-1hv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -170,6 +170,8 @@
     <resources>
         <image name="City driver-pana" width="2000" height="2000"/>
         <image name="chat" width="128" height="128"/>
+        <image name="home" width="16" height="16"/>
+        <image name="man" width="16" height="16"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

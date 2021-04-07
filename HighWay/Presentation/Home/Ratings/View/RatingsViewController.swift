@@ -17,6 +17,8 @@ class RatingsViewController: UIViewController,UITableViewDelegate,UITableViewDat
         ratingTableView.dataSource = self
         setupTableView()
         bindData()
+        fetchData()
+        ratingTableView.backgroundColor = UIColor.init(red:234.0/255.0 , green: 234.0/255.0, blue: 234.0/255.0, alpha: 1.0)
         // Do any additional setup after loading the view.
     }
     func setupTableView() {
@@ -42,7 +44,9 @@ class RatingsViewController: UIViewController,UITableViewDelegate,UITableViewDat
         return cell
         
     }
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 70
+    }
     
     
     

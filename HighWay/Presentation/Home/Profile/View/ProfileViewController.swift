@@ -65,6 +65,12 @@ extension ProfileViewController :UITableViewDelegate,UITableViewDataSource{
             let ratingsViewController = ratingsStoryboard.instantiateViewController(withIdentifier: "RatingsViewController") as! RatingsViewController
            
             self.navigationController?.pushViewController(ratingsViewController, animated: true)
+        case 2:
+            let resetPasswordStoryboard = UIStoryboard.init(name: "ResetPassword", bundle: nil)
+            let resetPasswordViewController = resetPasswordStoryboard.instantiateViewController(withIdentifier: "ResetPasswordViewController") as! ResetPasswordViewController
+            resetPasswordViewController.modalTransitionStyle = .crossDissolve
+            resetPasswordViewController.modalPresentationStyle = .overCurrentContext
+            self.present(resetPasswordViewController, animated: true, completion: nil)
         default:
         break
         }
