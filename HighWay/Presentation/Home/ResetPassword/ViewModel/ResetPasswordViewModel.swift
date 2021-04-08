@@ -12,6 +12,7 @@ class ResetPasswordViewModel {
     private var oldPassword = ""
     private var newPassword = ""
     private var confirmPassword = ""
+    private var email = ""
 
     
     var isOldPasswordTextFieldHighLighted: Observable<Bool> = Observable(false)
@@ -26,15 +27,16 @@ class ResetPasswordViewModel {
 //    }
 //
     //Here we update our model
-    func updatePassword(oldPassword: String,newPassword:String,confirmPassword:String) {
+    func updatePassword(oldPassword: String,newPassword:String,confirmPassword:String,email:String) {
         self.oldPassword = oldPassword
         self.newPassword = newPassword
         self.confirmPassword = confirmPassword
+        self.email = email
     }
     
     
     func changePassword() {
-        resetPasswordFirebaseManager.changePassword(password: newPassword) { [weak self] (message,error) in
+        resetPasswordFirebaseManager.changePassword(email: email,password: newPassword) { [weak self] (message,error) in
             if error != nil{
                 self?.errorMessage.value = error?.localizedDescription
 

@@ -38,13 +38,12 @@ class LoginViewModel {
     
     func login() {
         loginManager.loginWithCredentials(email: email, password: password) { [weak self] (user,error) in
-            guard let user = user else {
-                return
-            }
-            self?.loginSuccess.value = user
             guard let error = error else {
+                self?.loginSuccess.value = user
+
                 return
             }
+            
             
             self?.errorMessage.value = error.localizedDescription
         }

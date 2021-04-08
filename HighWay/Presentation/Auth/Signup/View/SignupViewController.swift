@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Toast_Swift
 class SignupViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
@@ -57,6 +57,8 @@ class SignupViewController: UIViewController {
         switch signupViewModel.credentialsInput() {
         
         case .Correct:
+            LoadingIndicatorView.show()
+
             signup()
         case .Incorrect:
             return
@@ -65,10 +67,19 @@ class SignupViewController: UIViewController {
         
     }
     func bindData() {
-//        loginViewModel.credentialsInputErrorMessage.bind { [weak self] in
-//
-//        }
-        
+
+        signupViewModel.signupSuccess.bind {
+            LoadingIndicatorView.hide()
+
+            guard let email = $0 else { return }
+            let homeViewStoryboard = UIStoryboard.init(name: "MainView", bundle: nil)
+            let homeViewController = homeViewStoryboard.instantiateViewController(withIdentifier: "HomeTabBar")
+            homeViewController.modalPresentationStyle = .fullScreen
+            self.present(homeViewController, animated: true, completion: nil)
+            UserDefaults.standard.set(email, forKey: "email")
+
+
+        }
         signupViewModel.isEmailTextFieldHighLighted.bind { [weak self] in
             if $0 { self?.highlightTextField((self?.emailTextField)!)}
         }
@@ -83,7 +94,16 @@ class SignupViewController: UIViewController {
             if $0 { self?.highlightTextField((self?.phoneNumberTextField)!)}
         }
         signupViewModel.errorMessage.bind {
+            LoadingIndicatorView.hide()
+
             guard let errorMessage = $0 else { return }
+            var style = ToastStyle()
+
+            // this is just one of many style options
+            style.messageColor = .white
+            style.backgroundColor = .red
+            style.messageFont = UIFont(name:"Cairo-Regular" , size:20.0)!
+            self.view.makeToast(errorMessage, duration: 3.0, position: .bottom,style:style)
 //            AlertController.showAllert(title: "Error", message: errorMessage, allertType: .error)
         }
     }

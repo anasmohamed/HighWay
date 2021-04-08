@@ -62,7 +62,7 @@
                                             <constraint firstAttribute="height" constant="50" id="D1H-hE-M8v"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
                                         </userDefinedRuntimeAttributes>
@@ -74,7 +74,7 @@
                                             <constraint firstAttribute="height" constant="50" id="cCl-Fo-CAU"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
                                         </userDefinedRuntimeAttributes>
@@ -120,7 +120,7 @@
                                             <constraint firstAttribute="height" constant="50" id="vh7-2H-GZo"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Cairo-SemiBold" family="Cairo" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
                                         </userDefinedRuntimeAttributes>

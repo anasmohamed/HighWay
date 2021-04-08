@@ -29,7 +29,8 @@ class SignupViewModel {
     var isPhoneNumberTextFieldHighLighted: Observable<Bool> = Observable(false)
     var isPrivacyPolicyCheckboxChecked: Observable<Bool> = Observable(false)
     var errorMessage: Observable<String?> = Observable(nil)
-    
+    var signupSuccess: Observable<String?> = Observable(nil)
+
     //    init() {
     //
     //    }
@@ -42,7 +43,7 @@ class SignupViewModel {
         user.userName = username
         user.password = password
         user.email = email
-        user.phoneNumber = phoneNumber
+        user.phoneNumber = "+973\(phoneNumber)"
         privacyPolicyCheckbox = isPrivacyPolicyChecked
     }
     
@@ -50,8 +51,11 @@ class SignupViewModel {
     func signup() {
         signupManager.signupWithEmailAndPassword(email: email, password: password) { [weak self] (user,error) in
             guard let error = error else {
+                self?.signupSuccess.value = user
+
                 return
             }
+            
             print(error)
             print(user)
             self?.errorMessage.value = error.localizedDescription

@@ -78,8 +78,26 @@ extension ProfileViewController :UITableViewDelegate,UITableViewDataSource{
             resetPasswordViewController.modalTransitionStyle = .crossDissolve
             resetPasswordViewController.modalPresentationStyle = .overCurrentContext
             self.present(resetPasswordViewController, animated: true, completion: nil)
+        case 6:
+            logout()
         default:
             break
         }
+    }
+    func logout()  {
+        // create the alert
+        let alert = UIAlertController(title: "", message: "Did you want to logout?", preferredStyle: UIAlertController.Style.alert)
+        
+        // add the actions (buttons)
+        alert.addAction(UIAlertAction(title: "Confirm", style: UIAlertAction.Style.default, handler:{_ in
+            UserDefaults.standard.removeObject(forKey: "email")
+            let loginStoryboard = UIStoryboard.init(name: "LoginView", bundle: nil)
+            let loginViewController = loginStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            self.navigationController!.pushViewController(loginViewController, animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
 }

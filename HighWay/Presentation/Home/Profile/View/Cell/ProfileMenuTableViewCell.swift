@@ -22,6 +22,7 @@ class ProfileMenuTableViewCell: UITableViewCell {
             {
                 menuItemNameLeadingConstrain.constant = 8
                 logoutImage.image = UIImage(named:("power-button"))
+                menuItemName.textColor = UIColor.red
             }
             self.menuItemImage.image = UIImage(named:(item?.image)!)
         }

@@ -16,13 +16,15 @@ class ResetPasswordViewController: UIViewController {
     @IBOutlet weak var oldPasswordTextFiled: UITextField!
     
     let resetPasswordViewModel = ResetPasswordViewModel()
-    
+    var email = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         bindData()
         setDelegates()
         setupButton()
         setupContainerView()
+        email = UserDefaults.standard.string(forKey:"email")!
+
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -37,7 +39,7 @@ class ResetPasswordViewController: UIViewController {
     }
     
     @IBAction func saveNewPasswordBtnDidTapped(_ sender: Any) {
-        resetPasswordViewModel.updatePassword(oldPassword: oldPasswordTextFiled.text!, newPassword: newPasswordTextField.text!,confirmPassword: confirmPasswordTextField.text!)
+        resetPasswordViewModel.updatePassword(oldPassword: oldPasswordTextFiled.text!, newPassword: newPasswordTextField.text!,confirmPassword: confirmPasswordTextField.text!,email: email)
         
         //Here we check user's credentials input - if it's correct we call login()
         switch resetPasswordViewModel.credentialsInput() {

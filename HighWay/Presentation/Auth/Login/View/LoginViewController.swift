@@ -24,10 +24,14 @@ class LoginViewController: UIViewController {
         setupButton()
         bindData()
         setDelegates()
+        self.tabBarController?.tabBar.isHidden = true
+        self.navigationItem.setHidesBackButton(true, animated: true)
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         createAccountStackView.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
     }
+   
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         containerView.cornerRadiusAndShodow()
@@ -80,7 +84,8 @@ class LoginViewController: UIViewController {
             guard let email = $0 else { return }
             let homeViewStoryboard = UIStoryboard.init(name: "MainView", bundle: nil)
             let homeViewController = homeViewStoryboard.instantiateViewController(withIdentifier: "HomeTabBar")
-            
+            homeViewController.modalPresentationStyle = .fullScreen
+
             self.present(homeViewController, animated: true, completion: nil)
             UserDefaults.standard.set(email, forKey: "email")
 

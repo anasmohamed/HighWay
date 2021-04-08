@@ -28,13 +28,12 @@ class ForgetPasswordViewModel {
     
     func sendEmailToResetPassword() {
         forgetPasswordManager.sendEmailToResetPassword(email: email) { [weak self] (message,error) in
-            guard let message = message else {
-                return
-            }
-            self?.successMessage.value = message
             guard let error = error else {
+                self?.successMessage.value = message
+
                 return
             }
+            
             
             self?.errorMessage.value = error.localizedDescription
 
