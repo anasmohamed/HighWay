@@ -20,9 +20,12 @@ class OrderHistoryFirebaseManager {
                 } else {
                     for document in querySnapshot!.documents {
                         print("\(document.documentID) => \(document.data())")
+                        
                         if document.data()["user_id"] as! String == UserDefaults.standard.string(forKey: "token")!{
+                            let towingOrder = document.data()["towingOrder"] as? [String:Any]
+
                         let timestamp: Timestamp = document.data()["timestamp"] as! Timestamp
-                        let order = Order(orderType: document.data()["type"] as! String, orderDataTime: timestamp.dateValue(), orderId: document.data()["id"] as! String, orderStatus: String(document.data()["status"] as! Int))
+                            let order = Order(orderType: document.data()["type"] as! String, orderDataTime: timestamp.dateValue(), orderId: document.data()["id"] as! String, orderStatus: String(document.data()["status"] as! Int),startLat:document.data()["startLat"] as! Double, startLong: document.data()["startLng"] as! Double,endLat: towingOrder?["endLat"] as? Double ?? 0.0 ,endLong: towingOrder?["endLng"] as? Double ?? 0.0)
                             orders.append(order)}
                     }
                     completion(true, orders)

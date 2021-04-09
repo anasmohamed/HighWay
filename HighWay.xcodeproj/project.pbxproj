@@ -25,6 +25,7 @@
 		323DBFFA26169882006E3380 /* ForgetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 323DBFF926169882006E3380 /* ForgetPassword.storyboard */; };
 		323DC0042616992D006E3380 /* ForgetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323DC0032616992D006E3380 /* ForgetPasswordViewModel.swift */; };
 		323DC00A26169A72006E3380 /* ForgetPasswordFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323DC00926169A72006E3380 /* ForgetPasswordFirebaseManager.swift */; };
+		324B17712620D8EB00062A74 /* OrderDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 324B17702620D8EB00062A74 /* OrderDetails.storyboard */; };
 		3263077D2614D15A00D72306 /* cairo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3263077C2614D15A00D72306 /* cairo.ttf */; };
 		3265514D26188B7A00A88C38 /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3265514C26188B7A00A88C38 /* MainView.storyboard */; };
 		3265515226188D2C00A88C38 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3265515126188D2C00A88C38 /* MainViewController.swift */; };
@@ -134,6 +135,7 @@
 		323DBFF926169882006E3380 /* ForgetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgetPassword.storyboard; sourceTree = "<group>"; };
 		323DC0032616992D006E3380 /* ForgetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewModel.swift; sourceTree = "<group>"; };
 		323DC00926169A72006E3380 /* ForgetPasswordFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordFirebaseManager.swift; sourceTree = "<group>"; };
+		324B17702620D8EB00062A74 /* OrderDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderDetails.storyboard; sourceTree = "<group>"; };
 		3263077C2614D15A00D72306 /* cairo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = cairo.ttf; sourceTree = "<group>"; };
 		3265514C26188B7A00A88C38 /* MainView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
 		3265515126188D2C00A88C38 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -405,6 +407,22 @@
 			path = ForgetPasswordFirebaseManger;
 			sourceTree = "<group>";
 		};
+		324B176E2620D89500062A74 /* OrderDetails */ = {
+			isa = PBXGroup;
+			children = (
+				324B176F2620D8A200062A74 /* View */,
+			);
+			path = OrderDetails;
+			sourceTree = "<group>";
+		};
+		324B176F2620D8A200062A74 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				324B17702620D8EB00062A74 /* OrderDetails.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3263077B2614D06B00D72306 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +440,7 @@
 		3265514926188A0100A88C38 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				324B176E2620D89500062A74 /* OrderDetails */,
 				3218B61F261F5842000706DC /* MapView */,
 				3287B5F4261D402F004E6971 /* OrderHistory */,
 				3287B5C7261D29AC004E6971 /* ResetPassword */,
@@ -886,6 +905,7 @@
 				32F1E6072615358000C12C84 /* Cairo-ExtraLight.ttf in Resources */,
 				3218B627261F58F8000706DC /* OrderHistoryMapView.storyboard in Resources */,
 				32F4B658261A84DE00D7D7E7 /* ProfileMenuTableViewCell.xib in Resources */,
+				324B17712620D8EB00062A74 /* OrderDetails.storyboard in Resources */,
 				3287B5CC261D2B06004E6971 /* ResetPassword.storyboard in Resources */,
 				322D9AE02614B14100C6F823 /* LaunchScreen.storyboard in Resources */,
 				32F1E6052615358000C12C84 /* Cairo-SemiBold.ttf in Resources */,

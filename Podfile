@@ -12,7 +12,8 @@ pod 'Firebase/Auth'
 pod "SwiftToast"
 pod 'Cosmos', '~> 23.0'
 pod 'Firebase/Firestore'
-
+pod 'GoogleMaps', '4.2.0'
+pod 'GooglePlaces', '4.2.0'
 
   target 'HighWayTests' do
     inherit! :search_paths

@@ -11,4 +11,8 @@ struct Order {
     var orderDataTime : Date!
     var orderId = ""
     var orderStatus = ""
+    var startLat = 0.0
+    var startLong = 0.0
+    var endLat = 0.0
+    var endLong = 0.0
 }

@@ -3,6 +3,23 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "OrderHistoryMapViewController.viewWillAppear(_:):OrderHistoryMapViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "order.endLat">
+            </PersistentString>
+            <PersistentString
+               value = "order.endLong">
+            </PersistentString>
+            <PersistentString
+               value = "order.startLat">
+            </PersistentString>
+            <PersistentString
+               value = "order.startLong">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in OrderHistoryFirebaseManager.getOrders(completion:):OrdersHistoryFirebaseManager.swift">
          <PersistentStrings>
             <PersistentString

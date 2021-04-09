@@ -10,11 +10,12 @@ import UIKit
 class OrdersHistroyViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     
     
-
+    
     @IBOutlet weak var ordersHistoryTableView: UITableView!
     
     
     let orderHistoryViewModel = OrdersHistoryViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ordersHistoryTableView.delegate = self
@@ -26,6 +27,7 @@ class OrdersHistroyViewController: UIViewController ,UITableViewDelegate,UITable
     }
     func bindData() {
         orderHistoryViewModel.reloadTableView.bind {_ in
+            
             self.ordersHistoryTableView.reloadData()
         }}
     func fetchData() {
@@ -39,7 +41,9 @@ class OrdersHistroyViewController: UIViewController ,UITableViewDelegate,UITable
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return orderHistoryViewModel.numberOfItems
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigateToOrderDetails(order: orderHistoryViewModel.getData(index: indexPath.row))
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OrdersHistoryTableViewCell", for: indexPath) as! OrdersHistoryTableViewCell
         cell.item = orderHistoryViewModel.getData(index: indexPath.row)
@@ -48,5 +52,14 @@ class OrdersHistroyViewController: UIViewController ,UITableViewDelegate,UITable
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
-
+    func navigateToOrderDetails(order: Order)
+    {
+        let orderHistoryMapViewStroyboard = UIStoryboard.init(name: "OrderHistoryMapView", bundle: nil)
+        let orderHistoryMapViewController = orderHistoryMapViewStroyboard.instantiateViewController(withIdentifier: "OrderHistoryMapViewController")
+        as! OrderHistoryMapViewController
+        orderHistoryMapViewController.order = order
+        orderHistoryMapViewController.modalPresentationStyle = .fullScreen
+        self.present(orderHistoryMapViewController, animated: true, completion: nil)
+        
+    }
 }
