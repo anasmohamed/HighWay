@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class ProfileViewController: UIViewController {
     
     @IBOutlet weak var emailLbl: UILabel!
@@ -94,6 +94,13 @@ extension ProfileViewController :UITableViewDelegate,UITableViewDataSource{
             let loginStoryboard = UIStoryboard.init(name: "LoginView", bundle: nil)
             let loginViewController = loginStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
             self.navigationController!.pushViewController(loginViewController, animated: true)
+            UserDefaults.standard.removeObject(forKey: "token")
+            UserDefaults.standard.removeObject(forKey: "email")
+
+            do { try Auth.auth().signOut() }
+            catch { print("already logged out")
+                
+            }
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
         

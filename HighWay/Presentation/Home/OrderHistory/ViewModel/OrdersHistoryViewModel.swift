@@ -11,6 +11,10 @@ class OrdersHistoryViewModel {
     private var orders: [Order] = [Order]()
     {
         didSet{
+            orders.sort{(e1,e2)in
+                e1.orderDataTime > e2.orderDataTime
+                
+            }
             reloadTableView.value = orders
         }
     }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3218B622261F5885000706DC /* OrderHistoryMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3218B621261F5885000706DC /* OrderHistoryMapViewController.swift */; };
+		3218B627261F58F8000706DC /* OrderHistoryMapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3218B626261F58F8000706DC /* OrderHistoryMapView.storyboard */; };
 		3224404B2616285E008A876B /* SignupViewController + TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3224404A2616285E008A876B /* SignupViewController + TextFieldDelegate.swift */; };
 		3224405326164A52008A876B /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3224405226164A52008A876B /* EmailValidation.swift */; };
 		322D9AD42614B14000C6F823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D9AD32614B14000C6F823 /* AppDelegate.swift */; };
@@ -107,6 +109,8 @@
 
 /* Begin PBXFileReference section */
 		2A963A342FEA0BB22094DC6D /* Pods-HighWay-HighWayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighWay-HighWayUITests.release.xcconfig"; path = "Target Support Files/Pods-HighWay-HighWayUITests/Pods-HighWay-HighWayUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3218B621261F5885000706DC /* OrderHistoryMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryMapViewController.swift; sourceTree = "<group>"; };
+		3218B626261F58F8000706DC /* OrderHistoryMapView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderHistoryMapView.storyboard; sourceTree = "<group>"; };
 		3224404A2616285E008A876B /* SignupViewController + TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignupViewController + TextFieldDelegate.swift"; sourceTree = "<group>"; };
 		3224405226164A52008A876B /* EmailValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidation.swift; sourceTree = "<group>"; };
 		322D9AD02614B14000C6F823 /* HighWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HighWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -231,6 +235,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3218B61F261F5842000706DC /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				3218B620261F584E000706DC /* View */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		3218B620261F584E000706DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3218B621261F5885000706DC /* OrderHistoryMapViewController.swift */,
+				3218B626261F58F8000706DC /* OrderHistoryMapView.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		322440492616281B008A876B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +422,7 @@
 		3265514926188A0100A88C38 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3218B61F261F5842000706DC /* MapView */,
 				3287B5F4261D402F004E6971 /* OrderHistory */,
 				3287B5C7261D29AC004E6971 /* ResetPassword */,
 				32EC9F2A261B604A0071C625 /* Ratings */,
@@ -760,6 +782,7 @@
 				322D9ACD2614B14000C6F823 /* Frameworks */,
 				322D9ACE2614B14000C6F823 /* Resources */,
 				65E567F6F09F18947E8BBF83 /* [CP] Embed Pods Frameworks */,
+				57FFD68B189EA8571E6C3A81 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -798,6 +821,7 @@
 				322D9AEE2614B14100C6F823 /* Frameworks */,
 				322D9AEF2614B14100C6F823 /* Resources */,
 				55A1BF0940F2877ED5E8A93D /* [CP] Embed Pods Frameworks */,
+				0BA557AE83C77780347090A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -860,6 +884,7 @@
 				3263077D2614D15A00D72306 /* cairo.ttf in Resources */,
 				323DBFFA26169882006E3380 /* ForgetPassword.storyboard in Resources */,
 				32F1E6072615358000C12C84 /* Cairo-ExtraLight.ttf in Resources */,
+				3218B627261F58F8000706DC /* OrderHistoryMapView.storyboard in Resources */,
 				32F4B658261A84DE00D7D7E7 /* ProfileMenuTableViewCell.xib in Resources */,
 				3287B5CC261D2B06004E6971 /* ResetPassword.storyboard in Resources */,
 				322D9AE02614B14100C6F823 /* LaunchScreen.storyboard in Resources */,
@@ -900,6 +925,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0BA557AE83C77780347090A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HighWay-HighWayUITests/Pods-HighWay-HighWayUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HighWay-HighWayUITests/Pods-HighWay-HighWayUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HighWay-HighWayUITests/Pods-HighWay-HighWayUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		55A1BF0940F2877ED5E8A93D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -915,6 +957,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HighWay-HighWayUITests/Pods-HighWay-HighWayUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57FFD68B189EA8571E6C3A81 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HighWay/Pods-HighWay-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HighWay/Pods-HighWay-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HighWay/Pods-HighWay-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		65E567F6F09F18947E8BBF83 /* [CP] Embed Pods Frameworks */ = {
@@ -1023,6 +1082,7 @@
 				3287B5FE261D4110004E6971 /* OrdersHistroyViewController.swift in Sources */,
 				3287B5ED261D3690004E6971 /* ResetPassword + TextFieldDelegetes.swift in Sources */,
 				322D9AD82614B14000C6F823 /* ViewController.swift in Sources */,
+				3218B622261F5885000706DC /* OrderHistoryMapViewController.swift in Sources */,
 				327D0634261BDA9D00A74D9A /* Rating.swift in Sources */,
 				322D9AD42614B14000C6F823 /* AppDelegate.swift in Sources */,
 				3287B608261D415F004E6971 /* OrdersHistoryFirebaseManager.swift in Sources */,

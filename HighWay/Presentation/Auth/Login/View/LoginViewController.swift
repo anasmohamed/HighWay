@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
         setupButton()
         bindData()
         setDelegates()
+        handeIsUserLogin()
         self.tabBarController?.tabBar.isHidden = true
         self.navigationItem.setHidesBackButton(true, animated: true)
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
@@ -44,6 +45,7 @@ class LoginViewController: UIViewController {
         let signupViewController = signupStoryboard.instantiateViewController(withIdentifier: "SignupViewController") as! SignupViewController
         self.navigationController?.pushViewController(signupViewController, animated: true)
         
+        
     }
     override func viewWillDisappear(_ animated: Bool) {
         self.removeKeyboardObserver()
@@ -51,7 +53,13 @@ class LoginViewController: UIViewController {
     func setupButton()  {
         signInBtn.layer.cornerRadius = 5
     }
-    
+    func handeIsUserLogin()
+    {
+        if !UserDefaults.standard.string(forKey: "token")!.isEmpty{
+            navigateToMainViewController()
+
+        }
+    }
     @IBAction func signInBtnDidTapped(_ sender: Any) {
         //Here we ask viewModel to update model with existing credentials from text fields
         loginViewModel.updateCredentials(email: emailTextField.text!, password: passwordTextField.text!)
@@ -80,15 +88,11 @@ class LoginViewController: UIViewController {
     }
     
     func bindData() {
-        loginViewModel.loginSuccess.bind {
-            guard let email = $0 else { return }
-            let homeViewStoryboard = UIStoryboard.init(name: "MainView", bundle: nil)
-            let homeViewController = homeViewStoryboard.instantiateViewController(withIdentifier: "HomeTabBar")
-            homeViewController.modalPresentationStyle = .fullScreen
-
-            self.present(homeViewController, animated: true, completion: nil)
+        loginViewModel.loginSuccess.bind { [self] in
+            guard let email = $0?[1] else { return }
             UserDefaults.standard.set(email, forKey: "email")
-
+            UserDefaults.standard.set($0![0], forKey: "token")
+            navigateToMainViewController()
 
         }
         
@@ -112,7 +116,13 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
+    func navigateToMainViewController() {
+        let homeViewStoryboard = UIStoryboard.init(name: "MainView", bundle: nil)
+        let homeViewController = homeViewStoryboard.instantiateViewController(withIdentifier: "HomeTabBar")
+        homeViewController.modalPresentationStyle = .fullScreen
+        
+        self.present(homeViewController, animated: true, completion: nil)
+    }
     func login() {
         loginViewModel.login()
     }

@@ -14,8 +14,8 @@
             filePath = "HighWay/Presentation/Home/OrderHistory/FirebaseManager/OrdersHistoryFirebaseManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "getOrders(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -36,11 +36,11 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "991C1DEF-A7B9-40B8-9895-6723D77CFED1 - 2d06e123e778795d"
+                  uuid = "991C1DEF-A7B9-40B8-9895-6723D77CFED1 - 3d629a27f999121f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "HighWay.SignupManager.signupWithEmailAndPassword(email: Swift.String, password: Swift.String, completionHandler: (Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "HighWay.SignupManager.signupWithEmailAndPassword(email: Swift.String, password: Swift.String, completionHandler: (Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "HighWay"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/noone/Desktop/HighWay/HighWay/Presentation/Auth/Signup/SignupManager/SignupManager.swift"
@@ -51,11 +51,11 @@
                   offsetFromSymbolStart = "62">
                </Location>
                <Location
-                  uuid = "991C1DEF-A7B9-40B8-9895-6723D77CFED1 - c1f7783ddf2a1da5"
+                  uuid = "991C1DEF-A7B9-40B8-9895-6723D77CFED1 - 76dda6004970d85"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in HighWay.SignupManager.signupWithEmailAndPassword(email: Swift.String, password: Swift.String, completionHandler: (Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in HighWay.SignupManager.signupWithEmailAndPassword(email: Swift.String, password: Swift.String, completionHandler: (Swift.Optional&lt;Swift.Array&lt;Swift.String&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "HighWay"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/noone/Desktop/HighWay/HighWay/Presentation/Auth/Signup/SignupManager/SignupManager.swift"
@@ -63,7 +63,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
                   endingLineNumber = "15"
-                  offsetFromSymbolStart = "214">
+                  offsetFromSymbolStart = "306">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -126,8 +126,8 @@
             filePath = "HighWay/Presentation/Auth/Signup/SignupManager/SignupManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "signupWithEmailAndPassword(email:password:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,8 +142,8 @@
             filePath = "HighWay/Presentation/Auth/Signup/SignupManager/SignupManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "signupWithEmailAndPassword(email:password:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -158,8 +158,8 @@
             filePath = "HighWay/Presentation/Auth/Signup/SignupManager/SignupManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "signupWithEmailAndPassword(email:password:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -177,6 +177,22 @@
             startingLineNumber = "16"
             endingLineNumber = "16"
             landmarkName = "signupWithEmailAndPassword(email:password:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A711805D-7F10-45D8-AF4A-845397AE1237"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HighWay/Presentation/Home/OrderHistory/FirebaseManager/OrdersHistoryFirebaseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getOrders(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

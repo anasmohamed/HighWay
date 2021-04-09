@@ -8,6 +8,9 @@
             <PersistentString
                value = "timestamp.dateValue()">
             </PersistentString>
+            <PersistentString
+               value = "UserDefaults.standard.string(forKey: &quot;token&quot;)">
+            </PersistentString>
          </PersistentStrings>
       </ContextState>
    </ContextStates>

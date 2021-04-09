@@ -71,12 +71,14 @@ class SignupViewController: UIViewController {
         signupViewModel.signupSuccess.bind {
             LoadingIndicatorView.hide()
 
-            guard let email = $0 else { return }
+            guard let email = $0?[1] else { return }
             let homeViewStoryboard = UIStoryboard.init(name: "MainView", bundle: nil)
             let homeViewController = homeViewStoryboard.instantiateViewController(withIdentifier: "HomeTabBar")
+            print("token\($0?[0])")
             homeViewController.modalPresentationStyle = .fullScreen
             self.present(homeViewController, animated: true, completion: nil)
             UserDefaults.standard.set(email, forKey: "email")
+            UserDefaults.standard.set($0![0], forKey: "token")
 
 
         }
