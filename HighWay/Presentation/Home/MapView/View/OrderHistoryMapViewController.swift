@@ -9,18 +9,24 @@ import UIKit
 import GoogleMaps
 class OrderHistoryMapViewController: UIViewController {
     
+    @IBOutlet weak var orderHistoryaMapVIew: GMSMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-        let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
-        self.view.addSubview(mapView)
-        
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
+
+        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 2.0)
+            
+        orderHistoryaMapVIew.camera = camera
+            // Creates a marker in the center of the map.
+            let marker = GMSMarker()
+            marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
+            marker.title = "Sydney"
+            marker.snippet = "Australia"
+            marker.map = orderHistoryaMapVIew
+        let marker2 = GMSMarker()
+        marker2.position = CLLocationCoordinate2D(latitude: -33.85, longitude: 151.20)
+        marker2.title = "anasssssss"
+        marker2.snippet = "Australia"
+        marker2.map = orderHistoryaMapVIew
     }
     
     
