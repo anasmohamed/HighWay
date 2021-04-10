@@ -43,6 +43,10 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func orderDetailsBtnDidTapped(_ sender: Any) {
+        let orderDetailsStoryboard = UIStoryboard(name: "OrderDetails", bundle: nil)
+        let orderDetailsViewController = orderDetailsStoryboard.instantiateViewController(withIdentifier: "OrderDetailesTableViewController") as! OrderDetailesTableViewController
+        orderDetailsViewController.modalPresentationStyle = .fullScreen
+        self.present(orderDetailsViewController, animated: true,completion: nil)
         
         
     }
