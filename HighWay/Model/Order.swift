@@ -15,4 +15,15 @@ struct Order {
     var startLong = 0.0
     var endLat = 0.0
     var endLong = 0.0
+    var fuelOrderDate = ""
+    var fuelOrderPrice = 0.0
+    var fuelOrderSize = ""
+    var userAddress = ""
+    var arriveAddress = ""
+    var notes = ""
+    var orderPrice = 0.0
+    var driver : Driver?
+
+    
 }
+

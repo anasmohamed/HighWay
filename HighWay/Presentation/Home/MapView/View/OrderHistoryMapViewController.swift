@@ -46,6 +46,7 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
         let orderDetailsStoryboard = UIStoryboard(name: "OrderDetails", bundle: nil)
         let orderDetailsViewController = orderDetailsStoryboard.instantiateViewController(withIdentifier: "OrderDetailesTableViewController") as! OrderDetailesTableViewController
         orderDetailsViewController.modalPresentationStyle = .fullScreen
+        orderDetailsViewController.order = order
         self.present(orderDetailsViewController, animated: true,completion: nil)
         
         

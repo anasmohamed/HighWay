@@ -51,6 +51,7 @@
 		3287B60D261D41E9004E6971 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3287B60C261D41E9004E6971 /* Order.swift */; };
 		3287B614261D43FF004E6971 /* OrdersHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3287B612261D43FE004E6971 /* OrdersHistoryTableViewCell.swift */; };
 		3287B615261D43FF004E6971 /* OrdersHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3287B613261D43FF004E6971 /* OrdersHistoryTableViewCell.xib */; };
+		32904DBD2621E19200F10778 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32904DBC2621E19200F10778 /* Driver.swift */; };
 		32D6A8C526174D7600661F6E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D9B162614B46600C6F823 /* LoginViewController.swift */; };
 		32D6A8EA2617629D00661F6E /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D6A8E92617629D00661F6E /* AlertController.swift */; };
 		32D6A9042617651300661F6E /* ForgetPassowordProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D6A9032617651300661F6E /* ForgetPassowordProtocol.swift */; };
@@ -162,6 +163,7 @@
 		3287B60C261D41E9004E6971 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		3287B612261D43FE004E6971 /* OrdersHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		3287B613261D43FF004E6971 /* OrdersHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrdersHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		32904DBC2621E19200F10778 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 		32D6A8E92617629D00661F6E /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		32D6A9032617651300661F6E /* ForgetPassowordProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassowordProtocol.swift; sourceTree = "<group>"; };
 		32D6A9E42617789700661F6E /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 				327270592618CA9800E947B2 /* Service.swift */,
 				327D0633261BDA9D00A74D9A /* Rating.swift */,
 				3287B60C261D41E9004E6971 /* Order.swift */,
+				32904DBC2621E19200F10778 /* Driver.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1109,6 +1112,7 @@
 				327D0634261BDA9D00A74D9A /* Rating.swift in Sources */,
 				322D9AD42614B14000C6F823 /* AppDelegate.swift in Sources */,
 				324782A326212437003A98A2 /* OrderDetailesTableViewController.swift in Sources */,
+				32904DBD2621E19200F10778 /* Driver.swift in Sources */,
 				3287B608261D415F004E6971 /* OrdersHistoryFirebaseManager.swift in Sources */,
 				32FA06E426150B5000912153 /* Observable.swift in Sources */,
 				323DBFF0261695D6006E3380 /* ForgetPasswordViewController.swift in Sources */,
