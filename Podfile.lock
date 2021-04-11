@@ -340,6 +340,9 @@ PODS:
   - nanopb/decode (2.30907.0)
   - nanopb/encode (2.30907.0)
   - PromisesObjC (1.2.12)
+  - SDWebImage (5.11.0):
+    - SDWebImage/Core (= 5.11.0)
+  - SDWebImage/Core (5.11.0)
   - SwiftToast (1.1.3)
   - Toast-Swift (5.0.1)
 
@@ -350,6 +353,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - GoogleMaps (= 4.2.0)
   - GooglePlaces (= 4.2.0)
+  - SDWebImage (~> 5.0)
   - SwiftToast
   - Toast-Swift (~> 5.0.1)
 
@@ -376,6 +380,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - SDWebImage
     - SwiftToast
     - Toast-Swift
 
@@ -401,9 +406,10 @@ SPEC CHECKSUMS:
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  SDWebImage: 7acbb57630ac7db4a495547fb73916ff3e432f6b
   SwiftToast: 029cbeda85c04fb3fa5df774ba461b19971bc6c5
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 90e0f58a6b8e93c406d14a2e6ffac76c77455137
+PODFILE CHECKSUM: 7320cbe5f7f861d39a00d1dda950db7e7a27cdbd
 
 COCOAPODS: 1.10.1

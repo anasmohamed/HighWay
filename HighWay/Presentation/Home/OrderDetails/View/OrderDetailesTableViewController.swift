@@ -12,6 +12,7 @@ class OrderDetailesTableViewController: UITableViewController {
     @IBOutlet weak var userPhone: UILabel!
     @IBOutlet weak var contuctUsView: UIView!
     @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var timeOfRecieveFuelOrder: UILabel!
     @IBOutlet weak var userPhoto: UIImageView!
     @IBOutlet weak var orderDetailsLbl: UILabel!
     @IBOutlet weak var notesLbl: UILabel!
@@ -35,6 +36,9 @@ class OrderDetailesTableViewController: UITableViewController {
             notesLbl.text = order.notes
         }
         if order.orderType == "towing" {
+            productPriceLbl.isHidden = true
+            timeOfRecieveFuelOrder.isHidden = true
+
             orderDetailsLbl.text = "i need towing"
             orderTypeLbl.text = "Car towing"
             userAddressLbl.text = "- User address : \(order.userAddress)"
@@ -43,12 +47,44 @@ class OrderDetailesTableViewController: UITableViewController {
             totalPriceLbl.text = "Total price : \(order.orderPrice)BHD"
             
             
+        }else if order.orderType == "battery"{
+            productPriceLbl.isHidden = true
+            timeOfRecieveFuelOrder.isHidden = true
+            orderDetailsLbl.text = "i need a battary charge"
+            orderTypeLbl.text = "Battery charge"
+            userAddressLbl.text = "- User address : \(order.userAddress)"
+//            driverAddressLbl.text = "- Arrive address : \(order.arriveAddress)"
+            servicePriceLbl.text = "Service price : \(order.orderPrice)BHD"
+            totalPriceLbl.text = "Total price : \(order.orderPrice)BHD"
+
+        }else if order.orderType == "fuel"{
+            productPriceLbl.isHidden = false
+            orderDetailsLbl.text = "-\(order.fuelOrderSize)"
+            timeOfRecieveFuelOrder.text = "-\(order.fuelOrderDate)"
+            orderTypeLbl.text = "Battery charge"
+            userAddressLbl.text = "- User address : \(order.userAddress)"
+//            driverAddressLbl.text = "- Arrive address : \(order.arriveAddress)"
+            servicePriceLbl.text = "Service price : \(order.orderPrice)BHD"
+            productPriceLbl.text = "Product price : \(order.fuelOrderPrice)BHD"
+            totalPriceLbl.text = "Total price : \(order.orderPrice + order.fuelOrderPrice)BHD"
+        }else{
+            productPriceLbl.isHidden = true
+            timeOfRecieveFuelOrder.isHidden = true
+
+            orderDetailsLbl.text = order.notes
+//            timeOfRecieveFuelOrder.text = "-\(order.fuelOrderDate)"
+            orderTypeLbl.text = order.orderType
+            userAddressLbl.text = "- User address : \(order.userAddress)"
+//            driverAddressLbl.text = "- Arrive address : \(order.arriveAddress)"
+            servicePriceLbl.text = "Service price : \(order.orderPrice)BHD"
+//            productPriceLbl.text = "Product price : \(order.fuelOrderPrice)BHD"
+            totalPriceLbl.text = "Total price : \(order.orderPrice + order.fuelOrderPrice)BHD"
         }
-        userName.text = order.driver!.name
-        userPhone.text = order.driver!.phone
-        userPhoto.sd_setImage(with: URL(string: order.driver!.image), completed: nil)
+        userName.text = order.driver?.name
+        userPhone.text = order.driver?.phone
+        userPhoto.sd_setImage(with: URL(string: order.driver?.image ?? ""), completed: nil)
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        // self.clearsSelectionOnViewWillAppear = fals
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
@@ -57,6 +93,39 @@ class OrderDetailesTableViewController: UITableViewController {
         if indexPath.row == 6 {
             print("nas 6")
         }
+    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 0:
+            if !timeOfRecieveFuelOrder.isHidden
+            {
+                return 115
+            }
+        case 2:
+            if !order.arriveAddress.isEmpty
+            {
+                return 175
+            }
+            else{
+                return 140
+            }
+        case 4:
+            if !productPriceLbl.isHidden
+            {
+                
+                return 163
+            }else{
+                return  120
+            }
+        case 5:
+            return 120
+        case 6:
+            return 70
+        default:
+            return 80
+            
+        }
+        return 80
     }
     // MARK: - Table view data source
     

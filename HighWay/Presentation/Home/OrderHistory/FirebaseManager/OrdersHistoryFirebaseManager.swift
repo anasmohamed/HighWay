@@ -21,7 +21,7 @@ class OrderHistoryFirebaseManager {
                 } else {
                     for document in querySnapshot!.documents {
                         print("\(document.documentID) => \(document.data())")
-                        if document.data()["user_id"] as! String == UserDefaults.standard.string(forKey: "token")!{
+//                        if document.data()["user_id"] as! String == UserDefaults.standard.string(forKey: "token")!{
                             let towingOrder = document.data()["towingOrder"] as? [String:Any]
                             let fuelOrder = document.data()["fuelOrder"] as? [String:Any]
                             self.getDriversForOrder(driverId: document.data()["driver_id"] as? String ?? ""){(sucess,driver)in
@@ -49,7 +49,7 @@ class OrderHistoryFirebaseManager {
                                 orders.append(order)
                                 completion(true, orders)
                                     
-                            }
+//                            }
                      
                             
                              

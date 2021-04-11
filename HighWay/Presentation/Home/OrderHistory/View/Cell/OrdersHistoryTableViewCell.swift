@@ -23,6 +23,9 @@ class OrdersHistoryTableViewCell: UITableViewCell {
             if item.orderType == "towing" || item.orderType == "fuel"{
                 orderTypeLbl.text = "Car \(item.orderType)"
                 
+            }else if item.orderType == "others"{
+                orderTypeLbl.text = item.orderType
+
             }else{
                 orderTypeLbl.text = "Battery charge"
 
@@ -30,6 +33,8 @@ class OrdersHistoryTableViewCell: UITableViewCell {
             if item.orderStatus == "-1"
             {
                 orderStatusColorView.backgroundColor = UIColor.init(red: 227.0/255.0, green: 20.0/255.0, blue: 19.0/255.0, alpha: 1)
+            }else if item.orderStatus == "0"{
+                orderStatusColorView.backgroundColor = UIColor.yellow
             }else{
                 orderStatusColorView.backgroundColor = UIColor.init(red: 1.0/255.0, green: 203.0/255.0, blue: 114.0/255.0, alpha: 1)
             }

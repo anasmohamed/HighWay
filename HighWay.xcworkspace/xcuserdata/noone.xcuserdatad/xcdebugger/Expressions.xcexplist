@@ -6,7 +6,7 @@
          contextName = "OrderHistoryMapViewController.viewWillAppear(_:):OrderHistoryMapViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "order.endLat">
+               value = "order.startLong">
             </PersistentString>
             <PersistentString
                value = "order.endLong">
@@ -15,7 +15,15 @@
                value = "order.startLat">
             </PersistentString>
             <PersistentString
-               value = "order.startLong">
+               value = "order.endLat">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "OrderDetailesTableViewController.tableView(_:heightForRowAt:):OrderDetailesTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "order.orderPrice">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

@@ -57,7 +57,6 @@ class LoginViewController: UIViewController {
     {
         if !UserDefaults.standard.string(forKey: "token")!.isEmpty{
             navigateToMainViewController()
-
         }
     }
     @IBAction func signInBtnDidTapped(_ sender: Any) {
