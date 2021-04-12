@@ -55,7 +55,7 @@ class LoginViewController: UIViewController {
     }
     func handeIsUserLogin()
     {
-        if !UserDefaults.standard.string(forKey: "token")!.isEmpty{
+        if !(UserDefaults.standard.string(forKey: "token")?.isEmpty ?? true){
             navigateToMainViewController()
         }
     }

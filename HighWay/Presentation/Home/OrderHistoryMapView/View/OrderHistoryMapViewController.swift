@@ -101,13 +101,11 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
         // Creates a marker in the center of the map.
         
         marker.position = CLLocationCoordinate2D(latitude: order.startLat, longitude:order.startLong)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
+        marker.icon = UIImage(named: "placeholder-2")
+
         marker.map = orderHistoryaMapVIew
         let marker2 = GMSMarker()
         marker2.position = CLLocationCoordinate2D(latitude:  order.endLat, longitude:order.endLong)
-        marker2.title = "anasssssss"
-        marker2.snippet = "Australia"
         marker2.map = orderHistoryaMapVIew
         
         if !order.endLat.isZero{

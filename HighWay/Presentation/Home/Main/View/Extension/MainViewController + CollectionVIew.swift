@@ -31,5 +31,12 @@ extension MainViewController : UICollectionViewDelegate,UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 95.0, height: 75.0)
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let requestOrderMapViewStroyboard = UIStoryboard.init(name: "RequestOrderMapView", bundle: nil)
+        let requestOrderViewController = requestOrderMapViewStroyboard.instantiateViewController(withIdentifier: "RequestOrderMapViewController")
+        as! RequestOrderMapViewController
+        let myNavigationController = UINavigationController(rootViewController: requestOrderViewController)
+        myNavigationController.modalPresentationStyle = .fullScreen
+        self.present(myNavigationController, animated: true,completion: nil)
+    }
 }
