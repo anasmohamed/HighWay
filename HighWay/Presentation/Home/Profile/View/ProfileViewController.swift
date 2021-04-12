@@ -78,6 +78,11 @@ extension ProfileViewController :UITableViewDelegate,UITableViewDataSource{
             resetPasswordViewController.modalTransitionStyle = .crossDissolve
             resetPasswordViewController.modalPresentationStyle = .overCurrentContext
             self.present(resetPasswordViewController, animated: true, completion: nil)
+        case 4:
+            let termsAndConditionStoryboard = UIStoryboard.init(name: "TermsAndCondition", bundle: nil)
+            let termsAndConditionsViewController = termsAndConditionStoryboard.instantiateViewController(withIdentifier: "TermsAndConditionsViewController") as! TermsAndConditionsViewController
+            
+            self.navigationController?.pushViewController(termsAndConditionsViewController, animated: true)
         case 5:
             let privacyPolicyStoryboard = UIStoryboard.init(name: "PrivacyPolicy", bundle: nil)
             let privacyPolicyViewController = privacyPolicyStoryboard.instantiateViewController(withIdentifier: "PrivacyPolicyViewController") as! PrivacyPolicyViewController

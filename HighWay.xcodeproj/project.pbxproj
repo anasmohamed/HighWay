@@ -55,6 +55,8 @@
 		3287B615261D43FF004E6971 /* OrdersHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3287B613261D43FF004E6971 /* OrdersHistoryTableViewCell.xib */; };
 		3289F54D2624BA91002D564C /* PrivacyPolicy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3289F54C2624BA91002D564C /* PrivacyPolicy.storyboard */; };
 		3289F5522624BABA002D564C /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3289F5512624BABA002D564C /* PrivacyPolicyViewController.swift */; };
+		3289F5762624C60E002D564C /* TermsAndCondition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3289F5752624C60E002D564C /* TermsAndCondition.storyboard */; };
+		3289F57B2624C71B002D564C /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3289F57A2624C71B002D564C /* TermsAndConditionsViewController.swift */; };
 		32904DBD2621E19200F10778 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32904DBC2621E19200F10778 /* Driver.swift */; };
 		32D6A8C526174D7600661F6E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D9B162614B46600C6F823 /* LoginViewController.swift */; };
 		32D6A8EA2617629D00661F6E /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D6A8E92617629D00661F6E /* AlertController.swift */; };
@@ -171,6 +173,8 @@
 		3287B613261D43FF004E6971 /* OrdersHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrdersHistoryTableViewCell.xib; sourceTree = "<group>"; };
 		3289F54C2624BA91002D564C /* PrivacyPolicy.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivacyPolicy.storyboard; sourceTree = "<group>"; };
 		3289F5512624BABA002D564C /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		3289F5752624C60E002D564C /* TermsAndCondition.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TermsAndCondition.storyboard; sourceTree = "<group>"; };
+		3289F57A2624C71B002D564C /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
 		32904DBC2621E19200F10778 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 		32D6A8E92617629D00661F6E /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		32D6A9032617651300661F6E /* ForgetPassowordProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassowordProtocol.swift; sourceTree = "<group>"; };
@@ -674,6 +678,8 @@
 		3289F5572624C228002D564C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3289F5752624C60E002D564C /* TermsAndCondition.storyboard */,
+				3289F57A2624C71B002D564C /* TermsAndConditionsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -991,6 +997,7 @@
 				322D9B1C2614B49900C6F823 /* LoginView.storyboard in Resources */,
 				32EC9F2D261B60630071C625 /* Ratings.storyboard in Resources */,
 				32F1E610261537ED00C12C84 /* Signup.storyboard in Resources */,
+				3289F5762624C60E002D564C /* TermsAndCondition.storyboard in Resources */,
 				32F1E6032615358000C12C84 /* Cairo-Bold.ttf in Resources */,
 				3287B5F9261D4089004E6971 /* OrdersHistory.storyboard in Resources */,
 			);
@@ -1194,6 +1201,7 @@
 				32E712152615E35600FF0F8F /* SignupViewModel.swift in Sources */,
 				32D6AA642617866600661F6E /* LoadingIndicatorView.swift in Sources */,
 				326AE86C262381C300E40CFC /* RequestOrderMapViewController.swift in Sources */,
+				3289F57B2624C71B002D564C /* TermsAndConditionsViewController.swift in Sources */,
 				323DC0042616992D006E3380 /* ForgetPasswordViewModel.swift in Sources */,
 				3224405326164A52008A876B /* EmailValidation.swift in Sources */,
 				32F1E61A26153F0F00C12C84 /* Checkbox.swift in Sources */,
