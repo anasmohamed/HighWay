@@ -18,7 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        let attributes = [NSAttributedString.Key.font: UIFont(name: "Cairo-Regular", size: 17)!]
+        for family: String in UIFont.familyNames {
+                print("\(family)")
+                for names: String in UIFont.fontNames(forFamilyName: family) {
+                    print("== \(names)")
+                }
+            }
+        UINavigationBar.appearance().titleTextAttributes = attributes
         // Override point for customization after application launch.
         GMSServices.provideAPIKey("AIzaSyBV788cfSiQGUjX2h5s2-0gCWvDKkT8fQ0")
         GMSPlacesClient.provideAPIKey("AIzaSyBV788cfSiQGUjX2h5s2-0gCWvDKkT8fQ0")

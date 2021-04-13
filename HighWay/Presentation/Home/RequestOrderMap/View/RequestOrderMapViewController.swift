@@ -10,7 +10,7 @@ import GoogleMaps
 import GooglePlaces
 import CoreLocation
 
-class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate  {
+class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearchBarDelegate{
    
     @IBOutlet weak var searchBarView: UIView!
     private let locationManager = CLLocationManager()
@@ -18,9 +18,14 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate  {
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var adressView: UIView!
     @IBOutlet weak var nextBtn: UIButton!
-    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var searchBar: GMSMapView!
     @IBOutlet weak var addressLbl: UILabel!
     @IBOutlet weak var gpsBtn: UIButton!
+    
+    var countryLongitude = 0.0
+    var countryLatitude = 0.0
+    let requestOrderMapViewModel = RequestOrderMapViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         gpsBtn.layer.cornerRadius = 8
@@ -28,18 +33,29 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate  {
         adressView.layer.cornerRadius = 8
         adressView.layer.borderWidth = 1
         adressView.layer.borderColor = UIColor.lightGray.cgColor
-        searchBarView.layer.borderColor = UIColor.lightGray.cgColor
-        searchBarView.layer.borderWidth = 1
-        searchBarView.layer.cornerRadius = 8
         // Do any additional setup after loading the view.
         locationManager.delegate = self
         mapView.delegate = self
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.autocompleteClicked(_:)))
-        searchBarView.addGestureRecognizer(tap)
+        setupBackButton()
+        bindData()
+        searchBar.delegate = self
+
+//        searchBarView.addGestureRecognizer(tap)
+//        self.navigationItem.title = "Pickup Location"
+
         locationManager.requestWhenInUseAuthorization()
     }
-    
+    func setupBackButton() {
+        let leftBackBtn = UIButton(type: .system)
+        leftBackBtn.setImage(UIImage(named: "left-arrow"), for: .normal)
+        leftBackBtn.sizeToFit()
+        leftBackBtn.addTarget(self, action: #selector(self.navigateToMainViewController), for: .touchUpInside)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBackBtn);
+        navigationController?.navigationBar.tintColor = UIColor.init(red: 68/255, green: 68/255, blue: 68/255, alpha: 1.0)
+    }
+    @objc func navigateToMainViewController() {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func gpsBtnDidTapped(_ sender: Any) {
         mapView.settings.myLocationButton = true
 
@@ -54,22 +70,23 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate  {
         print(position.target.latitude)
     }
     // Present the Autocomplete view controller when the button is pressed.
-    @objc func autocompleteClicked(_ sender: UIButton) {
-      let autocompleteController = GMSAutocompleteViewController()
-      autocompleteController.delegate = self
-
-      // Specify the place data types to return.
-      let fields: GMSPlaceField = GMSPlaceField(rawValue: UInt(GMSPlaceField.name.rawValue) |
-                                                    UInt(GMSPlaceField.placeID.rawValue))
-      autocompleteController.placeFields = fields
-
-      // Specify a filter.
-      let filter = GMSAutocompleteFilter()
-      filter.type = .address
-      autocompleteController.autocompleteFilter = filter
-
-      // Display the autocomplete view controller.
-      present(autocompleteController, animated: true, completion: nil)
+    func bindData() {
+        requestOrderMapViewModel.countryGeolocation.bind { [self] in
+            
+            self.countryLatitude = $0?.latitude ?? 0.0
+            self.countryLongitude = $0?.longitude ?? 0.0
+            mapView.camera = GMSCameraPosition(latitude: countryLongitude, longitude: countryLongitude, zoom: 10.0)
+            let marker = GMSMarker()
+            marker.position = CLLocationCoordinate2D(latitude:countryLongitude, longitude:countryLongitude)
+            marker.map = mapView
+        }
+       
+    }
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        requestOrderMapViewModel.setCounryWith(countryName: searchBar.text ?? "")
+        requestOrderMapViewModel.fetchData()
+       
+      
     }
 }
 extension RequestOrderMapViewController: CLLocationManagerDelegate {

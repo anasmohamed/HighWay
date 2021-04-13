@@ -17,9 +17,22 @@ class PrivacyPolicyViewController: UIViewController,WKUIDelegate  {
         let myURL = URL(string:"https://highway-app.blogspot.com/p/privacy-policy.html")
         let myRequest = URLRequest(url: myURL!)
         privacyPolicyWebView.load(myRequest)
+        self.navigationItem.title = "Privacy policy"
+
+        setupBackButton()
         // Do any additional setup after loading the view.
     }
-    
+    func setupBackButton() {
+        let leftBackBtn = UIButton(type: .system)
+        leftBackBtn.setImage(UIImage(named: "left-arrow"), for: .normal)
+        leftBackBtn.sizeToFit()
+        leftBackBtn.addTarget(self, action: #selector(self.navigateToMainViewController), for: .touchUpInside)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBackBtn);
+        navigationController?.navigationBar.tintColor = UIColor.init(red: 68/255, green: 68/255, blue: 68/255, alpha: 1.0)
+    }
+    @objc func navigateToMainViewController() {
+        self.navigationController?.popViewController(animated: true)
+    }
 
     /*
     // MARK: - Navigation

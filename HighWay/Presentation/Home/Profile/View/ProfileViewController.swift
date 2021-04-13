@@ -25,6 +25,8 @@ class ProfileViewController: UIViewController {
         setupEmailLbl()
         profileImageAndEmailView.layer.cornerRadius = 6
         profileManuTableView.layer.cornerRadius = 6
+        self.navigationItem.title = "Porfile"
+
         // Do any additional setup after loading the view.
     }
     
