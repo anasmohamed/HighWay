@@ -24,17 +24,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ME-8O-Yd9" customClass="GMSMapView">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
-                                <subviews>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="V0p-gU-mEF">
-                                        <rect key="frame" x="20" y="652" width="374" height="56"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </searchBar>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="V0p-gU-mEF" firstAttribute="leading" secondItem="2ME-8O-Yd9" secondAttribute="leading" constant="20" id="8hy-HM-zvF"/>
-                                    <constraint firstAttribute="trailing" secondItem="V0p-gU-mEF" secondAttribute="trailing" constant="20" id="cTh-7D-nB0"/>
-                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BO1-Eq-lYr">
                                 <rect key="frame" x="20" y="812" width="374" height="40"/>
@@ -91,19 +81,25 @@
                                     <constraint firstItem="ZnA-c5-bgh" firstAttribute="centerY" secondItem="a2S-KZ-QIJ" secondAttribute="centerY" id="of3-Yz-KwO"/>
                                 </constraints>
                             </view>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="V0p-gU-mEF">
+                                <rect key="frame" x="20" y="746" width="374" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="z7y-ez-0pV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6v1-hf-ZwY" firstAttribute="top" secondItem="z7y-ez-0pV" secondAttribute="top" constant="10" id="EPJ-IM-9Yo"/>
-                            <constraint firstItem="BO1-Eq-lYr" firstAttribute="top" secondItem="V0p-gU-mEF" secondAttribute="bottom" constant="16" id="Eis-Wg-OKK"/>
                             <constraint firstItem="BO1-Eq-lYr" firstAttribute="leading" secondItem="z7y-ez-0pV" secondAttribute="leading" constant="20" id="GZt-eB-ADw"/>
                             <constraint firstItem="2ME-8O-Yd9" firstAttribute="top" secondItem="z7y-ez-0pV" secondAttribute="top" id="IR4-AX-KMp"/>
                             <constraint firstItem="z7y-ez-0pV" firstAttribute="trailing" secondItem="6v1-hf-ZwY" secondAttribute="trailing" constant="10" id="QfK-bt-tdG"/>
                             <constraint firstAttribute="bottom" secondItem="2ME-8O-Yd9" secondAttribute="bottom" id="Qr5-PD-hWl"/>
                             <constraint firstItem="6v1-hf-ZwY" firstAttribute="leading" secondItem="iNc-qF-Q3B" secondAttribute="trailing" constant="10" id="SBZ-DI-FhO"/>
+                            <constraint firstItem="BO1-Eq-lYr" firstAttribute="top" secondItem="V0p-gU-mEF" secondAttribute="bottom" constant="10" id="TIw-jo-dCI"/>
                             <constraint firstItem="z7y-ez-0pV" firstAttribute="bottom" secondItem="BO1-Eq-lYr" secondAttribute="bottom" constant="10" id="gWe-DD-bib"/>
                             <constraint firstItem="2ME-8O-Yd9" firstAttribute="leading" secondItem="z7y-ez-0pV" secondAttribute="leading" id="ibD-xN-TBW"/>
+                            <constraint firstItem="V0p-gU-mEF" firstAttribute="leading" secondItem="z7y-ez-0pV" secondAttribute="leading" constant="20" id="qNu-V5-QHN"/>
+                            <constraint firstItem="z7y-ez-0pV" firstAttribute="trailing" secondItem="V0p-gU-mEF" secondAttribute="trailing" constant="20" id="rLs-Gr-DnK"/>
                             <constraint firstItem="2ME-8O-Yd9" firstAttribute="trailing" secondItem="z7y-ez-0pV" secondAttribute="trailing" id="uu8-X5-dey"/>
                             <constraint firstItem="iNc-qF-Q3B" firstAttribute="top" secondItem="z7y-ez-0pV" secondAttribute="top" constant="10" id="vgB-5X-obG"/>
                             <constraint firstItem="z7y-ez-0pV" firstAttribute="trailing" secondItem="BO1-Eq-lYr" secondAttribute="trailing" constant="20" id="xY3-ha-n3h"/>
@@ -117,7 +113,7 @@
                         <outlet property="gpsBtn" destination="iNc-qF-Q3B" id="ddX-Cy-fw2"/>
                         <outlet property="mapView" destination="2ME-8O-Yd9" id="MYf-fj-Qo2"/>
                         <outlet property="nextBtn" destination="BO1-Eq-lYr" id="J8B-sC-LWT"/>
-                        <outlet property="searchBar" destination="2ME-8O-Yd9" id="fbi-4K-wym"/>
+                        <outlet property="searchBar" destination="V0p-gU-mEF" id="8xK-X4-cKg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ncB-Rg-XWt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

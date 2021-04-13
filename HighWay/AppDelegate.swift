@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         UINavigationBar.appearance().titleTextAttributes = attributes
         // Override point for customization after application launch.
-        GMSServices.provideAPIKey("AIzaSyBV788cfSiQGUjX2h5s2-0gCWvDKkT8fQ0")
+        GMSServices.provideAPIKey("AIzaSyBFuCfU6gAQYq-Hxx7j6roE1liS9dYStsQ")
         GMSPlacesClient.provideAPIKey("AIzaSyBV788cfSiQGUjX2h5s2-0gCWvDKkT8fQ0")
 
         FirebaseApp.configure()

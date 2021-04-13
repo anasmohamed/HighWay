@@ -23,9 +23,12 @@ class RequestOrderMapViewModel {
     
     
     func fetchData() {
+        print("anas name\(countryName)")
         requestOrderMapViewApiManager.searchInLocation(name: countryName) { [weak self] (coutryGeolocation,error) in
               
-           
+            if error == nil{
+                self!.countryGeolocation.value = coutryGeolocation
+            }
               
           }
       }

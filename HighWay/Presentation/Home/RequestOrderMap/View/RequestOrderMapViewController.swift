@@ -18,14 +18,15 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var adressView: UIView!
     @IBOutlet weak var nextBtn: UIButton!
-    @IBOutlet weak var searchBar: GMSMapView!
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var addressLbl: UILabel!
     @IBOutlet weak var gpsBtn: UIButton!
     
     var countryLongitude = 0.0
     var countryLatitude = 0.0
     let requestOrderMapViewModel = RequestOrderMapViewModel()
-    
+    var timer : Timer?
     override func viewDidLoad() {
         super.viewDidLoad()
         gpsBtn.layer.cornerRadius = 8
@@ -75,18 +76,29 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
             
             self.countryLatitude = $0?.latitude ?? 0.0
             self.countryLongitude = $0?.longitude ?? 0.0
-            mapView.camera = GMSCameraPosition(latitude: countryLongitude, longitude: countryLongitude, zoom: 10.0)
+            mapView.camera = GMSCameraPosition(latitude: countryLatitude, longitude: countryLongitude, zoom: 15.0)
             let marker = GMSMarker()
             marker.position = CLLocationCoordinate2D(latitude:countryLongitude, longitude:countryLongitude)
             marker.map = mapView
         }
        
     }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+
+print("anaddidchange")
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(output), userInfo: searchText, repeats: false)
+    }
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        requestOrderMapViewModel.setCounryWith(countryName: searchBar.text ?? "")
-        requestOrderMapViewModel.fetchData()
-       
-      
+        print("anasendedit")
+    }
+    @objc func output(){
+        print("hello")
+        if timer?.userInfo != nil {
+            requestOrderMapViewModel.setCounryWith(countryName: searchBar.text ?? "")
+            requestOrderMapViewModel.fetchData()
+        }
+        timer?.invalidate()
     }
 }
 extension RequestOrderMapViewController: CLLocationManagerDelegate {
@@ -119,7 +131,7 @@ extension RequestOrderMapViewController: CLLocationManagerDelegate {
       
     // 7
     print("location\(location.coordinate.latitude)")
-    mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 10.0, bearing: 0, viewingAngle: 0)
+    mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15.0, bearing: 0, viewingAngle: 0)
 
     // 8
     locationManager.stopUpdatingLocation()
