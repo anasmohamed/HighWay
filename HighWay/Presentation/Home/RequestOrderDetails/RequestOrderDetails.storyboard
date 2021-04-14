@@ -345,10 +345,10 @@
             </objects>
             <point key="canvasLocation" x="1718.840579710145" y="53.571428571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Request Car Fuel Order View Controller-->
         <scene sceneID="xus-2B-EHN">
             <objects>
-                <viewController id="Ot2-0C-fJz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RequestCarFuelOrderViewController" id="Ot2-0C-fJz" customClass="RequestCarFuelOrderViewController" customModule="HighWay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="463-cB-tPk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -386,8 +386,18 @@
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fdh-QV-0c9">
                                 <rect key="frame" x="20" y="328" width="374" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYE-sC-i5D">
+                                        <rect key="frame" x="8" y="14.5" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="vYE-sC-i5D" firstAttribute="centerY" secondItem="Fdh-QV-0c9" secondAttribute="centerY" id="BCV-xT-xLs"/>
+                                    <constraint firstItem="vYE-sC-i5D" firstAttribute="leading" secondItem="Fdh-QV-0c9" secondAttribute="leading" constant="8" id="DQB-6N-tx9"/>
                                     <constraint firstAttribute="height" constant="50" id="d6W-rc-GWZ"/>
                                 </constraints>
                             </view>
@@ -441,6 +451,9 @@
                                 <state key="normal" title="Send">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendOrderDetailsBtnDidTapped:" destination="Ot2-0C-fJz" eventType="touchUpInside" id="XAg-K2-59j"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cYp-nW-D33"/>
@@ -470,6 +483,15 @@
                             <constraint firstItem="cYp-nW-D33" firstAttribute="trailing" secondItem="4O3-e9-N0y" secondAttribute="trailing" constant="20" id="zjb-RI-6kW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="itemstableView" destination="otX-ke-LCs" id="6st-eU-PMg"/>
+                        <outlet property="notesTextField" destination="cDB-AT-fPO" id="EYL-sF-tIK"/>
+                        <outlet property="orderPriceDetailsView" destination="f5f-2z-wZn" id="Ymd-RR-v5R"/>
+                        <outlet property="paymentTypeView" destination="4O3-e9-N0y" id="l5w-Yz-YeN"/>
+                        <outlet property="sendOrderBtn" destination="fU1-kx-4uW" id="kvL-g7-mPq"/>
+                        <outlet property="timeOfReciveLbl" destination="vYE-sC-i5D" id="kXQ-8k-Y8a"/>
+                        <outlet property="timeOfReciveView" destination="Fdh-QV-0c9" id="Uss-nP-m1i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4EM-OR-O4H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
