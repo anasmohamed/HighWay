@@ -23,7 +23,7 @@ class TermsAndConditionsViewController: UIViewController {
     }
     func setupBackButton() {
         let leftBackBtn = UIButton(type: .system)
-        leftBackBtn.setImage(UIImage(named: "left-arrow"), for: .normal)
+        leftBackBtn.setImage(UIImage(named: "left-arrow-4"), for: .normal)
         leftBackBtn.sizeToFit()
         leftBackBtn.addTarget(self, action: #selector(self.navigateToMainViewController), for: .touchUpInside)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBackBtn);

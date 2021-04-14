@@ -26,6 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         UINavigationBar.appearance().titleTextAttributes = attributes
+        UINavigationBar.appearance().barTintColor = UIColor.init(red: 37.0/255.0, green: 37.0/255.0, blue: 37.0/255.0, alpha: 1)
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+
         // Override point for customization after application launch.
         GMSServices.provideAPIKey("AIzaSyBFuCfU6gAQYq-Hxx7j6roE1liS9dYStsQ")
         GMSPlacesClient.provideAPIKey("AIzaSyBV788cfSiQGUjX2h5s2-0gCWvDKkT8fQ0")
