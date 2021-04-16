@@ -66,7 +66,7 @@ class OrderDetailesTableViewController: UITableViewController {
 //            driverAddressLbl.text = "- Arrive address : \(order.arriveAddress)"
             servicePriceLbl.text = "Service price : \(order.orderPrice)BHD"
             productPriceLbl.text = "Product price : \(order.fuelOrderPrice)BHD"
-            totalPriceLbl.text = "Total price : \(order.orderPrice + order.fuelOrderPrice)BHD"
+            totalPriceLbl.text = "Total price : \(order.orderPrice + Double(order.fuelOrderPrice)!)BHD"
         }else{
             productPriceLbl.isHidden = true
             timeOfRecieveFuelOrder.isHidden = true
@@ -78,7 +78,7 @@ class OrderDetailesTableViewController: UITableViewController {
 //            driverAddressLbl.text = "- Arrive address : \(order.arriveAddress)"
             servicePriceLbl.text = "Service price : \(order.orderPrice)BHD"
 //            productPriceLbl.text = "Product price : \(order.fuelOrderPrice)BHD"
-            totalPriceLbl.text = "Total price : \(order.orderPrice + order.fuelOrderPrice)BHD"
+            totalPriceLbl.text = "Total price : \(order.orderPrice + Double(order.fuelOrderPrice)!)BHD"
         }
         userName.text = order.driver?.name
         userPhone.text = order.driver?.phone

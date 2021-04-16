@@ -40,7 +40,7 @@ class OrderHistoryFirebaseManager {
                                         endLat: towingOrder?["endLat"] as? Double ?? 0.0 ,
                                         endLong: towingOrder?["endLng"] as? Double ?? 0.0,
                                         fuelOrderDate: fuelOrder?["date"] as? String ?? "",
-                                        fuelOrderPrice: fuelOrder?["fuelPrice"] as? Double ?? 0.0,
+                                        fuelOrderPrice: String(fuelOrder?["fuelPrice"] as? Double ?? 0.0),
                                         fuelOrderSize: fuelOrder?["size"] as? String ?? "",
                                         userAddress: document.data()["address"] as? String ?? "",
                                         arriveAddress: towingOrder?["arriveAddress"] as? String ?? "",

@@ -15,6 +15,8 @@ pod 'Firebase/Firestore'
 pod 'GoogleMaps', '4.2.0'
 pod 'GooglePlaces', '4.2.0'
 pod 'SDWebImage', '~> 5.0'
+pod 'SwiftyJSON', '~> 4.0'
+pod 'SheetPresentation'
 
   target 'HighWayTests' do
     inherit! :search_paths

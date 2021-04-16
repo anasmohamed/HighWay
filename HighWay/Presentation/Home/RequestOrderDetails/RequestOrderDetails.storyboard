@@ -29,13 +29,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8H-tt-W51">
-                                <rect key="frame" x="20" y="107" width="38" height="32"/>
+                                <rect key="frame" x="20" y="107" width="38" height="20"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kWy-m2-b5P">
-                                <rect key="frame" x="20" y="147" width="374" height="40"/>
+                                <rect key="frame" x="20" y="135" width="374" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="G8g-uk-ya8"/>
                                 </constraints>
@@ -43,13 +43,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOa-nm-sGd">
-                                <rect key="frame" x="20" y="195" width="88.5" height="32"/>
+                                <rect key="frame" x="20" y="183" width="93" height="20"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V6T-22-8kQ">
-                                <rect key="frame" x="20" y="235" width="374" height="90"/>
+                                <rect key="frame" x="20" y="211" width="374" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="kgI-XB-tuc"/>
                                 </constraints>
@@ -57,7 +57,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ql-dB-Pmn">
-                                <rect key="frame" x="20" y="345" width="374" height="40"/>
+                                <rect key="frame" x="20" y="321" width="374" height="40"/>
                                 <color key="backgroundColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="1CP-q9-ueo"/>
@@ -71,7 +71,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ze7-6J-snT">
-                                <rect key="frame" x="20" y="405" width="374" height="40"/>
+                                <rect key="frame" x="20" y="381" width="374" height="40"/>
                                 <color key="backgroundColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Ewp-EW-d24"/>
@@ -124,13 +124,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kD-tH-nn2">
-                                <rect key="frame" x="178.5" y="61" width="57" height="32"/>
+                                <rect key="frame" x="177" y="61" width="60.5" height="20"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aZs-Y6-Yac">
-                                <rect key="frame" x="20" y="101" width="374" height="90"/>
+                                <rect key="frame" x="20" y="89" width="374" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="xR8-4C-N14"/>
                                 </constraints>
@@ -138,7 +138,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R0U-1P-pL3">
-                                <rect key="frame" x="20" y="217" width="374" height="90"/>
+                                <rect key="frame" x="20" y="205" width="374" height="90"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="payment-method-2" translatesAutoresizingMaskIntoConstraints="NO" id="4bL-9Y-hSx">
                                         <rect key="frame" x="8" y="8" width="27" height="27"/>
@@ -148,7 +148,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment : Cash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VL-yN-ZGK">
-                                        <rect key="frame" x="43" y="5.5" width="110.5" height="32"/>
+                                        <rect key="frame" x="43" y="11.5" width="121" height="20"/>
                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -179,7 +179,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2E-KE-TFg">
-                                <rect key="frame" x="20" y="327" width="374" height="40"/>
+                                <rect key="frame" x="20" y="315" width="374" height="40"/>
                                 <color key="backgroundColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="cW5-ZN-Gkk"/>
@@ -190,7 +190,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gl5-Nh-ytk">
-                                <rect key="frame" x="20" y="375" width="374" height="40"/>
+                                <rect key="frame" x="20" y="363" width="374" height="40"/>
                                 <color key="backgroundColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="cto-sQ-Lph"/>
@@ -234,31 +234,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWi-zf-JgN">
-                                <rect key="frame" x="178.5" y="64" width="57" height="32"/>
+                                <rect key="frame" x="177" y="64" width="60.5" height="20"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbP-VI-Pks">
-                                <rect key="frame" x="20" y="101" width="87.5" height="32"/>
+                                <rect key="frame" x="20" y="89" width="97" height="20"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6F-7E-Ivp">
-                                <rect key="frame" x="362" y="106.5" width="42" height="21"/>
+                                <rect key="frame" x="362" y="88.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This cost is estimate, which mabe adjust upon compilition of the order" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fn6-ic-Uv5">
-                                <rect key="frame" x="20" y="141" width="384" height="60"/>
+                                <rect key="frame" x="20" y="117" width="384" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fAP-R4-xZ6">
-                                <rect key="frame" x="20" y="209" width="374" height="45"/>
+                                <rect key="frame" x="20" y="162.5" width="374" height="45"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="payment-method-2" translatesAutoresizingMaskIntoConstraints="NO" id="n5w-wa-6xK">
                                         <rect key="frame" x="10" y="9" width="27" height="27"/>
@@ -268,7 +268,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment : Cash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWr-Bo-Kea">
-                                        <rect key="frame" x="45" y="6.5" width="110.5" height="32"/>
+                                        <rect key="frame" x="45" y="12.5" width="121" height="20"/>
                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -284,7 +284,7 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5OW-ac-gH2">
-                                <rect key="frame" x="20" y="262" width="374" height="80"/>
+                                <rect key="frame" x="20" y="215.5" width="374" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Aax-Y9-hQb"/>
                                 </constraints>
@@ -292,7 +292,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKn-pC-ZBE">
-                                <rect key="frame" x="20" y="362" width="374" height="40"/>
+                                <rect key="frame" x="20" y="315.5" width="374" height="40"/>
                                 <color key="backgroundColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="PlU-GT-6rF"/>
@@ -303,7 +303,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFE-HZ-iQr">
-                                <rect key="frame" x="20" y="410" width="374" height="40"/>
+                                <rect key="frame" x="20" y="363.5" width="374" height="40"/>
                                 <color key="backgroundColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="O6J-CX-cdg"/>
@@ -354,13 +354,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QX5-aX-nCO">
-                                <rect key="frame" x="20" y="84" width="80" height="32"/>
+                                <rect key="frame" x="20" y="64" width="80" height="32"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="otX-ke-LCs">
-                                <rect key="frame" x="20" y="124" width="374" height="90"/>
+                                <rect key="frame" x="20" y="104" width="374" height="90"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="Ncr-nN-D42"/>
@@ -376,39 +376,51 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cDB-AT-fPO">
-                                <rect key="frame" x="20" y="244" width="374" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(Optional) you can add note here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cDB-AT-fPO">
+                                <rect key="frame" x="20" y="214" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Dhl-wv-KUn"/>
+                                    <constraint firstAttribute="height" constant="50" id="Dhl-wv-KUn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fdh-QV-0c9">
-                                <rect key="frame" x="20" y="328" width="374" height="50"/>
+                                <rect key="frame" x="20" y="308" width="374" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYE-sC-i5D">
-                                        <rect key="frame" x="8" y="14.5" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5fs-Bb-sDl">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="edit" translatesAutoresizingMaskIntoConstraints="NO" id="hjY-7e-ma6">
+                                        <rect key="frame" x="344" y="10" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="3Ja-Ne-ufU"/>
+                                            <constraint firstAttribute="width" constant="30" id="uR5-Ng-OAg"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="vYE-sC-i5D" firstAttribute="centerY" secondItem="Fdh-QV-0c9" secondAttribute="centerY" id="BCV-xT-xLs"/>
-                                    <constraint firstItem="vYE-sC-i5D" firstAttribute="leading" secondItem="Fdh-QV-0c9" secondAttribute="leading" constant="8" id="DQB-6N-tx9"/>
+                                    <constraint firstItem="5fs-Bb-sDl" firstAttribute="leading" secondItem="Fdh-QV-0c9" secondAttribute="leading" id="2eg-jQ-E0a"/>
+                                    <constraint firstItem="5fs-Bb-sDl" firstAttribute="top" secondItem="Fdh-QV-0c9" secondAttribute="top" id="Dje-XZ-BGx"/>
+                                    <constraint firstAttribute="bottom" secondItem="5fs-Bb-sDl" secondAttribute="bottom" id="Ivw-fV-nuT"/>
+                                    <constraint firstAttribute="trailing" secondItem="5fs-Bb-sDl" secondAttribute="trailing" id="LRG-2C-aWo"/>
+                                    <constraint firstAttribute="trailing" secondItem="hjY-7e-ma6" secondAttribute="trailing" id="TzV-b5-m0E"/>
                                     <constraint firstAttribute="height" constant="50" id="d6W-rc-GWZ"/>
+                                    <constraint firstItem="hjY-7e-ma6" firstAttribute="centerY" secondItem="Fdh-QV-0c9" secondAttribute="centerY" id="h4l-yB-91g"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhG-zm-9RC">
-                                <rect key="frame" x="20" y="292" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time of reiceve" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhG-zm-9RC">
+                                <rect key="frame" x="20" y="272" width="116.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4O3-e9-N0y">
-                                <rect key="frame" x="20" y="398" width="374" height="45"/>
+                                <rect key="frame" x="20" y="378" width="374" height="45"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="payment-method-2" translatesAutoresizingMaskIntoConstraints="NO" id="RkM-my-EJT">
                                         <rect key="frame" x="10" y="9" width="27" height="27"/>
@@ -424,7 +436,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="Pec-7r-Bdc"/>
                                     <constraint firstItem="fBl-fx-cbb" firstAttribute="centerY" secondItem="4O3-e9-N0y" secondAttribute="centerY" id="RaW-o5-cEu"/>
@@ -435,10 +447,71 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5f-2z-wZn">
-                                <rect key="frame" x="20" y="451" width="374" height="110"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="20" y="431" width="374" height="130"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuel Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2K-jY-2e8">
+                                        <rect key="frame" x="18" y="10" width="61.5" height="28.5"/>
+                                        <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCU-ef-kJT">
+                                        <rect key="frame" x="18" y="48.5" width="77" height="28.5"/>
+                                        <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WnS-Qh-6Mg">
+                                        <rect key="frame" x="18" y="85" width="342" height="3"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="3" id="I4K-2n-JrN"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdZ-qa-to2">
+                                        <rect key="frame" x="18" y="91" width="74" height="32"/>
+                                        <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                        <color key="textColor" red="0.74901960784313726" green="0.36078431372549019" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Apply" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hn8-Fc-bAH">
+                                        <rect key="frame" x="290" y="91" width="70" height="32"/>
+                                        <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                        <color key="textColor" red="0.74901960779999999" green="0.36078431370000003" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0 BHD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0x1-Fr-znR">
+                                        <rect key="frame" x="313" y="10" width="53" height="28.5"/>
+                                        <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.0 BHD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdA-eS-4be">
+                                        <rect key="frame" x="313" y="48.5" width="52.5" height="28.5"/>
+                                        <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="110" id="719-dd-HOJ"/>
+                                    <constraint firstItem="GCU-ef-kJT" firstAttribute="leading" secondItem="S2K-jY-2e8" secondAttribute="leading" id="1Rh-rj-Xja"/>
+                                    <constraint firstAttribute="trailing" secondItem="0x1-Fr-znR" secondAttribute="trailing" constant="8" id="5o7-HL-pGf"/>
+                                    <constraint firstAttribute="height" constant="130" id="719-dd-HOJ"/>
+                                    <constraint firstItem="sdA-eS-4be" firstAttribute="leading" secondItem="0x1-Fr-znR" secondAttribute="leading" id="7mF-ZJ-uRz"/>
+                                    <constraint firstItem="WnS-Qh-6Mg" firstAttribute="leading" secondItem="GCU-ef-kJT" secondAttribute="leading" id="HjA-On-9RU"/>
+                                    <constraint firstItem="GCU-ef-kJT" firstAttribute="top" secondItem="S2K-jY-2e8" secondAttribute="bottom" constant="10" id="Jup-gh-Id5"/>
+                                    <constraint firstItem="Hn8-Fc-bAH" firstAttribute="trailing" secondItem="WnS-Qh-6Mg" secondAttribute="trailing" id="KU2-e0-xJQ"/>
+                                    <constraint firstItem="UdZ-qa-to2" firstAttribute="leading" secondItem="GCU-ef-kJT" secondAttribute="leading" id="Mrp-Kn-4bt"/>
+                                    <constraint firstItem="S2K-jY-2e8" firstAttribute="leading" secondItem="f5f-2z-wZn" secondAttribute="leading" constant="18" id="NIR-BZ-4bD"/>
+                                    <constraint firstItem="Hn8-Fc-bAH" firstAttribute="centerY" secondItem="UdZ-qa-to2" secondAttribute="centerY" id="QNb-yh-7gn"/>
+                                    <constraint firstItem="S2K-jY-2e8" firstAttribute="top" secondItem="f5f-2z-wZn" secondAttribute="top" constant="10" id="U9q-yx-7bw"/>
+                                    <constraint firstItem="0x1-Fr-znR" firstAttribute="centerY" secondItem="S2K-jY-2e8" secondAttribute="centerY" id="gwb-OH-4qn"/>
+                                    <constraint firstAttribute="trailing" secondItem="WnS-Qh-6Mg" secondAttribute="trailing" constant="14" id="mfb-LR-nI2"/>
+                                    <constraint firstItem="sdA-eS-4be" firstAttribute="centerY" secondItem="GCU-ef-kJT" secondAttribute="centerY" id="o0N-fS-TRv"/>
+                                    <constraint firstItem="WnS-Qh-6Mg" firstAttribute="top" secondItem="GCU-ef-kJT" secondAttribute="bottom" constant="8" symbolic="YES" id="qEk-qm-4H9"/>
+                                    <constraint firstItem="UdZ-qa-to2" firstAttribute="top" secondItem="WnS-Qh-6Mg" secondAttribute="bottom" constant="3" id="qVk-Zk-sEW"/>
+                                    <constraint firstAttribute="trailing" secondItem="sdA-eS-4be" secondAttribute="trailing" constant="8.5" id="ura-M3-6kQ"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fU1-kx-4uW">
@@ -455,6 +528,21 @@
                                     <action selector="sendOrderDetailsBtnDidTapped:" destination="Ot2-0C-fJz" eventType="touchUpInside" id="XAg-K2-59j"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3o-dz-6vS">
+                                <rect key="frame" x="20" y="633" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.1843137255" green="0.1843137255" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="iR0-nk-fGH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelBtnDidTapped:" destination="Ot2-0C-fJz" eventType="touchUpInside" id="T9P-s1-OtW"/>
+                                    <action selector="sendOrderDetailsBtnDidTapped:" destination="Ot2-0C-fJz" eventType="touchUpInside" id="I9Y-qB-vYm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cYp-nW-D33"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -462,17 +550,20 @@
                             <constraint firstItem="Fdh-QV-0c9" firstAttribute="top" secondItem="EhG-zm-9RC" secondAttribute="bottom" constant="15" id="7PW-hN-1A7"/>
                             <constraint firstItem="QX5-aX-nCO" firstAttribute="leading" secondItem="cYp-nW-D33" secondAttribute="leading" constant="20" id="Atc-co-wNm"/>
                             <constraint firstItem="cYp-nW-D33" firstAttribute="trailing" secondItem="f5f-2z-wZn" secondAttribute="trailing" constant="20" id="EAi-es-45C"/>
-                            <constraint firstItem="cDB-AT-fPO" firstAttribute="top" secondItem="otX-ke-LCs" secondAttribute="bottom" constant="30" id="Gc8-Ph-vXg"/>
                             <constraint firstItem="cYp-nW-D33" firstAttribute="trailing" secondItem="otX-ke-LCs" secondAttribute="trailing" constant="20" id="GoP-gc-U4q"/>
                             <constraint firstItem="cYp-nW-D33" firstAttribute="trailing" secondItem="fU1-kx-4uW" secondAttribute="trailing" constant="20" id="JaS-3O-Qah"/>
                             <constraint firstItem="4O3-e9-N0y" firstAttribute="top" secondItem="Fdh-QV-0c9" secondAttribute="bottom" constant="20" id="LbM-rV-HDZ"/>
                             <constraint firstItem="fU1-kx-4uW" firstAttribute="top" secondItem="f5f-2z-wZn" secondAttribute="bottom" constant="24" id="O0J-oA-OKJ"/>
                             <constraint firstItem="f5f-2z-wZn" firstAttribute="top" secondItem="4O3-e9-N0y" secondAttribute="bottom" constant="8" symbolic="YES" id="Om4-rh-Bh6"/>
-                            <constraint firstItem="QX5-aX-nCO" firstAttribute="top" secondItem="cYp-nW-D33" secondAttribute="top" constant="40" id="P8x-PY-7rO"/>
+                            <constraint firstItem="QX5-aX-nCO" firstAttribute="top" secondItem="cYp-nW-D33" secondAttribute="top" constant="20" id="P8x-PY-7rO"/>
+                            <constraint firstItem="W3o-dz-6vS" firstAttribute="top" secondItem="fU1-kx-4uW" secondAttribute="bottom" constant="8" symbolic="YES" id="QLN-dO-aKE"/>
+                            <constraint firstItem="W3o-dz-6vS" firstAttribute="trailing" secondItem="fU1-kx-4uW" secondAttribute="trailing" id="R2Z-uP-DPz"/>
+                            <constraint firstItem="cDB-AT-fPO" firstAttribute="top" secondItem="otX-ke-LCs" secondAttribute="bottom" constant="20" id="StJ-cE-pfu"/>
                             <constraint firstItem="cDB-AT-fPO" firstAttribute="leading" secondItem="cYp-nW-D33" secondAttribute="leading" constant="20" id="T6E-7T-mde"/>
                             <constraint firstItem="otX-ke-LCs" firstAttribute="leading" secondItem="cYp-nW-D33" secondAttribute="leading" constant="20" id="Wlh-Yg-Db6"/>
                             <constraint firstItem="f5f-2z-wZn" firstAttribute="leading" secondItem="cYp-nW-D33" secondAttribute="leading" constant="20" id="Y4G-KI-Wg0"/>
                             <constraint firstItem="Fdh-QV-0c9" firstAttribute="trailing" secondItem="cDB-AT-fPO" secondAttribute="trailing" id="ZGq-WH-scY"/>
+                            <constraint firstItem="W3o-dz-6vS" firstAttribute="leading" secondItem="fU1-kx-4uW" secondAttribute="leading" id="ZLh-DO-Qmb"/>
                             <constraint firstItem="Fdh-QV-0c9" firstAttribute="leading" secondItem="EhG-zm-9RC" secondAttribute="leading" id="gik-Tk-LdB"/>
                             <constraint firstItem="EhG-zm-9RC" firstAttribute="top" secondItem="cDB-AT-fPO" secondAttribute="bottom" constant="8" symbolic="YES" id="hC8-Qv-6gr"/>
                             <constraint firstItem="4O3-e9-N0y" firstAttribute="leading" secondItem="cYp-nW-D33" secondAttribute="leading" constant="20" id="iRS-TA-Gfr"/>
@@ -484,12 +575,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cancelBtn" destination="W3o-dz-6vS" id="nxH-Vz-zuc"/>
                         <outlet property="itemstableView" destination="otX-ke-LCs" id="6st-eU-PMg"/>
                         <outlet property="notesTextField" destination="cDB-AT-fPO" id="EYL-sF-tIK"/>
                         <outlet property="orderPriceDetailsView" destination="f5f-2z-wZn" id="Ymd-RR-v5R"/>
                         <outlet property="paymentTypeView" destination="4O3-e9-N0y" id="l5w-Yz-YeN"/>
                         <outlet property="sendOrderBtn" destination="fU1-kx-4uW" id="kvL-g7-mPq"/>
-                        <outlet property="timeOfReciveLbl" destination="vYE-sC-i5D" id="kXQ-8k-Y8a"/>
+                        <outlet property="timeOfRecieveTextFiel" destination="5fs-Bb-sDl" id="BeB-2n-k94"/>
                         <outlet property="timeOfReciveView" destination="Fdh-QV-0c9" id="Uss-nP-m1i"/>
                     </connections>
                 </viewController>
@@ -499,6 +591,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="edit" width="128" height="128"/>
         <image name="payment-method-2" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

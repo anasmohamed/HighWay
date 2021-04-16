@@ -6,6 +6,49 @@
 //
 
 import Foundation
+import FirebaseFirestore
+ 
 class RequestOrderFirebaseManager {
-    
-}
+    let db = Firestore.firestore()
+
+    func getFuelModel(completion:@escaping (Bool?,[FuelModel]) -> Void)  {
+            var fuelModels = [FuelModel]()
+                db.collection("fuelModel").getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                        completion(false, fuelModels)
+                    } else {
+                        for document in querySnapshot!.documents {
+                            print("\(document.documentID) => \(document.data())")
+                            let rating = FuelModel(fuelPrice:Double(document.data()["price"] as! String)!, size: document.data()["size"] as! String)
+                            fuelModels.append(rating)
+                        }
+                        completion(true, fuelModels)
+                    }
+                }
+        }
+    func sendOrderData(order:Order,completion:@escaping (Error?) -> Void)  {
+        let orderDict = ["address":order.userAddress,
+                         "fuelOrder":["date":order.fuelOrderDate,"fuelPrice":order.fuelOrderPrice,"size":order.fuelOrderSize],
+                         "id":db.collection("userOrders").document().documentID,
+                         "note":order.notes,
+                         "price":order.orderPrice,
+                         "rated":"false",
+                         "startLat":order.startLat,
+                         "startLng":order.startLong,
+                         "status":Double(order.orderStatus)!,
+                         "timstamp":order.orderDataTime ?? Date(),
+                         "type":order.orderType,
+                         "user_id":UserDefaults.standard.string(forKey: "token")!] as [String : Any]
+
+                db.collection("userOrders").addDocument(data: orderDict){ (err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                        completion(err)
+                    } else {
+                      
+                        completion(nil)
+                    }
+                }
+        }
+    }

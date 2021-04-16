@@ -35,7 +35,9 @@ extension MainViewController : UICollectionViewDelegate,UICollectionViewDataSour
         let requestOrderMapViewStroyboard = UIStoryboard.init(name: "RequestOrderMapView", bundle: nil)
         let requestOrderViewController = requestOrderMapViewStroyboard.instantiateViewController(withIdentifier: "RequestOrderMapViewController")
         as! RequestOrderMapViewController
+        requestOrderViewController.orderType = mainViewModel.serviceListViewModel.serviceViewModels[indexPath.row].serviceName
         let myNavigationController = UINavigationController(rootViewController: requestOrderViewController)
+        
         myNavigationController.modalPresentationStyle = .fullScreen
         self.present(myNavigationController, animated: true,completion: nil)
     }

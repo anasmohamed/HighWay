@@ -10,7 +10,12 @@ import UIKit
 class ItemsTableViewCell: UITableViewCell {
     @IBOutlet weak var priceLbl: UILabel!
     @IBOutlet weak var sizeLbl: UILabel!
-    
+    var item = FuelModel(){
+        didSet{
+            priceLbl.text = "\(item.fuelPrice)BHD"
+            sizeLbl.text = item.size
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

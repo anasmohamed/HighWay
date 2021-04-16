@@ -37,8 +37,9 @@
 		326B01D126274B1B0061FB44 /* ItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326B01CF26274B1B0061FB44 /* ItemsTableViewCell.swift */; };
 		326B01D226274B1B0061FB44 /* ItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 326B01D026274B1B0061FB44 /* ItemsTableViewCell.xib */; };
 		326B01D726274B1C0061FB44 /* RequestCarFuelOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326B01D626274B1C0061FB44 /* RequestCarFuelOrderViewController.swift */; };
-		326B01DE26274CB00061FB44 /* RequestOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326B01DD26274CB00061FB44 /* RequestOrderViewModel.swift */; };
+		326B01DE26274CB00061FB44 /* RequestOrderDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326B01DD26274CB00061FB44 /* RequestOrderDetailsViewModel.swift */; };
 		326B01E626274CE30061FB44 /* RequestOrderFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326B01E526274CE30061FB44 /* RequestOrderFirebaseManager.swift */; };
+		326B01EB2627BC1E0061FB44 /* FuelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326B01EA2627BC1E0061FB44 /* FuelModel.swift */; };
 		3272705A2618CA9800E947B2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327270592618CA9800E947B2 /* Service.swift */; };
 		327270602618DC7800E947B2 /* MainViewController + CollectionVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3272705F2618DC7800E947B2 /* MainViewController + CollectionVIew.swift */; };
 		327270692618DD2300E947B2 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327270682618DD2200E947B2 /* MainViewModel.swift */; };
@@ -165,8 +166,9 @@
 		326B01CF26274B1B0061FB44 /* ItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableViewCell.swift; sourceTree = "<group>"; };
 		326B01D026274B1B0061FB44 /* ItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsTableViewCell.xib; sourceTree = "<group>"; };
 		326B01D626274B1C0061FB44 /* RequestCarFuelOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCarFuelOrderViewController.swift; sourceTree = "<group>"; };
-		326B01DD26274CB00061FB44 /* RequestOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOrderViewModel.swift; sourceTree = "<group>"; };
+		326B01DD26274CB00061FB44 /* RequestOrderDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOrderDetailsViewModel.swift; sourceTree = "<group>"; };
 		326B01E526274CE30061FB44 /* RequestOrderFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOrderFirebaseManager.swift; sourceTree = "<group>"; };
+		326B01EA2627BC1E0061FB44 /* FuelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelModel.swift; sourceTree = "<group>"; };
 		327270592618CA9800E947B2 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		3272705F2618DC7800E947B2 /* MainViewController + CollectionVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController + CollectionVIew.swift"; sourceTree = "<group>"; };
 		327270682618DD2200E947B2 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -395,6 +397,7 @@
 				3287B60C261D41E9004E6971 /* Order.swift */,
 				32904DBC2621E19200F10778 /* Driver.swift */,
 				32F89E722625F2A1002DC5CF /* CountryGeoLocation.swift */,
+				326B01EA2627BC1E0061FB44 /* FuelModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -555,7 +558,7 @@
 		326B01DB26274C7E0061FB44 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				326B01DD26274CB00061FB44 /* RequestOrderViewModel.swift */,
+				326B01DD26274CB00061FB44 /* RequestOrderDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1261,9 +1264,10 @@
 				322D9AD82614B14000C6F823 /* ViewController.swift in Sources */,
 				3218B622261F5885000706DC /* OrderHistoryMapViewController.swift in Sources */,
 				327D0634261BDA9D00A74D9A /* Rating.swift in Sources */,
-				326B01DE26274CB00061FB44 /* RequestOrderViewModel.swift in Sources */,
+				326B01DE26274CB00061FB44 /* RequestOrderDetailsViewModel.swift in Sources */,
 				322D9AD42614B14000C6F823 /* AppDelegate.swift in Sources */,
 				324782A326212437003A98A2 /* OrderDetailesTableViewController.swift in Sources */,
+				326B01EB2627BC1E0061FB44 /* FuelModel.swift in Sources */,
 				32F89E732625F2A1002DC5CF /* CountryGeoLocation.swift in Sources */,
 				32904DBD2621E19200F10778 /* Driver.swift in Sources */,
 				3287B608261D415F004E6971 /* OrdersHistoryFirebaseManager.swift in Sources */,

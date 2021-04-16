@@ -27,6 +27,12 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
     var countryLatitude = 0.0
     let requestOrderMapViewModel = RequestOrderMapViewModel()
     var timer : Timer?
+    var orderType = ""
+    var startLat = 0.0
+    var startLong = 0.0
+    var endLat = 0.0
+    var endLong = 0.0
+    var addressText = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         gpsBtn.layer.cornerRadius = 8
@@ -70,14 +76,26 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
                 as! SignupViewController
             requestOrderDetailsViewController.modalPresentationStyle = .overCurrentContext
             self.present(requestOrderDetailsViewController, animated: true,completion: nil)
-        }else{
-            let requestOrderMapViewStroyboard = UIStoryboard.init(name: "RequestOrderMapView", bundle: nil)
-            let requestOrderViewController = requestOrderMapViewStroyboard.instantiateViewController(withIdentifier: "RequestOrderMapViewController")
-                as! RequestOrderMapViewController
+        }else if orderType == "Car fuel" {
+            let requestOrderMapViewStroyboard = UIStoryboard.init(name: "RequestOrderDetails", bundle: nil)
+            let requestOrderViewController = requestOrderMapViewStroyboard.instantiateViewController(withIdentifier: "RequestCarFuelOrderViewController")
+                as! RequestCarFuelOrderViewController
+            requestOrderViewController.addressText = addressText
+            requestOrderViewController.endLat = endLat
+            requestOrderViewController.endLong = endLong
+            requestOrderViewController.startLat = startLat
+            requestOrderViewController.startLong = startLong
             let myNavigationController = UINavigationController(rootViewController: requestOrderViewController)
-            requestOrderViewController.viewControllerTitle = "Drop Location"
             myNavigationController.modalPresentationStyle = .fullScreen
             self.present(myNavigationController, animated: true,completion: nil)
+        }else {
+//            let requestOrderMapViewStroyboard = UIStoryboard.init(name: "RequestOrderMapView", bundle: nil)
+//            let requestOrderViewController = requestOrderMapViewStroyboard.instantiateViewController(withIdentifier: "RequestOrderMapViewController")
+//                as! RequestOrderMapViewController
+//            let myNavigationController = UINavigationController(rootViewController: requestOrderViewController)
+//            requestOrderViewController.viewControllerTitle = "Drop Location"
+//            myNavigationController.modalPresentationStyle = .fullScreen
+//            self.present(myNavigationController, animated: true,completion: nil)
         }
     }
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
@@ -166,6 +184,7 @@ extension RequestOrderMapViewController: CLLocationManagerDelegate {
             // 3
             self.addressLbl.text = lines.joined(separator: "\n")
             // 4
+            self.addressText = lines.joined(separator: "\n")
             if self.addressLbl.text!.contains("Bahrain")
             {
                 self.nextBtn.backgroundColor = .black
