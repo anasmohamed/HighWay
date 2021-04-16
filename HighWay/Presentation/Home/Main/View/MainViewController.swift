@@ -9,6 +9,8 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    @IBOutlet weak var itCanBeUsefulLbl: UILabel!
+    @IBOutlet weak var orderStatusView: UIView!
     @IBOutlet weak var chatImage: UIImageView!
     @IBOutlet weak var serviceCollectionView: UICollectionView!
     var mainViewModel : MainViewModel!
@@ -20,6 +22,17 @@ class MainViewController: UIViewController {
         setupCollectionView()
         serviceCollectionView.reloadData()
         setupChatImage()
+        if UserDefaults.standard.string(forKey: "requestOrder") == "true"
+        {
+            itCanBeUsefulLbl.isHidden = true
+            serviceCollectionView.isHidden = true
+            orderStatusView.isHidden = false
+        }else{
+            itCanBeUsefulLbl.isHidden = false
+            serviceCollectionView.isHidden = false
+            orderStatusView.isHidden = true
+        }
+        
         // Do any additional setup after loading the view.
     }
     

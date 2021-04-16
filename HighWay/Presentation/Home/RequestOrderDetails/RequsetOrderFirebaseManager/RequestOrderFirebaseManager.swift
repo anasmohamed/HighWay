@@ -28,9 +28,10 @@ class RequestOrderFirebaseManager {
                 }
         }
     func sendOrderData(order:Order,completion:@escaping (Error?) -> Void)  {
+        let timeInMiliseconds = String(Date().toMilliseconds())
         let orderDict = ["address":order.userAddress,
                          "fuelOrder":["date":order.fuelOrderDate,"fuelPrice":order.fuelOrderPrice,"size":order.fuelOrderSize],
-                         "id":db.collection("userOrders").document().documentID,
+                         "id":timeInMiliseconds,
                          "note":order.notes,
                          "price":order.orderPrice,
                          "rated":"false",
@@ -40,8 +41,7 @@ class RequestOrderFirebaseManager {
                          "timstamp":order.orderDataTime ?? Date(),
                          "type":order.orderType,
                          "user_id":UserDefaults.standard.string(forKey: "token")!] as [String : Any]
-
-                db.collection("userOrders").addDocument(data: orderDict){ (err) in
+        db.collection("userOrders").document(timeInMiliseconds).setData(orderDict){ (err) in
                     if let err = err {
                         print("Error getting documents: \(err)")
                         completion(err)
@@ -52,3 +52,14 @@ class RequestOrderFirebaseManager {
                 }
         }
     }
+extension Date {
+    
+    func toMilliseconds() -> Int64 {
+        Int64(self.timeIntervalSince1970 * 1000)
+    }
+
+    @available(iOS 13.0, *)
+    init(milliseconds:Int) {
+        self = Date().advanced(by: TimeInterval(integerLiteral: Int64(milliseconds / 1000)))
+    }
+}

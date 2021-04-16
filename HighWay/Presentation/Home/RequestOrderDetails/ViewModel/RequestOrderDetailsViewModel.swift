@@ -58,6 +58,8 @@ class RequestOrderDetailsViewModel {
         
     }
     var reloadTableView: Observable<[FuelModel]> = Observable([])
+    var inserOrdrSuccess: Observable<Bool> = Observable(false)
+
     func fetchData() {
         
         requestOrderFirebaseManager.getFuelModel { [weak self] (success, fuelModelsList) in
@@ -75,8 +77,15 @@ class RequestOrderDetailsViewModel {
         
         
         
-        requestOrderFirebaseManager.sendOrderData(order: order){ status in
-            
+        requestOrderFirebaseManager.sendOrderData(order: order){ error in
+            if error == nil
+            {
+                self.inserOrdrSuccess.value = true
+            }else
+            {
+                self.inserOrdrSuccess.value = false
+
+            }
             
         }
     }

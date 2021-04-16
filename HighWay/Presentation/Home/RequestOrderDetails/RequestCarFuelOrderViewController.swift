@@ -90,7 +90,25 @@ class RequestCarFuelOrderViewController: UIViewController {
     func bindData() {
         requestOrderViewModel.reloadTableView.bind {_ in
             self.itemstableView.reloadData()
-        }}
+        }
+        
+        requestOrderViewModel.inserOrdrSuccess.bind { status in
+            if status == true
+            {
+                UserDefaults.standard.set("true", forKey: "requestOrder")
+                self.navigateToMainViewController()
+            }else{
+                
+            }
+        }
+    }
+    func navigateToMainViewController() {
+        let homeViewStoryboard = UIStoryboard.init(name: "MainView", bundle: nil)
+        let homeViewController = homeViewStoryboard.instantiateViewController(withIdentifier: "HomeTabBar")
+        homeViewController.modalPresentationStyle = .fullScreen
+        
+        self.present(homeViewController, animated: true, completion: nil)
+    }
     /*
      // MARK: - Navigation
      
