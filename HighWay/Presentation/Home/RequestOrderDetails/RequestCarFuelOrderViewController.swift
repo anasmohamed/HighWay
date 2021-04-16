@@ -125,8 +125,9 @@ extension RequestCarFuelOrderViewController:UITableViewDelegate,UITableViewDataS
             cell?.accessoryType = .checkmark
             
         }
+        fuelOrderDate = timeOfRecieveTextFiel.text ?? ""
         fuelOrderPrice = requestOrderViewModel.getData(index: indexPath.row).fuelPrice
-        fuelOrderDate = requestOrderViewModel.getData(index: indexPath.row).date
+//        fuelOrderDate = requestOrderViewModel.getData(index: indexPath.row).date
         fuelOrderSize = requestOrderViewModel.getData(index: indexPath.row).size
     }
     

@@ -18,7 +18,6 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var adressView: UIView!
     @IBOutlet weak var nextBtn: UIButton!
-    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var addressLbl: UILabel!
     @IBOutlet weak var gpsBtn: UIButton!
@@ -166,7 +165,8 @@ extension RequestOrderMapViewController: CLLocationManagerDelegate {
         // 7
         print("location\(location.coordinate.latitude)")
         mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15.0, bearing: 0, viewingAngle: 0)
-        
+        startLat = location.coordinate.latitude
+        startLong = location.coordinate.longitude
         // 8
         locationManager.stopUpdatingLocation()
     }
