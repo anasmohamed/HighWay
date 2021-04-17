@@ -23,6 +23,7 @@ struct Order {
     var notes = ""
     var orderPrice = 0.0
     var driver : Driver?
+    var rated = false
    
     
 }

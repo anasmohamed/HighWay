@@ -45,7 +45,7 @@ class OrderHistoryFirebaseManager {
                                         userAddress: document.data()["address"] as? String ?? "",
                                         arriveAddress: towingOrder?["arriveAddress"] as? String ?? "",
                                         notes: document.data()["note"] as! String,
-                                        orderPrice: document.data()["price"] as! Double,driver: self.driver ?? nil)
+                                        orderPrice: document.data()["price"] as! Double,driver: self.driver ?? nil,rated:document.data()["rated"] as! Bool)
                                 orders.append(order)
                                 completion(true, orders)
                                     

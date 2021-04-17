@@ -62,6 +62,14 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
             buttomConstraintOrderStatusVIew.constant = 20
             mapViewHieghtConstant.isActive = false
             mapViewHeightConstraintSecond.isActive = true
+        }else if order.rated{
+            cancelOrderBtn.isEnabled = false
+            cancelOrderBtn.setTitle("This order was completed", for: .normal)
+            cancelOrderBtn.setTitleColor(UIColor.green, for: .normal)
+            addFeedbackBtn.isHidden = true
+            buttomConstraintOrderStatusVIew.constant = 20
+            mapViewHieghtConstant.isActive = false
+            mapViewHeightConstraintSecond.isActive = true
         }else{
             cancelOrderBtn.isEnabled = false
             cancelOrderBtn.setTitle("This order was completed", for: .normal)
@@ -153,7 +161,12 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
     
     @IBAction func addFeedbackBtnDidTapped(_ sender: Any) {
         
-        
+        let addFeedbackViewStoryboard = UIStoryboard.init(name: "OrderHistoryMapView", bundle: nil)
+        let addFeedbackViewController = addFeedbackViewStoryboard.instantiateViewController(withIdentifier: "AddFeedbackViewController") as! AddFeedbackViewController
+        addFeedbackViewController.modalTransitionStyle = .crossDissolve
+        addFeedbackViewController.modalPresentationStyle = .overCurrentContext
+        addFeedbackViewController.orderId = order.orderId
+        self.present(addFeedbackViewController, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -28,6 +28,7 @@
 		323DC00A26169A72006E3380 /* ForgetPasswordFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323DC00926169A72006E3380 /* ForgetPasswordFirebaseManager.swift */; };
 		324782A326212437003A98A2 /* OrderDetailesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324782A226212437003A98A2 /* OrderDetailesTableViewController.swift */; };
 		324B17712620D8EB00062A74 /* OrderDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 324B17702620D8EB00062A74 /* OrderDetails.storyboard */; };
+		32531CE1262B7BC100093BDD /* AddFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32531CE0262B7BC100093BDD /* AddFeedbackViewController.swift */; };
 		3263077D2614D15A00D72306 /* cairo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3263077C2614D15A00D72306 /* cairo.ttf */; };
 		3265514D26188B7A00A88C38 /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3265514C26188B7A00A88C38 /* MainView.storyboard */; };
 		3265515226188D2C00A88C38 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3265515126188D2C00A88C38 /* MainViewController.swift */; };
@@ -168,6 +169,7 @@
 		323DC00926169A72006E3380 /* ForgetPasswordFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordFirebaseManager.swift; sourceTree = "<group>"; };
 		324782A226212437003A98A2 /* OrderDetailesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailesTableViewController.swift; sourceTree = "<group>"; };
 		324B17702620D8EB00062A74 /* OrderDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderDetails.storyboard; sourceTree = "<group>"; };
+		32531CE0262B7BC100093BDD /* AddFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFeedbackViewController.swift; sourceTree = "<group>"; };
 		3263077C2614D15A00D72306 /* cairo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = cairo.ttf; sourceTree = "<group>"; };
 		3265514C26188B7A00A88C38 /* MainView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
 		3265515126188D2C00A88C38 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 			children = (
 				3218B621261F5885000706DC /* OrderHistoryMapViewController.swift */,
 				3218B626261F58F8000706DC /* OrderHistoryMapView.storyboard */,
+				32531CE0262B7BC100093BDD /* AddFeedbackViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -490,6 +493,29 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		32531CDA262B73C500093BDD /* RateOrder */ = {
+			isa = PBXGroup;
+			children = (
+				32531CDC262B73E500093BDD /* ViewModel */,
+				32531CDB262B73DC00093BDD /* View */,
+			);
+			path = RateOrder;
+			sourceTree = "<group>";
+		};
+		32531CDB262B73DC00093BDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		32531CDC262B73E500093BDD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		3263077B2614D06B00D72306 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -507,6 +533,7 @@
 		3265514926188A0100A88C38 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				32531CDA262B73C500093BDD /* RateOrder */,
 				329F610E2629F61D009DEF88 /* OrderLiveLocation */,
 				329F60E92629D3AD009DEF88 /* Notifications */,
 				32F89E9A26266D9B002DC5CF /* RequestOrderDetails */,
@@ -1413,6 +1440,7 @@
 				32F89EC326266E67002DC5CF /* RequestOrderDetailsViewController.swift in Sources */,
 				32E7127D261602CD00FF0F8F /* HandleKeboardShowExtenstion.swift in Sources */,
 				32FA06EA2615158600912153 /* LoginManager.swift in Sources */,
+				32531CE1262B7BC100093BDD /* AddFeedbackViewController.swift in Sources */,
 				326B01D726274B1C0061FB44 /* RequestCarFuelOrderViewController.swift in Sources */,
 				3272705A2618CA9800E947B2 /* Service.swift in Sources */,
 				3272706E2618E15C00E947B2 /* ServiceListViewModel.swift in Sources */,

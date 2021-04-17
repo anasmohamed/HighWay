@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Toast_Swift
 class MainViewController: UIViewController {
     
     @IBOutlet weak var itCanBeUsefulLbl: UILabel!
@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var serviceCollectionView: UICollectionView!
     var mainViewModel : MainViewModel!
     var order : Order?
+    var isAddFeedbackViewController = false
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mainViewModel = MainViewModel()
@@ -25,7 +26,15 @@ class MainViewController: UIViewController {
         serviceCollectionView.reloadData()
         setupChatImage()
         bind()
-        fetchData() 
+        fetchData()
+        if isAddFeedbackViewController{
+            var style = ToastStyle()
+            // this is just one of many style options
+            style.messageColor = .white
+            style.backgroundColor = UIColor.init(red: 69.0/255.0, green: 81.0/255.0, blue: 174.0/255.0, alpha: 1)
+            style.messageFont = UIFont(name:"Cairo-Regular" , size:20.0)!
+            self.view.makeToast("You rate added succcessfully, thak you", duration: 3.0, position: .top,style:style)
+        }
         
         // Do any additional setup after loading the view.
     }
