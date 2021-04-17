@@ -23,11 +23,15 @@ class OrdersHistroyViewController: UIViewController ,UITableViewDelegate,UITable
         setupTableView()
         bindData()
         fetchData()
+        
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(descriptor: UIFontDescriptor(name: "Cairo-Regular", size: 17), size: 17)]
 
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
 
         // Do any additional setup after loading the view.
+    }
+    override func willMove(toParent parent: UIViewController?) {
+      
     }
     func bindData() {
         orderHistoryViewModel.reloadTableView.bind {_ in

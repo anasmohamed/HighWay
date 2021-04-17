@@ -21,6 +21,7 @@
 		322D9AF62614B14100C6F823 /* HighWayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D9AF52614B14100C6F823 /* HighWayUITests.swift */; };
 		322D9B112614B31C00C6F823 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D9B102614B31C00C6F823 /* User.swift */; };
 		322D9B1C2614B49900C6F823 /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322D9B1B2614B49900C6F823 /* LoginView.storyboard */; };
+		32313C10262B39EB0000B959 /* OrderHistoryMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32313C0F262B39EB0000B959 /* OrderHistoryMapViewModel.swift */; };
 		323DBFF0261695D6006E3380 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323DBFEF261695D6006E3380 /* ForgetPasswordViewController.swift */; };
 		323DBFFA26169882006E3380 /* ForgetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 323DBFF926169882006E3380 /* ForgetPassword.storyboard */; };
 		323DC0042616992D006E3380 /* ForgetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323DC0032616992D006E3380 /* ForgetPasswordViewModel.swift */; };
@@ -66,6 +67,16 @@
 		3289F5A8262523D5002D564C /* RequestOrderMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3289F5A7262523D5002D564C /* RequestOrderMapViewModel.swift */; };
 		3289F5AD262523FD002D564C /* RequestOrderMapViewApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3289F5AC262523FD002D564C /* RequestOrderMapViewApiManager.swift */; };
 		32904DBD2621E19200F10778 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32904DBC2621E19200F10778 /* Driver.swift */; };
+		329F60EE2629D48C009DEF88 /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 329F60ED2629D48C009DEF88 /* Notifications.storyboard */; };
+		329F60F52629D503009DEF88 /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329F60F32629D503009DEF88 /* NotificationsTableViewCell.swift */; };
+		329F60F62629D503009DEF88 /* NotificationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 329F60F42629D503009DEF88 /* NotificationsTableViewCell.xib */; };
+		329F60FB2629DB58009DEF88 /* NotificationsViewCotrollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329F60FA2629DB58009DEF88 /* NotificationsViewCotrollerViewController.swift */; };
+		329F61002629DBB9009DEF88 /* NotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329F60FF2629DBB9009DEF88 /* NotificationsViewModel.swift */; };
+		329F61052629DBDC009DEF88 /* NotificationsFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329F61042629DBDC009DEF88 /* NotificationsFirebaseManager.swift */; };
+		329F610A2629E111009DEF88 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329F61092629E111009DEF88 /* Notification.swift */; };
+		329F61132629F725009DEF88 /* OrderLiveLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 329F61122629F725009DEF88 /* OrderLiveLocation.storyboard */; };
+		329F611D2629F8D8009DEF88 /* RealLiveLocationFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329F611C2629F8D8009DEF88 /* RealLiveLocationFirebaseManager.swift */; };
+		329F6146262A2EF3009DEF88 /* OrderFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329F6145262A2EF3009DEF88 /* OrderFirebaseManager.swift */; };
 		32D6A8C526174D7600661F6E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322D9B162614B46600C6F823 /* LoginViewController.swift */; };
 		32D6A8EA2617629D00661F6E /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D6A8E92617629D00661F6E /* AlertController.swift */; };
 		32D6A9042617651300661F6E /* ForgetPassowordProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D6A9032617651300661F6E /* ForgetPassowordProtocol.swift */; };
@@ -150,6 +161,7 @@
 		322D9B102614B31C00C6F823 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		322D9B162614B46600C6F823 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		322D9B1B2614B49900C6F823 /* LoginView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginView.storyboard; sourceTree = "<group>"; };
+		32313C0F262B39EB0000B959 /* OrderHistoryMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryMapViewModel.swift; sourceTree = "<group>"; };
 		323DBFEF261695D6006E3380 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		323DBFF926169882006E3380 /* ForgetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgetPassword.storyboard; sourceTree = "<group>"; };
 		323DC0032616992D006E3380 /* ForgetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewModel.swift; sourceTree = "<group>"; };
@@ -195,6 +207,16 @@
 		3289F5A7262523D5002D564C /* RequestOrderMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOrderMapViewModel.swift; sourceTree = "<group>"; };
 		3289F5AC262523FD002D564C /* RequestOrderMapViewApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOrderMapViewApiManager.swift; sourceTree = "<group>"; };
 		32904DBC2621E19200F10778 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		329F60ED2629D48C009DEF88 /* Notifications.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
+		329F60F32629D503009DEF88 /* NotificationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTableViewCell.swift; sourceTree = "<group>"; };
+		329F60F42629D503009DEF88 /* NotificationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationsTableViewCell.xib; sourceTree = "<group>"; };
+		329F60FA2629DB58009DEF88 /* NotificationsViewCotrollerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationsViewCotrollerViewController.swift; path = Cell/NotificationsViewCotrollerViewController.swift; sourceTree = "<group>"; };
+		329F60FF2629DBB9009DEF88 /* NotificationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModel.swift; sourceTree = "<group>"; };
+		329F61042629DBDC009DEF88 /* NotificationsFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsFirebaseManager.swift; sourceTree = "<group>"; };
+		329F61092629E111009DEF88 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		329F61122629F725009DEF88 /* OrderLiveLocation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrderLiveLocation.storyboard; sourceTree = "<group>"; };
+		329F611C2629F8D8009DEF88 /* RealLiveLocationFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealLiveLocationFirebaseManager.swift; sourceTree = "<group>"; };
+		329F6145262A2EF3009DEF88 /* OrderFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFirebaseManager.swift; sourceTree = "<group>"; };
 		32D6A8E92617629D00661F6E /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		32D6A9032617651300661F6E /* ForgetPassowordProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassowordProtocol.swift; sourceTree = "<group>"; };
 		32D6A9E42617789700661F6E /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
@@ -278,6 +300,8 @@
 		3218B61F261F5842000706DC /* OrderHistoryMapView */ = {
 			isa = PBXGroup;
 			children = (
+				329F611B2629F89F009DEF88 /* RealLiveLocationFirebaseManager */,
+				329F611A2629F894009DEF88 /* ViewModel */,
 				3218B620261F584E000706DC /* View */,
 			);
 			path = OrderHistoryMapView;
@@ -398,6 +422,7 @@
 				32904DBC2621E19200F10778 /* Driver.swift */,
 				32F89E722625F2A1002DC5CF /* CountryGeoLocation.swift */,
 				326B01EA2627BC1E0061FB44 /* FuelModel.swift */,
+				329F61092629E111009DEF88 /* Notification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -482,6 +507,8 @@
 		3265514926188A0100A88C38 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				329F610E2629F61D009DEF88 /* OrderLiveLocation */,
+				329F60E92629D3AD009DEF88 /* Notifications */,
 				32F89E9A26266D9B002DC5CF /* RequestOrderDetails */,
 				3289F5562624C214002D564C /* TermsAndCondition */,
 				3289F54A2624BA6B002D564C /* PrivacyPolicy */,
@@ -501,6 +528,7 @@
 		3265514A26188B3E00A88C38 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				329F6144262A2DC4009DEF88 /* OrderFirebaseManager */,
 				327270672618DD0500E947B2 /* ViewModel */,
 				3265514B26188B4D00A88C38 /* View */,
 			);
@@ -750,6 +778,107 @@
 				3289F5AC262523FD002D564C /* RequestOrderMapViewApiManager.swift */,
 			);
 			path = RequestOrderAPIManager;
+			sourceTree = "<group>";
+		};
+		329F60E92629D3AD009DEF88 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				329F60EC2629D3CA009DEF88 /* NotificationFirebaseManager */,
+				329F60EB2629D3BF009DEF88 /* ViewModel */,
+				329F60EA2629D3B7009DEF88 /* View */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		329F60EA2629D3B7009DEF88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				329F60F22629D4C6009DEF88 /* Cell */,
+				329F60ED2629D48C009DEF88 /* Notifications.storyboard */,
+				329F60FA2629DB58009DEF88 /* NotificationsViewCotrollerViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		329F60EB2629D3BF009DEF88 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				329F60FF2629DBB9009DEF88 /* NotificationsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		329F60EC2629D3CA009DEF88 /* NotificationFirebaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				329F61042629DBDC009DEF88 /* NotificationsFirebaseManager.swift */,
+			);
+			path = NotificationFirebaseManager;
+			sourceTree = "<group>";
+		};
+		329F60F22629D4C6009DEF88 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				329F60F32629D503009DEF88 /* NotificationsTableViewCell.swift */,
+				329F60F42629D503009DEF88 /* NotificationsTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		329F610E2629F61D009DEF88 /* OrderLiveLocation */ = {
+			isa = PBXGroup;
+			children = (
+				329F61112629F66A009DEF88 /* RealLocationFirebaseManager */,
+				329F61102629F650009DEF88 /* ViewModel */,
+				329F610F2629F646009DEF88 /* View */,
+			);
+			path = OrderLiveLocation;
+			sourceTree = "<group>";
+		};
+		329F610F2629F646009DEF88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				329F61122629F725009DEF88 /* OrderLiveLocation.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		329F61102629F650009DEF88 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		329F61112629F66A009DEF88 /* RealLocationFirebaseManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RealLocationFirebaseManager;
+			sourceTree = "<group>";
+		};
+		329F611A2629F894009DEF88 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				32313C0F262B39EB0000B959 /* OrderHistoryMapViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		329F611B2629F89F009DEF88 /* RealLiveLocationFirebaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				329F611C2629F8D8009DEF88 /* RealLiveLocationFirebaseManager.swift */,
+			);
+			path = RealLiveLocationFirebaseManager;
+			sourceTree = "<group>";
+		};
+		329F6144262A2DC4009DEF88 /* OrderFirebaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				329F6145262A2EF3009DEF88 /* OrderFirebaseManager.swift */,
+			);
+			path = OrderFirebaseManager;
 			sourceTree = "<group>";
 		};
 		32EC9F20261B5DB30071C625 /* Language */ = {
@@ -1061,12 +1190,14 @@
 				324B17712620D8EB00062A74 /* OrderDetails.storyboard in Resources */,
 				3287B5CC261D2B06004E6971 /* ResetPassword.storyboard in Resources */,
 				322D9AE02614B14100C6F823 /* LaunchScreen.storyboard in Resources */,
+				329F60EE2629D48C009DEF88 /* Notifications.storyboard in Resources */,
 				32F1E6052615358000C12C84 /* Cairo-SemiBold.ttf in Resources */,
 				3265515D26189D9500A88C38 /* ServiceCollectionViewCell.xib in Resources */,
 				32F1E6042615358000C12C84 /* Cairo-Regular.ttf in Resources */,
 				32F4B642261A754000D7D7E7 /* ProfileView.storyboard in Resources */,
 				326B01D226274B1B0061FB44 /* ItemsTableViewCell.xib in Resources */,
 				3287B615261D43FF004E6971 /* OrdersHistoryTableViewCell.xib in Resources */,
+				329F61132629F725009DEF88 /* OrderLiveLocation.storyboard in Resources */,
 				32EC9F1C261B5B2B0071C625 /* Language.storyboard in Resources */,
 				3265514D26188B7A00A88C38 /* MainView.storyboard in Resources */,
 				322D9ADD2614B14100C6F823 /* Assets.xcassets in Resources */,
@@ -1083,6 +1214,7 @@
 				3289F5762624C60E002D564C /* TermsAndCondition.storyboard in Resources */,
 				32F1E6032615358000C12C84 /* Cairo-Bold.ttf in Resources */,
 				3287B5F9261D4089004E6971 /* OrdersHistory.storyboard in Resources */,
+				329F60F62629D503009DEF88 /* NotificationsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1250,12 +1382,14 @@
 				327270602618DC7800E947B2 /* MainViewController + CollectionVIew.swift in Sources */,
 				32EC9F39261B62A40071C625 /* RatingTableViewCell.swift in Sources */,
 				327D062C261BDA7F00A74D9A /* RatingViewModel.swift in Sources */,
+				329F611D2629F8D8009DEF88 /* RealLiveLocationFirebaseManager.swift in Sources */,
 				32E7121A2615E42E00FF0F8F /* SignupManager.swift in Sources */,
 				32D6A8C526174D7600661F6E /* LoginViewController.swift in Sources */,
 				32D6A8EA2617629D00661F6E /* AlertController.swift in Sources */,
 				32EC9F32261B62270071C625 /* RatingsViewController.swift in Sources */,
 				32F4B647261A7E2C00D7D7E7 /* ProfileViewController.swift in Sources */,
 				3287B603261D4149004E6971 /* OrdersHistoryViewModel.swift in Sources */,
+				329F60FB2629DB58009DEF88 /* NotificationsViewCotrollerViewController.swift in Sources */,
 				3289F5522624BABA002D564C /* PrivacyPolicyViewController.swift in Sources */,
 				3289F5AD262523FD002D564C /* RequestOrderMapViewApiManager.swift in Sources */,
 				3287B5DB261D30FF004E6971 /* ResetPasswordFirebaseManager.swift in Sources */,
@@ -1271,6 +1405,7 @@
 				32F89E732625F2A1002DC5CF /* CountryGeoLocation.swift in Sources */,
 				32904DBD2621E19200F10778 /* Driver.swift in Sources */,
 				3287B608261D415F004E6971 /* OrdersHistoryFirebaseManager.swift in Sources */,
+				32313C10262B39EB0000B959 /* OrderHistoryMapViewModel.swift in Sources */,
 				326B01D126274B1B0061FB44 /* ItemsTableViewCell.swift in Sources */,
 				32FA06E426150B5000912153 /* Observable.swift in Sources */,
 				323DBFF0261695D6006E3380 /* ForgetPasswordViewController.swift in Sources */,
@@ -1287,11 +1422,13 @@
 				32E712822616032200FF0F8F /* UIResponder + KeyboardExtension.swift in Sources */,
 				32FA06DC26150A0F00912153 /* LoginViewModel.swift in Sources */,
 				32FA06F32615176E00912153 /* LoginVIewController + TextFiledDelegate.swift in Sources */,
+				329F6146262A2EF3009DEF88 /* OrderFirebaseManager.swift in Sources */,
 				3287B5D1261D2F06004E6971 /* ResetPasswordViewController.swift in Sources */,
 				32E712152615E35600FF0F8F /* SignupViewModel.swift in Sources */,
 				32D6AA642617866600661F6E /* LoadingIndicatorView.swift in Sources */,
 				326AE86C262381C300E40CFC /* RequestOrderMapViewController.swift in Sources */,
 				3289F57B2624C71B002D564C /* TermsAndConditionsViewController.swift in Sources */,
+				329F60F52629D503009DEF88 /* NotificationsTableViewCell.swift in Sources */,
 				323DC0042616992D006E3380 /* ForgetPasswordViewModel.swift in Sources */,
 				3224405326164A52008A876B /* EmailValidation.swift in Sources */,
 				32F1E61A26153F0F00C12C84 /* Checkbox.swift in Sources */,
@@ -1307,6 +1444,9 @@
 				3265515C26189D9500A88C38 /* ServiceCollectionViewCell.swift in Sources */,
 				3287B614261D43FF004E6971 /* OrdersHistoryTableViewCell.swift in Sources */,
 				322D9AD62614B14000C6F823 /* SceneDelegate.swift in Sources */,
+				329F61002629DBB9009DEF88 /* NotificationsViewModel.swift in Sources */,
+				329F610A2629E111009DEF88 /* Notification.swift in Sources */,
+				329F61052629DBDC009DEF88 /* NotificationsFirebaseManager.swift in Sources */,
 				327270692618DD2300E947B2 /* MainViewModel.swift in Sources */,
 				3287B60D261D41E9004E6971 /* Order.swift in Sources */,
 			);

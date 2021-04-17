@@ -19,16 +19,31 @@ class OrderDetailesTableViewController: UITableViewController {
     @IBOutlet weak var servicePriceLbl: UILabel!
     @IBOutlet weak var driverAddressLbl: UILabel!
     @IBOutlet weak var userAddressLbl: UILabel!
+    @IBOutlet weak var userIconImage: UIImageView!
     @IBOutlet weak var orderTypeLbl: UILabel!
     
+    @IBOutlet weak var noDriverDataYetLbl: UILabel!
+    @IBOutlet weak var phoneIconImage: UIImageView!
     @IBOutlet weak var productPriceLbl: UILabel!
     var order : Order!
     override func viewDidLoad() {
         super.viewDidLoad()
+        noDriverDataYetLbl.isHidden = true
+
+        setupBackButton() 
         contuctUsView.layer.cornerRadius = 8
         contuctUsView.layer.borderWidth = 0.5
         contuctUsView.layer.borderColor = UIColor.lightGray.cgColor
-        userPhoto.layer.cornerRadius = userPhoto.frame.width / 2 
+        userPhoto.layer.cornerRadius = userPhoto.frame.width / 2
+        navigationController!.navigationBar.barTintColor = .white
+        navigationController!.navigationBar.tintColor = .black
+        navigationItem.title = "Order details"
+        self.navigationController?.navigationBar.titleTextAttributes =
+        [NSAttributedString.Key.foregroundColor: UIColor.black,
+         NSAttributedString.Key.font: UIFont(name: "Cairo-Regular", size: 14)!]
+//        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black]
+//        navigationController?.navigationBar.titleTextAttributes = textAttributes
+       
         if order.notes.isEmpty
         {
             notesLbl.text = "There is no notes"
@@ -80,14 +95,40 @@ class OrderDetailesTableViewController: UITableViewController {
 //            productPriceLbl.text = "Product price : \(order.fuelOrderPrice)BHD"
             totalPriceLbl.text = "Total price : \(order.orderPrice + Double(order.fuelOrderPrice)!)BHD"
         }
-        userName.text = order.driver?.name
-        userPhone.text = order.driver?.phone
-        userPhoto.sd_setImage(with: URL(string: order.driver?.image ?? ""), completed: nil)
+        guard let driver = order.driver else {
+            userName.isHidden = true
+            userPhone.isHidden = true
+            userPhoto.isHidden = true
+            noDriverDataYetLbl.isHidden = false
+            userIconImage.isHidden = true
+            phoneIconImage.isHidden = true
+            return
+        }
+        userName.isHidden = false
+        userPhone.isHidden = false
+        userPhoto.isHidden = false
+        noDriverDataYetLbl.isHidden = true
+        userName.text = driver.name
+        userPhone.text = driver.phone
+        userIconImage.isHidden = true
+        phoneIconImage.isHidden = true
+        userPhoto.sd_setImage(with: URL(string: driver.image), completed: nil)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = fals
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    func setupBackButton() {
+        let leftBackBtn = UIButton(type: .system)
+        leftBackBtn.setImage(UIImage(named: "left-arrow"), for: .normal)
+        leftBackBtn.sizeToFit()
+        leftBackBtn.addTarget(self, action: #selector(self.navigateToMainViewController), for: .touchUpInside)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBackBtn);
+//        navigationController?.navigationBar.tintColor = UIColor.init(red: 68/255, green: 68/255, blue: 68/255, alpha: 1.0)
+    }
+    @objc func navigateToMainViewController()  {
+        self.dismiss(animated: true, completion: nil)
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 6 {

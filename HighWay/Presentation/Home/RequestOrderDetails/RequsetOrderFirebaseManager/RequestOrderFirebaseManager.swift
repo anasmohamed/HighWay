@@ -27,7 +27,7 @@ class RequestOrderFirebaseManager {
                     }
                 }
         }
-    func sendOrderData(order:Order,completion:@escaping (Error?) -> Void)  {
+    func sendOrderData(order:Order,completion:@escaping (Error?,Order?) -> Void)  {
         let timeInMiliseconds = String(Date().toMilliseconds())
         let orderDict = ["address":order.userAddress,
                          "fuelOrder":["date":order.fuelOrderDate,"fuelPrice":order.fuelOrderPrice,"size":order.fuelOrderSize],
@@ -38,16 +38,17 @@ class RequestOrderFirebaseManager {
                          "startLat":order.startLat,
                          "startLng":order.startLong,
                          "status":Double(order.orderStatus)!,
-                         "timstamp":order.orderDataTime ?? Date(),
+                         "timestamp":order.orderDataTime ?? Date(),
                          "type":order.orderType,
-                         "user_id":UserDefaults.standard.string(forKey: "token")!] as [String : Any]
-        db.collection("userOrders").document(timeInMiliseconds).setData(orderDict){ (err) in
+                         "driver_id": nil,
+                         "user_id":UserDefaults.standard.string(forKey: "token")!] as [String : Any?]
+        db.collection("userOrders").document(timeInMiliseconds).setData(orderDict as [String : Any]){ (err) in
                     if let err = err {
                         print("Error getting documents: \(err)")
-                        completion(err)
+                        completion(err,nil)
                     } else {
                       
-                        completion(nil)
+                        completion(nil,order)
                     }
                 }
         }

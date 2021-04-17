@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Cairo-Regular.ttf">
-            <string>Cairo-Regular</string>
-        </array>
         <array key="Cairo-SemiBold.ttf">
             <string>Cairo-SemiBold</string>
+        </array>
+        <array key="cairo.ttf">
+            <string>Cairo-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -26,114 +26,114 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UdR-5d-sM8">
-                                <rect key="frame" x="20.000000000000007" y="23" width="99.666666666666686" height="20"/>
+                                <rect key="frame" x="20.000000000000007" y="23" width="93.666666666666686" height="32"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXm-CS-9CH">
-                                <rect key="frame" x="20.000000000000004" y="51" width="39.333333333333343" height="18.666666666666671"/>
+                                <rect key="frame" x="20" y="63" width="36" height="30"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDi-e5-c5E">
-                                <rect key="frame" x="20" y="77.666666666666671" width="374" height="0.6666666666666714"/>
+                                <rect key="frame" x="20" y="101" width="374" height="0.6666666666666714"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.5" id="VyG-u2-79X"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wN1-nd-Qsh">
-                                <rect key="frame" x="20" y="142" width="374" height="0.66666666666665719"/>
+                                <rect key="frame" x="20" y="186.66666666666666" width="374" height="0.66666666666665719"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.5" id="5ZE-cQ-47s"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bjj-xt-1lX">
-                                <rect key="frame" x="20" y="92.666666666666671" width="37" height="17.666666666666671"/>
+                                <rect key="frame" x="19.999999999999996" y="115.99999999999999" width="33.666666666666657" height="28.333333333333329"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxk-9v-Dmf">
-                                <rect key="frame" x="20" y="113" width="37" height="17.666666666666657"/>
+                                <rect key="frame" x="19.999999999999996" y="147" width="33.666666666666657" height="28.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKh-q6-e7L">
-                                <rect key="frame" x="20.000000000000004" y="156" width="55.333333333333343" height="17.666666666666657"/>
+                                <rect key="frame" x="20.000000000000004" y="200.66666666666666" width="51.333333333333343" height="28.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dj-sf-VBP">
-                                <rect key="frame" x="20" y="181.66666666666666" width="42" height="21"/>
+                                <rect key="frame" x="20" y="237" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p29-Rt-l8f">
-                                <rect key="frame" x="20" y="220.66666666666666" width="42" height="21"/>
+                                <rect key="frame" x="20" y="276" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RzL-ux-uOK">
-                                <rect key="frame" x="20" y="249.66666666666666" width="374" height="0.66666666666665719"/>
+                                <rect key="frame" x="20" y="305" width="374" height="0.66666666666668561"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.5" id="a6x-FQ-yRa"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zu5-Vu-MB9">
-                                <rect key="frame" x="20.000000000000004" y="267.33333333333331" width="45.333333333333343" height="20"/>
+                                <rect key="frame" x="20" y="322.66666666666669" width="43" height="32"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxu-7e-JO6">
-                                <rect key="frame" x="19.999999999999996" y="294.66666666666669" width="41.666666666666657" height="20"/>
+                                <rect key="frame" x="20.000000000000004" y="362" width="38.333333333333343" height="32"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QCH-VJ-hx1">
-                                <rect key="frame" x="20" y="324.66666666666669" width="374" height="0.66666666666668561"/>
+                                <rect key="frame" x="20" y="404" width="374" height="0.66666666666668561"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.5" id="1YP-dB-TBA"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total price :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zf-P1-KXy">
-                                <rect key="frame" x="20" y="340.66666666666669" width="72.666666666666671" height="16.333333333333314"/>
+                                <rect key="frame" x="20" y="420" width="66.333333333333329" height="26.333333333333314"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNQ-Sl-Zjc">
-                                <rect key="frame" x="20" y="364.66666666666669" width="42" height="21"/>
+                                <rect key="frame" x="20" y="454" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1f-xJ-hII">
-                                <rect key="frame" x="20" y="393.66666666666669" width="42" height="21"/>
+                                <rect key="frame" x="20" y="483" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Cm-t3-dU0">
-                                <rect key="frame" x="20" y="416.66666666666669" width="374" height="0.33333333333331439"/>
+                                <rect key="frame" x="20" y="506" width="374" height="0.33333333333331439"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.5" id="lp2-ZB-BRV"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRu-eL-Kyq">
-                                <rect key="frame" x="20" y="424" width="374" height="80"/>
+                                <rect key="frame" x="20" y="513.33333333333337" width="374" height="80"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="eKi-go-3pa"/>
@@ -476,6 +476,12 @@
                                                                 <constraint firstAttribute="width" constant="20" id="JuN-TF-MKB"/>
                                                             </constraints>
                                                         </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No driver data yet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqt-RP-sBI">
+                                                            <rect key="frame" x="131" y="28" width="112.33333333333331" height="28.333333333333329"/>
+                                                            <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="15"/>
+                                                            <color key="textColor" systemColor="systemRedColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -484,8 +490,10 @@
                                                         <constraint firstItem="Bk2-gT-OhS" firstAttribute="leading" secondItem="ySb-fo-svD" secondAttribute="leading" id="Qvn-Qn-0QU"/>
                                                         <constraint firstItem="bzp-wu-a6X" firstAttribute="centerY" secondItem="CcR-xo-B2e" secondAttribute="centerY" id="S9G-tv-31H"/>
                                                         <constraint firstItem="tWz-8S-GHR" firstAttribute="leading" secondItem="bzp-wu-a6X" secondAttribute="trailing" constant="8" symbolic="YES" id="Shc-bG-MUP"/>
+                                                        <constraint firstItem="xqt-RP-sBI" firstAttribute="centerY" secondItem="CcR-xo-B2e" secondAttribute="centerY" id="ThQ-3L-cqr"/>
                                                         <constraint firstItem="LZh-hH-nio" firstAttribute="centerY" secondItem="Bk2-gT-OhS" secondAttribute="centerY" id="VBd-yT-jAO"/>
                                                         <constraint firstItem="bzp-wu-a6X" firstAttribute="leading" secondItem="CcR-xo-B2e" secondAttribute="leading" constant="15" id="Yo5-kH-2PX"/>
+                                                        <constraint firstItem="xqt-RP-sBI" firstAttribute="centerX" secondItem="CcR-xo-B2e" secondAttribute="centerX" id="aMT-NQ-Ap6"/>
                                                         <constraint firstItem="ySb-fo-svD" firstAttribute="top" secondItem="CcR-xo-B2e" secondAttribute="top" constant="8" id="k9q-co-hgL"/>
                                                         <constraint firstItem="LZh-hH-nio" firstAttribute="top" secondItem="tWz-8S-GHR" secondAttribute="bottom" constant="8" id="q0o-yD-lqv"/>
                                                         <constraint firstItem="tWz-8S-GHR" firstAttribute="top" secondItem="CcR-xo-B2e" secondAttribute="top" constant="9" id="t1P-kG-RuD"/>
@@ -553,14 +561,17 @@
                     <connections>
                         <outlet property="contuctUsView" destination="ksl-84-do5" id="RBa-C2-Wey"/>
                         <outlet property="driverAddressLbl" destination="Jah-nf-xHF" id="ieK-6W-YHv"/>
+                        <outlet property="noDriverDataYetLbl" destination="xqt-RP-sBI" id="Pmg-I7-Dju"/>
                         <outlet property="notesLbl" destination="BOx-ma-oqW" id="zUl-48-gfj"/>
                         <outlet property="orderDetailsLbl" destination="7FF-Dg-z1t" id="Cxw-PO-hDG"/>
                         <outlet property="orderTypeLbl" destination="ydV-9L-4YC" id="oJt-br-S4P"/>
+                        <outlet property="phoneIconImage" destination="LZh-hH-nio" id="Dd5-8V-X8J"/>
                         <outlet property="productPriceLbl" destination="4cl-NG-R6x" id="vs1-NK-q7q"/>
                         <outlet property="servicePriceLbl" destination="Zka-aX-wz2" id="zx7-wa-gNu"/>
                         <outlet property="timeOfRecieveFuelOrder" destination="473-kL-HtE" id="drG-R4-jJl"/>
                         <outlet property="totalPriceLbl" destination="lOD-Xb-3ZY" id="wqc-1L-Rf4"/>
                         <outlet property="userAddressLbl" destination="PIK-4b-fFU" id="mJT-KE-de9"/>
+                        <outlet property="userIconImage" destination="tWz-8S-GHR" id="lLW-YP-4z2"/>
                         <outlet property="userName" destination="ySb-fo-svD" id="oUQ-np-9G8"/>
                         <outlet property="userPhone" destination="Bk2-gT-OhS" id="jVz-Li-9e6"/>
                         <outlet property="userPhoto" destination="bzp-wu-a6X" id="J4F-AU-nnZ"/>
