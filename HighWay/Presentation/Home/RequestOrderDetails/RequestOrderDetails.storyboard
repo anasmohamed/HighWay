@@ -225,10 +225,10 @@
             </objects>
             <point key="canvasLocation" x="892.75362318840587" y="53.571428571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Car Towing View Request Order View Controller-->
         <scene sceneID="8rz-Nu-a3d">
             <objects>
-                <viewController id="DER-DG-ViW" sceneMemberID="viewController">
+                <viewController id="DER-DG-ViW" customClass="CarTowingViewRequestOrderViewController" customModule="HighWay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vrH-wV-nvE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -242,7 +242,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Service Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbP-VI-Pks">
                                 <rect key="frame" x="20" y="101" width="87.5" height="32"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6F-7E-Ivp">
@@ -274,7 +274,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="BWr-Bo-Kea" firstAttribute="centerY" secondItem="n5w-wa-6xK" secondAttribute="centerY" id="9C8-JE-u84"/>
                                     <constraint firstItem="n5w-wa-6xK" firstAttribute="leading" secondItem="fAP-R4-xZ6" secondAttribute="leading" constant="10" id="dY1-kZ-4oS"/>
@@ -285,6 +285,7 @@
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5OW-ac-gH2">
                                 <rect key="frame" x="20" y="262" width="374" height="80"/>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Aax-Y9-hQb"/>
                                 </constraints>
@@ -301,6 +302,9 @@
                                 <state key="normal" title="Send">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendRequestOrderBtnDidTapped:" destination="DER-DG-ViW" eventType="touchUpInside" id="JKx-1J-Viv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFE-HZ-iQr">
                                 <rect key="frame" x="20" y="410" width="374" height="40"/>
@@ -312,6 +316,9 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelOrderBtnDidTapped:" destination="DER-DG-ViW" eventType="touchUpInside" id="K5l-62-IIu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qOq-wp-UvW"/>
@@ -340,10 +347,16 @@
                             <constraint firstItem="L6F-7E-Ivp" firstAttribute="trailing" secondItem="qOq-wp-UvW" secondAttribute="trailing" constant="-10" id="xcM-9b-5td"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelOrderBtn" destination="RFE-HZ-iQr" id="ptE-pe-CxU"/>
+                        <outlet property="issueDescribeDetetailsTeextField" destination="5OW-ac-gH2" id="VHy-26-t8O"/>
+                        <outlet property="sendRequestBtn" destination="SKn-pC-ZBE" id="iEK-P4-o2P"/>
+                        <outlet property="serviceCostLbl" destination="L6F-7E-Ivp" id="5wx-c8-7o0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khj-eT-07Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1718.840579710145" y="53.571428571428569"/>
+            <point key="canvasLocation" x="1543" y="54"/>
         </scene>
         <!--Request Car Fuel Order View Controller-->
         <scene sceneID="xus-2B-EHN">
@@ -607,6 +620,9 @@
         <image name="payment-method-2" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

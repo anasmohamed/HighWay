@@ -34,7 +34,9 @@ class RequestOrderDetailsViewModel {
     var startLong = 0.0
     var endLat = 0.0
     var endLng = 0.0
-    func updateDate(note: String,addressText:String,price:Double,fuelOrderSize:String,fuelOrderDate: String,fuelOrderPrice:String,rated:Bool,status:String,type:String,userId:String,timestamp:Date?,startLat:Double,startLng:Double,endLat:Double,endLng:Double) {
+    var arriveAddress = ""
+    
+    func updateDate(note: String,addressText:String,price:Double,fuelOrderSize:String,fuelOrderDate: String,fuelOrderPrice:String,rated:Bool,status:String,type:String,userId:String,timestamp:Date?,startLat:Double,startLng:Double,endLat:Double,endLng:Double,arriveAddress:String) {
         
         
         self.addressText = addressText
@@ -52,7 +54,7 @@ class RequestOrderDetailsViewModel {
         self.endLng = endLng
         self.timestamp = timestamp
         self.type = type
-        
+        self.arriveAddress = arriveAddress
         
         
         
@@ -73,7 +75,7 @@ class RequestOrderDetailsViewModel {
       }
     func sendOrderData()  {
     
-     let order = Order(orderType: type, orderDataTime: timestamp, orderId: "", orderStatus: status, startLat: startLat, startLong: startLong, endLat: 0.0, endLong: 0.0, fuelOrderDate: fuelOrderDate, fuelOrderPrice: fuelOrderPrice, fuelOrderSize: fuelOrderSize, userAddress: addressText, arriveAddress: "", notes: note, orderPrice: 5.0 , driver: nil)
+        let order = Order(orderType: type, orderDataTime: timestamp, orderId: "", orderStatus: status, startLat: startLat, startLong: startLong, endLat: 0.0, endLong: 0.0, fuelOrderDate: fuelOrderDate, fuelOrderPrice: fuelOrderPrice, fuelOrderSize: fuelOrderSize, userAddress: addressText, arriveAddress: arriveAddress, notes: note, orderPrice: 5.0 , driver: nil)
         
         
         

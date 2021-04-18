@@ -117,6 +117,7 @@
 		32FA06E426150B5000912153 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA06E326150B5000912153 /* Observable.swift */; };
 		32FA06EA2615158600912153 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA06E92615158600912153 /* LoginManager.swift */; };
 		32FA06F32615176E00912153 /* LoginVIewController + TextFiledDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA06F22615176E00912153 /* LoginVIewController + TextFiledDelegate.swift */; };
+		35E0835F262CE0C300545CB2 /* CarTowingViewRequestOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E0835E262CE0C300545CB2 /* CarTowingViewRequestOrderViewController.swift */; };
 		38382F5D52B3ADCAD82A579D /* Pods_HighWayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE51935E4D6CBC9F78BB580B /* Pods_HighWayTests.framework */; };
 		4E46F8C3EF175696A88AAC00 /* Pods_HighWay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3614DA640F371E5ED27AF9BB /* Pods_HighWay.framework */; };
 		D19923E55440F36AABF4C576 /* Pods_HighWay_HighWayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8095E87ADB9F1E7F022F7F /* Pods_HighWay_HighWayUITests.framework */; };
@@ -261,6 +262,7 @@
 		32FA06E326150B5000912153 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		32FA06E92615158600912153 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		32FA06F22615176E00912153 /* LoginVIewController + TextFiledDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVIewController + TextFiledDelegate.swift"; sourceTree = "<group>"; };
+		35E0835E262CE0C300545CB2 /* CarTowingViewRequestOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTowingViewRequestOrderViewController.swift; sourceTree = "<group>"; };
 		3614DA640F371E5ED27AF9BB /* Pods_HighWay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HighWay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8095E87ADB9F1E7F022F7F /* Pods_HighWay_HighWayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HighWay_HighWayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B12F5321069AFFBFD64F970 /* Pods-HighWay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighWay.release.xcconfig"; path = "Target Support Files/Pods-HighWay/Pods-HighWay.release.xcconfig"; sourceTree = "<group>"; };
@@ -1026,6 +1028,7 @@
 				32F89E9B26266DD5002DC5CF /* RequestOrderDetails.storyboard */,
 				32F89EC226266E67002DC5CF /* RequestOrderDetailsViewController.swift */,
 				326B01D626274B1C0061FB44 /* RequestCarFuelOrderViewController.swift */,
+				35E0835E262CE0C300545CB2 /* CarTowingViewRequestOrderViewController.swift */,
 			);
 			path = RequestOrderDetails;
 			sourceTree = "<group>";
@@ -1452,6 +1455,7 @@
 				32FA06F32615176E00912153 /* LoginVIewController + TextFiledDelegate.swift in Sources */,
 				329F6146262A2EF3009DEF88 /* OrderFirebaseManager.swift in Sources */,
 				3287B5D1261D2F06004E6971 /* ResetPasswordViewController.swift in Sources */,
+				35E0835F262CE0C300545CB2 /* CarTowingViewRequestOrderViewController.swift in Sources */,
 				32E712152615E35600FF0F8F /* SignupViewModel.swift in Sources */,
 				32D6AA642617866600661F6E /* LoadingIndicatorView.swift in Sources */,
 				326AE86C262381C300E40CFC /* RequestOrderMapViewController.swift in Sources */,
