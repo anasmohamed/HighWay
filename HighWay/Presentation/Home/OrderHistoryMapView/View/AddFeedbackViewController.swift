@@ -68,7 +68,7 @@ class AddFeedbackViewController: UIViewController {
             style.messageColor = .white
             style.backgroundColor = UIColor.init(red: 69.0/255.0, green: 81.0/255.0, blue: 174.0/255.0, alpha: 1)
             style.messageFont = UIFont(name:"Cairo-Regular" , size:20.0)!
-            self.view.makeToast("Add rate first", duration: 3.0, position: .bottom,style:style)
+            self.view.makeToast("Add rate first".localized, duration: 3.0, position: .bottom,style:style)
         }else{
             LoadingIndicatorView.show()
             self.viewModel.addFeedback(orderId: orderId!)

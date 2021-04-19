@@ -45,7 +45,7 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
         if order.orderStatus == "-1"
         {
             cancelOrderBtn.isEnabled = false
-            cancelOrderBtn.setTitle("This order was canceled", for: .normal)
+            cancelOrderBtn.setTitle("This order was canceled".localized, for: .normal)
             cancelOrderBtn.setTitleColor(UIColor.red, for: .normal)
             addFeedbackBtn.isHidden = true
             buttomConstraintOrderStatusVIew.constant = 20
@@ -55,7 +55,7 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
         }else if order.orderStatus == "0"
         {
             cancelOrderBtn.isEnabled = true
-            cancelOrderBtn.setTitle("Cancel Order", for: .normal)
+            cancelOrderBtn.setTitle("Cancel Order".localized, for: .normal)
             cancelOrderBtn.backgroundColor = UIColor.red
             cancelOrderBtn.setTitleColor(UIColor.white, for: .normal)
             addFeedbackBtn.isHidden = true
@@ -64,7 +64,7 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
             mapViewHeightConstraintSecond.isActive = true
         }else if order.rated{
             cancelOrderBtn.isEnabled = false
-            cancelOrderBtn.setTitle("This order was completed", for: .normal)
+            cancelOrderBtn.setTitle("This order was completed".localized, for: .normal)
             cancelOrderBtn.setTitleColor(UIColor.green, for: .normal)
             addFeedbackBtn.isHidden = true
             buttomConstraintOrderStatusVIew.constant = 20
@@ -72,7 +72,7 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
             mapViewHeightConstraintSecond.isActive = true
         }else{
             cancelOrderBtn.isEnabled = false
-            cancelOrderBtn.setTitle("This order was completed", for: .normal)
+            cancelOrderBtn.setTitle("This order was completed".localized, for: .normal)
             cancelOrderBtn.setTitleColor(UIColor.green, for: .normal)
             addFeedbackBtn.isHidden = false
             buttomConstraintOrderStatusVIew.constant = 67
@@ -92,7 +92,7 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
                 style.messageColor = .white
                 style.backgroundColor = UIColor.init(red: 220.0, green: 46.0, blue: 47.0, alpha: 1)
                 style.messageFont = UIFont(name:"Cairo-Regular" , size:20.0)!
-                self.view.makeToast("We are sorry, your order was cancel", duration: 3.0, position: .bottom,style:style)
+                self.view.makeToast("We are sorry, your order was cancel".localized, duration: 3.0, position: .bottom,style:style)
                 let homeViewStoryboard = UIStoryboard.init(name: "MainView", bundle: nil)
                 let homeViewController = homeViewStoryboard.instantiateViewController(withIdentifier: "HomeTabBar")
                 homeViewController.modalPresentationStyle = .fullScreen
@@ -117,10 +117,10 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
     
     func cancelOrder()  {
         // create the alert
-        let alert = UIAlertController(title: "", message: "Did you want to logout?", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "", message: "".localized, preferredStyle: UIAlertController.Style.alert)
         
         // add the actions (buttons)
-        alert.addAction(UIAlertAction(title: "Confirm", style: UIAlertAction.Style.default, handler:{_ in
+        alert.addAction(UIAlertAction(title: "Confirm".localized, style: UIAlertAction.Style.default, handler:{_ in
 //            UserDefaults.standard.removeObject(forKey: "email")
 //            let loginStoryboard = UIStoryboard.init(name: "LoginView", bundle: nil)
 //            let loginViewController = loginStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
@@ -132,7 +132,7 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
             self.viewModel.cancelOrder(orderId: self.order.orderId)
             
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel".localized, style: UIAlertAction.Style.cancel, handler: nil))
         
         // show the alert
         self.present(alert, animated: true, completion: nil)
@@ -178,12 +178,12 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
         
         marker.position = CLLocationCoordinate2D(latitude: order.startLat, longitude:order.startLong)
         marker.icon = UIImage(named: "placeholder-2")
-        marker.title = "User Location"
+        marker.title = "User Location".localized
         marker.map = orderHistoryaMapVIew
         let marker2 = GMSMarker()
         marker2.position = CLLocationCoordinate2D(latitude:  order.endLat, longitude:order.endLong)
         marker2.map = orderHistoryaMapVIew
-        marker2.title = "Arrive point"
+        marker2.title = "Arrive point".localized
         if !order.endLat.isZero{
             let bounds = GMSCoordinateBounds(coordinate:  CLLocationCoordinate2D(latitude: order.startLat, longitude:order.startLong), coordinate: CLLocationCoordinate2D(latitude:  order.endLat, longitude:order.endLong))
             let camera: GMSCameraUpdate = GMSCameraUpdate.fit(bounds)

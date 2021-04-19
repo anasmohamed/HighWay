@@ -19,7 +19,7 @@ class RatingTableViewCell: UITableViewCell {
             if !item.review.isEmpty{
                 ratingLbl.text = item.review
             }else{
-                ratingLbl.text = "No Review Has been Written"
+                ratingLbl.text = "No Review Has been Written".localized
             }
             ratingNamLbl.text = item.reviewerName
             

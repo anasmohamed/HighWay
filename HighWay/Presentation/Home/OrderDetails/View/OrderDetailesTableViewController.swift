@@ -37,7 +37,7 @@ class OrderDetailesTableViewController: UITableViewController {
         userPhoto.layer.cornerRadius = userPhoto.frame.width / 2
         navigationController!.navigationBar.barTintColor = .white
         navigationController!.navigationBar.tintColor = .black
-        navigationItem.title = "Order details"
+        navigationItem.title = "Order details".localized
         self.navigationController?.navigationBar.titleTextAttributes =
         [NSAttributedString.Key.foregroundColor: UIColor.black,
          NSAttributedString.Key.font: UIFont(name: "Cairo-Regular", size: 14)!]
@@ -46,7 +46,7 @@ class OrderDetailesTableViewController: UITableViewController {
        
         if order.notes.isEmpty
         {
-            notesLbl.text = "There is no notes"
+            notesLbl.text = "There is no notes".localized
         }else{
             notesLbl.text = order.notes
         }
@@ -54,34 +54,34 @@ class OrderDetailesTableViewController: UITableViewController {
             productPriceLbl.isHidden = true
             timeOfRecieveFuelOrder.isHidden = true
 
-            orderDetailsLbl.text = "i need towing"
-            orderTypeLbl.text = "Car towing"
-            userAddressLbl.text = "- User address : \(order.userAddress)"
-            driverAddressLbl.text = "- Arrive address : \(order.arriveAddress)"
-            servicePriceLbl.text = "Service price : \(order.orderPrice)BHD"
-            totalPriceLbl.text = "Total price : \(order.orderPrice)BHD"
+            orderDetailsLbl.text = "i need towing".localized
+            orderTypeLbl.text = "Car towing".localized
+            userAddressLbl.text = "- User address : ".localized + "\(order.userAddress)"
+            driverAddressLbl.text = "- Arrive address : ".localized + "\(order.arriveAddress)"
+            servicePriceLbl.text = "Service price : ".localized + "\(order.orderPrice)BHD"
+            totalPriceLbl.text = "Total price : ".localized + "\(order.orderPrice)BHD"
             
             
         }else if order.orderType == "battery"{
             productPriceLbl.isHidden = true
             timeOfRecieveFuelOrder.isHidden = true
-            orderDetailsLbl.text = "i need a battary charge"
-            orderTypeLbl.text = "Battery charge"
-            userAddressLbl.text = "- User address : \(order.userAddress)"
+            orderDetailsLbl.text = "i need a battary charge".localized
+            orderTypeLbl.text = "Battery charge".localized
+            userAddressLbl.text = "- User address : ".localized + "\(order.userAddress)"
 //            driverAddressLbl.text = "- Arrive address : \(order.arriveAddress)"
-            servicePriceLbl.text = "Service price : \(order.orderPrice)BHD"
-            totalPriceLbl.text = "Total price : \(order.orderPrice)BHD"
+            servicePriceLbl.text = "Service price : ".localized + "\(order.orderPrice)BHD"
+            totalPriceLbl.text = "Total price : ".localized + "\(order.orderPrice)BHD"
 
         }else if order.orderType == "fuel"{
             productPriceLbl.isHidden = false
             orderDetailsLbl.text = "-\(order.fuelOrderSize)"
             timeOfRecieveFuelOrder.text = "-\(order.fuelOrderDate)"
-            orderTypeLbl.text = "Battery charge"
-            userAddressLbl.text = "- User address : \(order.userAddress)"
+            orderTypeLbl.text = "Battery charge".localized
+            userAddressLbl.text = "- User address : ".localized + "\(order.userAddress)"
 //            driverAddressLbl.text = "- Arrive address : \(order.arriveAddress)"
-            servicePriceLbl.text = "Service price : \(order.orderPrice)BHD"
-            productPriceLbl.text = "Product price : \(order.fuelOrderPrice)BHD"
-            totalPriceLbl.text = "Total price : \(order.orderPrice + Double(order.fuelOrderPrice)!)BHD"
+            servicePriceLbl.text = "Service price : ".localized + "\(order.orderPrice)BHD"
+            productPriceLbl.text = "Product price : ".localized + "\(order.fuelOrderPrice)BHD"
+            totalPriceLbl.text = "Total price : ".localized + "\(order.orderPrice + Double(order.fuelOrderPrice)!)BHD"
         }else{
             productPriceLbl.isHidden = true
             timeOfRecieveFuelOrder.isHidden = true
@@ -89,11 +89,11 @@ class OrderDetailesTableViewController: UITableViewController {
             orderDetailsLbl.text = order.notes
 //            timeOfRecieveFuelOrder.text = "-\(order.fuelOrderDate)"
             orderTypeLbl.text = order.orderType
-            userAddressLbl.text = "- User address : \(order.userAddress)"
+            userAddressLbl.text = "- User address : ".localized + "\(order.userAddress)"
 //            driverAddressLbl.text = "- Arrive address : \(order.arriveAddress)"
-            servicePriceLbl.text = "Service price : \(order.orderPrice)BHD"
+            servicePriceLbl.text = "Service price : ".localized + "\(order.orderPrice)BHD"
 //            productPriceLbl.text = "Product price : \(order.fuelOrderPrice)BHD"
-            totalPriceLbl.text = "Total price : \(order.orderPrice + Double(order.fuelOrderPrice)!)BHD"
+            totalPriceLbl.text = "Total price : ".localized + "\(order.orderPrice + Double(order.fuelOrderPrice)!)BHD"
         }
         guard let driver = order.driver else {
             userName.isHidden = true

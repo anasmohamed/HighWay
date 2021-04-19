@@ -21,7 +21,7 @@ class OrdersHistoryTableViewCell: UITableViewCell {
         didSet{
             orderIdLbl.text = "#\(item.orderId)"
             if item.orderType == "towing" || item.orderType == "fuel"{
-                orderTypeLbl.text = "Car \(item.orderType)"
+                orderTypeLbl.text = "Car \(item.orderType)".localized
                 
             }else if item.orderType == "others"{
                 orderTypeLbl.text = item.orderType
