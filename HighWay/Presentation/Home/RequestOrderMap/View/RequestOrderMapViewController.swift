@@ -48,7 +48,7 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
         bindData()
         searchBar.delegate = self
         
-        self.navigationItem.title = viewControllerTitle
+        self.navigationItem.title = viewControllerTitle.localized
         
         locationManager.requestWhenInUseAuthorization()
         
@@ -98,7 +98,7 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
                 let requestOrderViewController = requestOrderMapViewStroyboard.instantiateViewController(withIdentifier: "RequestOrderMapViewController")
                     as! RequestOrderMapViewController
                 let myNavigationController = UINavigationController(rootViewController: requestOrderViewController)
-                requestOrderViewController.viewControllerTitle = "Drop Location"
+                requestOrderViewController.viewControllerTitle = "Drop Location"
                 requestOrderViewController.orderType = "Car towing"
                 requestOrderViewController.count = count
                 requestOrderViewController.startLat = startLat
