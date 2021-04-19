@@ -9,15 +9,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="cairo.ttf">
+        <array key="Cairo-Regular.ttf">
             <string>Cairo-Regular</string>
         </array>
     </customFonts>
     <scenes>
-        <!--Request Other Order Details View Controller-->
+        <!--Others View Controller-->
         <scene sceneID="Hgu-t1-UbB">
             <objects>
-                <viewController storyboardIdentifier="RequestOtherOrderDetailsViewController" id="A0f-xY-awj" customClass="RequestOtherOrderDetailsViewController" customModule="HighWay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OthersViewController" id="A0f-xY-awj" customClass="OthersViewController" customModule="HighWay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aks-kq-aiS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,7 +67,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="sendBtnDidTapped:" destination="A0f-xY-awj" eventType="touchUpInside" id="3oh-Zx-RjO"/>
+                                    <action selector="sendBtnDidTapped:" destination="A0f-xY-awj" eventType="touchUpInside" id="hqV-qi-ecT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ze7-6J-snT">
@@ -80,6 +80,9 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelBtnDidTapped:" destination="A0f-xY-awj" eventType="touchUpInside" id="kOi-PH-Ohe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CnR-Ng-f1z"/>
@@ -107,18 +110,20 @@
                     </view>
                     <connections>
                         <outlet property="DescriptionTextField" destination="V6T-22-8kQ" id="FiE-Ef-FQe"/>
-                        <outlet property="sendBtn" destination="3Ql-dB-Pmn" id="IJT-KE-hOL"/>
-                        <outlet property="titleTextField" destination="kWy-m2-b5P" id="ona-AS-T2t"/>
+                        <outlet property="cancelBtn" destination="Ze7-6J-snT" id="DUx-RK-1zD"/>
+                        <outlet property="descriptionTextField" destination="V6T-22-8kQ" id="pio-wc-aEo"/>
+                        <outlet property="sendBtm" destination="3Ql-dB-Pmn" id="lFL-Kg-ovj"/>
+                        <outlet property="titleTextField" destination="kWy-m2-b5P" id="6yC-Pm-jw1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ib-vu-Eid" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="53.571428571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Battary View Contoller View Controller-->
         <scene sceneID="NNG-fC-kDT">
             <objects>
-                <viewController id="7s1-as-KM0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BattaryViewContollerViewController" id="7s1-as-KM0" customClass="BattaryViewContollerViewController" customModule="HighWay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3iY-D7-Wei">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,14 +161,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Price :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlQ-H7-acW">
                                         <rect key="frame" x="8" y="61" width="89" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vA9-ns-hpH">
-                                        <rect key="frame" x="332" y="61" width="42" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vA9-ns-hpH">
+                                        <rect key="frame" x="324" y="61" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -172,10 +176,12 @@
                                     <constraint firstItem="xlQ-H7-acW" firstAttribute="top" secondItem="4bL-9Y-hSx" secondAttribute="bottom" constant="26" id="30p-wk-9JI"/>
                                     <constraint firstItem="1VL-yN-ZGK" firstAttribute="centerY" secondItem="4bL-9Y-hSx" secondAttribute="centerY" id="8hc-Rl-5at"/>
                                     <constraint firstAttribute="height" constant="90" id="9kJ-Xq-j10"/>
+                                    <constraint firstItem="vA9-ns-hpH" firstAttribute="centerY" secondItem="xlQ-H7-acW" secondAttribute="centerY" id="XIm-xh-jUh"/>
                                     <constraint firstItem="4bL-9Y-hSx" firstAttribute="leading" secondItem="R0U-1P-pL3" secondAttribute="leading" constant="8" id="XV5-UO-pQa"/>
                                     <constraint firstItem="xlQ-H7-acW" firstAttribute="leading" secondItem="4bL-9Y-hSx" secondAttribute="leading" id="b1C-AN-zOt"/>
                                     <constraint firstItem="1VL-yN-ZGK" firstAttribute="leading" secondItem="4bL-9Y-hSx" secondAttribute="trailing" constant="8" symbolic="YES" id="bxi-0B-Xru"/>
                                     <constraint firstItem="4bL-9Y-hSx" firstAttribute="top" secondItem="R0U-1P-pL3" secondAttribute="top" constant="8" id="eGn-Rb-mJk"/>
+                                    <constraint firstAttribute="trailing" secondItem="vA9-ns-hpH" secondAttribute="trailing" constant="8" id="wjz-eF-NiB"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2E-KE-TFg">
@@ -188,6 +194,9 @@
                                 <state key="normal" title="Send">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendBtnDidTapped:" destination="7s1-as-KM0" eventType="touchUpInside" id="GBQ-Pq-0WF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gl5-Nh-ytk">
                                 <rect key="frame" x="20" y="375" width="374" height="40"/>
@@ -199,6 +208,9 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelBtnDidTapped:" destination="7s1-as-KM0" eventType="touchUpInside" id="yl4-Ii-l9e"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AAP-gV-DoX"/>
@@ -220,6 +232,12 @@
                             <constraint firstItem="AAP-gV-DoX" firstAttribute="trailing" secondItem="aZs-Y6-Yac" secondAttribute="trailing" constant="20" id="w0e-tN-Sta"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelBtn" destination="Gl5-Nh-ytk" id="Scf-Z5-EeG"/>
+                        <outlet property="notesTextField" destination="aZs-Y6-Yac" id="iZc-g3-mt0"/>
+                        <outlet property="sendBtn" destination="i2E-KE-TFg" id="uzI-Bs-9wA"/>
+                        <outlet property="servicCostLbl" destination="vA9-ns-hpH" id="t7V-8q-mxu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YXz-hj-sX2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -248,7 +266,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6F-7E-Ivp">
                                 <rect key="frame" x="362" y="106.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This cost is estimate, which mabe adjust upon compilition of the order" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fn6-ic-Uv5">

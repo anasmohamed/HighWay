@@ -76,7 +76,7 @@ class RequestOrderFirebaseManager {
                          "type":order.orderType,
                          "driver_id": nil,
                          "user_id":UserDefaults.standard.string(forKey: "token")!] as [String : Any?] as [String : Any]
-        case "other":
+        case "others":
             orderDict = ["address":order.userAddress,
                          "fuelOrder":nil,
                          "towingOrder":nil,

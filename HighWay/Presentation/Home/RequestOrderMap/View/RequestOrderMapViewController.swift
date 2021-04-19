@@ -70,14 +70,14 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
     }
     
     @IBAction func nextBtnDidTapped(_ sender: Any) {
-//        if viewControllerTitle == "Drop Location"
-//        {
-//            let requestOrderDetailsViewStroyboard = UIStoryboard.init(name: "Signup", bundle: nil)
-//            let requestOrderDetailsViewController = requestOrderDetailsViewStroyboard.instantiateViewController(withIdentifier: "SignupViewController")
-//                as! SignupViewController
-//            requestOrderDetailsViewController.modalPresentationStyle = .overCurrentContext
-//            self.present(requestOrderDetailsViewController, animated: true,completion: nil)
-         if orderType == "Car fuel" {
+        //        if viewControllerTitle == "Drop Location"
+        //        {
+        //            let requestOrderDetailsViewStroyboard = UIStoryboard.init(name: "Signup", bundle: nil)
+        //            let requestOrderDetailsViewController = requestOrderDetailsViewStroyboard.instantiateViewController(withIdentifier: "SignupViewController")
+        //                as! SignupViewController
+        //            requestOrderDetailsViewController.modalPresentationStyle = .overCurrentContext
+        //            self.present(requestOrderDetailsViewController, animated: true,completion: nil)
+        if orderType == "Car fuel" {
             let requestOrderMapViewStroyboard = UIStoryboard.init(name: "RequestOrderDetails", bundle: nil)
             let requestOrderViewController = requestOrderMapViewStroyboard.instantiateViewController(withIdentifier: "RequestCarFuelOrderViewController")
                 as! RequestCarFuelOrderViewController
@@ -120,10 +120,32 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
                 myNavigationController.modalPresentationStyle = .fullScreen
                 self.present(myNavigationController, animated: true,completion: nil)
                 count = 1
-
+                
             }
             
             
+        }else if orderType == "Battery"
+        {
+            let requestOrderMapViewStroyboard = UIStoryboard.init(name: "RequestOrderDetails", bundle: nil)
+            let requestOrderViewController = requestOrderMapViewStroyboard.instantiateViewController(withIdentifier: "BattaryViewContollerViewController")
+                as! BattaryViewContollerViewController
+            requestOrderViewController.addressText = addressText
+            requestOrderViewController.startLat = startLat
+            requestOrderViewController.startLong = startLong
+            let myNavigationController = UINavigationController(rootViewController: requestOrderViewController)
+            myNavigationController.modalPresentationStyle = .fullScreen
+            self.present(myNavigationController, animated: true,completion: nil)
+        }else if orderType == "Others"
+        {
+            let requestOrderMapViewStroyboard = UIStoryboard.init(name: "RequestOrderDetails", bundle: nil)
+            let requestOrderViewController = requestOrderMapViewStroyboard.instantiateViewController(withIdentifier: "OthersViewController")
+                as! OthersViewController
+            requestOrderViewController.addressText = addressText
+            requestOrderViewController.startLat = startLat
+            requestOrderViewController.startLong = startLong
+            let myNavigationController = UINavigationController(rootViewController: requestOrderViewController)
+            myNavigationController.modalPresentationStyle = .fullScreen
+            self.present(myNavigationController, animated: true,completion: nil)
         }
     }
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
@@ -227,7 +249,7 @@ extension RequestOrderMapViewController: CLLocationManagerDelegate {
             // 4
             if self.count == 1 {
                 self.addressText = lines.joined(separator: "\n")
-
+                
             }else{
                 self.arriveText = lines.joined(separator: "\n")
             }

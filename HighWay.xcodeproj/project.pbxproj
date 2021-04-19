@@ -118,6 +118,8 @@
 		32FA06EA2615158600912153 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA06E92615158600912153 /* LoginManager.swift */; };
 		32FA06F32615176E00912153 /* LoginVIewController + TextFiledDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA06F22615176E00912153 /* LoginVIewController + TextFiledDelegate.swift */; };
 		356D9162262D1661008051A3 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356D9161262D1661008051A3 /* AppSettings.swift */; };
+		356D9167262D3026008051A3 /* BattaryViewContollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356D9166262D3026008051A3 /* BattaryViewContollerViewController.swift */; };
+		356D916C262D32D7008051A3 /* OthersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356D916B262D32D7008051A3 /* OthersViewController.swift */; };
 		35E0835F262CE0C300545CB2 /* CarTowingViewRequestOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E0835E262CE0C300545CB2 /* CarTowingViewRequestOrderViewController.swift */; };
 		38382F5D52B3ADCAD82A579D /* Pods_HighWayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE51935E4D6CBC9F78BB580B /* Pods_HighWayTests.framework */; };
 		4E46F8C3EF175696A88AAC00 /* Pods_HighWay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3614DA640F371E5ED27AF9BB /* Pods_HighWay.framework */; };
@@ -264,6 +266,8 @@
 		32FA06E92615158600912153 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		32FA06F22615176E00912153 /* LoginVIewController + TextFiledDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVIewController + TextFiledDelegate.swift"; sourceTree = "<group>"; };
 		356D9161262D1661008051A3 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		356D9166262D3026008051A3 /* BattaryViewContollerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattaryViewContollerViewController.swift; sourceTree = "<group>"; };
+		356D916B262D32D7008051A3 /* OthersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersViewController.swift; sourceTree = "<group>"; };
 		35E0835E262CE0C300545CB2 /* CarTowingViewRequestOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTowingViewRequestOrderViewController.swift; sourceTree = "<group>"; };
 		3614DA640F371E5ED27AF9BB /* Pods_HighWay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HighWay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8095E87ADB9F1E7F022F7F /* Pods_HighWay_HighWayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HighWay_HighWayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1032,6 +1036,8 @@
 				32F89EC226266E67002DC5CF /* RequestOrderDetailsViewController.swift */,
 				326B01D626274B1C0061FB44 /* RequestCarFuelOrderViewController.swift */,
 				35E0835E262CE0C300545CB2 /* CarTowingViewRequestOrderViewController.swift */,
+				356D9166262D3026008051A3 /* BattaryViewContollerViewController.swift */,
+				356D916B262D32D7008051A3 /* OthersViewController.swift */,
 			);
 			path = RequestOrderDetails;
 			sourceTree = "<group>";
@@ -1432,6 +1438,7 @@
 				3218B622261F5885000706DC /* OrderHistoryMapViewController.swift in Sources */,
 				327D0634261BDA9D00A74D9A /* Rating.swift in Sources */,
 				326B01DE26274CB00061FB44 /* RequestOrderDetailsViewModel.swift in Sources */,
+				356D916C262D32D7008051A3 /* OthersViewController.swift in Sources */,
 				322D9AD42614B14000C6F823 /* AppDelegate.swift in Sources */,
 				324782A326212437003A98A2 /* OrderDetailesTableViewController.swift in Sources */,
 				326B01EB2627BC1E0061FB44 /* FuelModel.swift in Sources */,
@@ -1467,6 +1474,7 @@
 				323DC0042616992D006E3380 /* ForgetPasswordViewModel.swift in Sources */,
 				3224405326164A52008A876B /* EmailValidation.swift in Sources */,
 				32F1E61A26153F0F00C12C84 /* Checkbox.swift in Sources */,
+				356D9167262D3026008051A3 /* BattaryViewContollerViewController.swift in Sources */,
 				356D9162262D1661008051A3 /* AppSettings.swift in Sources */,
 				3287B5D6261D30C3004E6971 /* ResetPasswordViewModel.swift in Sources */,
 				32FA06CF2615065F00912153 /* ShadowForUIVIew.swift in Sources */,
