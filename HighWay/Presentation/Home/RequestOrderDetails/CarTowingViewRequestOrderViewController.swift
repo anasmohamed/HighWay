@@ -21,7 +21,9 @@ class CarTowingViewRequestOrderViewController: UIViewController {
     var addressText = ""
     var arriveAddressText = ""
     var date = Date()
+    var servicePrice = 0.0
     override func viewDidLoad(){
+        requestOrderViewModel.getAppSettings()
         bindData()
     }
     
@@ -41,6 +43,12 @@ class CarTowingViewRequestOrderViewController: UIViewController {
                 
             }
         }
+        requestOrderViewModel.getAppSettingsSuccess.bind{
+            (appsettings) in
+            
+            self.servicePrice = appsettings?.minValue ?? 0.0
+            self.serviceCostLbl.text = "\(self.servicePrice)BHD"
+        }
     }
     func navigateToMainViewController(order:Order) {
         let homeViewStoryboard = UIStoryboard.init(name: "MainView", bundle: nil)
@@ -50,7 +58,7 @@ class CarTowingViewRequestOrderViewController: UIViewController {
         self.present(homeViewController, animated: true, completion: nil)
     }
     @IBAction func sendRequestOrderBtnDidTapped(_ sender: Any) {
-        requestOrderViewModel.updateDate(note: issueDescribeDetetailsTeextField.text!, addressText: addressText, price: 5.0, fuelOrderSize: "", fuelOrderDate: "", fuelOrderPrice: "", rated: false, status: "-1", type: "fuel", userId: "", timestamp: date, startLat: startLat, startLng: startLong, endLat: endLat, endLng: endLong,arriveAddress: arriveAddressText)
+        requestOrderViewModel.updateDate(note: issueDescribeDetetailsTeextField.text!, addressText: addressText, price:servicePrice , fuelOrderSize: "", fuelOrderDate: "", fuelOrderPrice: "", rated: false, status: "-1", type: "towing", userId: "", timestamp: date, startLat: startLat, startLng: startLong, endLat: endLat, endLng: endLong,arriveAddress: arriveAddressText)
         requestOrderViewModel.sendOrderData()
     }
 }

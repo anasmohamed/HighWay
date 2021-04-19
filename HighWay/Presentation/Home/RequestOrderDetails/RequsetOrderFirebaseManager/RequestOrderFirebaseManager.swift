@@ -105,6 +105,24 @@ class RequestOrderFirebaseManager {
             }
         }
     }
+    func getAppSettings(completion:@escaping (Error?,AppSettings?) -> Void){
+        var appSetting : AppSettings?
+
+        db.collection("app_settings").getDocuments() {
+            (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                    completion(err, nil)
+                } else {
+                    for document in querySnapshot!.documents {
+                        print("\(document.documentID) => \(document.data())")
+                        appSetting = AppSettings(batteryPrice: document.data()["batteryPrice"] as! Double, driverShare: document.data()["batteryPrice"] as! Double, fuelDelivery: document.data()["fuelDelivery"] as! Double, kmPrice: document.data()["kmPrice"] as! Double, maxValue: document.data()["maxValue"] as! Double,minValue: document.data()["minValue"] as! Double)
+                       
+                    }
+                    completion(nil,appSetting ?? nil)
+                }
+        }
+    }
 }
 extension Date {
     

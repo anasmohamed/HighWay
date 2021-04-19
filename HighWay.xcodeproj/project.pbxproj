@@ -117,6 +117,7 @@
 		32FA06E426150B5000912153 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA06E326150B5000912153 /* Observable.swift */; };
 		32FA06EA2615158600912153 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA06E92615158600912153 /* LoginManager.swift */; };
 		32FA06F32615176E00912153 /* LoginVIewController + TextFiledDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA06F22615176E00912153 /* LoginVIewController + TextFiledDelegate.swift */; };
+		356D9162262D1661008051A3 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356D9161262D1661008051A3 /* AppSettings.swift */; };
 		35E0835F262CE0C300545CB2 /* CarTowingViewRequestOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E0835E262CE0C300545CB2 /* CarTowingViewRequestOrderViewController.swift */; };
 		38382F5D52B3ADCAD82A579D /* Pods_HighWayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE51935E4D6CBC9F78BB580B /* Pods_HighWayTests.framework */; };
 		4E46F8C3EF175696A88AAC00 /* Pods_HighWay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3614DA640F371E5ED27AF9BB /* Pods_HighWay.framework */; };
@@ -262,6 +263,7 @@
 		32FA06E326150B5000912153 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		32FA06E92615158600912153 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		32FA06F22615176E00912153 /* LoginVIewController + TextFiledDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVIewController + TextFiledDelegate.swift"; sourceTree = "<group>"; };
+		356D9161262D1661008051A3 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		35E0835E262CE0C300545CB2 /* CarTowingViewRequestOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTowingViewRequestOrderViewController.swift; sourceTree = "<group>"; };
 		3614DA640F371E5ED27AF9BB /* Pods_HighWay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HighWay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E8095E87ADB9F1E7F022F7F /* Pods_HighWay_HighWayUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HighWay_HighWayUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -428,6 +430,7 @@
 				32F89E722625F2A1002DC5CF /* CountryGeoLocation.swift */,
 				326B01EA2627BC1E0061FB44 /* FuelModel.swift */,
 				329F61092629E111009DEF88 /* Notification.swift */,
+				356D9161262D1661008051A3 /* AppSettings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1464,6 +1467,7 @@
 				323DC0042616992D006E3380 /* ForgetPasswordViewModel.swift in Sources */,
 				3224405326164A52008A876B /* EmailValidation.swift in Sources */,
 				32F1E61A26153F0F00C12C84 /* Checkbox.swift in Sources */,
+				356D9162262D1661008051A3 /* AppSettings.swift in Sources */,
 				3287B5D6261D30C3004E6971 /* ResetPasswordViewModel.swift in Sources */,
 				32FA06CF2615065F00912153 /* ShadowForUIVIew.swift in Sources */,
 				323DC00A26169A72006E3380 /* ForgetPasswordFirebaseManager.swift in Sources */,

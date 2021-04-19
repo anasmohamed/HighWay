@@ -27,7 +27,7 @@ class RequestOrderDetailsViewModel {
     var fuelOrder = FuelModel()
     var rated = false
     var status = "-1"
-    var type = "fuel"
+    var type = ""
     var userId = ""
     var timestamp : Date?
     var startLat = 0.0
@@ -61,6 +61,7 @@ class RequestOrderDetailsViewModel {
     }
     var reloadTableView: Observable<[FuelModel]> = Observable([])
     var inserOrdrSuccess: Observable<Order?> = Observable(nil)
+    var getAppSettingsSuccess: Observable<AppSettings?> = Observable(nil)
 
     func fetchData() {
         
@@ -75,7 +76,7 @@ class RequestOrderDetailsViewModel {
       }
     func sendOrderData()  {
     
-        let order = Order(orderType: type, orderDataTime: timestamp, orderId: "", orderStatus: status, startLat: startLat, startLong: startLong, endLat: 0.0, endLong: 0.0, fuelOrderDate: fuelOrderDate, fuelOrderPrice: fuelOrderPrice, fuelOrderSize: fuelOrderSize, userAddress: addressText, arriveAddress: arriveAddress, notes: note, orderPrice: 5.0 , driver: nil)
+        let order = Order(orderType: type, orderDataTime: timestamp, orderId: "", orderStatus: status, startLat: startLat, startLong: startLong, endLat: endLat, endLong: endLng, fuelOrderDate: fuelOrderDate, fuelOrderPrice: fuelOrderPrice, fuelOrderSize: fuelOrderSize, userAddress: addressText, arriveAddress: arriveAddress, notes: note, orderPrice: price , driver: nil)
         
         
         
@@ -89,6 +90,15 @@ class RequestOrderDetailsViewModel {
 
             }
             
+        }
+    }
+    
+    func getAppSettings()  {
+        requestOrderFirebaseManager.getAppSettings{ (error,appSettings) in
+            if error == nil
+            {
+                self.getAppSettingsSuccess.value = appSettings
+            }
         }
     }
     func getData(index: Int) -> FuelModel {
