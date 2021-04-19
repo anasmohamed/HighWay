@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Cairo-Regular.ttf">
+        <array key="cairo.ttf">
             <string>Cairo-Regular</string>
         </array>
     </customFonts>
@@ -39,19 +39,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqF-Se-Uuc">
-                                <rect key="frame" x="35" y="645.5" width="37" height="17.5"/>
+                                <rect key="frame" x="35" y="645.5" width="34" height="28.5"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="hed-Ea-rHS">
-                                <rect key="frame" x="30" y="673" width="354" height="53.5"/>
+                                <rect key="frame" x="30" y="684" width="354" height="32.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXr-l7-Ntw">
-                                        <rect key="frame" x="0.0" y="2" width="20" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="32.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tick-2" translatesAutoresizingMaskIntoConstraints="NO" id="3Un-y8-kg4">
-                                                <rect key="frame" x="0.0" y="0.0" width="20" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="20" height="32.5"/>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -65,14 +65,14 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAf-Fa-PAH">
-                                        <rect key="frame" x="27" y="26" width="133" height="2"/>
+                                        <rect key="frame" x="27" y="15.5" width="133" height="2"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="RCC-c3-i8g"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="raH-x7-8hU">
-                                        <rect key="frame" x="167" y="17" width="20" height="20"/>
+                                        <rect key="frame" x="167" y="6.5" width="20" height="20"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tick-2" translatesAutoresizingMaskIntoConstraints="NO" id="1wD-Q4-mAD">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -88,14 +88,14 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2N-v6-ySn">
-                                        <rect key="frame" x="194" y="26" width="133" height="2"/>
+                                        <rect key="frame" x="194" y="15.5" width="133" height="2"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="c8Q-IF-7CQ"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEx-oQ-vRS">
-                                        <rect key="frame" x="334" y="17" width="20" height="20"/>
+                                        <rect key="frame" x="334" y="6.5" width="20" height="20"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tick-2" translatesAutoresizingMaskIntoConstraints="NO" id="4XO-lc-TRQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -144,25 +144,25 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="0Ts-bu-wbG">
-                                <rect key="frame" x="10" y="631.5" width="20" height="45.5"/>
+                                <rect key="frame" x="10" y="631.5" width="20" height="56.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="lCB-B5-kQm"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPX-SV-8D0">
-                                <rect key="frame" x="25.5" y="726.5" width="29" height="16.5"/>
+                                <rect key="frame" x="26.5" y="716.5" width="27.5" height="26.5"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3x1-fn-v1G">
-                                <rect key="frame" x="179.5" y="726.5" width="55.5" height="16.5"/>
+                                <rect key="frame" x="181" y="716.5" width="52.5" height="26.5"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJy-KK-mSM">
-                                <rect key="frame" x="343.5" y="726.5" width="61" height="16.5"/>
+                                <rect key="frame" x="346" y="716.5" width="56.5" height="26.5"/>
                                 <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -174,6 +174,18 @@
                                     <action selector="cancelOrderBtnDidTapped:" destination="H8u-J9-lGo" eventType="touchUpInside" id="gfU-jx-Gpd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="قيد التنفيذ " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5b-kZ-kLa">
+                                <rect key="frame" x="92.5" y="717.5" width="62" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مكتمل" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V22-Xp-5do">
+                                <rect key="frame" x="270.5" y="717.5" width="40" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f39-js-6x5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -181,12 +193,14 @@
                             <constraint firstItem="ulb-80-tfm" firstAttribute="top" secondItem="3x1-fn-v1G" secondAttribute="bottom" constant="7" id="13b-2B-tZX"/>
                             <constraint firstItem="hqj-eq-gVT" firstAttribute="leading" secondItem="ulb-80-tfm" secondAttribute="trailing" constant="8" symbolic="YES" id="4TF-LZ-SnX"/>
                             <constraint firstItem="bqF-Se-Uuc" firstAttribute="leading" secondItem="0Ts-bu-wbG" secondAttribute="trailing" constant="5" id="4gh-gb-1Il"/>
+                            <constraint firstItem="M5b-kZ-kLa" firstAttribute="centerX" secondItem="aAf-Fa-PAH" secondAttribute="centerX" id="7Wl-u2-exu"/>
                             <constraint firstItem="gDZ-Qd-i6z" firstAttribute="leading" secondItem="f39-js-6x5" secondAttribute="leading" constant="10" id="9z5-im-pwB"/>
                             <constraint firstItem="0Ts-bu-wbG" firstAttribute="top" secondItem="0MI-o6-Oka" secondAttribute="bottom" constant="6" id="AwZ-Bs-9gI"/>
                             <constraint firstItem="0MI-o6-Oka" firstAttribute="leading" secondItem="f39-js-6x5" secondAttribute="leading" id="BHn-S7-MJ3"/>
                             <constraint firstItem="0MI-o6-Oka" firstAttribute="height" secondItem="CeL-pm-9ML" secondAttribute="height" multiplier="0.6" id="Cgz-dB-J17"/>
                             <constraint firstItem="bhx-C8-vah" firstAttribute="leading" secondItem="f39-js-6x5" secondAttribute="leading" constant="10" id="Dxf-G3-shO"/>
                             <constraint firstItem="ulb-80-tfm" firstAttribute="bottom" secondItem="hqj-eq-gVT" secondAttribute="bottom" id="E6j-ZY-Znh"/>
+                            <constraint firstItem="M5b-kZ-kLa" firstAttribute="centerY" secondItem="3x1-fn-v1G" secondAttribute="centerY" id="FbD-93-bNO"/>
                             <constraint firstItem="0MI-o6-Oka" firstAttribute="top" secondItem="f39-js-6x5" secondAttribute="top" id="GhG-Zu-z8v"/>
                             <constraint firstItem="ulb-80-tfm" firstAttribute="top" secondItem="hqj-eq-gVT" secondAttribute="top" id="Ie9-HN-Vsn"/>
                             <constraint firstItem="ulb-80-tfm" firstAttribute="centerY" secondItem="hqj-eq-gVT" secondAttribute="centerY" id="JYE-HI-fZv"/>
@@ -201,10 +215,12 @@
                             <constraint firstItem="hed-Ea-rHS" firstAttribute="leading" secondItem="f39-js-6x5" secondAttribute="leading" constant="30" id="X6r-et-Fgi"/>
                             <constraint firstItem="VJy-KK-mSM" firstAttribute="top" secondItem="hed-Ea-rHS" secondAttribute="bottom" id="XYN-bO-xWE"/>
                             <constraint firstItem="BPX-SV-8D0" firstAttribute="top" secondItem="3x1-fn-v1G" secondAttribute="top" id="YX2-tt-KDX"/>
+                            <constraint firstItem="V22-Xp-5do" firstAttribute="centerY" secondItem="3x1-fn-v1G" secondAttribute="centerY" id="fGn-2x-vcl"/>
                             <constraint firstItem="3x1-fn-v1G" firstAttribute="top" secondItem="hed-Ea-rHS" secondAttribute="bottom" id="gar-Yw-aj2"/>
                             <constraint firstItem="BPX-SV-8D0" firstAttribute="centerX" secondItem="3Un-y8-kg4" secondAttribute="centerX" id="hgq-pH-JHy"/>
                             <constraint firstItem="f39-js-6x5" firstAttribute="bottom" secondItem="ulb-80-tfm" secondAttribute="bottom" constant="67" id="jvj-MH-2hl"/>
                             <constraint firstItem="3x1-fn-v1G" firstAttribute="centerY" secondItem="BPX-SV-8D0" secondAttribute="centerY" id="ktv-zK-lsc"/>
+                            <constraint firstItem="V22-Xp-5do" firstAttribute="centerX" secondItem="r2N-v6-ySn" secondAttribute="centerX" id="mly-1J-80s"/>
                             <constraint firstItem="f39-js-6x5" firstAttribute="trailing" secondItem="bhx-C8-vah" secondAttribute="trailing" constant="10" id="nOx-cX-yjR"/>
                             <constraint firstItem="3x1-fn-v1G" firstAttribute="top" secondItem="VJy-KK-mSM" secondAttribute="top" id="oSp-qK-uIo"/>
                             <constraint firstItem="BPX-SV-8D0" firstAttribute="bottom" secondItem="3x1-fn-v1G" secondAttribute="bottom" id="oqJ-gO-thb"/>
@@ -228,11 +244,20 @@
                         <outlet property="backBtn" destination="gDZ-Qd-i6z" id="nPv-B1-o9G"/>
                         <outlet property="buttomConstraintOrderStatusVIew" destination="jvj-MH-2hl" id="fer-dw-NyE"/>
                         <outlet property="cancelOrderBtn" destination="ulb-80-tfm" id="QZX-TJ-e17"/>
+                        <outlet property="completeArabicTitleLbl" destination="V22-Xp-5do" id="fFR-b3-rwA"/>
+                        <outlet property="completeImageView" destination="4XO-lc-TRQ" id="2D5-Cf-ioC"/>
+                        <outlet property="completeTitleLbl" destination="VJy-KK-mSM" id="pGi-RX-fhA"/>
+                        <outlet property="completeView" destination="hEx-oQ-vRS" id="eJg-JA-fJA"/>
                         <outlet property="mapViewHeightConstraintSecond" destination="pQG-Uw-gGI" id="Xqg-kN-CnU"/>
                         <outlet property="mapViewHieghtConstant" destination="Cgz-dB-J17" id="tn1-Pa-o1n"/>
                         <outlet property="orderDateLbl" destination="bqF-Se-Uuc" id="xEt-VA-UEZ"/>
                         <outlet property="orderDetailsBtn" destination="hqj-eq-gVT" id="6wz-cy-2X4"/>
                         <outlet property="orderHistoryaMapVIew" destination="0MI-o6-Oka" id="HaS-nF-gya"/>
+                        <outlet property="progressArabicTitleLbl" destination="M5b-kZ-kLa" id="XPy-YS-17w"/>
+                        <outlet property="progressImageView" destination="1wD-Q4-mAD" id="aVP-ek-MWv"/>
+                        <outlet property="progressTitleLbl" destination="3x1-fn-v1G" id="Hw2-LM-2V4"/>
+                        <outlet property="progressView" destination="raH-x7-8hU" id="K73-KS-lTt"/>
+                        <outlet property="sentTitleLbl" destination="BPX-SV-8D0" id="KrT-g9-YIG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dsV-q4-2br" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -309,7 +334,7 @@
                                             <action selector="closeViewBtnDidTapped:" destination="WBL-0Z-N88" eventType="touchUpInside" id="JAF-O6-NlW"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r0K-Xz-gkl" customClass="CosmosView" customModule="Cosmos">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r0K-Xz-gkl" customClass="CosmosView" customModule="Cosmos">
                                         <rect key="frame" x="35" y="50" width="220" height="40"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -364,6 +389,11 @@
             <point key="canvasLocation" x="1217" y="38"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="r0K-Xz-gkl">
+            <size key="intrinsicContentSize" width="220" height="40"/>
+        </designable>
+    </designables>
     <resources>
         <image name="cancel" width="128" height="128"/>
         <image name="clock" width="16" height="16"/>

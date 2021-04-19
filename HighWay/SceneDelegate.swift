@@ -6,9 +6,9 @@
 //
 
 import UIKit
-
+import MOLH
 @available(iOS 13.0, *)
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate,MOLHResetable {
 
     var window: UIWindow?
 

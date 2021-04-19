@@ -142,17 +142,19 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fd5-ph-uqt">
                                                         <rect key="frame" x="95" y="0.0" width="20" height="17"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tick-2" translatesAutoresizingMaskIntoConstraints="NO" id="GAL-ob-M6H">
-                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="17"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="GAL-ob-M6H">
+                                                                <rect key="frame" x="0.0" y="-1.5" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="20" id="T9J-H8-f1e"/>
+                                                                    <constraint firstAttribute="height" constant="20" id="hRr-7B-zXp"/>
+                                                                </constraints>
                                                             </imageView>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="BxY-Ez-OkM"/>
+                                                            <constraint firstItem="GAL-ob-M6H" firstAttribute="centerX" secondItem="fd5-ph-uqt" secondAttribute="centerX" id="DLj-4m-gna"/>
                                                             <constraint firstAttribute="height" constant="17" id="Dne-p0-KYM"/>
-                                                            <constraint firstAttribute="trailing" secondItem="GAL-ob-M6H" secondAttribute="trailing" id="SAW-Jw-g22"/>
-                                                            <constraint firstAttribute="bottom" secondItem="GAL-ob-M6H" secondAttribute="bottom" id="WFn-Vb-tsn"/>
-                                                            <constraint firstItem="GAL-ob-M6H" firstAttribute="leading" secondItem="fd5-ph-uqt" secondAttribute="leading" id="cSh-oY-OiZ"/>
-                                                            <constraint firstItem="GAL-ob-M6H" firstAttribute="top" secondItem="fd5-ph-uqt" secondAttribute="top" id="iav-bA-3X1"/>
+                                                            <constraint firstItem="GAL-ob-M6H" firstAttribute="centerY" secondItem="fd5-ph-uqt" secondAttribute="centerY" id="LCK-ix-5sB"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1s7-Ce-FzQ">
@@ -165,17 +167,19 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vuu-Mq-4z2">
                                                         <rect key="frame" x="190" y="0.0" width="20" height="17"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tick-2" translatesAutoresizingMaskIntoConstraints="NO" id="kRQ-vx-oiN">
-                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="17"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="kRQ-vx-oiN">
+                                                                <rect key="frame" x="0.0" y="-1.5" width="20" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="20" id="Qcs-d0-Hu7"/>
+                                                                    <constraint firstAttribute="height" constant="20" id="cXQ-yJ-qfr"/>
+                                                                </constraints>
                                                             </imageView>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstItem="kRQ-vx-oiN" firstAttribute="leading" secondItem="vuu-Mq-4z2" secondAttribute="leading" id="Ajx-YA-1dF"/>
-                                                            <constraint firstAttribute="bottom" secondItem="kRQ-vx-oiN" secondAttribute="bottom" id="KJu-7L-dRu"/>
                                                             <constraint firstAttribute="height" constant="17" id="LvS-dJ-5uO"/>
-                                                            <constraint firstAttribute="trailing" secondItem="kRQ-vx-oiN" secondAttribute="trailing" id="eNv-Cx-3Ep"/>
+                                                            <constraint firstItem="kRQ-vx-oiN" firstAttribute="centerY" secondItem="vuu-Mq-4z2" secondAttribute="centerY" id="VHf-Ta-riS"/>
                                                             <constraint firstAttribute="width" constant="20" id="j0M-iz-J6q"/>
-                                                            <constraint firstItem="kRQ-vx-oiN" firstAttribute="top" secondItem="vuu-Mq-4z2" secondAttribute="top" id="z3h-SZ-WME"/>
+                                                            <constraint firstItem="kRQ-vx-oiN" firstAttribute="centerX" secondItem="vuu-Mq-4z2" secondAttribute="centerX" id="tmn-P4-luN"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -214,6 +218,18 @@
                                                     <action selector="orderDetailsBtnDidTapped:" destination="dwZ-rG-zV5" eventType="touchUpInside" id="kje-qI-N2m"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="قيد التنفيذ " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKb-rj-suK">
+                                                <rect key="frame" x="71.5" y="69.5" width="62" height="24.5"/>
+                                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مكتمل" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rK-f3-pX4">
+                                                <rect key="frame" x="177.5" y="69.5" width="40" height="24.5"/>
+                                                <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -225,7 +241,10 @@
                                             <constraint firstItem="ACY-ck-LXz" firstAttribute="top" secondItem="rI6-p9-sOc" secondAttribute="bottom" constant="3" id="FBz-db-qWv"/>
                                             <constraint firstItem="rI6-p9-sOc" firstAttribute="top" secondItem="Iih-T5-UAH" secondAttribute="bottom" constant="5" id="PZP-RL-U5N"/>
                                             <constraint firstItem="EAV-Po-Qb9" firstAttribute="top" secondItem="uGC-mL-6fe" secondAttribute="top" constant="5" id="UZG-Tr-uMA"/>
+                                            <constraint firstItem="7rK-f3-pX4" firstAttribute="centerX" secondItem="1s7-Ce-FzQ" secondAttribute="centerX" id="Wie-U8-cCD"/>
                                             <constraint firstItem="EAV-Po-Qb9" firstAttribute="leading" secondItem="uGC-mL-6fe" secondAttribute="leading" constant="5" id="Xmo-aR-Df5"/>
+                                            <constraint firstItem="FKb-rj-suK" firstAttribute="centerY" secondItem="IrO-Zb-CWc" secondAttribute="centerY" id="Ycu-68-YjN"/>
+                                            <constraint firstItem="FKb-rj-suK" firstAttribute="centerX" secondItem="rMW-PE-rw0" secondAttribute="centerX" id="ZSJ-6s-7tI"/>
                                             <constraint firstItem="kJC-97-V4J" firstAttribute="top" secondItem="uGC-mL-6fe" secondAttribute="top" constant="5" id="doz-NA-CGf"/>
                                             <constraint firstAttribute="trailing" secondItem="kJC-97-V4J" secondAttribute="trailing" id="efY-io-sSd"/>
                                             <constraint firstItem="oYg-db-azk" firstAttribute="leading" secondItem="EAV-Po-Qb9" secondAttribute="trailing" constant="8" symbolic="YES" id="fy9-Iu-KKt"/>
@@ -234,6 +253,7 @@
                                             <constraint firstItem="ACY-ck-LXz" firstAttribute="centerX" secondItem="mqT-V6-1IY" secondAttribute="centerX" id="nlN-uR-dfc"/>
                                             <constraint firstAttribute="height" constant="100" id="rMK-e9-xYK"/>
                                             <constraint firstItem="Jjw-Yr-ZcM" firstAttribute="centerX" secondItem="kRQ-vx-oiN" secondAttribute="centerX" id="rMf-BW-hCO"/>
+                                            <constraint firstItem="7rK-f3-pX4" firstAttribute="centerY" secondItem="Jjw-Yr-ZcM" secondAttribute="centerY" id="xye-Ay-VRN"/>
                                             <constraint firstItem="oYg-db-azk" firstAttribute="centerY" secondItem="EAV-Po-Qb9" secondAttribute="centerY" id="yqX-eZ-VE8"/>
                                         </constraints>
                                     </view>
@@ -294,8 +314,17 @@
                     <tabBarItem key="tabBarItem" title="Home" image="home" id="6Nc-6z-Adw"/>
                     <connections>
                         <outlet property="chatImage" destination="v44-R3-tR3" id="ieq-P8-Jc3"/>
+                        <outlet property="circelImageView" destination="GAL-ob-M6H" id="PXd-hj-qcV"/>
+                        <outlet property="completeArabicTitleLbl" destination="FKb-rj-suK" id="FQe-dd-eYA"/>
+                        <outlet property="completeImageView" destination="kRQ-vx-oiN" id="bsq-Pg-nbW"/>
+                        <outlet property="completeTitleLbl" destination="Jjw-Yr-ZcM" id="Dj9-ct-AXZ"/>
+                        <outlet property="completeView" destination="vuu-Mq-4z2" id="GZR-U8-g2w"/>
                         <outlet property="itCanBeUsefulLbl" destination="2Hl-gR-bV2" id="BcB-Jx-biT"/>
                         <outlet property="orderStatusView" destination="uGC-mL-6fe" id="HRj-kR-ncJ"/>
+                        <outlet property="progressArabicTitleLbl" destination="7rK-f3-pX4" id="sbT-kK-b72"/>
+                        <outlet property="progressCircleView" destination="fd5-ph-uqt" id="Wqd-dJ-hik"/>
+                        <outlet property="progressTitleLbl" destination="IrO-Zb-CWc" id="8At-4q-bbv"/>
+                        <outlet property="sentTitleLbl" destination="ACY-ck-LXz" id="AsC-Yn-CEH"/>
                         <outlet property="serviceCollectionView" destination="jcn-47-04d" id="stI-tB-efn"/>
                     </connections>
                 </viewController>
@@ -345,8 +374,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="3" width="128" height="128"/>
         <image name="City driver-pana" width="2000" height="2000"/>
         <image name="chat" width="128" height="128"/>
+        <image name="circle" width="128" height="128"/>
         <image name="clock" width="16" height="16"/>
         <image name="google-docs" width="16" height="16"/>
         <image name="home" width="16" height="16"/>

@@ -37,7 +37,6 @@ class CarTowingViewRequestOrderViewController: UIViewController {
         requestOrderViewModel.inserOrdrSuccess.bind { (order) in
             if order != nil
             {
-                UserDefaults.standard.set("true", forKey: "requestOrder")
                 self.navigateToMainViewController(order:order!)
             }else{
                 

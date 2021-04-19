@@ -22,7 +22,7 @@ class OrderFirebaseManager {
             } else {
                 for document in querySnapshot!.documents {
                     
-                    if document.data()["user_id"] as! String == UserDefaults.standard.string(forKey: "token") &&   document.data()["status"] as! Int == 0 {
+                    if document.data()["user_id"] as? String == UserDefaults.standard.string(forKey: "token") &&   document.data()["status"] as! Int == 0 {
                         let towingOrder = document.data()["towingOrder"] as? [String:Any]
                         let fuelOrder = document.data()["fuelOrder"] as? [String:Any]
                         

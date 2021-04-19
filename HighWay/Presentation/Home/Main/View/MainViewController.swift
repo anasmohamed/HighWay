@@ -7,8 +7,17 @@
 
 import UIKit
 import Toast_Swift
+import MOLH
 class MainViewController: UIViewController {
-    
+    @IBOutlet weak var completeArabicTitleLbl: UILabel!
+    @IBOutlet weak var progressArabicTitleLbl: UILabel!
+    @IBOutlet weak var sentTitleLbl: UILabel!
+    @IBOutlet weak var completeTitleLbl: UILabel!
+    @IBOutlet weak var progressTitleLbl: UILabel!
+    @IBOutlet weak var completeImageView: UIImageView!
+    @IBOutlet weak var completeView: UIView!
+    @IBOutlet weak var circelImageView: UIImageView!
+    @IBOutlet weak var progressCircleView: UIView!
     @IBOutlet weak var itCanBeUsefulLbl: UILabel!
     @IBOutlet weak var orderStatusView: UIView!
     @IBOutlet weak var chatImage: UIImageView!
@@ -27,6 +36,14 @@ class MainViewController: UIViewController {
         setupChatImage()
         bind()
         fetchData()
+        circelImageView.layer.borderWidth = 2
+        circelImageView.layer.cornerRadius = circelImageView.frame.width / 2
+        circelImageView.layer.borderColor = UIColor.init(red: 162.0/255.0, green: 162.0/255.0, blue: 162.0/255.0, alpha: 1).cgColor
+        progressCircleView.layer.borderColor = UIColor.init(red: 162.0/255.0, green: 162.0/255.0, blue: 162.0/255.0, alpha: 1).cgColor
+        completeImageView.layer.borderWidth = 2
+        completeImageView.layer.cornerRadius = circelImageView.frame.width / 2
+        completeImageView.layer.borderColor = UIColor.init(red: 162.0/255.0, green: 162.0/255.0, blue: 162.0/255.0, alpha: 1).cgColor
+        completeView.layer.borderColor = UIColor.init(red: 162.0/255.0, green: 162.0/255.0, blue: 162.0/255.0, alpha: 1).cgColor
         if isAddFeedbackViewController{
             var style = ToastStyle()
             // this is just one of many style options
@@ -35,24 +52,40 @@ class MainViewController: UIViewController {
             style.messageFont = UIFont(name:"Cairo-Regular" , size:20.0)!
             self.view.makeToast("You rate added succcessfully, thak you".localized, duration: 3.0, position: .top,style:style)
         }
-        
+        if MOLHLanguage.currentAppleLanguage() == "ar"
+        {
+            completeTitleLbl.isHidden = true
+            progressTitleLbl.isHidden = true
+            sentTitleLbl.isHidden = true
+            completeArabicTitleLbl.isHidden = false
+            progressArabicTitleLbl.isHidden = false
+        }else{
+            completeTitleLbl.isHidden = false
+            progressTitleLbl.isHidden = false
+            sentTitleLbl.isHidden = false
+            completeArabicTitleLbl.isHidden = true
+            progressArabicTitleLbl.isHidden = true
+        }
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if UserDefaults.standard.string(forKey: "requestOrder") == "true"{
+            self.itCanBeUsefulLbl.isHidden = true
+            self.serviceCollectionView.isHidden = true
+            self.orderStatusView.isHidden = false
+        }else{
+            self.itCanBeUsefulLbl.isHidden = false
+            self.serviceCollectionView.isHidden = false
+            self.orderStatusView.isHidden = true
+        }
     }
     func fetchData()  {
         mainViewModel.fetchOrder()
     }
     func bind()  {
         mainViewModel.lastOrder.bind{ order in
-            if order != nil{
-                self.order = order
-                self.itCanBeUsefulLbl.isHidden = true
-                self.serviceCollectionView.isHidden = true
-                self.orderStatusView.isHidden = false
-            }else{
-                self.itCanBeUsefulLbl.isHidden = false
-                self.serviceCollectionView.isHidden = false
-                self.orderStatusView.isHidden = true
-            }
+            self.order = order
         }
     }
     private func setupChatImage()

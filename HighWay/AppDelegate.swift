@@ -28,9 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable {
                 print("== \(names)")
             }
         }
-        MOLHLanguage.setDefaultLanguage("en")
-        MOLH.shared.activate(true)
-        MOLH.shared.specialKeyWords = ["Cancel","Done"]
+       
         UINavigationBar.appearance().titleTextAttributes = attributes
         UINavigationBar.appearance().barTintColor = UIColor.init(red: 37.0/255.0, green: 37.0/255.0, blue: 37.0/255.0, alpha: 1)
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
@@ -40,7 +38,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate,MOLHResetable {
         GMSPlacesClient.provideAPIKey("AIzaSyBV788cfSiQGUjX2h5s2-0gCWvDKkT8fQ0")
         
         FirebaseApp.configure()
-        
+        MOLHLanguage.setDefaultLanguage("ar")
+        MOLH.shared.activate(false)
+        MOLH.shared.specialKeyWords = ["Cancel","Done"]
+        reset()
         return true
     }
     

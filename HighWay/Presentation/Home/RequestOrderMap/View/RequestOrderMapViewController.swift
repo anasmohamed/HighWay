@@ -262,7 +262,7 @@ extension RequestOrderMapViewController: CLLocationManagerDelegate {
                 
             }else{
                 self.nextBtn.backgroundColor = UIColor.init(red: 238.0/255.0, green: 20.0/255, blue: 19.0/255, alpha: 1)
-                self.nextBtn.setTitle("Out of area", for: .normal)
+                self.nextBtn.setTitle("Out of area".localized, for: .normal)
                 self.nextBtn.isEnabled = false
                 
             }

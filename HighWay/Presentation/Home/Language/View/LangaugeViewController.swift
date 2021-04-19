@@ -19,12 +19,15 @@ class LangaugeViewController: UIViewController {
         englishContainerView.layer.cornerRadius = 8
         arabicContainerView.layer.cornerRadius = 8
         langaugeContainerView.layer.cornerRadius = 8
+        englishLangaugeIndicatorView.layer.cornerRadius = englishLangaugeIndicatorView.frame.width / 2
+        arabicLangaugeIndicatorView.layer.cornerRadius =  arabicLangaugeIndicatorView.frame.width / 2
+
         let englishTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleEnglishTap))
 
         englishContainerView.addGestureRecognizer(englishTapGestureRecognizer)
         let arabicTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleArabicTap))
 
-        englishContainerView.addGestureRecognizer(arabicTapGestureRecognizer)
+        arabicContainerView.addGestureRecognizer(arabicTapGestureRecognizer)
         if MOLHLanguage.currentAppleLanguage() == "ar"
         {
             englishLangaugeIndicatorView.isHidden = true
@@ -39,6 +42,8 @@ class LangaugeViewController: UIViewController {
         englishLangaugeIndicatorView.isHidden = false
         arabicLangaugeIndicatorView.isHidden = true
         MOLH.setLanguageTo("en")
+//        MOLH.reset()
+
         MOLH.reset(transition: .transitionCrossDissolve)
     }
   
@@ -46,6 +51,7 @@ class LangaugeViewController: UIViewController {
         englishLangaugeIndicatorView.isHidden = true
         arabicLangaugeIndicatorView.isHidden = false
         MOLH.setLanguageTo("ar")
+//        MOLH.reset()
         MOLH.reset(transition: .transitionCrossDissolve)
     }
 }

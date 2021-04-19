@@ -8,9 +8,19 @@
 import UIKit
 import GoogleMaps
 import Toast_Swift
+import MOLH
 class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
     @IBOutlet weak var orderStatusLbl: UILabel!
     
+    @IBOutlet weak var completeArabicTitleLbl: UILabel!
+    @IBOutlet weak var progressArabicTitleLbl: UILabel!
+    @IBOutlet weak var sentTitleLbl: UILabel!
+    @IBOutlet weak var completeTitleLbl: UILabel!
+    @IBOutlet weak var progressTitleLbl: UILabel!
+    @IBOutlet weak var completeImageView: UIImageView!
+    @IBOutlet weak var completeView: UIView!
+    @IBOutlet weak var progressView: UIView!
+    @IBOutlet weak var progressImageView: UIImageView!
     @IBOutlet weak var cancelOrderBtn: UIButton!
     @IBOutlet weak var mapViewHeightConstraintSecond: NSLayoutConstraint!
     @IBOutlet weak var mapViewHieghtConstant: NSLayoutConstraint!
@@ -40,10 +50,36 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
         cancelOrderBtn.layer.cornerRadius = 8
         orderDetailsBtn.layer.cornerRadius = 8
         backBtn.layer.cornerRadius = 8
+        
         cancelOrderBtn.layer.borderColor = UIColor.lightGray.cgColor
-        bindData() 
+        bindData()
+        if MOLHLanguage.currentAppleLanguage() == "ar"
+        {
+            completeTitleLbl.isHidden = true
+            progressTitleLbl.isHidden = true
+            sentTitleLbl.isHidden = true
+            completeArabicTitleLbl.isHidden = false
+            progressArabicTitleLbl.isHidden = false
+        }else{
+            completeTitleLbl.isHidden = false
+            progressTitleLbl.isHidden = false
+            sentTitleLbl.isHidden = false
+            completeArabicTitleLbl.isHidden = true
+            progressArabicTitleLbl.isHidden = true
+        }
         if order.orderStatus == "-1"
         {
+            
+            progressImageView.image = UIImage(named: "2")
+            progressImageView.layer.borderWidth = 2
+            progressImageView.layer.cornerRadius = progressImageView.frame.width / 2
+            progressImageView.layer.borderColor = UIColor.init(red: 162.0/255.0, green: 162.0/255.0, blue: 162.0/255.0, alpha: 1).cgColor
+            progressView.layer.borderColor = UIColor.init(red: 162.0/255.0, green: 162.0/255.0, blue: 162.0/255.0, alpha: 1).cgColor
+            completeImageView.image = UIImage(named: "3")
+            completeImageView.layer.borderWidth = 2
+            completeImageView.layer.cornerRadius = completeImageView.frame.width / 2
+            completeImageView.layer.borderColor = UIColor.init(red: 162.0/255.0, green: 162.0/255.0, blue: 162.0/255.0, alpha: 1).cgColor
+            completeView.layer.borderColor = UIColor.init(red: 162.0/255.0, green: 162.0/255.0, blue: 162.0/255.0, alpha: 1).cgColor
             cancelOrderBtn.isEnabled = false
             cancelOrderBtn.setTitle("This order was canceled".localized, for: .normal)
             cancelOrderBtn.setTitleColor(UIColor.red, for: .normal)
@@ -54,6 +90,17 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
             
         }else if order.orderStatus == "0"
         {
+            progressImageView.image = UIImage(named: "circle")
+            progressImageView.layer.borderWidth = 2
+            progressImageView.layer.cornerRadius = progressImageView.frame.width / 2
+            progressImageView.layer.borderColor = UIColor.init(red: 162.0/255.0, green: 162.0/255.0, blue: 162.0/255.0, alpha: 1).cgColor
+            progressView.layer.borderColor = UIColor.init(red: 162.0/255.0, green: 162.0/255.0, blue: 162.0/255.0, alpha: 1).cgColor
+            completeImageView.image = UIImage(named: "3")
+
+            completeImageView.layer.borderWidth = 2
+            completeImageView.layer.cornerRadius = completeImageView.frame.width / 2
+            completeImageView.layer.borderColor = UIColor.init(red: 162.0/255.0, green: 162.0/255.0, blue: 162.0/255.0, alpha: 1).cgColor
+            completeView.layer.borderColor = UIColor.init(red: 162.0/255.0, green: 162.0/255.0, blue: 162.0/255.0, alpha: 1).cgColor
             cancelOrderBtn.isEnabled = true
             cancelOrderBtn.setTitle("Cancel Order".localized, for: .normal)
             cancelOrderBtn.backgroundColor = UIColor.red
@@ -97,7 +144,7 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
                 let homeViewController = homeViewStoryboard.instantiateViewController(withIdentifier: "HomeTabBar")
                 homeViewController.modalPresentationStyle = .fullScreen
                 self.present(homeViewController, animated: true, completion: nil)
-              
+                UserDefaults.standard.setValue("false", forKey: "requestOrder")
             }
             
         }

@@ -38,7 +38,7 @@ class RequestOrderFirebaseManager {
                          "id":timeInMiliseconds,
                          "note":order.notes,
                          "price":order.orderPrice,
-                         "rated":"false",
+                         "rated":false,
                          "startLat":order.startLat,
                          "startLng":order.startLong,
                          "status":Double(order.orderStatus)!,
@@ -53,7 +53,7 @@ class RequestOrderFirebaseManager {
                          "id":timeInMiliseconds,
                          "note":order.notes,
                          "price":order.orderPrice,
-                         "rated":"false",
+                         "rated":false,
                          "startLat":order.startLat,
                          "startLng":order.startLong,
                          "status":Double(order.orderStatus)!,
@@ -68,7 +68,7 @@ class RequestOrderFirebaseManager {
                          "id":timeInMiliseconds,
                          "note":order.notes,
                          "price":order.orderPrice,
-                         "rated":"false",
+                         "rated":false,
                          "startLat":order.startLat,
                          "startLng":order.startLong,
                          "status":Double(order.orderStatus)!,
@@ -83,7 +83,7 @@ class RequestOrderFirebaseManager {
                          "id":timeInMiliseconds,
                          "note":order.notes,
                          "price":order.orderPrice,
-                         "rated":"false",
+                         "rated":false,
                          "startLat":order.startLat,
                          "startLng":order.startLong,
                          "status":Double(order.orderStatus)!,
@@ -100,7 +100,8 @@ class RequestOrderFirebaseManager {
                 print("Error getting documents: \(err)")
                 completion(err,nil)
             } else {
-                
+                UserDefaults.standard.set("true", forKey: "requestOrder")
+
                 completion(nil,order)
             }
         }
