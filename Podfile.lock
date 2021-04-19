@@ -340,6 +340,7 @@ PODS:
   - gRPC-Core/Interface (1.28.2)
   - GTMSessionFetcher/Core (1.5.0)
   - leveldb-library (1.22.1)
+  - MOLH (1.4.3)
   - nanopb (2.30907.0):
     - nanopb/decode (= 2.30907.0)
     - nanopb/encode (= 2.30907.0)
@@ -362,6 +363,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - GoogleMaps (= 4.2.0)
   - GooglePlaces (= 4.2.0)
+  - MOLH
   - SDWebImage (~> 5.0)
   - SheetPresentation
   - SwiftToast
@@ -390,6 +392,7 @@ SPEC REPOS:
     - gRPC-Core
     - GTMSessionFetcher
     - leveldb-library
+    - MOLH
     - nanopb
     - PromisesObjC
     - SDWebImage
@@ -419,6 +422,7 @@ SPEC CHECKSUMS:
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
+  MOLH: e45827d200aeb1310641090fd8cd03ad2b42ae72
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SDWebImage: 7acbb57630ac7db4a495547fb73916ff3e432f6b
@@ -427,6 +431,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: f48a189c0ed943e0f603e3f6834401f57648feb3
+PODFILE CHECKSUM: 98279eda1c6d849628ea085711c95d5726f678c2
 
 COCOAPODS: 1.10.1

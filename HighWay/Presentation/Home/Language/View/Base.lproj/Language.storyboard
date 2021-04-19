@@ -128,7 +128,9 @@
                     </view>
                     <connections>
                         <outlet property="arabicContainerView" destination="491-dZ-jmZ" id="Fa1-O3-I7e"/>
+                        <outlet property="arabicLangaugeIndicatorView" destination="EZs-Ag-Mzm" id="lTy-1c-duY"/>
                         <outlet property="englishContainerView" destination="Gja-Zj-4gh" id="x1C-Md-DkK"/>
+                        <outlet property="englishLangaugeIndicatorView" destination="cmx-k9-XJb" id="P6C-3W-pGh"/>
                         <outlet property="langaugeContainerView" destination="mVK-B1-DOC" id="6KR-9o-wTD"/>
                     </connections>
                 </viewController>
