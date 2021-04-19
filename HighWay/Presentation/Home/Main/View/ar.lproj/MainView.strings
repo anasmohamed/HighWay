@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "it can be useful.."; ObjectID = "2Hl-gR-bV2"; */
+"2Hl-gR-bV2.text" = "يمكن أن يكون مفيدا...";
+
+/* Class = "UILabel"; text = "How we can help you ?"; ObjectID = "5Ei-Vu-Wjw"; */
+"5Ei-Vu-Wjw.text" = "كيف يمكننا مساعدتك ؟";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "6Nc-6z-Adw"; */
+"6Nc-6z-Adw.title" = "الرئيسية";
+
+/* Class = "UILabel"; text = "Start"; ObjectID = "ACY-ck-LXz"; */
+"ACY-ck-LXz.text" = "Start";
+
+/* Class = "UITabBarItem"; title = "Profle"; ObjectID = "Cgj-JJ-HTV"; */
+"Cgj-JJ-HTV.title" = "حسابى";
+
+/* Class = "UITextField"; placeholder = "Start a quick chat"; ObjectID = "DPK-Yg-hbm"; */
+"DPK-Yg-hbm.placeholder" = "ابدأ محادثة سريعة!";
+
+/* Class = "UILabel"; text = "HIGHWAY"; ObjectID = "GGa-er-iI9"; */
+"GGa-er-iI9.text" = "HIGHWAY";
+
+/* Class = "UILabel"; text = "obtaining the nearest driver..."; ObjectID = "Iih-T5-UAH"; */
+"Iih-T5-UAH.text" = "الحصول على أقرب سائق...";
+
+/* Class = "UILabel"; text = "Progress"; ObjectID = "IrO-Zb-CWc"; */
+"IrO-Zb-CWc.text" = "Progress";
+
+/* Class = "UILabel"; text = "Complete"; ObjectID = "Jjw-Yr-ZcM"; */
+"Jjw-Yr-ZcM.text" = "Complete";
+
+/* Class = "UILabel"; text = "We are happy to help you , anytime, anywhere"; ObjectID = "hag-Kr-hy9"; */
+"hag-Kr-hy9.text" = "يسعدنا مساعدتك فى أى وقت وأى مكان";
+
+/* Class = "UILabel"; text = "just now"; ObjectID = "oYg-db-azk"; */
+"oYg-db-azk.text" = "just now";
+
+/* Class = "UITabBarItem"; title = "Orders"; ObjectID = "ynz-2I-1SW"; */
+"ynz-2I-1SW.title" = "Orders";
