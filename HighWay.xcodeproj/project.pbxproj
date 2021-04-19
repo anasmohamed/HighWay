@@ -29,7 +29,6 @@
 		3265515226188D2C00A88C38 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3265515126188D2C00A88C38 /* MainViewController.swift */; };
 		3265515C26189D9500A88C38 /* ServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3265515A26189D9500A88C38 /* ServiceCollectionViewCell.swift */; };
 		3265515D26189D9500A88C38 /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3265515B26189D9500A88C38 /* ServiceCollectionViewCell.xib */; };
-		326AE867262379BA00E40CFC /* RequestOrderMapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 326AE866262379BA00E40CFC /* RequestOrderMapView.storyboard */; };
 		326AE86C262381C300E40CFC /* RequestOrderMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326AE86B262381C300E40CFC /* RequestOrderMapViewController.swift */; };
 		326B01D126274B1B0061FB44 /* ItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326B01CF26274B1B0061FB44 /* ItemsTableViewCell.swift */; };
 		326B01D226274B1B0061FB44 /* ItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 326B01D026274B1B0061FB44 /* ItemsTableViewCell.xib */; };
@@ -99,7 +98,6 @@
 		32F4B657261A84DE00D7D7E7 /* ProfileMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F4B655261A84DE00D7D7E7 /* ProfileMenuTableViewCell.swift */; };
 		32F4B658261A84DE00D7D7E7 /* ProfileMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32F4B656261A84DE00D7D7E7 /* ProfileMenuTableViewCell.xib */; };
 		32F89E732625F2A1002DC5CF /* CountryGeoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F89E722625F2A1002DC5CF /* CountryGeoLocation.swift */; };
-		32F89E9C26266DD5002DC5CF /* RequestOrderDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32F89E9B26266DD5002DC5CF /* RequestOrderDetails.storyboard */; };
 		32F89EC326266E67002DC5CF /* RequestOrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F89EC226266E67002DC5CF /* RequestOrderDetailsViewController.swift */; };
 		32FA06C7261504C100912153 /* PlaceholderCenterText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA06C6261504C100912153 /* PlaceholderCenterText.swift */; };
 		32FA06CF2615065F00912153 /* ShadowForUIVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA06CE2615065F00912153 /* ShadowForUIVIew.swift */; };
@@ -117,6 +115,8 @@
 		3530853A262DA81A00BC6962 /* OrdersHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3530853C262DA81A00BC6962 /* OrdersHistory.storyboard */; };
 		35308545262DAA6D00BC6962 /* OrderHistoryMapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35308547262DAA6D00BC6962 /* OrderHistoryMapView.storyboard */; };
 		35308550262DAD0100BC6962 /* OrderDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35308552262DAD0100BC6962 /* OrderDetails.storyboard */; };
+		3530855B262DAF4E00BC6962 /* RequestOrderMapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3530855D262DAF4E00BC6962 /* RequestOrderMapView.storyboard */; };
+		35308566262DAFA200BC6962 /* RequestOrderDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35308568262DAFA200BC6962 /* RequestOrderDetails.storyboard */; };
 		356D9162262D1661008051A3 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356D9161262D1661008051A3 /* AppSettings.swift */; };
 		356D9167262D3026008051A3 /* BattaryViewContollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356D9166262D3026008051A3 /* BattaryViewContollerViewController.swift */; };
 		356D916C262D32D7008051A3 /* OthersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356D916B262D32D7008051A3 /* OthersViewController.swift */; };
@@ -174,7 +174,6 @@
 		3265515126188D2C00A88C38 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3265515A26189D9500A88C38 /* ServiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCollectionViewCell.swift; sourceTree = "<group>"; };
 		3265515B26189D9500A88C38 /* ServiceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCollectionViewCell.xib; sourceTree = "<group>"; };
-		326AE866262379BA00E40CFC /* RequestOrderMapView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RequestOrderMapView.storyboard; sourceTree = "<group>"; };
 		326AE86B262381C300E40CFC /* RequestOrderMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOrderMapViewController.swift; sourceTree = "<group>"; };
 		326B01CF26274B1B0061FB44 /* ItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableViewCell.swift; sourceTree = "<group>"; };
 		326B01D026274B1B0061FB44 /* ItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsTableViewCell.xib; sourceTree = "<group>"; };
@@ -247,7 +246,6 @@
 		32F4B655261A84DE00D7D7E7 /* ProfileMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMenuTableViewCell.swift; sourceTree = "<group>"; };
 		32F4B656261A84DE00D7D7E7 /* ProfileMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileMenuTableViewCell.xib; sourceTree = "<group>"; };
 		32F89E722625F2A1002DC5CF /* CountryGeoLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryGeoLocation.swift; sourceTree = "<group>"; };
-		32F89E9B26266DD5002DC5CF /* RequestOrderDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RequestOrderDetails.storyboard; sourceTree = "<group>"; };
 		32F89EC226266E67002DC5CF /* RequestOrderDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOrderDetailsViewController.swift; sourceTree = "<group>"; };
 		32FA06C6261504C100912153 /* PlaceholderCenterText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderCenterText.swift; sourceTree = "<group>"; };
 		32FA06CE2615065F00912153 /* ShadowForUIVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowForUIVIew.swift; sourceTree = "<group>"; };
@@ -277,6 +275,10 @@
 		3530854C262DAA8600BC6962 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/OrderHistoryMapView.strings; sourceTree = "<group>"; };
 		35308551262DAD0100BC6962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/OrderDetails.storyboard; sourceTree = "<group>"; };
 		35308557262DAD3800BC6962 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/OrderDetails.strings; sourceTree = "<group>"; };
+		3530855C262DAF4E00BC6962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RequestOrderMapView.storyboard; sourceTree = "<group>"; };
+		35308562262DAF5A00BC6962 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/RequestOrderMapView.strings; sourceTree = "<group>"; };
+		35308567262DAFA200BC6962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RequestOrderDetails.storyboard; sourceTree = "<group>"; };
+		3530856D262DAFBC00BC6962 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/RequestOrderDetails.strings; sourceTree = "<group>"; };
 		356D9161262D1661008051A3 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		356D9166262D3026008051A3 /* BattaryViewContollerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattaryViewContollerViewController.swift; sourceTree = "<group>"; };
 		356D916B262D32D7008051A3 /* OthersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersViewController.swift; sourceTree = "<group>"; };
@@ -616,7 +618,7 @@
 		326AE8652623796400E40CFC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				326AE866262379BA00E40CFC /* RequestOrderMapView.storyboard */,
+				3530855D262DAF4E00BC6962 /* RequestOrderMapView.storyboard */,
 				326AE86B262381C300E40CFC /* RequestOrderMapViewController.swift */,
 			);
 			path = View;
@@ -1044,7 +1046,7 @@
 				326B01DC26274C870061FB44 /* RequsetOrderFirebaseManager */,
 				326B01DB26274C7E0061FB44 /* ViewModel */,
 				326B01CE26274AA60061FB44 /* Cell */,
-				32F89E9B26266DD5002DC5CF /* RequestOrderDetails.storyboard */,
+				35308568262DAFA200BC6962 /* RequestOrderDetails.storyboard */,
 				32F89EC226266E67002DC5CF /* RequestOrderDetailsViewController.swift */,
 				326B01D626274B1C0061FB44 /* RequestCarFuelOrderViewController.swift */,
 				35E0835E262CE0C300545CB2 /* CarTowingViewRequestOrderViewController.swift */,
@@ -1254,10 +1256,10 @@
 				35308516262D9DB000BC6962 /* MainView.storyboard in Resources */,
 				322D9ADD2614B14100C6F823 /* Assets.xcassets in Resources */,
 				322D9ADB2614B14100C6F823 /* Main.storyboard in Resources */,
-				32F89E9C26266DD5002DC5CF /* RequestOrderDetails.storyboard in Resources */,
+				35308566262DAFA200BC6962 /* RequestOrderDetails.storyboard in Resources */,
 				32F1E6022615358000C12C84 /* Cairo-Light.ttf in Resources */,
 				32EC9F3A261B62A40071C625 /* RatingTableViewCell.xib in Resources */,
-				326AE867262379BA00E40CFC /* RequestOrderMapView.storyboard in Resources */,
+				3530855B262DAF4E00BC6962 /* RequestOrderMapView.storyboard in Resources */,
 				3289F54D2624BA91002D564C /* PrivacyPolicy.storyboard in Resources */,
 				32F1E6062615358000C12C84 /* Cairo-Black.ttf in Resources */,
 				35308503262D9B7E00BC6962 /* LoginView.storyboard in Resources */,
@@ -1647,6 +1649,24 @@
 				35308557262DAD3800BC6962 /* ar */,
 			);
 			name = OrderDetails.storyboard;
+			sourceTree = "<group>";
+		};
+		3530855D262DAF4E00BC6962 /* RequestOrderMapView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3530855C262DAF4E00BC6962 /* Base */,
+				35308562262DAF5A00BC6962 /* ar */,
+			);
+			name = RequestOrderMapView.storyboard;
+			sourceTree = "<group>";
+		};
+		35308568262DAFA200BC6962 /* RequestOrderDetails.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35308567262DAFA200BC6962 /* Base */,
+				3530856D262DAFBC00BC6962 /* ar */,
+			);
+			name = RequestOrderDetails.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

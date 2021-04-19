@@ -1,0 +1,98 @@
+
+/* Class = "UILabel"; text = "0.0 BHD"; ObjectID = "0x1-Fr-znR"; */
+"0x1-Fr-znR.text" = "0.0 BHD";
+
+/* Class = "UILabel"; text = "Payment : Cash"; ObjectID = "1VL-yN-ZGK"; */
+"1VL-yN-ZGK.text" = "الدفع: نقدا";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "3Ql-dB-Pmn"; */
+"3Ql-dB-Pmn.normalTitle" = "ارسال الطلب";
+
+/* Class = "UILabel"; text = "Confirm"; ObjectID = "7kD-tH-nn2"; */
+"7kD-tH-nn2.text" = "تأكيد";
+
+/* Class = "UILabel"; text = "Payment : Cash"; ObjectID = "BWr-Bo-Kea"; */
+"BWr-Bo-Kea.text" = "الدفع: نقدا";
+
+/* Class = "UILabel"; text = "Time of reiceve"; ObjectID = "EhG-zm-9RC"; */
+"EhG-zm-9RC.text" = "وقت الاستلام";
+
+/* Class = "UILabel"; text = "This cost is estimate, which mabe adjust upon compilition of the order"; ObjectID = "Fn6-ic-Uv5"; */
+"Fn6-ic-Uv5.text" = "هذه التكلفة هى تقدير ويمكن تعديلها لاحقا";
+
+/* Class = "UILabel"; text = "Service Cost"; ObjectID = "GCU-ef-kJT"; */
+"GCU-ef-kJT.text" = "تكلفة الخدمة";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Gl5-Nh-ytk"; */
+"Gl5-Nh-ytk.normalTitle" = "إلغاء";
+
+/* Class = "UILabel"; text = "Not Apply"; ObjectID = "Hn8-Fc-bAH"; */
+"Hn8-Fc-bAH.text" = "تكلفة الخدمة";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "L6F-7E-Ivp"; */
+"L6F-7E-Ivp.text" = "Label";
+
+/* Class = "UILabel"; text = "Description*"; ObjectID = "NOa-nm-sGd"; */
+"NOa-nm-sGd.text" = "وصف*";
+
+/* Class = "UILabel"; text = "Select item"; ObjectID = "QX5-aX-nCO"; */
+"QX5-aX-nCO.text" = "اختر";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "RFE-HZ-iQr"; */
+"RFE-HZ-iQr.normalTitle" = "إلغاء";
+
+/* Class = "UILabel"; text = "Fuel Price"; ObjectID = "S2K-jY-2e8"; */
+"S2K-jY-2e8.text" = "سعر الوقد";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "SKn-pC-ZBE"; */
+"SKn-pC-ZBE.normalTitle" = "ارسال الطلب";
+
+/* Class = "UILabel"; text = "Total Price"; ObjectID = "UdZ-qa-to2"; */
+"UdZ-qa-to2.text" = "السعر الكلى";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "W3o-dz-6vS"; */
+"W3o-dz-6vS.normalTitle" = "إلغاء";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Ze7-6J-snT"; */
+"Ze7-6J-snT.normalTitle" = "إلغاء";
+
+/* Class = "UILabel"; text = "Confirm"; ObjectID = "bDP-ad-9tX"; */
+"bDP-ad-9tX.text" = "تأكيد";
+
+/* Class = "UITextField"; placeholder = "(Optional) you can add note here"; ObjectID = "cDB-AT-fPO"; */
+"cDB-AT-fPO.placeholder" = "(اختيارى)يمكنك إضافة ملاحظة هنا";
+
+/* Class = "UILabel"; text = "Payment : Cash"; ObjectID = "fBl-fx-cbb"; */
+"fBl-fx-cbb.text" = "الدفع: نقدا";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "fU1-kx-4uW"; */
+"fU1-kx-4uW.normalTitle" = "ارسال الطلب";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "i2E-KE-TFg"; */
+"i2E-KE-TFg.normalTitle" = "ارسال الطلب";
+
+/* Class = "UILabel"; text = "Confirm"; ObjectID = "kWi-zf-JgN"; */
+"kWi-zf-JgN.text" = "تأكيد";
+
+/* Class = "UILabel"; text = "Title*"; ObjectID = "n8H-tt-W51"; */
+"n8H-tt-W51.text" = "عنوان*";
+
+/* Class = "UILabel"; text = "5.0 BHD"; ObjectID = "sdA-eS-4be"; */
+"sdA-eS-4be.text" = "5.0 BHD";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "vA9-ns-hpH"; */
+"vA9-ns-hpH.text" = "Label";
+
+/* Class = "UILabel"; text = "Service Cost"; ObjectID = "vbP-VI-Pks"; */
+"vbP-VI-Pks.text" = "تكلفة الخدمة:";
+
+/* Class = "UILabel"; text = "Total Price :"; ObjectID = "xlQ-H7-acW"; */
+"xlQ-H7-acW.text" = "السعر الكلى:";
+
+"aZs-Y6-Yac.placeholder" = "(اختيارى) يمكنك وصف مشكلتك بالتفاصيل";
+
+"5OW-ac-gH2.placeholder" = "(اختيارى) يمكنك وصف مشكلتك بالتفاصيل";
+
+"kWy-m2-b5P.placeholder" = "عنوان المشكلة";
+
+"V6T-22-8kQ.placeholder" = "صف مشكلتك بالتفاصيل";
