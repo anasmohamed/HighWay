@@ -56,19 +56,19 @@ class LoginViewModel {
         //            return .Incorrect
         //        }
         if password.isEmpty {
-            errorMessage.value = "Password shoulb be 6 digits or more"
+            errorMessage.value = "Password should be 6 digits or more".localized
             isPasswordTextFieldHighLighted.value = true
             return .Incorrect
             
         }
         if email.isEmpty {
-            errorMessage.value = "email field is empty."
+            errorMessage.value = "email field is empty.".localized
             isEmailTextFieldHighLighted.value = true
             return .Incorrect
         }
         if !EmailValidation.isValidEmail(email)
         {
-            errorMessage.value = "Enter Valid Email."
+            errorMessage.value = "Enter Valid Email.".localized
             isEmailTextFieldHighLighted.value = true
             return .Incorrect
         }

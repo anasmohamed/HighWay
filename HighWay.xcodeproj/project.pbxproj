@@ -117,6 +117,8 @@
 		35308550262DAD0100BC6962 /* OrderDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35308552262DAD0100BC6962 /* OrderDetails.storyboard */; };
 		3530855B262DAF4E00BC6962 /* RequestOrderMapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3530855D262DAF4E00BC6962 /* RequestOrderMapView.storyboard */; };
 		35308566262DAFA200BC6962 /* RequestOrderDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35308568262DAFA200BC6962 /* RequestOrderDetails.storyboard */; };
+		35308576262DBD2800BC6962 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35308578262DBD2800BC6962 /* Localizable.strings */; };
+		35308581262DBD8B00BC6962 /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35308580262DBD8B00BC6962 /* Localize.swift */; };
 		356D9162262D1661008051A3 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356D9161262D1661008051A3 /* AppSettings.swift */; };
 		356D9167262D3026008051A3 /* BattaryViewContollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356D9166262D3026008051A3 /* BattaryViewContollerViewController.swift */; };
 		356D916C262D32D7008051A3 /* OthersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356D916B262D32D7008051A3 /* OthersViewController.swift */; };
@@ -279,6 +281,9 @@
 		35308562262DAF5A00BC6962 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/RequestOrderMapView.strings; sourceTree = "<group>"; };
 		35308567262DAFA200BC6962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RequestOrderDetails.storyboard; sourceTree = "<group>"; };
 		3530856D262DAFBC00BC6962 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/RequestOrderDetails.strings; sourceTree = "<group>"; };
+		35308577262DBD2800BC6962 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3530857C262DBD2C00BC6962 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		35308580262DBD8B00BC6962 /* Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localize.swift; sourceTree = "<group>"; };
 		356D9161262D1661008051A3 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		356D9166262D3026008051A3 /* BattaryViewContollerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattaryViewContollerViewController.swift; sourceTree = "<group>"; };
 		356D916B262D32D7008051A3 /* OthersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersViewController.swift; sourceTree = "<group>"; };
@@ -386,6 +391,7 @@
 				322D9ADE2614B14100C6F823 /* LaunchScreen.storyboard */,
 				32E7121E2615E66B00FF0F8F /* GoogleService-Info.plist */,
 				322D9AE12614B14100C6F823 /* Info.plist */,
+				35308578262DBD2800BC6962 /* Localizable.strings */,
 			);
 			path = HighWay;
 			sourceTree = "<group>";
@@ -1069,6 +1075,7 @@
 				3224405226164A52008A876B /* EmailValidation.swift */,
 				32D6A8E92617629D00661F6E /* AlertController.swift */,
 				32D6A9E42617789700661F6E /* LoadingIndicatorView.swift */,
+				35308580262DBD8B00BC6962 /* Localize.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1245,6 +1252,7 @@
 				35308532262DA11800BC6962 /* ResetPassword.storyboard in Resources */,
 				322D9AE02614B14100C6F823 /* LaunchScreen.storyboard in Resources */,
 				329F60EE2629D48C009DEF88 /* Notifications.storyboard in Resources */,
+				35308576262DBD2800BC6962 /* Localizable.strings in Resources */,
 				32F1E6052615358000C12C84 /* Cairo-SemiBold.ttf in Resources */,
 				3265515D26189D9500A88C38 /* ServiceCollectionViewCell.xib in Resources */,
 				32F1E6042615358000C12C84 /* Cairo-Regular.ttf in Resources */,
@@ -1468,6 +1476,7 @@
 				32F89EC326266E67002DC5CF /* RequestOrderDetailsViewController.swift in Sources */,
 				32E7127D261602CD00FF0F8F /* HandleKeboardShowExtenstion.swift in Sources */,
 				32FA06EA2615158600912153 /* LoginManager.swift in Sources */,
+				35308581262DBD8B00BC6962 /* Localize.swift in Sources */,
 				32531CE1262B7BC100093BDD /* AddFeedbackViewController.swift in Sources */,
 				326B01D726274B1C0061FB44 /* RequestCarFuelOrderViewController.swift in Sources */,
 				3272705A2618CA9800E947B2 /* Service.swift in Sources */,
@@ -1667,6 +1676,15 @@
 				3530856D262DAFBC00BC6962 /* ar */,
 			);
 			name = RequestOrderDetails.storyboard;
+			sourceTree = "<group>";
+		};
+		35308578262DBD2800BC6962 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35308577262DBD2800BC6962 /* en */,
+				3530857C262DBD2C00BC6962 /* ar */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

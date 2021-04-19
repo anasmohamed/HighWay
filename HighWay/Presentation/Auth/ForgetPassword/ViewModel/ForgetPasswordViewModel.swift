@@ -44,13 +44,13 @@ class ForgetPasswordViewModel {
     func credentialsInput() -> CredentialsInputStatus {
 
         if email.isEmpty {
-            errorMessage.value = "email field is empty."
+            errorMessage.value = "email field is empty.".localized
             isEmailTextFieldHighLighted.value = true
             return .Incorrect
         }
         if !EmailValidation.isValidEmail(email)
         {
-            errorMessage.value = "Enter Valid Email."
+            errorMessage.value = "Enter Valid Email.".localized
             isEmailTextFieldHighLighted.value = true
             return .Incorrect
         }

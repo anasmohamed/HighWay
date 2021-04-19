@@ -33,7 +33,7 @@ class MainViewController: UIViewController {
             style.messageColor = .white
             style.backgroundColor = UIColor.init(red: 69.0/255.0, green: 81.0/255.0, blue: 174.0/255.0, alpha: 1)
             style.messageFont = UIFont(name:"Cairo-Regular" , size:20.0)!
-            self.view.makeToast("You rate added succcessfully, thak you", duration: 3.0, position: .top,style:style)
+            self.view.makeToast("You rate added succcessfully, thak you".localized, duration: 3.0, position: .top,style:style)
         }
         
         // Do any additional setup after loading the view.

@@ -34,10 +34,10 @@ struct ServiceDataAccess {
     func getAllService() ->[Service]
     {
         var services = [Service]()
-        services.append(Service(name: "Car towing", image: "tow-truck-8"))
-        services.append(Service(name: "Car fuel", image: "fuel"))
-        services.append(Service(name: "Battery", image: "battery"))
-        services.append(Service(name: "Others", image: "ellipsis"))
+        services.append(Service(name: "Car towing".localized, image: "tow-truck-8"))
+        services.append(Service(name: "Car fuel".localized, image: "fuel"))
+        services.append(Service(name: "Battery".localized, image: "battery"))
+        services.append(Service(name: "Others".localized, image: "ellipsis"))
         return services
     }
 }

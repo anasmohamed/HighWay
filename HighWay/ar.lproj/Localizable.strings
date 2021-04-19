@@ -1,0 +1,46 @@
+/* 
+  Localizable.strings
+  HighWay
+
+  Created by Anas Mohamed on 19/04/2021.
+  
+*/
+"Password shoulb be 6 digits or more" = "يجب أن تتكون كلمة المرور من 6 أرقام أو أكثر";
+
+"the conditons must be agreed first" = "يجب الموافقة على الشروط أولا";
+
+"Username field is empty." = "يجب إدخال اسم المستخدم";
+
+"Password field is empty." = "يجب إدخال كلمة المرور";
+
+"Email field is empty." = "يجب إدخال البريد الالكترونى";
+
+"Enter Valid Email." = "يجب إدخال بريد الكترونى صحيح";
+
+"phone number field is empty." = "يجب إدخال رقم المحمول";
+
+"You rate added succcessfully, thak you" = "تقييمك أضيف بنجاح , شكرا لك";
+
+"Car towing" = "سحب سيارة";
+
+"Car fuel" = "وقود سيارة";
+
+"Battery" = "شحن بطارية";
+
+"Others" = "اَخرى";
+
+"Profile" = "حسابى";
+
+"language" = "اللغة";
+
+"Ratings" = "التقييمات";
+
+"Reset Password" = "إعادة تعيين كلمة المرور";
+
+"Connect us" = "تواصل معنا";
+
+"Terms of use" = "تعليمات الاستخدام";
+
+"Privacy policy" = "سياسة الخصوصية";
+
+"Logout" = "تسجيل الخروج";

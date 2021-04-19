@@ -18,7 +18,7 @@ class ProfileMenuTableViewCell: UITableViewCell {
     {
         didSet{
             self.menuItemName.text = item?.name
-            if item?.name == "Logout"
+            if item?.name == "Logout" || item?.name == "تسجيل الخروج"
             {
                 menuItemNameLeadingConstrain.constant = 8
                 logoutImage.image = UIImage(named:("power-button"))

@@ -25,7 +25,7 @@ class ProfileViewController: UIViewController {
         setupEmailLbl()
         profileImageAndEmailView.layer.cornerRadius = 6
         profileManuTableView.layer.cornerRadius = 6
-        self.navigationItem.title = "Porfile"
+        self.navigationItem.title = "Profile".localized
 
         // Do any additional setup after loading the view.
     }

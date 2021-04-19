@@ -71,7 +71,7 @@ class SignupViewModel {
     func credentialsInput() -> CredentialsInputStatus {
         if !privacyPolicyCheckbox
         {
-            errorMessage.value = "the conditons must be agreed first"
+            errorMessage.value = "the conditons must be agreed first".localized
             return .Incorrect
 
         }
@@ -82,7 +82,7 @@ class SignupViewModel {
 //            return .Incorrect
 //        }
         if userName.isEmpty {
-            errorMessage.value = "Username field is empty."
+            errorMessage.value = "Username field is empty.".localized
             isUsernameTextFieldHighLighted.value = true
             return .Incorrect
         }

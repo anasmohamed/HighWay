@@ -31,13 +31,13 @@ struct ProfileMenuDataAccess {
     func getMenuItems() ->[ProfileMenuViewModel]
     {
         var profileMenuViewModels = [ProfileMenuViewModel]()
-        profileMenuViewModels.append(ProfileMenuViewModel(name: "language", image: "language"))
-        profileMenuViewModels.append(ProfileMenuViewModel(name: "Ratings", image: "user-2"))
-        profileMenuViewModels.append(ProfileMenuViewModel(name: "Reset Password", image: "padlock"))
-        profileMenuViewModels.append(ProfileMenuViewModel(name: "Connect us", image: "dialogue"))
-        profileMenuViewModels.append(ProfileMenuViewModel(name: "Terms of use", image: "terms-and-conditions"))
-        profileMenuViewModels.append(ProfileMenuViewModel(name: "Privacy policy", image: "insurance"))
-        profileMenuViewModels.append(ProfileMenuViewModel(name: "Logout", image: ""))
+        profileMenuViewModels.append(ProfileMenuViewModel(name: "language".localized, image: "language"))
+        profileMenuViewModels.append(ProfileMenuViewModel(name: "Ratings".localized, image: "user-2"))
+        profileMenuViewModels.append(ProfileMenuViewModel(name: "Reset Password".localized, image: "padlock"))
+        profileMenuViewModels.append(ProfileMenuViewModel(name: "Connect us".localized, image: "dialogue"))
+        profileMenuViewModels.append(ProfileMenuViewModel(name: "Terms of use".localized, image: "terms-and-conditions"))
+        profileMenuViewModels.append(ProfileMenuViewModel(name: "Privacy policy".localized, image: "insurance"))
+        profileMenuViewModels.append(ProfileMenuViewModel(name: "Logout".localized, image: ""))
 
         
         
