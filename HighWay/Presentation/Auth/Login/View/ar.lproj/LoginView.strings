@@ -1,0 +1,24 @@
+
+/* Class = "UIButton"; normalTitle = "Foreget Password ?"; ObjectID = "2Vh-U5-VdH"; */
+"2Vh-U5-VdH.normalTitle" = "نسيت كلمة السر ؟";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "3qb-YB-E4K"; */
+"3qb-YB-E4K.placeholder" = "بريد إلكترونى";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "9Fv-r4-rap"; */
+"9Fv-r4-rap.placeholder" = "كلمة المرور";
+
+/* Class = "UIButton"; normalTitle = "SIGN IN"; ObjectID = "RR9-vO-a2M"; */
+"RR9-vO-a2M.normalTitle" = "تسجيل دخول";
+
+/* Class = "UINavigationItem"; title = "Login"; ObjectID = "UHT-u0-XUR"; */
+"UHT-u0-XUR.title" = "تسجيل دخول";
+
+/* Class = "UILabel"; text = "Create Account"; ObjectID = "WoU-dz-gmK"; */
+"WoU-dz-gmK.text" = "إنشاء حساب";
+
+/* Class = "UILabel"; text = "We are happy to help you , anytime, anywhere"; ObjectID = "fKU-Df-aAZ"; */
+"fKU-Df-aAZ.text" = "يسعدنا مساعدتك فى أى وقت وأى مكان";
+
+/* Class = "UILabel"; text = "HIGHWAY"; ObjectID = "ykq-2X-TCR"; */
+"ykq-2X-TCR.text" = "HIGHWAY";

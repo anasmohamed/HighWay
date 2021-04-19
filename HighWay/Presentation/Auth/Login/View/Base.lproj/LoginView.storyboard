@@ -73,9 +73,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Vh-U5-VdH">
-                                        <rect key="frame" x="20" y="138" width="125" height="41"/>
+                                        <rect key="frame" x="20" y="138" width="117" height="41"/>
                                         <fontDescription key="fontDescription" name="Cairo-Regular" family="Cairo" pointSize="15"/>
-                                        <state key="normal" title="Foreget Password ?">
+                                        <state key="normal" title="Forget Password ?">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                         <connections>
