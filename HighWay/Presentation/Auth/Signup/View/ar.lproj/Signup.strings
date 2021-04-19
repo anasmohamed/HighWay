@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "We are happy to help you , anytime, anywhere"; ObjectID = "BJW-Qa-ccD"; */
+"BJW-Qa-ccD.text" = "يسعدنا مساعدتك فى أى وقت وأى مكان";
+
+/* Class = "UIButton"; normalTitle = "I agree to the terms and privacy policy"; ObjectID = "Wrv-1S-mua"; */
+"Wrv-1S-mua.normalTitle" = "أوافق على الشروط وسياسة الخصوصية";
+
+/* Class = "UINavigationItem"; title = "Sign up"; ObjectID = "htf-1g-9fa"; */
+"htf-1g-9fa.title" = "اشتراك";
+
+/* Class = "UITextField"; placeholder = "Phone Number"; ObjectID = "mzy-84-bsG"; */
+"mzy-84-bsG.placeholder" = "رقم المحمول";
+
+/* Class = "UITextField"; placeholder = "Full Name"; ObjectID = "ruw-qP-JRk"; */
+"ruw-qP-JRk.placeholder" = "الاسم الكامل";
+
+/* Class = "UILabel"; text = "HIGHWAY"; ObjectID = "svV-K7-euP"; */
+"svV-K7-euP.text" = "HIGHWAY";
+
+/* Class = "UIButton"; normalTitle = "CREATE ACCOUNT"; ObjectID = "tSL-0q-aOf"; */
+"tSL-0q-aOf.normalTitle" = "إنشاء حساب";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "tqA-S4-rKG"; */
+"tqA-S4-rKG.placeholder" = "كلمة المرور";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "vLw-WX-VbA"; */
+"vLw-WX-VbA.placeholder" = "بريد إلكترونى";

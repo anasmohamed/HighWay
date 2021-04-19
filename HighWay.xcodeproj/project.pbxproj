@@ -100,7 +100,6 @@
 		32F1E6052615358000C12C84 /* Cairo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32F1E5FF2615358000C12C84 /* Cairo-SemiBold.ttf */; };
 		32F1E6062615358000C12C84 /* Cairo-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32F1E6002615358000C12C84 /* Cairo-Black.ttf */; };
 		32F1E6072615358000C12C84 /* Cairo-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32F1E6012615358000C12C84 /* Cairo-ExtraLight.ttf */; };
-		32F1E610261537ED00C12C84 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32F1E60F261537ED00C12C84 /* Signup.storyboard */; };
 		32F1E6152615380700C12C84 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F1E6142615380700C12C84 /* SignupViewController.swift */; };
 		32F1E61A26153F0F00C12C84 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F1E61926153F0F00C12C84 /* Checkbox.swift */; };
 		32F4B642261A754000D7D7E7 /* ProfileView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32F4B641261A754000D7D7E7 /* ProfileView.storyboard */; };
@@ -117,6 +116,7 @@
 		32FA06E426150B5000912153 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA06E326150B5000912153 /* Observable.swift */; };
 		32FA06EA2615158600912153 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA06E92615158600912153 /* LoginManager.swift */; };
 		32FA06F32615176E00912153 /* LoginVIewController + TextFiledDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FA06F22615176E00912153 /* LoginVIewController + TextFiledDelegate.swift */; };
+		353084F2262D989800BC6962 /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353084F4262D989800BC6962 /* Signup.storyboard */; };
 		356D9162262D1661008051A3 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356D9161262D1661008051A3 /* AppSettings.swift */; };
 		356D9167262D3026008051A3 /* BattaryViewContollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356D9166262D3026008051A3 /* BattaryViewContollerViewController.swift */; };
 		356D916C262D32D7008051A3 /* OthersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356D916B262D32D7008051A3 /* OthersViewController.swift */; };
@@ -248,7 +248,6 @@
 		32F1E5FF2615358000C12C84 /* Cairo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-SemiBold.ttf"; sourceTree = "<group>"; };
 		32F1E6002615358000C12C84 /* Cairo-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-Black.ttf"; sourceTree = "<group>"; };
 		32F1E6012615358000C12C84 /* Cairo-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-ExtraLight.ttf"; sourceTree = "<group>"; };
-		32F1E60F261537ED00C12C84 /* Signup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		32F1E6142615380700C12C84 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		32F1E61926153F0F00C12C84 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		32F4B641261A754000D7D7E7 /* ProfileView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileView.storyboard; sourceTree = "<group>"; };
@@ -265,6 +264,10 @@
 		32FA06E326150B5000912153 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		32FA06E92615158600912153 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		32FA06F22615176E00912153 /* LoginVIewController + TextFiledDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVIewController + TextFiledDelegate.swift"; sourceTree = "<group>"; };
+		353084ED262D986100BC6962 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		353084EE262D986300BC6962 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		353084F3262D989800BC6962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Signup.storyboard; sourceTree = "<group>"; };
+		353084FC262D98D400BC6962 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Signup.strings; sourceTree = "<group>"; };
 		356D9161262D1661008051A3 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		356D9166262D3026008051A3 /* BattaryViewContollerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattaryViewContollerViewController.swift; sourceTree = "<group>"; };
 		356D916B262D32D7008051A3 /* OthersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersViewController.swift; sourceTree = "<group>"; };
@@ -977,7 +980,7 @@
 			isa = PBXGroup;
 			children = (
 				322440492616281B008A876B /* Extensions */,
-				32F1E60F261537ED00C12C84 /* Signup.storyboard */,
+				353084F4262D989800BC6962 /* Signup.storyboard */,
 				32F1E6142615380700C12C84 /* SignupViewController.swift */,
 			);
 			path = View;
@@ -1202,6 +1205,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 322D9AC72614B14000C6F823;
 			productRefGroup = 322D9AD12614B14000C6F823 /* Products */;
@@ -1249,7 +1253,7 @@
 				32F1E6062615358000C12C84 /* Cairo-Black.ttf in Resources */,
 				322D9B1C2614B49900C6F823 /* LoginView.storyboard in Resources */,
 				32EC9F2D261B60630071C625 /* Ratings.storyboard in Resources */,
-				32F1E610261537ED00C12C84 /* Signup.storyboard in Resources */,
+				353084F2262D989800BC6962 /* Signup.storyboard in Resources */,
 				3289F5762624C60E002D564C /* TermsAndCondition.storyboard in Resources */,
 				32F1E6032615358000C12C84 /* Cairo-Bold.ttf in Resources */,
 				3287B5F9261D4089004E6971 /* OrdersHistory.storyboard in Resources */,
@@ -1532,6 +1536,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				322D9ADA2614B14100C6F823 /* Base */,
+				353084ED262D986100BC6962 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1540,8 +1545,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				322D9ADF2614B14100C6F823 /* Base */,
+				353084EE262D986300BC6962 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		353084F4262D989800BC6962 /* Signup.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				353084F3262D989800BC6962 /* Base */,
+				353084FC262D98D400BC6962 /* ar */,
+			);
+			name = Signup.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1551,6 +1566,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1612,6 +1628,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
