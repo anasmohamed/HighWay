@@ -8,7 +8,7 @@
 import UIKit
 
 class OthersViewController: UIViewController {
-
+    
     @IBOutlet weak var titleTextField: UITextField!
     
     @IBOutlet weak var cancelBtn: UIButton!
@@ -31,8 +31,16 @@ class OthersViewController: UIViewController {
     }
     
     @IBAction func sendBtnDidTapped(_ sender: Any) {
-        requestOrderViewModel.updateDate(note: "\(titleTextField.text!)<BODY>\(descriptionTextField.text!)", addressText: addressText, price:servicePrice , fuelOrderSize: "", fuelOrderDate: "", fuelOrderPrice: "", rated: false, status: "-1", type: "others", userId: "", timestamp: date, startLat: startLat, startLng: startLong, endLat: endLat, endLng: endLong,arriveAddress: arriveAddressText)
-        requestOrderViewModel.sendOrderData()
+        requestOrderViewModel.updateOthresTitleAndDescription(title:titleTextField.text! , decsription: descriptionTextField.text!)
+        switch requestOrderViewModel.credentialsInput() {
+        
+        case .Correct:
+            requestOrderViewModel.updateDate(note: "\(titleTextField.text!)<BODY>\(descriptionTextField.text!)", addressText: addressText, price:servicePrice , fuelOrderSize: "", fuelOrderDate: "", fuelOrderPrice: "", rated: false, status: "-1", type: "others", userId: "", timestamp: date, startLat: startLat, startLng: startLong, endLat: endLat, endLng: endLong,arriveAddress: arriveAddressText)
+            requestOrderViewModel.sendOrderData()
+        case .Incorrect:
+            return
+        }
+        
     }
     
     @IBAction func cancelBtnDidTapped(_ sender: Any) {
@@ -48,13 +56,27 @@ class OthersViewController: UIViewController {
                 
             }
         }
-//        requestOrderViewModel.getAppSettingsSuccess.bind{
-//            (appsettings) in
-//
-//            self.servicePrice = appsettings?.batteryPrice ?? 0.0
-//            self.servicCostLbl.text = "\(self.servicePrice)BHD"
-//        }
+        requestOrderViewModel.isOtherTitleFieldHighlighted.bind { [weak self] in
+            if $0 { self?.highlightTextField((self?.titleTextField)!)}
+        }
         
+        requestOrderViewModel.isOtherDescriptionFieldHighlighted.bind { [weak self] in
+            if $0 { self?.highlightTextField((self?.descriptionTextField)!)}
+        }
+        
+        //        requestOrderViewModel.getAppSettingsSuccess.bind{
+        //            (appsettings) in
+        //
+        //            self.servicePrice = appsettings?.batteryPrice ?? 0.0
+        //            self.servicCostLbl.text = "\(self.servicePrice)BHD"
+        //        }
+        
+    }
+    func highlightTextField(_ textField: UITextField) {
+        textField.resignFirstResponder()
+        textField.layer.borderWidth = 1.0
+        textField.layer.borderColor = UIColor.red.cgColor
+        textField.layer.cornerRadius = 3
     }
     func navigateToMainViewController(order:Order) {
         let homeViewStoryboard = UIStoryboard.init(name: "MainView", bundle: nil)

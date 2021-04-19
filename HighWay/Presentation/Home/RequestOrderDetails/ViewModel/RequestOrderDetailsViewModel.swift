@@ -35,7 +35,12 @@ class RequestOrderDetailsViewModel {
     var endLat = 0.0
     var endLng = 0.0
     var arriveAddress = ""
-    
+    var othersTitle = ""
+    var othersDescription = ""
+    func updateOthresTitleAndDescription(title:String,decsription:String) {
+        self.othersTitle = title
+        self.othersDescription = decsription
+    }
     func updateDate(note: String,addressText:String,price:Double,fuelOrderSize:String,fuelOrderDate: String,fuelOrderPrice:String,rated:Bool,status:String,type:String,userId:String,timestamp:Date?,startLat:Double,startLng:Double,endLat:Double,endLng:Double,arriveAddress:String) {
         
         
@@ -62,7 +67,10 @@ class RequestOrderDetailsViewModel {
     var reloadTableView: Observable<[FuelModel]> = Observable([])
     var inserOrdrSuccess: Observable<Order?> = Observable(nil)
     var getAppSettingsSuccess: Observable<AppSettings?> = Observable(nil)
+    var isOtherTitleFieldHighlighted: Observable<Bool> = Observable(false)
+    var isOtherDescriptionFieldHighlighted: Observable<Bool> = Observable(false)
 
+    var errorMessage: Observable<String?> = Observable(nil)
     func fetchData() {
         
         requestOrderFirebaseManager.getFuelModel { [weak self] (success, fuelModelsList) in
@@ -104,4 +112,31 @@ class RequestOrderDetailsViewModel {
     func getData(index: Int) -> FuelModel {
         return fuelModelsList[index]
     }
+    func credentialsInput() -> CredentialsInputStatus {
+        
+        if othersTitle.isEmpty {
+            errorMessage.value = "title field is empty."
+            isOtherTitleFieldHighlighted.value = true
+            return .Incorrect
+            
+        }
+        if othersDescription.isEmpty {
+            errorMessage.value = "decription field is empty."
+            isOtherDescriptionFieldHighlighted.value = true
+            return .Incorrect
+        }
+
+        
+        return .Correct
+    }
+
+}
+
+
+
+extension RequestOrderDetailsViewModel {
+enum CredentialsInputStatus {
+    case Correct
+    case Incorrect
+}
 }
