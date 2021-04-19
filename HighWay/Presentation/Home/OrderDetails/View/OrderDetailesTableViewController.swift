@@ -76,7 +76,7 @@ class OrderDetailesTableViewController: UITableViewController {
             productPriceLbl.isHidden = false
             orderDetailsLbl.text = "-\(order.fuelOrderSize)"
             timeOfRecieveFuelOrder.text = "-\(order.fuelOrderDate)"
-            orderTypeLbl.text = "Battery charge".localized
+            orderTypeLbl.text = "Car fuel".localized
             userAddressLbl.text = "- User address : ".localized + "\(order.userAddress)"
 //            driverAddressLbl.text = "- Arrive address : \(order.arriveAddress)"
             servicePriceLbl.text = "Service price : ".localized + "\(order.orderPrice)BHD"
