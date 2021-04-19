@@ -29,12 +29,16 @@ class NotificationsTableViewCell: UITableViewCell {
             print("my date anas \(dateString)")
             dataLbl.text = dateString
             if item.action == "ORDER_COMPLETE"{
-                orderStatusLbl.text = "Order completed"
-                orderStatusTextLbl.text = "Your order completed successfully"
+                orderStatusLbl.text = "Order completed".localized
+                orderStatusTextLbl.text = "Your order completed successfully".localized
             }else if (item.action == "ORDER_CANCEL")
             {
-                orderStatusLbl.text = "Order canceled"
-                orderStatusTextLbl.text = "Sorry, your order was canceled"
+                orderStatusLbl.text = "Order canceled".localized
+                orderStatusTextLbl.text = "Sorry, your order was canceled".localized
+            }else if (item.action == "ORDER_ACCEPT")
+            {orderStatusLbl.text = "Order accepted".localized
+                orderStatusTextLbl.text = "Your order is accepted, the driver on the way".localized
+                
             }
             
         }
@@ -45,12 +49,12 @@ class NotificationsTableViewCell: UITableViewCell {
         bellImageContainerView.layer.borderColor = UIColor.init(red:2.0/255.0 , green:206.0/255.0 , blue: 119.0/255.0, alpha:1.0 ).cgColor
         bellImageContainerView.layer.cornerRadius = bellImageContainerView.frame.width / 2
         mainView.layer.cornerRadius = 8
-//        containerView.layer.cornerRadius = cornerRadius
+        //        containerView.layer.cornerRadius = cornerRadius
         mainView.layer.shadowColor = UIColor.gray.cgColor
         mainView.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         mainView.layer.shadowRadius = 5.0
         mainView.layer.shadowOpacity = 0.5
-              
+        
         containerView.layer.cornerRadius = 8
         containerView.clipsToBounds = true
         // Initialization code

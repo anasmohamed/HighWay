@@ -94,3 +94,15 @@
 "Pickup Location" = "اختار موقع";
 
 "Out of area" = "خارج النطاق";
+
+"Order canceled" = "تم الغاء الطلب";
+
+"Sorry, your order was canceled" = "عذرا , تم الغاء طلبك";
+
+"Order completed" = "تم إكمال الطلب";
+
+"Your order completed successfully" = "اكتمل طلبك بنجاح";
+
+"Order accepted" = "تم قبول طلبك";
+
+"Your order is accepted, the driver on the way" = "تم قبول طلبك, السائق فى الطريق";
