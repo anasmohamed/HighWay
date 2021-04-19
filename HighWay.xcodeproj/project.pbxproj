@@ -46,7 +46,6 @@
 		327D062C261BDA7F00A74D9A /* RatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D062B261BDA7F00A74D9A /* RatingViewModel.swift */; };
 		327D0634261BDA9D00A74D9A /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D0633261BDA9D00A74D9A /* Rating.swift */; };
 		327D063A261BE47C00A74D9A /* RatingFirbaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327D0639261BE47C00A74D9A /* RatingFirbaseManager.swift */; };
-		3287B5CC261D2B06004E6971 /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3287B5CB261D2B06004E6971 /* ResetPassword.storyboard */; };
 		3287B5D1261D2F06004E6971 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3287B5D0261D2F06004E6971 /* ResetPasswordViewController.swift */; };
 		3287B5D6261D30C3004E6971 /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3287B5D5261D30C3004E6971 /* ResetPasswordViewModel.swift */; };
 		3287B5DB261D30FF004E6971 /* ResetPasswordFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3287B5DA261D30FF004E6971 /* ResetPasswordFirebaseManager.swift */; };
@@ -117,6 +116,7 @@
 		35308516262D9DB000BC6962 /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35308518262D9DB000BC6962 /* MainView.storyboard */; };
 		3530851E262DA02D00BC6962 /* ProfileView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35308520262DA02D00BC6962 /* ProfileView.storyboard */; };
 		35308523262DA07B00BC6962 /* Language.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35308525262DA07B00BC6962 /* Language.storyboard */; };
+		35308532262DA11800BC6962 /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35308534262DA11800BC6962 /* ResetPassword.storyboard */; };
 		356D9162262D1661008051A3 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356D9161262D1661008051A3 /* AppSettings.swift */; };
 		356D9167262D3026008051A3 /* BattaryViewContollerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356D9166262D3026008051A3 /* BattaryViewContollerViewController.swift */; };
 		356D916C262D32D7008051A3 /* OthersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356D916B262D32D7008051A3 /* OthersViewController.swift */; };
@@ -191,7 +191,6 @@
 		327D062B261BDA7F00A74D9A /* RatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewModel.swift; sourceTree = "<group>"; };
 		327D0633261BDA9D00A74D9A /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
 		327D0639261BE47C00A74D9A /* RatingFirbaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingFirbaseManager.swift; sourceTree = "<group>"; };
-		3287B5CB261D2B06004E6971 /* ResetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
 		3287B5D0261D2F06004E6971 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		3287B5D5261D30C3004E6971 /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
 		3287B5DA261D30FF004E6971 /* ResetPasswordFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordFirebaseManager.swift; sourceTree = "<group>"; };
@@ -273,6 +272,8 @@
 		35308522262DA03900BC6962 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ProfileView.strings; sourceTree = "<group>"; };
 		35308524262DA07B00BC6962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Language.storyboard; sourceTree = "<group>"; };
 		3530852E262DA09400BC6962 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Language.strings; sourceTree = "<group>"; };
+		35308533262DA11800BC6962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ResetPassword.storyboard; sourceTree = "<group>"; };
+		35308539262DA12400BC6962 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ResetPassword.strings; sourceTree = "<group>"; };
 		356D9161262D1661008051A3 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		356D9166262D3026008051A3 /* BattaryViewContollerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattaryViewContollerViewController.swift; sourceTree = "<group>"; };
 		356D916B262D32D7008051A3 /* OthersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersViewController.swift; sourceTree = "<group>"; };
@@ -699,7 +700,7 @@
 			isa = PBXGroup;
 			children = (
 				3287B5EB261D3655004E6971 /* Extension */,
-				3287B5CB261D2B06004E6971 /* ResetPassword.storyboard */,
+				35308534262DA11800BC6962 /* ResetPassword.storyboard */,
 				3287B5D0261D2F06004E6971 /* ResetPasswordViewController.swift */,
 			);
 			path = View;
@@ -1236,7 +1237,7 @@
 				3218B627261F58F8000706DC /* OrderHistoryMapView.storyboard in Resources */,
 				32F4B658261A84DE00D7D7E7 /* ProfileMenuTableViewCell.xib in Resources */,
 				324B17712620D8EB00062A74 /* OrderDetails.storyboard in Resources */,
-				3287B5CC261D2B06004E6971 /* ResetPassword.storyboard in Resources */,
+				35308532262DA11800BC6962 /* ResetPassword.storyboard in Resources */,
 				322D9AE02614B14100C6F823 /* LaunchScreen.storyboard in Resources */,
 				329F60EE2629D48C009DEF88 /* Notifications.storyboard in Resources */,
 				32F1E6052615358000C12C84 /* Cairo-SemiBold.ttf in Resources */,
@@ -1607,6 +1608,15 @@
 				3530852E262DA09400BC6962 /* ar */,
 			);
 			name = Language.storyboard;
+			sourceTree = "<group>";
+		};
+		35308534262DA11800BC6962 /* ResetPassword.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				35308533262DA11800BC6962 /* Base */,
+				35308539262DA12400BC6962 /* ar */,
+			);
+			name = ResetPassword.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
