@@ -1,0 +1,93 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "3dj-sf-VBP"; */
+"3dj-sf-VBP.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "473-kL-HtE"; */
+"473-kL-HtE.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4cl-NG-R6x"; */
+"4cl-NG-R6x.text" = "Label";
+
+/* Class = "UILabel"; text = "Order type"; ObjectID = "5hs-Zw-TA8"; */
+"5hs-Zw-TA8.text" = "نوع الطلب";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "7FF-Dg-z1t"; */
+"7FF-Dg-z1t.text" = "Label";
+
+/* Class = "UILabel"; text = "Total price :"; ObjectID = "9zf-P1-KXy"; */
+"9zf-P1-KXy.text" = "Total price :";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "BOx-ma-oqW"; */
+"BOx-ma-oqW.text" = "Label";
+
+/* Class = "UILabel"; text = "Have any problem? , contact us"; ObjectID = "Bi0-ZV-CjT"; */
+"Bi0-ZV-CjT.text" = "هل لديك أى مشاكل ؟ ,اتصل بنا";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Bjj-xt-1lX"; */
+"Bjj-xt-1lX.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Bk2-gT-OhS"; */
+"Bk2-gT-OhS.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Jah-nf-xHF"; */
+"Jah-nf-xHF.text" = "Label";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "NHc-vE-xsp"; */
+"NHc-vE-xsp.text" = "العنوان";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "PIK-4b-fFU"; */
+"PIK-4b-fFU.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "PXm-CS-9CH"; */
+"PXm-CS-9CH.text" = "Label";
+
+/* Class = "UILabel"; text = "Total price"; ObjectID = "Qn8-Cw-wi1"; */
+"Qn8-Cw-wi1.text" = "السعر الكلى";
+
+/* Class = "UILabel"; text = "Order Details"; ObjectID = "UdR-5d-sM8"; */
+"UdR-5d-sM8.text" = "Order Details";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Wxu-7e-JO6"; */
+"Wxu-7e-JO6.text" = "Label";
+
+/* Class = "UILabel"; text = "Order details"; ObjectID = "XSW-uc-cCg"; */
+"XSW-uc-cCg.text" = "تفاصيل الطلب";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Zka-aX-wz2"; */
+"Zka-aX-wz2.text" = "Label";
+
+/* Class = "UILabel"; text = "Notes"; ObjectID = "cUo-rJ-M8r"; */
+"cUo-rJ-M8r.text" = "ملاحظات";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "f1Y-f8-CWt"; */
+"f1Y-f8-CWt.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "fKh-q6-e7L"; */
+"fKh-q6-e7L.text" = "Address";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "lOD-Xb-3ZY"; */
+"lOD-Xb-3ZY.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "p29-Rt-l8f"; */
+"p29-Rt-l8f.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "u1f-xJ-hII"; */
+"u1f-xJ-hII.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "vNQ-Sl-Zjc"; */
+"vNQ-Sl-Zjc.text" = "Label";
+
+/* Class = "UILabel"; text = "No driver data yet"; ObjectID = "xqt-RP-sBI"; */
+"xqt-RP-sBI.text" = "لايوجد بيانات للسائق حتى الاًن";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ySb-fo-svD"; */
+"ySb-fo-svD.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ydV-9L-4YC"; */
+"ydV-9L-4YC.text" = "Label";
+
+/* Class = "UILabel"; text = "Notes"; ObjectID = "zu5-Vu-MB9"; */
+"zu5-Vu-MB9.text" = "Notes";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "zxk-9v-Dmf"; */
+"zxk-9v-Dmf.text" = "Label";

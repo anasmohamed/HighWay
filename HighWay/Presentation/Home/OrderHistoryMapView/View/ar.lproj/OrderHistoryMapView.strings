@@ -1,0 +1,26 @@
+
+/* Class = "UILabel"; text = "Progress"; ObjectID = "3x1-fn-v1G"; */
+"3x1-fn-v1G.text" = "Progress";
+
+/* Class = "UILabel"; text = "Sent"; ObjectID = "BPX-SV-8D0"; */
+"BPX-SV-8D0.text" = "Sent";
+
+/* Class = "UILabel"; text = "Complete"; ObjectID = "VJy-KK-mSM"; */
+"VJy-KK-mSM.text" = "Complete";
+
+/* Class = "UILabel"; text = "Rate"; ObjectID = "ZGL-ix-qWv"; */
+"ZGL-ix-qWv.text" = "تقيم";
+
+/* Class = "UIButton"; normalTitle = "Add feedback"; ObjectID = "bhx-C8-vah"; */
+"bhx-C8-vah.normalTitle" = "أضف ملاحظات";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "bqF-Se-Uuc"; */
+"bqF-Se-Uuc.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "suz-Go-gT1"; */
+"suz-Go-gT1.normalTitle" = "تاكيد";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ulb-80-tfm"; */
+"ulb-80-tfm.normalTitle" = "Button";
+
+"lAJ-e0-QMn.placeholder" = "يرجى تقييم الخدمة";
