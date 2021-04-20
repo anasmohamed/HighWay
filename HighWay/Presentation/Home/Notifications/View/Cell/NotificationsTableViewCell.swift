@@ -9,6 +9,7 @@ import UIKit
 
 class NotificationsTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var notificationRedCircle: UIView!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var bellImage: UIImageView!
     @IBOutlet weak var containerView: UIView!
@@ -40,11 +41,17 @@ class NotificationsTableViewCell: UITableViewCell {
                 orderStatusTextLbl.text = "Your order is accepted, the driver on the way".localized
                 
             }
+            if item.read {
+                notificationRedCircle.isHidden = true
+            }else{
+                notificationRedCircle.isHidden = false
+            }
             
         }
     }
     override func awakeFromNib() {
         super.awakeFromNib()
+        notificationRedCircle.layer.cornerRadius = notificationRedCircle.frame.width / 2
         bellImageContainerView.layer.borderWidth = 2
         bellImageContainerView.layer.borderColor = UIColor.init(red:2.0/255.0 , green:206.0/255.0 , blue: 119.0/255.0, alpha:1.0 ).cgColor
         bellImageContainerView.layer.cornerRadius = bellImageContainerView.frame.width / 2

@@ -22,10 +22,14 @@ class NotificationsViewModel {
           return notifications.count
       }
     
+    var orderId = ""
     
     var reloadTableView: Observable<[Notification]> = Observable([])
-    
-    
+    var order: Observable<Order?> = Observable(nil)
+
+    func updateOrderId(orderId:String)  {
+        self.orderId = orderId
+    }
     func fetchData() {
         notificationsFirebaseManager.getNotifications { [weak self] (success, notifications) in
               
@@ -36,6 +40,15 @@ class NotificationsViewModel {
 //              self?.isLoading = false
           }
       }
+    func getOrder()
+    {
+        notificationsFirebaseManager.getOrder(orderId:orderId ){(status,order)
+            in
+            if status {
+                self.order.value = order}
+        }
+    }
+    
     func getData(index: Int) -> Notification {
         return notifications[index]
     }

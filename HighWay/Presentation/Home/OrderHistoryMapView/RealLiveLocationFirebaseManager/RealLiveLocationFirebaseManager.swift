@@ -42,6 +42,18 @@ class RealLiveLocationFirebaseManager {
 //            }
 //        })
     }
+    func readNotification(orderId: String,completion:@escaping (Bool,Error?) -> Void)  {
+        db.collection("userNotifications").document(orderId).updateData(["read": true]){err in
+            if let err = err {
+                print("Error updating document: \(err)")
+                completion(false,err)
+            } else {
+                print("Document successfully updated")
+                completion(true,nil)
+
+            }
+        }
+    }
     func cancelOrder(orderId: String,completion:@escaping (Bool,Error?) -> Void)  {
         db.collection("userOrders").document(orderId).updateData(["status": -1]){err in
             if let err = err {

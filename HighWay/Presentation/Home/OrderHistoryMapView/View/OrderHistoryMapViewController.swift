@@ -11,7 +11,6 @@ import Toast_Swift
 import MOLH
 class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
     @IBOutlet weak var orderStatusLbl: UILabel!
-    
     @IBOutlet weak var completeArabicTitleLbl: UILabel!
     @IBOutlet weak var progressArabicTitleLbl: UILabel!
     @IBOutlet weak var sentTitleLbl: UILabel!
@@ -37,6 +36,8 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
     var viewModel = OrderHistoryMapViewModel()
     var realLiveLat = 0.0
     var realiveLng = 0.0
+    var orderId = ""
+    var isNotificationController = false
     override func viewDidLoad() {
         super.viewDidLoad()
         self.orderHistoryaMapVIew.delegate = self
@@ -69,6 +70,12 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
             sentTitleLbl.isHidden = false
             completeArabicTitleLbl.isHidden = true
             progressArabicTitleLbl.isHidden = true
+        }
+        if isNotificationController
+        {
+            
+            viewModel.readNotifications(orderId: order.orderId)
+
         }
         if order.orderStatus == "-1"
         {
@@ -154,7 +161,9 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
             }
             
         }
-        
+        viewModel.readNoftificationsObserver.bind{status in
+            print(status)
+        }
         viewModel.realLiveLatLng.bind{(latLng) in
             if self.isMainViewController{
                 
