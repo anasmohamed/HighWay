@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Cairo-Regular.ttf">
+            <string>Cairo-Regular</string>
+        </array>
         <array key="Cairo-SemiBold.ttf">
             <string>Cairo-SemiBold</string>
-        </array>
-        <array key="cairo.ttf">
-            <string>Cairo-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -279,6 +279,14 @@
                                     <constraint firstItem="5Ei-Vu-Wjw" firstAttribute="top" secondItem="6xF-xm-SZU" secondAttribute="top" constant="8" id="y69-9R-BgA"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cy5-7r-VSv">
+                                <rect key="frame" x="306" y="3" width="10" height="10"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="O1z-L1-TMn"/>
+                                    <constraint firstAttribute="width" constant="10" id="sTN-ef-LI1"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rq-Rw-R64">
                                 <rect key="frame" x="285" y="8" width="30" height="30"/>
                                 <constraints>
@@ -305,7 +313,9 @@
                             <constraint firstItem="VvN-aP-UzA" firstAttribute="top" secondItem="hag-Kr-hy9" secondAttribute="bottom" constant="7.5" id="ea6-EO-q4B"/>
                             <constraint firstItem="0hb-V4-vaT" firstAttribute="trailing" secondItem="hag-Kr-hy9" secondAttribute="trailing" constant="7" id="fFb-Sz-fwe"/>
                             <constraint firstItem="hag-Kr-hy9" firstAttribute="top" secondItem="GGa-er-iI9" secondAttribute="bottom" constant="5" id="hd1-TZ-gT4"/>
+                            <constraint firstItem="cy5-7r-VSv" firstAttribute="top" secondItem="6rq-Rw-R64" secondAttribute="top" constant="-5" id="o1H-tU-MbH"/>
                             <constraint firstItem="0hb-V4-vaT" firstAttribute="trailing" secondItem="6xF-xm-SZU" secondAttribute="trailing" id="oLq-Hp-9Eh"/>
+                            <constraint firstItem="cy5-7r-VSv" firstAttribute="trailing" secondItem="6rq-Rw-R64" secondAttribute="trailing" constant="1" id="pdV-Ls-NtQ"/>
                             <constraint firstItem="GGa-er-iI9" firstAttribute="top" secondItem="0hb-V4-vaT" secondAttribute="top" constant="20" id="skJ-SU-y1Z"/>
                             <constraint firstItem="6rq-Rw-R64" firstAttribute="top" secondItem="0hb-V4-vaT" secondAttribute="top" constant="8" id="tmq-MW-CvG"/>
                             <constraint firstItem="VvN-aP-UzA" firstAttribute="leading" secondItem="0hb-V4-vaT" secondAttribute="leading" id="uu8-ym-CdB"/>
@@ -320,6 +330,7 @@
                         <outlet property="completeTitleLbl" destination="Jjw-Yr-ZcM" id="Dj9-ct-AXZ"/>
                         <outlet property="completeView" destination="vuu-Mq-4z2" id="GZR-U8-g2w"/>
                         <outlet property="itCanBeUsefulLbl" destination="2Hl-gR-bV2" id="BcB-Jx-biT"/>
+                        <outlet property="notificationRedCircle" destination="cy5-7r-VSv" id="Z4g-Mq-gdd"/>
                         <outlet property="orderStatusView" destination="uGC-mL-6fe" id="HRj-kR-ncJ"/>
                         <outlet property="progressArabicTitleLbl" destination="7rK-f3-pX4" id="sbT-kK-b72"/>
                         <outlet property="progressCircleView" destination="fd5-ph-uqt" id="Wqd-dJ-hik"/>
@@ -390,6 +401,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

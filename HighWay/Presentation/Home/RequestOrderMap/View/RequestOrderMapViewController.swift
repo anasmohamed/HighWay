@@ -77,7 +77,7 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
         //                as! SignupViewController
         //            requestOrderDetailsViewController.modalPresentationStyle = .overCurrentContext
         //            self.present(requestOrderDetailsViewController, animated: true,completion: nil)
-        if orderType == "Car fuel" {
+        if orderType == "Car fuel".localized {
             let requestOrderMapViewStroyboard = UIStoryboard.init(name: "RequestOrderDetails", bundle: nil)
             let requestOrderViewController = requestOrderMapViewStroyboard.instantiateViewController(withIdentifier: "RequestCarFuelOrderViewController")
                 as! RequestCarFuelOrderViewController
@@ -89,7 +89,7 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
             let myNavigationController = UINavigationController(rootViewController: requestOrderViewController)
             myNavigationController.modalPresentationStyle = .fullScreen
             self.present(myNavigationController, animated: true,completion: nil)
-        }else if orderType == "Car towing"{
+        }else if orderType == "Car towing".localized{
             
             if count == 1 {
                 count = count + 1
@@ -124,7 +124,7 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
             }
             
             
-        }else if orderType == "Battery"
+        }else if orderType == "Battery".localized
         {
             let requestOrderMapViewStroyboard = UIStoryboard.init(name: "RequestOrderDetails", bundle: nil)
             let requestOrderViewController = requestOrderMapViewStroyboard.instantiateViewController(withIdentifier: "BattaryViewContollerViewController")
@@ -135,7 +135,7 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
             let myNavigationController = UINavigationController(rootViewController: requestOrderViewController)
             myNavigationController.modalPresentationStyle = .fullScreen
             self.present(myNavigationController, animated: true,completion: nil)
-        }else if orderType == "Others"
+        }else if orderType == "Others".localized
         {
             let requestOrderMapViewStroyboard = UIStoryboard.init(name: "RequestOrderDetails", bundle: nil)
             let requestOrderViewController = requestOrderMapViewStroyboard.instantiateViewController(withIdentifier: "OthersViewController")
@@ -253,10 +253,10 @@ extension RequestOrderMapViewController: CLLocationManagerDelegate {
             }else{
                 self.arriveText = lines.joined(separator: "\n")
             }
-            if self.addressLbl.text!.contains("Bahrain")
+            if self.addressLbl.text!.contains("Bahrain") || self.addressLbl.text!.contains("البحرين")
             {
                 self.nextBtn.backgroundColor = .black
-                self.nextBtn.setTitle("next", for: .normal)
+                self.nextBtn.setTitle("next".localized, for: .normal)
                 
                 self.nextBtn.isEnabled = true
                 

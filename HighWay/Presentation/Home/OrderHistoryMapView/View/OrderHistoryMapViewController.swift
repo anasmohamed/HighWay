@@ -31,9 +31,12 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
     @IBOutlet weak var orderDetailsBtn: UIButton!
     @IBOutlet weak var orderHistoryaMapVIew: GMSMapView!
     var order : Order!
+    var isMainViewController = false
     let marker = GMSMarker()
     var camera : GMSCameraPosition?
     var viewModel = OrderHistoryMapViewModel()
+    var realLiveLat = 0.0
+    var realiveLng = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
         self.orderHistoryaMapVIew.delegate = self
@@ -42,7 +45,7 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
         formatter.dateFormat = "MM-dd-yyyy HH:mm a"
         formatter.amSymbol = "AM"
         formatter.pmSymbol = "PM"
-        print("orderid anas\(order.orderId)")
+        //        print("orderid anas\(order.orderId)")
         let dateString = formatter.string(from: order.orderDataTime)
         orderDateLbl.text = dateString
         addFeedbackBtn.layer.cornerRadius = 8
@@ -96,7 +99,7 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
             progressImageView.layer.borderColor = UIColor.init(red: 162.0/255.0, green: 162.0/255.0, blue: 162.0/255.0, alpha: 1).cgColor
             progressView.layer.borderColor = UIColor.init(red: 162.0/255.0, green: 162.0/255.0, blue: 162.0/255.0, alpha: 1).cgColor
             completeImageView.image = UIImage(named: "3")
-
+            
             completeImageView.layer.borderWidth = 2
             completeImageView.layer.cornerRadius = completeImageView.frame.width / 2
             completeImageView.layer.borderColor = UIColor.init(red: 162.0/255.0, green: 162.0/255.0, blue: 162.0/255.0, alpha: 1).cgColor
@@ -126,13 +129,16 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
             mapViewHieghtConstant.isActive = true
             mapViewHeightConstraintSecond.isActive = false
         }
+        if isMainViewController {
+            viewModel.getRealTimeLocation()
+        }
         //        self.orderHistoryaMapVIew.animate(with: camera)
         
     }
     func bindData() {
         viewModel.isOrderCanceldSuccessfully.bind { (status) in
             LoadingIndicatorView.hide()
-
+            
             if status {
                 var style = ToastStyle()
                 // this is just one of many style options
@@ -148,10 +154,29 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
             }
             
         }
+        
+        viewModel.realLiveLatLng.bind{(latLng) in
+            if self.isMainViewController{
+                
+            if latLng != nil{
+                print(latLng)
+                self.realiveLng = latLng![0]
+                self.realLiveLat = latLng![1]
+                print(self.realiveLng)
+                self.marker.position = CLLocationCoordinate2D(latitude: self.realLiveLat, longitude:self.realiveLng)
+                self.marker.icon = UIImage(named: "placeholder-2")
+                self.marker.title = "User Location".localized
+                self.marker.map = self.orderHistoryaMapVIew
+                self.camera = GMSCameraPosition.camera(withLatitude: self.realLiveLat, longitude:  self.realiveLng, zoom: 13.0,bearing: 270,
+                                                  viewingAngle: 45)
+                self.orderHistoryaMapVIew.camera = self.camera!}
+            }
+        }
+        
         viewModel.isOrderCanceldError.bind{ error in
             if error != nil{
                 var style = ToastStyle()
-
+                
                 // this is just one of many style options
                 style.messageColor = .white
                 style.backgroundColor = UIColor.init(red: 220.0, green: 46.0, blue: 47.0, alpha: 1)
@@ -168,14 +193,14 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
         
         // add the actions (buttons)
         alert.addAction(UIAlertAction(title: "Confirm".localized, style: UIAlertAction.Style.default, handler:{_ in
-//            UserDefaults.standard.removeObject(forKey: "email")
-//            let loginStoryboard = UIStoryboard.init(name: "LoginView", bundle: nil)
-//            let loginViewController = loginStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-//            self.navigationController!.pushViewController(loginViewController, animated: true)
-//            UserDefaults.standard.removeObject(forKey: "token")
-//            UserDefaults.standard.removeObject(forKey: "email")
+            //            UserDefaults.standard.removeObject(forKey: "email")
+            //            let loginStoryboard = UIStoryboard.init(name: "LoginView", bundle: nil)
+            //            let loginViewController = loginStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            //            self.navigationController!.pushViewController(loginViewController, animated: true)
+            //            UserDefaults.standard.removeObject(forKey: "token")
+            //            UserDefaults.standard.removeObject(forKey: "email")
             LoadingIndicatorView.show()
-
+            
             self.viewModel.cancelOrder(orderId: self.order.orderId)
             
         }))

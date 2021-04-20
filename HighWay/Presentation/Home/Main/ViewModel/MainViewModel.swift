@@ -15,6 +15,7 @@ class MainViewModel {
     private var orderFirebaseManager = OrderFirebaseManager()
 
     var lastOrder: Observable<Order?> = Observable(nil)
+    var notificationsObserver: Observable<Bool?> = Observable(nil)
 
     init() {
         self.serviceListViewModel = ServiceListViewModel(serviceDataAccess: serviceDataAccess)
@@ -28,5 +29,11 @@ class MainViewModel {
             }
         }
     }
-    
+    func observeNewNotifications()  {
+        orderFirebaseManager.observerForNotifications{
+            status in
+            print("\(status) anasnotifications")
+            self.notificationsObserver.value = status
+        }
+    }
 }

@@ -12,6 +12,9 @@ class OrderHistoryMapViewModel {
     var isOrderCanceldError: Observable<Error?> = Observable(nil)
     var isAddFeedbackSuccessfully: Observable<Bool> = Observable(false)
     var isAddFeedbackError: Observable<Error?> = Observable(nil)
+    var realLiveLatLng: Observable<[Double]?> = Observable(nil)
+    var realLiveLatLngStatus: Observable<Bool> = Observable(false)
+
     func cancelOrder(orderId:String)  {
         realLiveLocationFirebaseManager.cancelOrder(orderId:orderId){ (status,error) in
             
@@ -21,6 +24,12 @@ class OrderHistoryMapViewModel {
             {
                 self.isOrderCanceldError.value = error
             }
+        }
+    }
+    func getRealTimeLocation()  {
+        realLiveLocationFirebaseManager.getRealTimeLocation{(status,latLng) in
+            self.realLiveLatLngStatus.value = status
+            self.realLiveLatLng.value = latLng
         }
     }
     func addFeedback(orderId:String)  {

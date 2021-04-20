@@ -73,4 +73,28 @@ class OrderFirebaseManager {
         }
         
     }
+    func observerForNotifications(completion:@escaping (Bool?) -> Void)
+    {
+       
+        db.collection("userNotifications").whereField("receiver_id", isEqualTo: UserDefaults.standard.string(forKey: "token")!)
+            .addSnapshotListener { querySnapshot, error in
+                guard let documents = querySnapshot?.documents else {
+                    print("Error fetching documents: \(error!)")
+                    return
+                }
+                let cities = documents.map { $0["read"]! }
+                for city in cities{
+                    if city as! Int == 0{
+                        completion(true)
+                        
+                    }else{
+                        completion(false)
+
+                    }
+                }
+                print("Current cities in CA: \(cities)")
+            }
+       
+        
+    }
 }

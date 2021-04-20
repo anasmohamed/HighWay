@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var progressTitleLbl: UILabel!
     @IBOutlet weak var completeImageView: UIImageView!
     @IBOutlet weak var completeView: UIView!
+    @IBOutlet weak var notificationRedCircle: UIView!
     @IBOutlet weak var circelImageView: UIImageView!
     @IBOutlet weak var progressCircleView: UIView!
     @IBOutlet weak var itCanBeUsefulLbl: UILabel!
@@ -28,6 +29,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mainViewModel = MainViewModel()
+        notificationRedCircle.layer.cornerRadius = notificationRedCircle.frame.width / 2
+        notificationRedCircle.isHidden = true
         serviceCollectionView.delegate = self
         serviceCollectionView.dataSource = self
         orderStatusView.layer.cornerRadius = 8
@@ -82,10 +85,22 @@ class MainViewController: UIViewController {
     }
     func fetchData()  {
         mainViewModel.fetchOrder()
+        mainViewModel.observeNewNotifications()
     }
     func bind()  {
         mainViewModel.lastOrder.bind{ order in
             self.order = order
+        }
+        mainViewModel.notificationsObserver.bind{
+            status in
+            print(status)
+            if status != nil{
+            if status!
+            {
+                self.notificationRedCircle.isHidden = false
+            }else{
+                self.notificationRedCircle.isHidden = true
+            }}
         }
     }
     private func setupChatImage()
@@ -100,6 +115,7 @@ class MainViewController: UIViewController {
         let orderHistoryMapViewController = orderHistoryMapViewStroyboard.instantiateViewController(withIdentifier: "OrderHistoryMapViewController")
             as! OrderHistoryMapViewController
         orderHistoryMapViewController.order = order
+        orderHistoryMapViewController.isMainViewController = true
         orderHistoryMapViewController.modalPresentationStyle = .fullScreen
         self.present(orderHistoryMapViewController, animated: true, completion: nil)
     }

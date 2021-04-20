@@ -55,54 +55,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "24E2BDBF-0094-4E85-A915-F7970FACC594"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HighWay/Presentation/Home/RequestOrderMap/View/RequestOrderMapViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
-            landmarkName = "bindData()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "19D93309-0509-49FD-8C29-727F68A74EF0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HighWay/Presentation/Home/RequestOrderMap/View/RequestOrderMapViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
-            landmarkName = "bindData()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FCD21AC7-FDAE-4EA4-A035-6A455476710F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HighWay/Presentation/Home/RequestOrderMap/View/RequestOrderMapViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
-            landmarkName = "bindData()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "B795A599-A7A5-4F0F-B9E1-0D3472F5B745"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -231,16 +183,192 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1C248EC6-716D-42D9-898B-33E4260D420A"
+            uuid = "E169793F-E1ED-4947-A04C-23DD1FCBD64D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HighWay/Presentation/Home/Main/View/MainViewController.swift"
+            filePath = "HighWay/Presentation/Home/RequestOrderMap/View/RequestOrderMapViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "orderDetailsBtnDidTapped(_:)"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "nextBtnDidTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E9E5C52D-1028-43DF-BD9B-999F6F4638DF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HighWay/Presentation/Home/RequestOrderMap/View/RequestOrderMapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "nextBtnDidTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F3BFD576-6274-4CBE-9A4B-1224460D39DE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HighWay/Presentation/Home/OrderHistoryMapView/View/OrderHistoryMapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "bindData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "410A6D11-7F0F-428C-BD2C-C4993F30514D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HighWay/Presentation/Home/OrderHistoryMapView/View/OrderHistoryMapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
+            landmarkName = "bindData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EDACFA2A-A2E6-4505-8204-254BC8BD3393"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HighWay/Presentation/Home/OrderHistoryMapView/View/OrderHistoryMapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "bindData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "505C6D83-92F2-4D1F-ABD8-7C54B9E0B22F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HighWay/Presentation/Home/Main/OrderFirebaseManager/OrderFirebaseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "observerForNotifications(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "756AE3C6-01B0-4A26-9FDF-4F2710925E47"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HighWay/Presentation/Home/Main/OrderFirebaseManager/OrderFirebaseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "observerForNotifications(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "756AE3C6-01B0-4A26-9FDF-4F2710925E47 - 996d4805e55eb7b7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in HighWay.OrderFirebaseManager.observerForNotifications(completion: (Swift.Optional&lt;Swift.Bool&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "HighWay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anasmohamed/Desktop/HighWay/HighWay/Presentation/Home/Main/OrderFirebaseManager/OrderFirebaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "646">
+               </Location>
+               <Location
+                  uuid = "756AE3C6-01B0-4A26-9FDF-4F2710925E47 - 83063bcb695ae508"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRQueryDocumentSnapshot) -&gt; Any in closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in HighWay.OrderFirebaseManager.observerForNotifications(completion: (Swift.Optional&lt;Swift.Bool&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "HighWay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anasmohamed/Desktop/HighWay/HighWay/Presentation/Home/Main/OrderFirebaseManager/OrderFirebaseManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4DB13387-8D76-440F-9E37-8F091638ACFA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HighWay/Presentation/Home/Main/OrderFirebaseManager/OrderFirebaseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "observerForNotifications(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5FFC641F-EAF3-4C58-ADA2-6544CE395C0B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HighWay/Presentation/Home/Main/OrderFirebaseManager/OrderFirebaseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "observerForNotifications(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "70B334D8-E100-4ECB-B7D4-0797170A5D85"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HighWay/Presentation/Home/Main/OrderFirebaseManager/OrderFirebaseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "observerForNotifications(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
