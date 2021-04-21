@@ -11,6 +11,7 @@ import MOLH
 class MainViewController: UIViewController {
     @IBOutlet weak var completeArabicTitleLbl: UILabel!
     @IBOutlet weak var progressArabicTitleLbl: UILabel!
+    @IBOutlet weak var orderDetailsBtn: UIButton!
     @IBOutlet weak var sentTitleLbl: UILabel!
     @IBOutlet weak var completeTitleLbl: UILabel!
     @IBOutlet weak var progressTitleLbl: UILabel!
@@ -29,6 +30,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mainViewModel = MainViewModel()
+    
         notificationRedCircle.layer.cornerRadius = notificationRedCircle.frame.width / 2
         notificationRedCircle.isHidden = true
         serviceCollectionView.delegate = self
@@ -73,15 +75,7 @@ class MainViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if UserDefaults.standard.string(forKey: "requestOrder") == "true"{
-            self.itCanBeUsefulLbl.isHidden = true
-            self.serviceCollectionView.isHidden = true
-            self.orderStatusView.isHidden = false
-        }else{
-            self.itCanBeUsefulLbl.isHidden = false
-            self.serviceCollectionView.isHidden = false
-            self.orderStatusView.isHidden = true
-        }
+        
     }
     func fetchData()  {
         mainViewModel.fetchOrder()
@@ -90,6 +84,17 @@ class MainViewController: UIViewController {
     func bind()  {
         mainViewModel.lastOrder.bind{ order in
             self.order = order
+            
+            if order != nil{
+                self.itCanBeUsefulLbl.isHidden = true
+                self.serviceCollectionView.isHidden = true
+                self.orderStatusView.isHidden = false
+            }else{
+                self.itCanBeUsefulLbl.isHidden = false
+                self.serviceCollectionView.isHidden = false
+                self.orderStatusView.isHidden = true
+            }
+            
         }
         mainViewModel.notificationsObserver.bind{
             status in

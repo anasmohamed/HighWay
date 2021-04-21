@@ -27,8 +27,8 @@ class OrderHistoryMapViewModel {
             }
         }
     }
-    func getRealTimeLocation()  {
-        realLiveLocationFirebaseManager.getRealTimeLocation{(status,latLng) in
+    func getRealTimeLocation(driverId:String)  {
+        realLiveLocationFirebaseManager.getRealTimeLocation(driverId:driverId){(status,latLng) in
             self.realLiveLatLngStatus.value = status
             self.realLiveLatLng.value = latLng
         }

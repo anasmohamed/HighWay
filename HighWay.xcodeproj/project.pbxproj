@@ -522,29 +522,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		32531CDA262B73C500093BDD /* RateOrder */ = {
-			isa = PBXGroup;
-			children = (
-				32531CDC262B73E500093BDD /* ViewModel */,
-				32531CDB262B73DC00093BDD /* View */,
-			);
-			path = RateOrder;
-			sourceTree = "<group>";
-		};
-		32531CDB262B73DC00093BDD /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		32531CDC262B73E500093BDD /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		3263077B2614D06B00D72306 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,7 +539,6 @@
 		3265514926188A0100A88C38 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				32531CDA262B73C500093BDD /* RateOrder */,
 				329F610E2629F61D009DEF88 /* OrderLiveLocation */,
 				329F60E92629D3AD009DEF88 /* Notifications */,
 				32F89E9A26266D9B002DC5CF /* RequestOrderDetails */,

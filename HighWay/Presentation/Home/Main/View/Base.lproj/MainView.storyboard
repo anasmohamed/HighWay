@@ -331,6 +331,7 @@
                         <outlet property="completeView" destination="vuu-Mq-4z2" id="GZR-U8-g2w"/>
                         <outlet property="itCanBeUsefulLbl" destination="2Hl-gR-bV2" id="BcB-Jx-biT"/>
                         <outlet property="notificationRedCircle" destination="cy5-7r-VSv" id="Z4g-Mq-gdd"/>
+                        <outlet property="orderDetailsBtn" destination="kJC-97-V4J" id="RIh-K5-f7G"/>
                         <outlet property="orderStatusView" destination="uGC-mL-6fe" id="HRj-kR-ncJ"/>
                         <outlet property="progressArabicTitleLbl" destination="7rK-f3-pX4" id="sbT-kK-b72"/>
                         <outlet property="progressCircleView" destination="fd5-ph-uqt" id="Wqd-dJ-hik"/>

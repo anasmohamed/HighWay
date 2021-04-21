@@ -22,6 +22,7 @@ struct Order {
     var arriveAddress = ""
     var notes = ""
     var orderPrice = 0.0
+    var driverId = ""
     var driver : Driver?
     var rated = false
    

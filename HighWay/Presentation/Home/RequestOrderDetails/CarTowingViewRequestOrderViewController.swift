@@ -25,12 +25,15 @@ class CarTowingViewRequestOrderViewController: UIViewController {
     override func viewDidLoad(){
         requestOrderViewModel.getAppSettings()
         bindData()
+        cancelOrderBtn.layer.cornerRadius = 8
+        sendRequestBtn.layer.cornerRadius = 8
     }
     
     
     @IBAction func cancelOrderBtnDidTapped(_ sender: Any) {
         
-        
+        self.dismiss(animated: true, completion: nil)
+
     }
     func bindData() {
        
@@ -51,9 +54,11 @@ class CarTowingViewRequestOrderViewController: UIViewController {
     }
     func navigateToMainViewController(order:Order) {
         let homeViewStoryboard = UIStoryboard.init(name: "MainView", bundle: nil)
-        let homeViewController = homeViewStoryboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+        let homeViewController = homeViewStoryboard.instantiateViewController(withIdentifier: "HomeTabBar") as! UITabBarController
+        let viewC = homeViewController.viewControllers?.first as! MainViewController
+        // will give single Navigation Controller on index 0
+        viewC.isAddFeedbackViewController = true
         homeViewController.modalPresentationStyle = .fullScreen
-        homeViewController.order = order
         self.present(homeViewController, animated: true, completion: nil)
     }
     @IBAction func sendRequestOrderBtnDidTapped(_ sender: Any) {

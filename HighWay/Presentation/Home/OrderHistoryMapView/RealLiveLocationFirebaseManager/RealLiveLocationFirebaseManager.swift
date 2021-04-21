@@ -12,10 +12,10 @@ import FirebaseFirestore
 class RealLiveLocationFirebaseManager {
     let rootRef = Database.database().reference()
     let db = Firestore.firestore()
-    func getRealTimeLocation(completion:@escaping (Bool,[Double]?) -> Void) {
+    func getRealTimeLocation(driverId:String?,completion:@escaping (Bool,[Double]?) -> Void) {
         var latLng = [Double]()
-
-        let ref = rootRef.child("drivers_locations").child("nIJEtA6wyucXS0KnQ08wVX5BwlC3")
+        if driverId != ""{
+            let ref = rootRef.child("drivers_locations").child(driverId!)
         ref.observe(.value, with: { (snapshot) in
                     print(snapshot)
                     guard let dictionary = snapshot.value as? [String : AnyObject] else {
@@ -30,7 +30,7 @@ class RealLiveLocationFirebaseManager {
             completion(true,latLng)
 
                 }, withCancel: nil)
-
+        }
 //        ref.observeSingleEvent(of: .childChanged, with: { (snapshot) in
 //            print("anasSnapshot\(snapshot.value)")
 //            if let userDict = snapshot.value as? [String:Any] {

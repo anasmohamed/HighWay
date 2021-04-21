@@ -46,7 +46,7 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
         formatter.dateFormat = "MM-dd-yyyy HH:mm a"
         formatter.amSymbol = "AM"
         formatter.pmSymbol = "PM"
-        //        print("orderid anas\(order.orderId)")
+        print("orderid anas\(order.orderId)")
         let dateString = formatter.string(from: order.orderDataTime)
         orderDateLbl.text = dateString
         addFeedbackBtn.layer.cornerRadius = 8
@@ -137,7 +137,7 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
             mapViewHeightConstraintSecond.isActive = false
         }
         if isMainViewController {
-            viewModel.getRealTimeLocation()
+            viewModel.getRealTimeLocation(driverId: order.driverId)
         }
         //        self.orderHistoryaMapVIew.animate(with: camera)
         

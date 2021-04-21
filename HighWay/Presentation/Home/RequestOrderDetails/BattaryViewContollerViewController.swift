@@ -26,10 +26,13 @@ class BattaryViewContollerViewController: UIViewController {
         super.viewDidLoad()
         requestOrderViewModel.getAppSettings()
         bindData()
+        sendBtn.layer.cornerRadius = 8
+        cancelBtn.layer.cornerRadius = 8
         // Do any additional setup after loading the view.
     }
     
     @IBAction func cancelBtnDidTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func sendBtnDidTapped(_ sender: Any) {
         requestOrderViewModel.updateDate(note: notesTextField.text!, addressText: addressText, price:servicePrice , fuelOrderSize: "", fuelOrderDate: "", fuelOrderPrice: "", rated: false, status: "-1", type: "battery", userId: "", timestamp: date, startLat: startLat, startLng: startLong, endLat: endLat, endLng: endLong,arriveAddress: arriveAddressText)
@@ -55,9 +58,11 @@ class BattaryViewContollerViewController: UIViewController {
     }
     func navigateToMainViewController(order:Order) {
         let homeViewStoryboard = UIStoryboard.init(name: "MainView", bundle: nil)
-        let homeViewController = homeViewStoryboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+        let homeViewController = homeViewStoryboard.instantiateViewController(withIdentifier: "HomeTabBar") as! UITabBarController
+        let viewC = homeViewController.viewControllers?.first as! MainViewController
+        // will give single Navigation Controller on index 0
+        viewC.isAddFeedbackViewController = true
         homeViewController.modalPresentationStyle = .fullScreen
-        homeViewController.order = order
         self.present(homeViewController, animated: true, completion: nil)
     }
     /*

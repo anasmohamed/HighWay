@@ -55,14 +55,14 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
     }
     func setupBackButton() {
         let leftBackBtn = UIButton(type: .system)
-        leftBackBtn.setImage(UIImage(named: "left-arrow-4"), for: .normal)
+        leftBackBtn.setImage(UIImage(named: "left-arrow-4")?.imageFlippedForRightToLeftLayoutDirection(), for: .normal)
         leftBackBtn.sizeToFit()
         leftBackBtn.addTarget(self, action: #selector(self.navigateToMainViewController), for: .touchUpInside)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBackBtn);
         navigationController?.navigationBar.tintColor = .white
     }
     @objc func navigateToMainViewController() {
-        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func gpsBtnDidTapped(_ sender: Any) {
         mapView.settings.myLocationButton = true
@@ -86,9 +86,10 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
             requestOrderViewController.endLong = endLong
             requestOrderViewController.startLat = startLat
             requestOrderViewController.startLong = startLong
-            let myNavigationController = UINavigationController(rootViewController: requestOrderViewController)
-            myNavigationController.modalPresentationStyle = .fullScreen
-            self.present(myNavigationController, animated: true,completion: nil)
+            requestOrderViewController.modalPresentationStyle = .popover
+//            let myNavigationController = UINavigationController(rootViewController: requestOrderViewController)
+//            myNavigationController.modalPresentationStyle = .fullScreen
+            self.present(requestOrderViewController, animated: true,completion: nil)
         }else if orderType == "Car towing".localized{
             
             if count == 1 {
@@ -97,15 +98,15 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
                 let requestOrderMapViewStroyboard = UIStoryboard.init(name: "RequestOrderMapView", bundle: nil)
                 let requestOrderViewController = requestOrderMapViewStroyboard.instantiateViewController(withIdentifier: "RequestOrderMapViewController")
                     as! RequestOrderMapViewController
-                let myNavigationController = UINavigationController(rootViewController: requestOrderViewController)
-                requestOrderViewController.viewControllerTitle = "Drop Location" 
-                requestOrderViewController.orderType = "Car towing"
+               
+                requestOrderViewController.viewControllerTitle = "Drop Location".localized
+                requestOrderViewController.orderType = "Car towing".localized
                 requestOrderViewController.count = count
                 requestOrderViewController.startLat = startLat
                 requestOrderViewController.startLong = startLong
                 requestOrderViewController.addressText = addressText
-                myNavigationController.modalPresentationStyle = .fullScreen
-                self.present(myNavigationController, animated: true,completion: nil)
+                requestOrderViewController.modalPresentationStyle = .popover
+                self.present(requestOrderViewController, animated: true,completion: nil)
             }else{
                 let requestOrderMapViewStroyboard = UIStoryboard.init(name: "RequestOrderDetails", bundle: nil)
                 let requestOrderViewController = requestOrderMapViewStroyboard.instantiateViewController(withIdentifier: "CarTowingViewRequestOrderViewController")
@@ -116,9 +117,8 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
                 requestOrderViewController.startLat = startLat
                 requestOrderViewController.startLong = startLong
                 requestOrderViewController.arriveAddressText = arriveText
-                let myNavigationController = UINavigationController(rootViewController: requestOrderViewController)
-                myNavigationController.modalPresentationStyle = .fullScreen
-                self.present(myNavigationController, animated: true,completion: nil)
+                requestOrderViewController.modalPresentationStyle = .popover
+                self.present(requestOrderViewController, animated: true,completion: nil)
                 count = 1
                 
             }
@@ -132,9 +132,9 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
             requestOrderViewController.addressText = addressText
             requestOrderViewController.startLat = startLat
             requestOrderViewController.startLong = startLong
-            let myNavigationController = UINavigationController(rootViewController: requestOrderViewController)
-            myNavigationController.modalPresentationStyle = .fullScreen
-            self.present(myNavigationController, animated: true,completion: nil)
+            requestOrderViewController.modalPresentationStyle = .popover
+
+            self.present(requestOrderViewController, animated: true,completion: nil)
         }else if orderType == "Others".localized
         {
             let requestOrderMapViewStroyboard = UIStoryboard.init(name: "RequestOrderDetails", bundle: nil)
@@ -143,9 +143,8 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
             requestOrderViewController.addressText = addressText
             requestOrderViewController.startLat = startLat
             requestOrderViewController.startLong = startLong
-            let myNavigationController = UINavigationController(rootViewController: requestOrderViewController)
-            myNavigationController.modalPresentationStyle = .fullScreen
-            self.present(myNavigationController, animated: true,completion: nil)
+            requestOrderViewController.modalPresentationStyle = .popover
+            self.present(requestOrderViewController, animated: true,completion: nil)
         }
     }
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
@@ -176,8 +175,10 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
                 endLat = $0?.latitude ?? 0.0
                 endLong =  $0?.longitude ?? 0.0
                 mapView.camera = GMSCameraPosition(latitude:endLat , longitude: endLong, zoom: 15.0)
-                let marker2 = GMSMarker()
                 
+                let marker2 = GMSMarker()
+                marker2.icon = UIImage(named: "check__1_-removebg-preview")
+
                 marker2.position = CLLocationCoordinate2D(latitude:endLat, longitude:endLong)
                 marker2.map = mapView
             }

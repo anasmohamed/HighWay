@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Toast_Swift
 class RequestCarFuelOrderViewController: UIViewController {
     @IBOutlet weak var timeOfReciveView: UIView!
     @IBOutlet weak var cancelBtn: UIButton!
@@ -27,6 +27,7 @@ class RequestCarFuelOrderViewController: UIViewController {
     var fuelOrderPrice = 0.0
     var fuelOrderSize = ""
     var fuelOrderDate = ""
+    var isFuelTypeChoosen = false
     override func viewDidLoad() {
         super.viewDidLoad()
         itemstableView.delegate = self
@@ -35,7 +36,8 @@ class RequestCarFuelOrderViewController: UIViewController {
         bindData()
         fetchData()
         createDatePicker()
-        
+        cancelBtn.layer.cornerRadius = 8
+        sendOrderBtn.layer.cornerRadius = 8
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
@@ -49,9 +51,20 @@ class RequestCarFuelOrderViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE , d/MMM/yyyy"
         let date = dateFormatter.date(from: timeOfRecieveTextFiel.text!)
-        
+        if isFuelTypeChoosen == true {
         requestOrderViewModel.updateDate(note: notesTextField.text!, addressText: addressText, price: 5.0, fuelOrderSize: fuelOrderSize, fuelOrderDate: fuelOrderDate, fuelOrderPrice: String(fuelOrderPrice), rated: false, status: "-1", type: "fuel", userId: "", timestamp: date!, startLat: startLat, startLng: startLong, endLat: endLat, endLng: endLong,arriveAddress: "")
-        requestOrderViewModel.sendOrderData()
+            requestOrderViewModel.sendOrderData()
+            
+        }
+        else{
+            var style = ToastStyle()
+
+            // this is just one of many style options
+            style.messageColor = .white
+            style.backgroundColor = .red
+            style.messageFont = UIFont(name:"Cairo-Regular" , size:20.0)!
+            self.view.makeToast("You should enter fuel order size".localized, duration: 3.0, position: .bottom,style:style)
+        }
         
     }
     
@@ -86,6 +99,8 @@ class RequestCarFuelOrderViewController: UIViewController {
     
     
     @IBAction func cancelBtnDidTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+
     }
     func bindData() {
         requestOrderViewModel.reloadTableView.bind {_ in
@@ -103,9 +118,11 @@ class RequestCarFuelOrderViewController: UIViewController {
     }
     func navigateToMainViewController(order:Order) {
         let homeViewStoryboard = UIStoryboard.init(name: "MainView", bundle: nil)
-        let homeViewController = homeViewStoryboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+        let homeViewController = homeViewStoryboard.instantiateViewController(withIdentifier: "HomeTabBar") as! UITabBarController
+        let viewC = homeViewController.viewControllers?.first as! MainViewController
+        // will give single Navigation Controller on index 0
+        viewC.isAddFeedbackViewController = true
         homeViewController.modalPresentationStyle = .fullScreen
-        homeViewController.order = order
         self.present(homeViewController, animated: true, completion: nil)
     }
     /*
@@ -142,6 +159,7 @@ extension RequestCarFuelOrderViewController:UITableViewDelegate,UITableViewDataS
             cell?.accessoryType = .checkmark
             
         }
+        isFuelTypeChoosen = true
         fuelOrderDate = timeOfRecieveTextFiel.text ?? ""
         fuelOrderPrice = requestOrderViewModel.getData(index: indexPath.row).fuelPrice
 //        fuelOrderDate = requestOrderViewModel.getData(index: indexPath.row).date
