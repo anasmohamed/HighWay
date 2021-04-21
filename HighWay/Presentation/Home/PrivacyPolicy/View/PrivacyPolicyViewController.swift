@@ -24,11 +24,11 @@ class PrivacyPolicyViewController: UIViewController,WKUIDelegate  {
     }
     func setupBackButton() {
         let leftBackBtn = UIButton(type: .system)
-        leftBackBtn.setImage(UIImage(named: "left-arrow-4"), for: .normal)
+        leftBackBtn.setImage(UIImage(named: "left-arrow-4")?.imageFlippedForRightToLeftLayoutDirection(), for: .normal)
         leftBackBtn.sizeToFit()
         leftBackBtn.addTarget(self, action: #selector(self.navigateToMainViewController), for: .touchUpInside)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBackBtn);
-        navigationController?.navigationBar.tintColor = UIColor.init(red: 68/255, green: 68/255, blue: 68/255, alpha: 1.0)
+        navigationController?.navigationBar.tintColor = .white
     }
     @objc func navigateToMainViewController() {
         self.navigationController?.popViewController(animated: true)

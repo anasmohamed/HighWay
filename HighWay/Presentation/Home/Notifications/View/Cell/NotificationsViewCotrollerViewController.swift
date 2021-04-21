@@ -19,6 +19,11 @@ class NotificationsViewCotrollerViewController: UIViewController,UITableViewDele
         setupTableView()
         bindData()
         fetchData()
+        self.navigationItem.title = "Notifications".localized
+        self.navigationController?.navigationBar.titleTextAttributes =
+        [NSAttributedString.Key.foregroundColor: UIColor.white,
+         NSAttributedString.Key.font: UIFont(name: "Cairo-Regular", size: 14)!]
+        setupBackButton()
         // Do any additional setup after loading the view.
     }
     func bindData() {
@@ -46,7 +51,17 @@ class NotificationsViewCotrollerViewController: UIViewController,UITableViewDele
         
        
     }
-    
+    func setupBackButton() {
+        let leftBackBtn = UIButton(type: .system)
+        leftBackBtn.setImage(UIImage(named: "left-arrow-4")?.imageFlippedForRightToLeftLayoutDirection(), for: .normal)
+        leftBackBtn.sizeToFit()
+        leftBackBtn.addTarget(self, action: #selector(self.navigateToMainViewController), for: .touchUpInside)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBackBtn);
+        navigationController?.navigationBar.tintColor = .white
+    }
+    @objc func navigateToMainViewController() {
+        self.dismiss(animated: true, completion: nil)
+    }
     func setupTableView()  {
         notificationsTableView.register(UINib(nibName: "NotificationsTableViewCell", bundle: nil), forCellReuseIdentifier: "NotificationsTableViewCell")
     }
