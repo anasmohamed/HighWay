@@ -173,7 +173,7 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
                 self.realLiveLat = latLng![1]
                 print(self.realiveLng)
                 self.marker.position = CLLocationCoordinate2D(latitude: self.realLiveLat, longitude:self.realiveLng)
-                self.marker.icon = UIImage(named: "placeholder-2")
+                self.marker.icon = UIImage(named: "placeholder-1")
                 self.marker.title = "User Location".localized
                 self.marker.map = self.orderHistoryaMapVIew
                 self.camera = GMSCameraPosition.camera(withLatitude: self.realLiveLat, longitude:  self.realiveLng, zoom: 13.0,bearing: 270,
@@ -198,7 +198,7 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
     
     func cancelOrder()  {
         // create the alert
-        let alert = UIAlertController(title: "", message: "".localized, preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Do you want to cancel this order".localized, message: "".localized, preferredStyle: UIAlertController.Style.alert)
         
         // add the actions (buttons)
         alert.addAction(UIAlertAction(title: "Confirm".localized, style: UIAlertAction.Style.default, handler:{_ in
@@ -258,11 +258,12 @@ class OrderHistoryMapViewController: UIViewController ,GMSMapViewDelegate {
         // Creates a marker in the center of the map.
         
         marker.position = CLLocationCoordinate2D(latitude: order.startLat, longitude:order.startLong)
-        marker.icon = UIImage(named: "placeholder-2")
+        marker.icon = UIImage(named: "user-map")
         marker.title = "User Location".localized
         marker.map = orderHistoryaMapVIew
         let marker2 = GMSMarker()
         marker2.position = CLLocationCoordinate2D(latitude:  order.endLat, longitude:order.endLong)
+        marker2.icon = UIImage(named: "placeholder-1")
         marker2.map = orderHistoryaMapVIew
         marker2.title = "Arrive point".localized
         if !order.endLat.isZero{

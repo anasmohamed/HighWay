@@ -49,6 +49,7 @@ class RealLiveLocationFirebaseManager {
                 completion(false,err)
             } else {
                 print("Document successfully updated")
+                UserDefaults.standard.setValue("false",forKey: "requestOrder")
                 completion(true,nil)
 
             }

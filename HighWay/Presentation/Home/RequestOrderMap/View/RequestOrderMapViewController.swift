@@ -151,6 +151,7 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
         destinationMarker.position = position.target
         destinationMarker.map = mapView
+        destinationMarker.icon = UIImage(named:"placeholder-1")
         reverseGeocodeCoordinate(position.target)
         print(position.target.latitude)
     }
@@ -161,15 +162,24 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
             self.countryLatitude = $0?.latitude ?? 0.0
             self.countryLongitude = $0?.longitude ?? 0.0
             mapView.camera = GMSCameraPosition(latitude: countryLatitude, longitude: countryLongitude, zoom: 15.0)
-            let marker = GMSMarker()
-            marker.position = CLLocationCoordinate2D(latitude:countryLongitude, longitude:countryLongitude)
-            marker.map = mapView
+            
             if count == 1 {
                 startLat = $0?.latitude ?? 0.0
                 startLong =  $0?.longitude ?? 0.0
+                mapView.camera = GMSCameraPosition(latitude: startLat, longitude: countryLongitude, zoom: 15.0)
+                let marker = GMSMarker()
+                marker.position = CLLocationCoordinate2D(latitude:countryLongitude, longitude:startLong)
+                marker.icon = UIImage(named: "check__1_-removebg-preview")
+                marker.map = mapView
             }else{
+              
                 endLat = $0?.latitude ?? 0.0
                 endLong =  $0?.longitude ?? 0.0
+                mapView.camera = GMSCameraPosition(latitude:endLat , longitude: endLong, zoom: 15.0)
+                let marker2 = GMSMarker()
+                
+                marker2.position = CLLocationCoordinate2D(latitude:endLat, longitude:endLong)
+                marker2.map = mapView
             }
         }
         
