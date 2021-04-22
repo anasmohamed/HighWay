@@ -17,7 +17,7 @@ class PrivacyPolicyViewController: UIViewController,WKUIDelegate  {
         let myURL = URL(string:"https://highway-app.blogspot.com/p/privacy-policy.html")
         let myRequest = URLRequest(url: myURL!)
         privacyPolicyWebView.load(myRequest)
-        self.navigationItem.title = "Privacy policy"
+        self.navigationItem.title = "Privacy policy".localized
 
         setupBackButton()
         // Do any additional setup after loading the view.
