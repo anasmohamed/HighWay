@@ -103,12 +103,25 @@
                                             <constraint firstItem="uZq-g2-oZF" firstAttribute="leading" secondItem="Gja-Zj-4gh" secondAttribute="leading" constant="5" id="x8f-VZ-aji"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYT-pM-jya">
+                                        <rect key="frame" x="301" y="-30" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="3Z7-Oo-JLc"/>
+                                            <constraint firstAttribute="width" constant="60" id="aOI-hn-1Xw"/>
+                                        </constraints>
+                                        <state key="normal" image="remove"/>
+                                        <connections>
+                                            <action selector="closeBtnDidTapped:" destination="MoV-a0-IPA" eventType="touchUpInside" id="122-J4-43p"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="Gja-Zj-4gh" firstAttribute="top" secondItem="491-dZ-jmZ" secondAttribute="bottom" constant="4" id="CQC-0f-LLZ"/>
                                     <constraint firstItem="FO9-1N-Q0q" firstAttribute="top" secondItem="mVK-B1-DOC" secondAttribute="top" constant="5" id="Dku-pb-ZwV"/>
                                     <constraint firstAttribute="height" constant="160" id="Kh4-bR-dqP"/>
+                                    <constraint firstItem="uYT-pM-jya" firstAttribute="top" secondItem="mVK-B1-DOC" secondAttribute="top" constant="-30" id="WGV-kh-IsK"/>
+                                    <constraint firstAttribute="trailing" secondItem="uYT-pM-jya" secondAttribute="trailing" constant="-30" id="YVc-gR-yRH"/>
                                     <constraint firstItem="491-dZ-jmZ" firstAttribute="leading" secondItem="mVK-B1-DOC" secondAttribute="leading" constant="10" id="fxq-Ny-kYi"/>
                                     <constraint firstItem="Gja-Zj-4gh" firstAttribute="trailing" secondItem="491-dZ-jmZ" secondAttribute="trailing" id="hS2-R3-0Ly"/>
                                     <constraint firstAttribute="trailing" secondItem="491-dZ-jmZ" secondAttribute="trailing" constant="10" id="ict-Hx-aQl"/>
@@ -141,6 +154,7 @@
     </scenes>
     <resources>
         <image name="bahrain" width="128" height="128"/>
+        <image name="remove" width="128" height="128"/>
         <image name="united-kingdom" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

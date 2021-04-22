@@ -121,11 +121,11 @@ class OrderDetailesTableViewController: UITableViewController {
     }
     func setupBackButton() {
         let leftBackBtn = UIButton(type: .system)
-        leftBackBtn.setImage(UIImage(named: "left-arrow"), for: .normal)
+        leftBackBtn.setImage(UIImage(named: "left-arrow")?.imageFlippedForRightToLeftLayoutDirection(), for: .normal)
         leftBackBtn.sizeToFit()
         leftBackBtn.addTarget(self, action: #selector(self.navigateToMainViewController), for: .touchUpInside)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBackBtn);
-//        navigationController?.navigationBar.tintColor = UIColor.init(red: 68/255, green: 68/255, blue: 68/255, alpha: 1.0)
+        navigationController?.navigationBar.tintColor = .white
     }
     @objc func navigateToMainViewController()  {
         self.dismiss(animated: true, completion: nil)

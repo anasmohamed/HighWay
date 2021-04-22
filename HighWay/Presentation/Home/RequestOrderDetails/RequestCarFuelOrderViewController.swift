@@ -52,7 +52,7 @@ class RequestCarFuelOrderViewController: UIViewController {
         dateFormatter.dateFormat = "EEEE , d/MMM/yyyy"
         let date = dateFormatter.date(from: timeOfRecieveTextFiel.text!)
         if isFuelTypeChoosen == true {
-        requestOrderViewModel.updateDate(note: notesTextField.text!, addressText: addressText, price: 5.0, fuelOrderSize: fuelOrderSize, fuelOrderDate: fuelOrderDate, fuelOrderPrice: String(fuelOrderPrice), rated: false, status: "-1", type: "fuel", userId: "", timestamp: date!, startLat: startLat, startLng: startLong, endLat: endLat, endLng: endLong,arriveAddress: "")
+        requestOrderViewModel.updateDate(note: notesTextField.text!, addressText: addressText, price: 5.0, fuelOrderSize: fuelOrderSize, fuelOrderDate: fuelOrderDate, fuelOrderPrice: String(fuelOrderPrice), rated: false, status: "0", type: "fuel", userId: "", timestamp: date!, startLat: startLat, startLng: startLong, endLat: endLat, endLng: endLong,arriveAddress: "")
             requestOrderViewModel.sendOrderData()
             
         }
@@ -121,7 +121,9 @@ class RequestCarFuelOrderViewController: UIViewController {
         let homeViewController = homeViewStoryboard.instantiateViewController(withIdentifier: "HomeTabBar") as! UITabBarController
         let viewC = homeViewController.viewControllers?.first as! MainViewController
         // will give single Navigation Controller on index 0
-        viewC.isAddFeedbackViewController = true
+//        viewC.isAddFeedbackViewController = true
+        viewC.order = order
+
         homeViewController.modalPresentationStyle = .fullScreen
         self.present(homeViewController, animated: true, completion: nil)
     }

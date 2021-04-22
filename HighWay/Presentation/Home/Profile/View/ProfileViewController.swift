@@ -98,10 +98,10 @@ extension ProfileViewController :UITableViewDelegate,UITableViewDataSource{
     }
     func logout()  {
         // create the alert
-        let alert = UIAlertController(title: "", message: "Did you want to logout?", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "", message: "Did you want to logout?".localized, preferredStyle: UIAlertController.Style.alert)
         
         // add the actions (buttons)
-        alert.addAction(UIAlertAction(title: "Confirm", style: UIAlertAction.Style.default, handler:{_ in
+        alert.addAction(UIAlertAction(title: "Confirm".localized, style: UIAlertAction.Style.default, handler:{_ in
             UserDefaults.standard.removeObject(forKey: "email")
             let loginStoryboard = UIStoryboard.init(name: "LoginView", bundle: nil)
             let loginViewController = loginStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
@@ -114,7 +114,7 @@ extension ProfileViewController :UITableViewDelegate,UITableViewDataSource{
                 
             }
         }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel".localized, style: UIAlertAction.Style.cancel, handler: nil))
         
         // show the alert
         self.present(alert, animated: true, completion: nil)

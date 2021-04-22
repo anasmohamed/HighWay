@@ -57,12 +57,14 @@ class CarTowingViewRequestOrderViewController: UIViewController {
         let homeViewController = homeViewStoryboard.instantiateViewController(withIdentifier: "HomeTabBar") as! UITabBarController
         let viewC = homeViewController.viewControllers?.first as! MainViewController
         // will give single Navigation Controller on index 0
-        viewC.isAddFeedbackViewController = true
+//        viewC.isAddFeedbackViewController = true
+        viewC.order = order
+
         homeViewController.modalPresentationStyle = .fullScreen
         self.present(homeViewController, animated: true, completion: nil)
     }
     @IBAction func sendRequestOrderBtnDidTapped(_ sender: Any) {
-        requestOrderViewModel.updateDate(note: issueDescribeDetetailsTeextField.text!, addressText: addressText, price:servicePrice , fuelOrderSize: "", fuelOrderDate: "", fuelOrderPrice: "", rated: false, status: "-1", type: "towing", userId: "", timestamp: date, startLat: startLat, startLng: startLong, endLat: endLat, endLng: endLong,arriveAddress: arriveAddressText)
+        requestOrderViewModel.updateDate(note: issueDescribeDetetailsTeextField.text!, addressText: addressText, price:servicePrice , fuelOrderSize: "", fuelOrderDate: "", fuelOrderPrice: "", rated: false, status: "0", type: "towing", userId: "", timestamp: date, startLat: startLat, startLng: startLong, endLat: endLat, endLng: endLong,arriveAddress: arriveAddressText)
         requestOrderViewModel.sendOrderData()
     }
 }

@@ -47,6 +47,9 @@ class LangaugeViewController: UIViewController {
         MOLH.reset(transition: .transitionCrossDissolve)
     }
   
+    @IBAction func closeBtnDidTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @objc func handleArabicTap(){
         englishLangaugeIndicatorView.isHidden = true
         arabicLangaugeIndicatorView.isHidden = false

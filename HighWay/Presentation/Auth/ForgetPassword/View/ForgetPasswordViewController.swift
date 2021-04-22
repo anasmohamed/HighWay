@@ -37,6 +37,9 @@ class ForgetPasswordViewController: UIViewController {
         self.removeKeyboardObserver()
 
     }
+    @IBAction func closeBtnDidTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func sendEmailBtnDidTapped(_ sender: Any) {
         forgetPasswordViewModel.updateEmail(email: emailTextField.text!)
         
@@ -44,7 +47,7 @@ class ForgetPasswordViewController: UIViewController {
         switch forgetPasswordViewModel.credentialsInput() {
         
         case .Correct:
-            LoadingIndicatorView.show(self.view, loadingText: "Loading")
+            LoadingIndicatorView.show(self.view, loadingText: "Loading".localized)
 
             sendEmailToResetPassword()
         case .Incorrect:
@@ -65,7 +68,7 @@ class ForgetPasswordViewController: UIViewController {
             style.messageColor = .white
             style.backgroundColor = .green
             style.messageFont = UIFont(name:"" , size:20.0)!
-            self.view.makeToast(successMessage, duration: 3.0, position: .bottom,style:style)
+            self.view.makeToast(successMessage.localized, duration: 3.0, position: .bottom,style:style)
 
 
         }

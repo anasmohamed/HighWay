@@ -38,7 +38,7 @@ class OthersViewController: UIViewController {
         switch requestOrderViewModel.credentialsInput() {
         
         case .Correct:
-            requestOrderViewModel.updateDate(note: "\(titleTextField.text!)<BODY>\(descriptionTextField.text!)", addressText: addressText, price:servicePrice , fuelOrderSize: "", fuelOrderDate: "", fuelOrderPrice: "", rated: false, status: "-1", type: "others", userId: "", timestamp: date, startLat: startLat, startLng: startLong, endLat: endLat, endLng: endLong,arriveAddress: arriveAddressText)
+            requestOrderViewModel.updateDate(note: "\(titleTextField.text!)<BODY>\(descriptionTextField.text!)", addressText: addressText, price:servicePrice , fuelOrderSize: "", fuelOrderDate: "", fuelOrderPrice: "", rated: false, status: "0", type: "others", userId: "", timestamp: date, startLat: startLat, startLng: startLong, endLat: endLat, endLng: endLong,arriveAddress: arriveAddressText)
             requestOrderViewModel.sendOrderData()
         case .Incorrect:
             return
@@ -87,7 +87,8 @@ class OthersViewController: UIViewController {
         let homeViewController = homeViewStoryboard.instantiateViewController(withIdentifier: "HomeTabBar") as! UITabBarController
         let viewC = homeViewController.viewControllers?.first as! MainViewController
         // will give single Navigation Controller on index 0
-        viewC.isAddFeedbackViewController = true
+//        viewC.isAddFeedbackViewController = true
+        viewC.order = order
         homeViewController.modalPresentationStyle = .fullScreen
         self.present(homeViewController, animated: true, completion: nil)
     }

@@ -53,6 +53,11 @@ class ResetPasswordViewController: UIViewController {
 
         
     }
+    
+    
+    @IBAction func closeBtnDidTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     func setupButton()  {
         saveNewPasswordBtn.layer.cornerRadius = 8
     }

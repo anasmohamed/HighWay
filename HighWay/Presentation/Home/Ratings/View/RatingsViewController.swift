@@ -19,6 +19,8 @@ class RatingsViewController: UIViewController,UITableViewDelegate,UITableViewDat
         bindData()
         fetchData()
         ratingTableView.backgroundColor = UIColor.init(red:234.0/255.0 , green: 234.0/255.0, blue: 234.0/255.0, alpha: 1.0)
+        self.navigationItem.title = "Ratings".localized
+        setupBackButton()
         // Do any additional setup after loading the view.
     }
     func setupTableView() {
@@ -48,6 +50,16 @@ class RatingsViewController: UIViewController,UITableViewDelegate,UITableViewDat
     return 70
     }
     
-    
+    func setupBackButton() {
+        let leftBackBtn = UIButton(type: .system)
+        leftBackBtn.setImage(UIImage(named: "left-arrow-4")?.imageFlippedForRightToLeftLayoutDirection(), for: .normal)
+        leftBackBtn.sizeToFit()
+        leftBackBtn.addTarget(self, action: #selector(self.navigateToMainViewController), for: .touchUpInside)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBackBtn);
+        navigationController?.navigationBar.tintColor = .white
+    }
+    @objc func navigateToMainViewController() {
+        self.navigationController?.popViewController(animated: true)
+    }
     
 }

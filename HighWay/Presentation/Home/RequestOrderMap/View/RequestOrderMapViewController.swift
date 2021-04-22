@@ -105,8 +105,11 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
                 requestOrderViewController.startLat = startLat
                 requestOrderViewController.startLong = startLong
                 requestOrderViewController.addressText = addressText
-                requestOrderViewController.modalPresentationStyle = .popover
-                self.present(requestOrderViewController, animated: true,completion: nil)
+                requestOrderViewController.modalPresentationStyle = .fullScreen
+                let myNavigationController = UINavigationController(rootViewController: requestOrderViewController)
+                myNavigationController.modalPresentationStyle = .fullScreen
+                self.present(myNavigationController, animated: true,completion: nil)
+//                self.present(requestOrderViewController, animated: true,completion: nil)
             }else{
                 let requestOrderMapViewStroyboard = UIStoryboard.init(name: "RequestOrderDetails", bundle: nil)
                 let requestOrderViewController = requestOrderMapViewStroyboard.instantiateViewController(withIdentifier: "CarTowingViewRequestOrderViewController")

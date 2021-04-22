@@ -13,6 +13,8 @@
 
 "Password field is empty." = "يجب إدخال كلمة المرور";
 
+"email field is empty." = "يجب إدخال البريد الالكترونى";
+
 "Email field is empty." = "يجب إدخال البريد الالكترونى";
 
 "Enter Valid Email." = "يجب إدخال بريد الكترونى صحيح";
@@ -118,3 +120,7 @@
 "User Location" = "موقع المستخدم";
 
 "You should enter fuel order size" = "من فضلك أدخل حجم الطلب";
+
+"Loading" = "تحميل";
+
+"Did you want to logout?" = "هل تريد تسجيل الخروج";
