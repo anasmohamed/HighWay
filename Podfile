@@ -19,6 +19,7 @@ pod 'SwiftyJSON', '~> 4.0'
 pod 'SheetPresentation'
 pod 'Firebase/Database'
 pod 'MOLH'
+pod 'SwiftyGif'
 
   target 'HighWayTests' do
     inherit! :search_paths

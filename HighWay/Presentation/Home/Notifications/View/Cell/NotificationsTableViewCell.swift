@@ -22,7 +22,7 @@ class NotificationsTableViewCell: UITableViewCell {
         didSet{
             let formatter = DateFormatter()
             formatter.locale = Locale(identifier: "en_US_POSIX")
-            formatter.dateFormat = "MM-dd-yyyy HH:mm a"
+            formatter.dateFormat = "MM-dd-yyyy H:mm a"
             formatter.amSymbol = "AM"
             formatter.pmSymbol = "PM"
             

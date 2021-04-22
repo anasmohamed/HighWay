@@ -338,6 +338,7 @@
                         <outlet property="progressTitleLbl" destination="IrO-Zb-CWc" id="8At-4q-bbv"/>
                         <outlet property="sentTitleLbl" destination="ACY-ck-LXz" id="AsC-Yn-CEH"/>
                         <outlet property="serviceCollectionView" destination="jcn-47-04d" id="stI-tB-efn"/>
+                        <outlet property="timeOfOrder" destination="oYg-db-azk" id="L4L-1K-ht0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmf-HH-M6h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

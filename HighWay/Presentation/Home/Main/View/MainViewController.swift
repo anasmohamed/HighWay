@@ -10,6 +10,7 @@ import Toast_Swift
 import MOLH
 class MainViewController: UIViewController {
     @IBOutlet weak var completeArabicTitleLbl: UILabel!
+    @IBOutlet weak var timeOfOrder: UILabel!
     @IBOutlet weak var progressArabicTitleLbl: UILabel!
     @IBOutlet weak var orderDetailsBtn: UIButton!
     @IBOutlet weak var sentTitleLbl: UILabel!
@@ -85,7 +86,16 @@ class MainViewController: UIViewController {
         mainViewModel.lastOrder.bind{ order in
             self.order = order
             
+          
             if order != nil{
+                let formatter = DateFormatter()
+                formatter.locale = Locale(identifier: "en_US_POSIX")
+                formatter.dateFormat = "MM-dd-yyyy h:mm a"
+                formatter.amSymbol = "AM"
+                formatter.pmSymbol = "PM"
+                
+                let dateString = formatter.string(from: order!.orderDataTime)
+                self.timeOfOrder.text = dateString
                 self.itCanBeUsefulLbl.isHidden = true
                 self.serviceCollectionView.isHidden = true
                 self.orderStatusView.isHidden = false
