@@ -35,7 +35,7 @@ class BattaryViewContollerViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func sendBtnDidTapped(_ sender: Any) {
-        requestOrderViewModel.updateDate(note: notesTextField.text!, addressText: addressText, price:servicePrice , fuelOrderSize: "", fuelOrderDate: "", fuelOrderPrice: "", rated: false, status: "0", type: "battery", userId: "", timestamp: date, startLat: startLat, startLng: startLong, endLat: endLat, endLng: endLong,arriveAddress: arriveAddressText)
+        requestOrderViewModel.updateDate(note: notesTextField.text!, addressText: addressText, price:servicePrice , fuelOrderSize: "", fuelOrderDate: "", fuelOrderPrice: "", rated: false, status: "0", type: "battery", userId: "", timestamp: date, startLat: startLat, startLng: startLong, endLat: endLat, endLng: endLong,arriveAddress: arriveAddressText,distance: 0.0)
         requestOrderViewModel.sendOrderData()
     }
     func bindData() {

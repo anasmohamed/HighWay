@@ -38,7 +38,7 @@ class OthersViewController: UIViewController {
         switch requestOrderViewModel.credentialsInput() {
         
         case .Correct:
-            requestOrderViewModel.updateDate(note: "\(titleTextField.text!)<BODY>\(descriptionTextField.text!)", addressText: addressText, price:servicePrice , fuelOrderSize: "", fuelOrderDate: "", fuelOrderPrice: "", rated: false, status: "0", type: "others", userId: "", timestamp: date, startLat: startLat, startLng: startLong, endLat: endLat, endLng: endLong,arriveAddress: arriveAddressText)
+            requestOrderViewModel.updateDate(note: "\(titleTextField.text!)<BODY>\(descriptionTextField.text!)", addressText: addressText, price:servicePrice , fuelOrderSize: "", fuelOrderDate: "", fuelOrderPrice: "", rated: false, status: "0", type: "others", userId: "", timestamp: date, startLat: startLat, startLng: startLong, endLat: endLat, endLng: endLong,arriveAddress: arriveAddressText,distance: 0.0)
             requestOrderViewModel.sendOrderData()
         case .Incorrect:
             return

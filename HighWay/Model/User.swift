@@ -11,5 +11,9 @@ struct User {
     var phoneNumber : String = ""
     var email : String = ""
     var password : String = ""
-    
+    var isActive = ""
+    var hasOrder = 0
+    var token = ""
+    var currentOrder = ""
+    var deviceToken = ""
 }

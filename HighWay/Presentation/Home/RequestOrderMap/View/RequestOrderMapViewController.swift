@@ -10,6 +10,7 @@ import GoogleMaps
 import GooglePlaces
 import CoreLocation
 import SheetPresentation
+import Toast_Swift
 class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearchBarDelegate{
     
     @IBOutlet weak var searchBarView: UIView!
@@ -114,15 +115,31 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
                 let requestOrderMapViewStroyboard = UIStoryboard.init(name: "RequestOrderDetails", bundle: nil)
                 let requestOrderViewController = requestOrderMapViewStroyboard.instantiateViewController(withIdentifier: "CarTowingViewRequestOrderViewController")
                     as! CarTowingViewRequestOrderViewController
+                let cordinate0 = CLLocation(latitude: startLat, longitude: startLong)
+                let cordinate1 = CLLocation(latitude: endLat, longitude: endLong)
+                let distanceInMeter = cordinate0.distance(from: cordinate1)
+                if distanceInMeter != 0.0 {
                 requestOrderViewController.addressText = addressText
                 requestOrderViewController.endLat = endLat
                 requestOrderViewController.endLong = endLong
                 requestOrderViewController.startLat = startLat
                 requestOrderViewController.startLong = startLong
                 requestOrderViewController.arriveAddressText = arriveText
+                requestOrderViewController.distance = distanceInMeter
                 requestOrderViewController.modalPresentationStyle = .popover
+               
+                
                 self.present(requestOrderViewController, animated: true,completion: nil)
                 count = 1
+                }else{
+                    var style = ToastStyle()
+
+                    // this is just one of many style options
+                    style.messageColor = .white
+                    style.backgroundColor = .red
+                    style.messageFont = UIFont(name:"Cairo-Regular" , size:20.0)!
+                    self.view.makeToast("please pick another location".localized, duration: 3.0, position: .bottom,style:style)
+                }
                 
             }
             
@@ -154,7 +171,15 @@ class RequestOrderMapViewController: UIViewController,GMSMapViewDelegate,UISearc
         destinationMarker.position = position.target
         destinationMarker.map = mapView
         destinationMarker.icon = UIImage(named:"placeholder-1")
+        
         reverseGeocodeCoordinate(position.target)
+        if count == 1 {
+            startLat = position.target.latitude
+            startLong = position.target.longitude
+        }else{
+            endLat = position.target.latitude
+            endLong = position.target.longitude
+        }
         print(position.target.latitude)
     }
     // Present the Autocomplete view controller when the button is pressed.

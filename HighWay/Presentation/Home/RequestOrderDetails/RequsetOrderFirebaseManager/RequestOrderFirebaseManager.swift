@@ -64,7 +64,7 @@ class RequestOrderFirebaseManager {
         case "towing":
             orderDict = ["address":order.userAddress,
                          "fuelOrder":nil,
-                         "towingOrder":["arriveAddress":order.arriveAddress,"distance":order.fuelOrderPrice,"endLat":order.endLat,"endLng":order.endLong],
+                         "towingOrder":["arriveAddress":order.arriveAddress,"distance":order.distance,"endLat":order.endLat,"endLng":order.endLong],
                          "id":timeInMiliseconds,
                          "note":order.notes,
                          "price":order.orderPrice,

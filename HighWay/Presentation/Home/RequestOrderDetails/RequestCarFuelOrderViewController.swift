@@ -52,7 +52,7 @@ class RequestCarFuelOrderViewController: UIViewController {
         dateFormatter.dateFormat = "EEEE , d/MMM/yyyy"
         let date = dateFormatter.date(from: timeOfRecieveTextFiel.text!)
         if isFuelTypeChoosen == true {
-        requestOrderViewModel.updateDate(note: notesTextField.text!, addressText: addressText, price: 5.0, fuelOrderSize: fuelOrderSize, fuelOrderDate: fuelOrderDate, fuelOrderPrice: String(fuelOrderPrice), rated: false, status: "0", type: "fuel", userId: "", timestamp: date!, startLat: startLat, startLng: startLong, endLat: endLat, endLng: endLong,arriveAddress: "")
+            requestOrderViewModel.updateDate(note: notesTextField.text!, addressText: addressText, price: 5.0, fuelOrderSize: fuelOrderSize, fuelOrderDate: fuelOrderDate, fuelOrderPrice: String(fuelOrderPrice), rated: false, status: "0", type: "fuel", userId: "", timestamp: date!, startLat: startLat, startLng: startLong, endLat: endLat, endLng: endLong,arriveAddress: "",distance: 0.0)
             requestOrderViewModel.sendOrderData()
             
         }

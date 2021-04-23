@@ -34,6 +34,7 @@ class RequestOrderDetailsViewModel {
     var startLong = 0.0
     var endLat = 0.0
     var endLng = 0.0
+    var distance = 0.0
     var arriveAddress = ""
     var othersTitle = ""
     var othersDescription = ""
@@ -41,7 +42,7 @@ class RequestOrderDetailsViewModel {
         self.othersTitle = title
         self.othersDescription = decsription
     }
-    func updateDate(note: String,addressText:String,price:Double,fuelOrderSize:String,fuelOrderDate: String,fuelOrderPrice:String,rated:Bool,status:String,type:String,userId:String,timestamp:Date?,startLat:Double,startLng:Double,endLat:Double,endLng:Double,arriveAddress:String) {
+    func updateDate(note: String,addressText:String,price:Double,fuelOrderSize:String,fuelOrderDate: String,fuelOrderPrice:String,rated:Bool,status:String,type:String,userId:String,timestamp:Date?,startLat:Double,startLng:Double,endLat:Double,endLng:Double,arriveAddress:String,distance:Double) {
         
         
         self.addressText = addressText
@@ -61,7 +62,7 @@ class RequestOrderDetailsViewModel {
         self.type = type
         self.arriveAddress = arriveAddress
         
-        
+        self.distance = distance
         
     }
     var reloadTableView: Observable<[FuelModel]> = Observable([])
@@ -84,7 +85,7 @@ class RequestOrderDetailsViewModel {
       }
     func sendOrderData()  {
     
-        let order = Order(orderType: type, orderDataTime: timestamp, orderId: "", orderStatus: status, startLat: startLat, startLong: startLong, endLat: endLat, endLong: endLng, fuelOrderDate: fuelOrderDate, fuelOrderPrice: fuelOrderPrice, fuelOrderSize: fuelOrderSize, userAddress: addressText, arriveAddress: arriveAddress, notes: note, orderPrice: price , driver: nil)
+        let order = Order(orderType: type, orderDataTime: timestamp, orderId: "", orderStatus: status, startLat: startLat, startLong: startLong, endLat: endLat, endLong: endLng, fuelOrderDate: fuelOrderDate, fuelOrderPrice: fuelOrderPrice, fuelOrderSize: fuelOrderSize, userAddress: addressText, arriveAddress: arriveAddress, notes: note, orderPrice: price , driver: nil,distance : distance)
         
         
         

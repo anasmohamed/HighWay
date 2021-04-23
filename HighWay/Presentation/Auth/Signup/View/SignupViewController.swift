@@ -51,7 +51,7 @@ class SignupViewController: UIViewController {
     @IBAction func createAccountBtnDidTapped(_ sender: Any) {
         //Here we ask viewModel to update model with existing credentials from text fields
         print(privacypolicyCheckBox.isChecked)
-        signupViewModel.updateCredentials(username: userNameTextField.text!, password: passwordTextField.text!,phoneNumber: phoneNumberTextField.text!,email: emailTextField.text!,isPrivacyPolicyChecked: privacypolicyCheckBox.isChecked)
+        signupViewModel.updateCredentials(username: userNameTextField.text!, password: passwordTextField.text!,phoneNumber: phoneNumberTextField.text!,email: emailTextField.text!,isPrivacyPolicyChecked: privacypolicyCheckBox.isChecked,isActive: "1", deviceToken: "")
         
         //Here we check user's credentials input - if it's correct we call login()
         switch signupViewModel.credentialsInput() {
@@ -74,12 +74,13 @@ class SignupViewController: UIViewController {
             guard let email = $0?[1] else { return }
             let homeViewStoryboard = UIStoryboard.init(name: "MainView", bundle: nil)
             let homeViewController = homeViewStoryboard.instantiateViewController(withIdentifier: "HomeTabBar")
+            self.signupViewModel.saveUser(userToken: $0![0])
             print("token\($0?[0])")
             homeViewController.modalPresentationStyle = .fullScreen
             self.present(homeViewController, animated: true, completion: nil)
             UserDefaults.standard.set(email, forKey: "email")
             UserDefaults.standard.set($0![0], forKey: "token")
-
+            
 
         }
         signupViewModel.isEmailTextFieldHighLighted.bind { [weak self] in

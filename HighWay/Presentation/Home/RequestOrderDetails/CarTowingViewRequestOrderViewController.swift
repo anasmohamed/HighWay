@@ -22,6 +22,7 @@ class CarTowingViewRequestOrderViewController: UIViewController {
     var arriveAddressText = ""
     var date = Date()
     var servicePrice = 0.0
+    var distance = 0.0
     override func viewDidLoad(){
         requestOrderViewModel.getAppSettings()
         bindData()
@@ -64,7 +65,7 @@ class CarTowingViewRequestOrderViewController: UIViewController {
         self.present(homeViewController, animated: true, completion: nil)
     }
     @IBAction func sendRequestOrderBtnDidTapped(_ sender: Any) {
-        requestOrderViewModel.updateDate(note: issueDescribeDetetailsTeextField.text!, addressText: addressText, price:servicePrice , fuelOrderSize: "", fuelOrderDate: "", fuelOrderPrice: "", rated: false, status: "0", type: "towing", userId: "", timestamp: date, startLat: startLat, startLng: startLong, endLat: endLat, endLng: endLong,arriveAddress: arriveAddressText)
+        requestOrderViewModel.updateDate(note: issueDescribeDetetailsTeextField.text!, addressText: addressText, price:servicePrice , fuelOrderSize: "", fuelOrderDate: "", fuelOrderPrice: "", rated: false, status: "0", type: "towing", userId: "", timestamp: date, startLat: startLat, startLng: startLong, endLat: endLat, endLng: endLong,arriveAddress: arriveAddressText,distance:distance )
         requestOrderViewModel.sendOrderData()
     }
 }

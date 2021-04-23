@@ -25,7 +25,7 @@ struct Order {
     var driverId = ""
     var driver : Driver?
     var rated = false
-   
+    var distance = 0.0
     
 }
 

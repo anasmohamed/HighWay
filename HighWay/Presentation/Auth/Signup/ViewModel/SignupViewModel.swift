@@ -14,6 +14,8 @@ class SignupViewModel {
             password = user.password
             email = user.email
             phoneNumber = user.phoneNumber
+            isActive = user.isActive
+            notificationToken = user.deviceToken
         }
     }
     private var userName = ""
@@ -21,7 +23,10 @@ class SignupViewModel {
     private var email = ""
     private var phoneNumber = ""
     private var privacyPolicyCheckbox = false
+    private var isActive = ""
+    private var notificationToken = ""
     
+
     var credentialsInputErrorMessage: Observable<String> = Observable("")
     var isUsernameTextFieldHighLighted: Observable<Bool> = Observable(false)
     var isPasswordTextFieldHighLighted: Observable<Bool> = Observable(false)
@@ -30,7 +35,7 @@ class SignupViewModel {
     var isPrivacyPolicyCheckboxChecked: Observable<Bool> = Observable(false)
     var errorMessage: Observable<String?> = Observable(nil)
     var signupSuccess: Observable<[String]?> = Observable(nil)
-
+//    var saveUserSuccess : Observable<> = Observable(nil)
     //    init() {
     //
     //    }
@@ -39,10 +44,13 @@ class SignupViewModel {
     //    }
     
     //Here we update our model
-    func updateCredentials(username: String, password: String, phoneNumber: String,email: String,isPrivacyPolicyChecked : Bool) {
+    func updateCredentials(username: String, password: String, phoneNumber: String,email: String,isPrivacyPolicyChecked : Bool,isActive : String,deviceToken: String) {
         user.userName = username
         user.password = password
         user.email = email
+        user.isActive = isActive
+        user.deviceToken = deviceToken
+        user.hasOrder = 0
         user.phoneNumber = "+973\(phoneNumber)"
         privacyPolicyCheckbox = isPrivacyPolicyChecked
     }
@@ -68,6 +76,12 @@ class SignupViewModel {
 //        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
 //        return emailPred.evaluate(with: email)
 //    }
+    func saveUser(userToken:String)  {
+        let user = User(userName:userName , phoneNumber:phoneNumber , email: email, password:password , isActive:isActive , hasOrder:0 , token:userToken , currentOrder:"" , deviceToken:notificationToken )
+        signupManager.sendUserData(user:user){_,_ in
+            
+        }
+    }
     func credentialsInput() -> CredentialsInputStatus {
         if !privacyPolicyCheckbox
         {
