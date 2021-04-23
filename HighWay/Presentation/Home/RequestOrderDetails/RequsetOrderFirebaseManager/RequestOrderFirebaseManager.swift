@@ -94,14 +94,36 @@ class RequestOrderFirebaseManager {
         default:
             break
         }
-        
+        let notificationDict = ["action":"NEW_ORDER","id":nil,"orderId":timeInMiliseconds,"real":false,"timestamp":order.orderDataTime ?? Date(),"userId":UserDefaults.standard.string(forKey: "token")!] as [String : Any?]
+        db.collection("adminNotification").document(timeInMiliseconds).setData(notificationDict as [String : Any]){ (err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+                completion(err,nil)
+            } else {
+                UserDefaults.standard.set("true", forKey: "requestOrder")
+            
+                
+                completion(nil,order)
+            }
+        }
+        self.db.collection("users").document(UserDefaults.standard.string(forKey: "token")!).updateData(["currentOrder": timeInMiliseconds]){err in
+            if let err = err {
+                print("Error updating document: \(err)")
+                completion(nil,nil)
+            } else {
+                print("Document successfully updated")
+                UserDefaults.standard.setValue("false",forKey: "requestOrder")
+                completion(nil,nil)
+
+            }
+        }
         db.collection("userOrders").document(timeInMiliseconds).setData(orderDict! as [String : Any]){ (err) in
             if let err = err {
                 print("Error getting documents: \(err)")
                 completion(err,nil)
             } else {
                 UserDefaults.standard.set("true", forKey: "requestOrder")
-
+               
                 completion(nil,order)
             }
         }
